@@ -1,0 +1,205 @@
+{"0": {
+    "doc": "Changelog",
+    "title": "Laserfiche SharePoint Online Integration Changelog",
+    "content": " ",
+    "url": "/CHANGELOG.html#laserfiche-sharepoint-online-integration-changelog",
+    
+    "relUrl": "/CHANGELOG.html#laserfiche-sharepoint-online-integration-changelog"
+  },"1": {
+    "doc": "Changelog",
+    "title": "1.0.0.360",
+    "content": "Features . | Initial release | Ability to save documents in a SharePoint document library to Laserfiche | Ability to view your Laserfiche repository from within SharePoint Online | . Known Issues . | 488127: Importing file from repository explorer hits a dead end when invalid metadata is entered . | Workaround: Press the cancel button and restart import process. | . | 488097: Admin Configuration page appears interactive when user is logged out . | Workaround: To edit the configuration, click the “Sign In” button. | . | 487980: If configured Laserfiche template is deleted, profile configuration page does not show a good error. | Workaround: Delete the profile or reconfigure the metadata of the profile. | . | 490833: Content Type can’t be determined unless column is shown . | Workaround: Display the Content Type column in the Documents tab of the site. | . | 492278: Image files are saved to Laserfiche as electronic documents | . ",
+    "url": "/CHANGELOG.html#100360",
+    
+    "relUrl": "/CHANGELOG.html#100360"
+  },"2": {
+    "doc": "Changelog",
+    "title": "Changelog",
+    "content": " ",
+    "url": "/CHANGELOG.html",
+    
+    "relUrl": "/CHANGELOG.html"
+  },"3": {
+    "doc": "Adding App to Organization",
+    "title": "Adding App to Organization",
+    "content": "Prerequisites . | Have a SharePoint Online account with administrator privileges. | If you don’t wish to use the integration available in the SharePoint Store, download the latest Laserfiche SharePoint Online Integration package and add it as a custom app. | . Steps . Follow Microsoft’s documentation for adding apps from the SharePoint Store or for adding custom apps. Next Steps . Follow the steps for setting up the app in your SharePoint site . ",
+    "url": "/docs/admin-documentation/adding-app-organization.html#adding-app-to-organization",
+    
+    "relUrl": "/docs/admin-documentation/adding-app-organization.html#adding-app-to-organization"
+  },"4": {
+    "doc": "Adding App to Organization",
+    "title": "Adding App to Organization",
+    "content": " ",
+    "url": "/docs/admin-documentation/adding-app-organization.html",
+    
+    "relUrl": "/docs/admin-documentation/adding-app-organization.html"
+  },"5": {
+    "doc": "Adding App to SharePoint Site",
+    "title": "Adding App to SharePoint Site",
+    "content": " ",
+    "url": "/docs/admin-documentation/adding-app-to-sp-site.html#adding-app-to-sharepoint-site",
+    
+    "relUrl": "/docs/admin-documentation/adding-app-to-sp-site.html#adding-app-to-sharepoint-site"
+  },"6": {
+    "doc": "Adding App to SharePoint Site",
+    "title": "Adding app via SharePoint store",
+    "content": "Prerequisites . | Be an owner of a SharePoint site you want to add the integration to. | . Initial Steps . Follow Microsoft’s instructions for adding an app to a site in SharePoint. The Laserfiche Sign In Page . | In your SharePoint site, select the “Pages” item in the navigation bar on the left side of the page. | Create and open a new site page by clicking the “+ New” button and selecting “Site Page” from the dropdown. | Title the page “LaserficheSignIn”. | Move your cursor just below the title area to the white space beneath. This should reveal a hidden “+” button. If you hover over it, it should display the message “Add a new web part in column one”. | Click on that button and Search for “Laserfiche Sign In”. | Click on the search result with a white L on an orange square. The Laserfiche Sign In web part should now appear on your Page. Before creating subsequent pages, make sure to click the ‘Publish’ button to save the page. | . The Repository Explorer Page . Follow the same steps as above, but title the Page whatever you wish and add the “Repository Explorer” web part. The Admin Configuration Page . Follow the same steps as above, but title the page whatever you wish and add the “Admin Configuration” web part instead of “Laserfiche Sign In”. Next Steps . Before you can log in and use the web pages you just created, you will need to Register the integration in the Laserfiche Developer Console. After you register your Apps, you should be able to log in and use the web parts. For Documentation on how to use the integration, reference the User Documentation. ",
+    "url": "/docs/admin-documentation/adding-app-to-sp-site.html#adding-app-via-sharepoint-store",
+    
+    "relUrl": "/docs/admin-documentation/adding-app-to-sp-site.html#adding-app-via-sharepoint-store"
+  },"7": {
+    "doc": "Adding App to SharePoint Site",
+    "title": "Adding App to SharePoint Site",
+    "content": " ",
+    "url": "/docs/admin-documentation/adding-app-to-sp-site.html",
+    
+    "relUrl": "/docs/admin-documentation/adding-app-to-sp-site.html"
+  },"8": {
+    "doc": "Configuring Metadata Mappings",
+    "title": "Configuring Metadata Mappings",
+    "content": "Prerequisites . | be a Site Owner of the SharePoint Site for which the integration will be configured | . ",
+    "url": "/docs/admin-documentation/configuring-metadata-mappings.html#configuring-metadata-mappings",
+    
+    "relUrl": "/docs/admin-documentation/configuring-metadata-mappings.html#configuring-metadata-mappings"
+  },"9": {
+    "doc": "Configuring Metadata Mappings",
+    "title": "Introduction",
+    "content": "You must configure mappings for your site before you can send documents to Laserfiche. Mappings are set based on the SharePoint Content Type of the item you are trying to save. You must set up a mapping for each SharePoint Content Type you use in your site, or set a default mapping for anything not specifically mapped that you would still like to save to Laserfiche. A mapping allows you to specify options for how to save to Laserfiche for that Content Type, including a destination folder, a template with mapped metadata from SharePoint properties to Laserfiche fields, and what happens in SharePoint once you save to Laserfiche. ",
+    "url": "/docs/admin-documentation/configuring-metadata-mappings.html#introduction",
+    
+    "relUrl": "/docs/admin-documentation/configuring-metadata-mappings.html#introduction"
+  },"10": {
+    "doc": "Configuring Metadata Mappings",
+    "title": "Steps",
+    "content": "Create a Profile . In the “Profiles” tab of the Admin Configuration web part, click on the “Add Profile” button to add a new profile. Click on the pencil icon to edit an existing profile. Either selection will open the Profile Editor View. Define the Profile in the Profile Editor . | Name: this is the identifier used to associate SharePoint content types with this profile in the Profile Mapping tab. | Laserfiche Template: If a profile is assigned a template, then all files saved to Laserfiche through that profile will be assigned that template in Laserfiche. Learn more about templates. | Laserfiche Destination: This option specifies the path to the folder in the Laserfiche Repository where the files associated with this profile will be saved. | After Import: This option specifies what to do with the SharePoint file after exporting it to Laserfiche. | Mappings from SharePoint Column to Laserfiche Field Values - This is where the actual metadata transfer is configured. - Each Field in the template can be assigned a SharePoint column, so that when files are exported from SharePoint to Laserfiche, the file in Laserfiche will have a field with the same value as the Column of the file in SharePoint. - templates with required fields MUST have columns assigned to them. - The association between SharePoint columns and Laserfiche fields should be one-to-one, i.e., you should not attempt to map multiple SharePoint columns to the same Laserfiche field. | . Map Content Types to Profiles in the Profile Mapping Tab . Displays a list of SharePoint Content Types and their corresponding Laserfiche Profile. If you add a content type/profile pair, then any SharePoint content matching that type will be assigned the corresponding profile when you attempt to save the content to Laserfiche. Default Profile . If you attempt to save a file to Laserfiche and it does not have a SharePoint Content Type or its SharePoint Content Type is not mapped to any Laserfiche Profile, you will not be able to save that file. You must either create a mapping for each Content Type that will exist on your site or set a default mapping which will apply to any file in SharePoint that does not have a Content Type or does not have a corresponding Laserfiche Profile for its Content Type. ",
+    "url": "/docs/admin-documentation/configuring-metadata-mappings.html#steps",
+    
+    "relUrl": "/docs/admin-documentation/configuring-metadata-mappings.html#steps"
+  },"11": {
+    "doc": "Configuring Metadata Mappings",
+    "title": "Configuring Metadata Mappings",
+    "content": " ",
+    "url": "/docs/admin-documentation/configuring-metadata-mappings.html",
+    
+    "relUrl": "/docs/admin-documentation/configuring-metadata-mappings.html"
+  },"12": {
+    "doc": "Overview",
+    "title": "Working with the Laserfiche SharePoint Online Integration",
+    "content": " ",
+    "url": "/#working-with-the-laserfiche-sharepoint-online-integration",
+    
+    "relUrl": "/#working-with-the-laserfiche-sharepoint-online-integration"
+  },"13": {
+    "doc": "Overview",
+    "title": "Introduction",
+    "content": "The Laserfiche SharePoint Online Integration adds the following functionality to your SharePoint Online site: . | Laserfiche Repository Explorer: Browse a Laserfiche Cloud repository directly from a SharePoint site, and open documents in the web client directly from that site. | Save documents to Laserfiche: Send documents from a SharePoint document library to a Laserfiche Cloud repository. You can customize how different types of SharePoint documents will be handled by Laserfiche. | . ",
+    "url": "/#introduction",
+    
+    "relUrl": "/#introduction"
+  },"14": {
+    "doc": "Overview",
+    "title": "Guides",
+    "content": ". | See the Administration Guide for details on adding the integration to your SharePoint site. | See The User Guide for details on saving documents to Laserfiche or browsing the Laserfiche Cloud repository. | . ",
+    "url": "/#guides",
+    
+    "relUrl": "/#guides"
+  },"15": {
+    "doc": "Overview",
+    "title": "Overview",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"16": {
+    "doc": "Laserfiche SharePoint Online Integration Administration Guide",
+    "title": "Laserfiche SharePoint Online Integration Administration Guide",
+    "content": "The following guides detail how to add the Laserfiche SharePoint Online integration. By default, you must be a tenant administrator to install the integration. Installing the integration involves the following steps: . | Adding the integration to your SharePoint organization. | Adding the integration to a SharePoint site. | Configuring authentication between the integration and your Laserfiche Cloud account. | Mapping SharePoint columns and content types to Laserfiche. | . ",
+    "url": "/docs/admin-documentation/#laserfiche-sharepoint-online-integration-administration-guide",
+    
+    "relUrl": "/docs/admin-documentation/#laserfiche-sharepoint-online-integration-administration-guide"
+  },"17": {
+    "doc": "Laserfiche SharePoint Online Integration Administration Guide",
+    "title": "Important Security Notice",
+    "content": "JavaScript code running in same domain/origin as your SharePoint tenant has access to the Laserfiche Integration security token. This token must be kept secure to avoid unauthorized access to Laserfiche systems. To this end, ensure that only trusted code is allowed to run in the same domain/origin. ",
+    "url": "/docs/admin-documentation/#important-security-notice",
+    
+    "relUrl": "/docs/admin-documentation/#important-security-notice"
+  },"18": {
+    "doc": "Laserfiche SharePoint Online Integration Administration Guide",
+    "title": "Laserfiche SharePoint Online Integration Administration Guide",
+    "content": " ",
+    "url": "/docs/admin-documentation/",
+    
+    "relUrl": "/docs/admin-documentation/"
+  },"19": {
+    "doc": "Laserfiche SharePoint Online Integration User Guide",
+    "title": "Laserfiche SharePoint Online Integration User Guide",
+    "content": " ",
+    "url": "/docs/user-documentation/#laserfiche-sharepoint-online-integration-user-guide",
+    
+    "relUrl": "/docs/user-documentation/#laserfiche-sharepoint-online-integration-user-guide"
+  },"20": {
+    "doc": "Laserfiche SharePoint Online Integration User Guide",
+    "title": "Overview",
+    "content": "Laserfiche SharePoint Online Integration provides two services: . The Save To Laserfiche Command . This provides the option to export documents directly from SharePoint to Laserfiche. The Repository View . This web part allows you to view your Laserfiche Repository inside SharePoint webpages. ",
+    "url": "/docs/user-documentation/#overview",
+    
+    "relUrl": "/docs/user-documentation/#overview"
+  },"21": {
+    "doc": "Laserfiche SharePoint Online Integration User Guide",
+    "title": "Laserfiche SharePoint Online Integration User Guide",
+    "content": " ",
+    "url": "/docs/user-documentation/",
+    
+    "relUrl": "/docs/user-documentation/"
+  },"22": {
+    "doc": "Registering App in Laserfiche",
+    "title": "Registering App in Laserfiche",
+    "content": "Prerequisites . | Have developer rights in your Laserfiche account. | . Steps . | Open the Developer Console. | Attempt to Create a New App from Manifest, and upload the manifest provided here. | If the attempt fails because an app with that client ID already exists, find the app with that client id by opening this url in a new tab. | One way or another, an app with that client ID should now exist. Open the app and switch from the general tab to the authentication tab. | Copy the URL from your SharePoint LaserficheSignIn page, append the query parameter ?autologin and add it to the developer console as a new redirect URI. The URI should end with SitePages/LaserficheSignIn.aspx?autologin. | For example, if your LaserficheSignInPage was named https://subdomain.sharepoint.com/sites/my-test-site/SitePages/LaserficheSignIn.aspx, then the redirect URI you would add to the Laserfiche devconsole would be https://subdomain.sharepoint.com/sites/my-test-site/SitePages/LaserficheSignIn.aspx?autologin. | . | You should now be able to sign in on each of the components. | . Next Steps . Configure Metadata Mappings in the Admin Configuration web part . ",
+    "url": "/docs/admin-documentation/register-app-in-laserfiche.html#registering-app-in-laserfiche",
+    
+    "relUrl": "/docs/admin-documentation/register-app-in-laserfiche.html#registering-app-in-laserfiche"
+  },"23": {
+    "doc": "Registering App in Laserfiche",
+    "title": "Registering App in Laserfiche",
+    "content": " ",
+    "url": "/docs/admin-documentation/register-app-in-laserfiche.html",
+    
+    "relUrl": "/docs/admin-documentation/register-app-in-laserfiche.html"
+  },"24": {
+    "doc": "View Laserfiche Repository from SharePoint",
+    "title": "View Laserfiche Repository from SharePoint",
+    "content": " ",
+    "url": "/docs/user-documentation/repository-explorer-usage.html#view-laserfiche-repository-from-sharepoint",
+    
+    "relUrl": "/docs/user-documentation/repository-explorer-usage.html#view-laserfiche-repository-from-sharepoint"
+  },"25": {
+    "doc": "View Laserfiche Repository from SharePoint",
+    "title": "Usage",
+    "content": ". | Navigate to the SharePoint Page containing the Repository Explorer web part. If none exists, consult the Admin Documentation for How to Add App to SharePoint Site. | Sign In: To view your folders and documents, authenticate yourself by clicking on the button labeled “Sign in to Laserfiche” and subsequently logging in. | Buttons . | Open: Clicking this button will open the selected entry, if one exists. | Upload File: Clicking this button will prompt you to select a file to upload to the currently open folder in the Repository Access web part. | New Folder: Clicking this button will prompt you to input a name for a new folder within the currently open folder. | . | Navigation . | Navigation Down . | Double-click on a folder to view its contents within the web part. | Double-click on a file to view it in Laserfiche Repository. | . | Navigation Up . | Use the links in the Breadcrumb Navigation to jump back up to a higher level folder. | . | . | . ",
+    "url": "/docs/user-documentation/repository-explorer-usage.html#usage",
+    
+    "relUrl": "/docs/user-documentation/repository-explorer-usage.html#usage"
+  },"26": {
+    "doc": "View Laserfiche Repository from SharePoint",
+    "title": "View Laserfiche Repository from SharePoint",
+    "content": " ",
+    "url": "/docs/user-documentation/repository-explorer-usage.html",
+    
+    "relUrl": "/docs/user-documentation/repository-explorer-usage.html"
+  },"27": {
+    "doc": "Save a Document to Laserfiche",
+    "title": "Save a Document to Laserfiche",
+    "content": "Prerequisites . | Be able to open the documents tab in Laserfiche | . Steps . | Navigate to the Documents tab in your SharePoint Site and choose which document you wish to send to Laserfiche. | Right-click on the entry you chose or select the ellipses to the right of the name. | Choose Save to Laserfiche from the drop-down menu. | If the Document saved, you should see the following message: | . ",
+    "url": "/docs/user-documentation/sign-in-usage.html#save-a-document-to-laserfiche",
+    
+    "relUrl": "/docs/user-documentation/sign-in-usage.html#save-a-document-to-laserfiche"
+  },"28": {
+    "doc": "Save a Document to Laserfiche",
+    "title": "Save a Document to Laserfiche",
+    "content": " ",
+    "url": "/docs/user-documentation/sign-in-usage.html",
+    
+    "relUrl": "/docs/user-documentation/sign-in-usage.html"
+  }
+}
