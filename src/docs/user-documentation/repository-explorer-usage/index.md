@@ -11,8 +11,8 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 ## Usage
 
-- Navigate to the SharePoint Page containing the Repository Explorer web part. If none exists, consult the Admin Documentation for [How to Add App to SharePoint Site](../admin-documentation/adding-app-to-sp-site).
-  <a href="../assets/images/repositoryExplorer.png"><img src="../assets/images/repositoryExplorer.png"></a>
+- Navigate to the SharePoint Page containing the Repository Explorer web part. If none exists, consult the Admin Documentation for [How to Add App to SharePoint Site](../../admin-documentation/adding-app-to-sp-site).
+  <a href="./assets/images/repositoryExplorer.png"><img src="./assets/images/repositoryExplorer.png"></a>
 - Sign In: To view your folders and documents, authenticate yourself
   by clicking on the button labeled "Sign in to Laserfiche" and
   subsequently logging in.

@@ -13,7 +13,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 ### Prerequisites
 
 - Have a SharePoint Online account with administrator privileges.
-- If you don't wish to use the integration available in the SharePoint Store, download the latest Laserfiche SharePoint Online Integration [package](../assets/LaserficheSharePointOnlineIntegration.sppkg) and add it as a custom app.
+- If you don't wish to use the integration available in the SharePoint Store, download the latest Laserfiche SharePoint Online Integration [package](./assets/LaserficheSharePointOnlineIntegration.sppkg) and add it as a custom app.
 
 ### Steps
 
@@ -21,4 +21,4 @@ Follow Microsoft's documentation for [adding apps from the SharePoint Store](htt
 
 ### Next Steps
 
-Follow the steps for [setting up the app in your SharePoint site](./adding-app-to-sp-site)
+Follow the steps for [setting up the app in your SharePoint site](../adding-app-to-sp-site)
