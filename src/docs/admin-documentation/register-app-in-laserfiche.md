@@ -16,7 +16,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 1. Open the [Developer Console](https://developer.laserfiche.com/developer-console.html){:target="_blank"}.
    <a href="../assets/images/createAppFromManifest.png"><img src="../assets/images/createAppFromManifest.png"></a>
-1. Attempt to Create a New App from Manifest, and upload the manifest provided [here](../assets/LaserficheSharePointIntegrationAppManifest.json).
+1. Attempt to Create a New App from Manifest, and upload the manifest. Since this is just demo documentation, the link is not provided.
    <a href="../assets/images/createApplication.png"><img src="../assets/images/createApplication.png"></a>
 1. If the attempt fails because an app with that client ID already exists, find the app with that client id by opening [this url](https://app.laserfiche.com/devconsole/apps/8ee987ea-a0b1-4ca2-85c4-a79b335cd214/config){:target="_blank"} in a new tab.
    <a href="../assets/images/clientIdRegistered.png"><img src="../assets/images/clientIdRegistered.png"></a>
