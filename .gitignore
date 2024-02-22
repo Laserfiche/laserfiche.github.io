@@ -36,5 +36,3 @@ obj
 output.css
 .heft/
 
-# locally generated documentation
-src/_site/
