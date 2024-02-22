@@ -51,6 +51,7 @@ to view changes in the browser, run `jekyll serve --watch` and browse <http://lo
 To redirect from a list of links to a page, add a redirect-from key in the front matter of the page, and then list the links you want to redirect from in a bulleted list. For example:
 
   ```
+  ---
   layout: default
   title: Save a Document to Laserfiche
   redirect_from:
@@ -58,6 +59,7 @@ To redirect from a list of links to a page, add a redirect-from key in the front
     - /docs/user-docs/save-to-lf
   nav_order: 1
   parent: Laserfiche SharePoint Online Integration User Guide
+  ---
   ```
 
 
