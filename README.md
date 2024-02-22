@@ -54,7 +54,7 @@ layout: default
 title: Save a Document to Laserfiche
 redirect_from:
    - /docs/user-documentation/save-to-laserfiche
-   - http://localhost:4000/path
+   - /docs/user-docs/save-to-lf
 nav_order: 1
 parent: Laserfiche SharePoint Online Integration User Guide
 ---
