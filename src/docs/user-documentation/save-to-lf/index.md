@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Save a Document to Laserfiche
+redirect_from:
+   - /docs/user-documentation/save-to-laserfiche
 nav_order: 1
 parent: Laserfiche SharePoint Online Integration User Guide
 ---

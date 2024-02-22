@@ -59,6 +59,7 @@ plugins:
   - jekyll-seo-tag
   # - jekyll-github-metadata
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 heading_anchors: true
 color_scheme: lf-styles
