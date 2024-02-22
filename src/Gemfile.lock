@@ -68,6 +68,8 @@ GEM
       webrick (~> 1.7)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
@@ -130,6 +132,7 @@ DEPENDENCIES
   bundler (>= 2.3.5)
   html-proofer (~> 5.0)
   jekyll-include-cache
+  jekyll-redirect-from
 
 BUNDLED WITH
    2.3.26
