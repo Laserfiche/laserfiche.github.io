@@ -1,7 +1,7 @@
 # developer.laserfiche.com
 Laserfiche developer portal:  https://developer.laserfiche.com
 
-## To build documentation locally
+## Building documentation locally
 ### Prerequisites:
 - Follow the instructions [here](https://jekyllrb.com/docs/) to install jekyll and bundler. 
 - Check installations and versions:
@@ -31,8 +31,8 @@ Laserfiche developer portal:  https://developer.laserfiche.com
 1. Run `bundle exec jekyll serve --destination ../_site` to build and serve the documentation.
 1. Open `localhost:4000` in a browser.
 
-## Adding a new page, or modifying an existing one.
-All website content is defined under the folder /src/docs. Each page is defined by a folder containing a file named `index.md`, and optionally linked static assets such as images. 
+## Adding a new page, or modifying an existing one
+All website content is defined under the folder `/src/docs`. Each page is defined by a folder containing a file named `index.md`, and optionally linked static assets such as images. 
 
 The `index.md` jekyll front matter defines page data such as navigation order, title, and optional nested pages. For example:
 ```
@@ -47,18 +47,19 @@ has_children: true
 to view changes in the browser, run `jekyll serve --watch` and browse <http://localhost:4000>. Refresh to see changes.
 
 ## Configuring Redirects
-- to redirect from a list of links to a page, add a redirect-from key in the front matter of the page, and then list
-- the links below in a bulleted list. For example:
----
-layout: default
-title: Save a Document to Laserfiche
-redirect_from:
-   - /docs/user-documentation/save-to-laserfiche
-   - /docs/user-docs/save-to-lf
-nav_order: 1
-parent: Laserfiche SharePoint Online Integration User Guide
----
+
+To redirect from a list of links to a page, add a redirect-from key in the front matter of the page, and then list the links you want to redirect from in a bulleted list. For example:
+
+  ```
+  layout: default
+  title: Save a Document to Laserfiche
+  redirect_from:
+    - /docs/user-documentation/save-to-laserfiche
+    - /docs/user-docs/save-to-lf
+  nav_order: 1
+  parent: Laserfiche SharePoint Online Integration User Guide
+  ```
 
 
-## To push to production
-To push documentation changes to production, create and approve a Pull Request merging into the main branch. This will trigger the [pipeline which builds and publishes the documentation](./.github/workflows/build-documentation.yml)
+## Pushing to production
+To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation.
