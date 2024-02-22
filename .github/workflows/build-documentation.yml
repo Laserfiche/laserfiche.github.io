@@ -45,8 +45,8 @@ jobs:
           source: ./src
           destination: ./_site
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
         with: 
           path: ${{ github.workspace }}/_site
 
