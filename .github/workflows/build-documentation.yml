@@ -45,12 +45,6 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
 
-      - name: Upload preview artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: preview-artifact
-          path: ${{ github.workspace }}/_site
-
   # Deployment job
   deploy:
     environment:
