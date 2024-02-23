@@ -52,7 +52,7 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: laserfiche-act
+          approvers: act
           minimum-approvals: 1
           issue-body: "Please approve or deny the deployment"
           exclude-workflow-initiator-as-approver: false
