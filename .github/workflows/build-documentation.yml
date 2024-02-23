@@ -48,13 +48,13 @@ jobs:
       - name: Add page config to preview artifact
         run: |
           mkdir -p ./docs_temp
-          cp -r ./_site/* ./docs_temp
+          cp ./_site/* ./docs_temp
           cd docs_temp
           touch _config.yml
           echo "baseurl: /developer.laserfiche.com" >> _config.yml
 
       - name: Upload preview artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: preview-artifact
           path: ${{ github.workspace }}/docs_temp
