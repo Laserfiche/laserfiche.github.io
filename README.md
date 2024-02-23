@@ -2,7 +2,7 @@
 Laserfiche developer portal:  https://developer.laserfiche.com
 
 ## Building documentation locally
-### Prerequisites:
+### Prerequisites: <tag id="local_prereq">
 - Follow the instructions [here](https://jekyllrb.com/docs/) to install jekyll and bundler. 
 - Check installations and versions:
   ```
@@ -23,6 +23,7 @@ Laserfiche developer portal:  https://developer.laserfiche.com
     1.  <tag id="fetch_error">Install the dependencies from local .gem files if you see errors like`'fetch_http': bad response Forbidden 403 (https://index.rubygems.org/gems/google-protobuf-3.25.3-x64-mingw-ucrt.gem?_sm_nck=1)` when run `gem install jekyll`.
         1. Find the dependency needed in your local drive or go to https://index.rubygems.org/gems and download the package file.
         1. Run `gem install --local <path_to_gem/filename.gem>`.
+
 ### Build the static website and serve locally
 1. Navigate to directory `<project_path>/src`.
 1. Run `bundle install` to install all the dependencies needed to serve.
@@ -62,6 +63,19 @@ To redirect from a list of links to a page, add a redirect-from key in the front
   ---
   ```
 
+
+## Previewing pages from buid artifact
+
+### Prerequisites: 
+`Gem` `Ruby` `jekyll`. For more details, see [Prerequisites](#local_prereq) in [**Building documentation locally**](#building-documentation-locally)
+### Steps:
+1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
+
+1. Download the artifact `preview-artifact`from the your build.
+
+1. Extract the files from the artifact and navigate to the directory of the extracted files.
+
+1. Run `jekyll serve` and browse <http://127.0.0.1:4000/developer.laserfiche.com/>
 
 ## Pushing to production
 To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. You can view the results on [Github Pages](https://laserfiche.github.io/developer.laserfiche.com/).

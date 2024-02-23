@@ -2,7 +2,7 @@
 # Licensed under the MIT License. See LICENSE in the project root for license information.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Documentation
+name: Build and Deploy Documentation
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,30 +27,46 @@ concurrency:
 jobs:
   # Build job
   build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./src
           destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Upload preview artifact
+        run: |
+          mkdir -p ./docs_temp
+          cp -r ./_site/* ./docs_temp
+          cd docs_temp
+          touch _config.yml
+          echo "baseurl: /developer.laserfiche.com" >> _config.yml
+
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-artifact
+          path: ${{ github.workspace }}/docs_temp
+
 
   # Deployment job
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: ${{ github.run_attempt != 1 }}
     needs: build
     steps:
       - name: Deploy to GitHub Pages
