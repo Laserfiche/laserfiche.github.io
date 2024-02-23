@@ -67,7 +67,7 @@ To redirect from a list of links to a page, add a redirect-from key in the front
 ## Previewing pages from buid artifact
 
 ### Prerequisites: 
-`Gem` `Ruby` `jekyll`. see [Prerequisites](#local_prereq) in [**Building documentation locally**](#building-documentation-locally)
+`Gem` `Ruby` `jekyll`. For more details, see [Prerequisites](#local_prereq) in [**Building documentation locally**](#building-documentation-locally)
 ### Steps:
 1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
 
