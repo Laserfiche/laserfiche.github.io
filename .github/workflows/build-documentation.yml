@@ -53,6 +53,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          approvers: laserfiche-act
+          minimum-approvals: 1
+          issue-body: "Please approve or deny the deployment"
+          exclude-workflow-initiator-as-approver: false
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
