@@ -20,7 +20,7 @@ Here is a table:
 | row3 | row3 | row3 |
 | row4 | row4 | row4 |
 
-Here is javascript snippet:
+Here is a javascript snippet:
 ```js
 function getName(i: int) {
     for (let i = 0; i < n; ++i){
