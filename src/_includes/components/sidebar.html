@@ -9,7 +9,6 @@
     collection_key, collection_value, collection, nav_footer_custom.
   Should not be cached, because nav_footer_custom.html might depend on page.
 {%- endcomment -%}
-
 <div class="side-bar">
   <div class="site-header" role="banner">
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
@@ -69,7 +68,6 @@
       {% endfor %}
     {% endif %}
   </nav>
-
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}

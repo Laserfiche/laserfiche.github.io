@@ -78,6 +78,4 @@ To redirect from a list of links to a page, add a redirect-from key in the front
 1. Run `jekyll serve` and browse <http://127.0.0.1:4000/developer.laserfiche.com/>
 
 ## Pushing to production
-To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. 
-
-
+To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. You can view the results on [Github Pages](https://laserfiche.github.io/developer.laserfiche.com/).
