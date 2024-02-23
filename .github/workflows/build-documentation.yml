@@ -45,6 +45,19 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
 
+      - name: Add page config to preview artifact
+        run: |
+          cd ./_site
+          touch _config.yml
+          echo "baseurl: /developer.laserfiche.com" >> _config.yml
+          
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: preview-artifact
+          path: ${{ github.workspace }}/_site
+
+
   # Deployment job
   deploy:
     environment:
