@@ -1,6 +1,6 @@
 # Jekyll Documentation Generator Configuration File
 
-title: Laserfiche SharePoint Online Integration
+title: Laserfiche Developer Documentation
 
 exclude:
  # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
