@@ -64,4 +64,5 @@ plugins:
 heading_anchors: true
 color_scheme: lf-styles
 favicon_ico: "/assets/favicon.ico"
+logo: "/assets/laserfiche_2019.svg"
 
