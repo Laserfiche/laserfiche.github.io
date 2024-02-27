@@ -51,7 +51,7 @@ jobs:
           cp -r ./_site/* ./docs_temp
           cd docs_temp
           touch _config.yml
-          echo "baseurl: /" >> _config.yml
+          echo "baseurl: /developer.laserfiche.com" >> _config.yml
 
       - name: Upload preview artifact
         uses: actions/upload-artifact@v4
