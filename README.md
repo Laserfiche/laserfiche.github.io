@@ -64,15 +64,23 @@ To redirect from a list of links to a page, add a redirect-from key in the front
   ```
 
 
-## Previewing pages from buid artifact
+## Previewing pages from build artifact
 
-### Prerequisites: 
-`Gem` `Ruby` `jekyll`. For more details, see [Prerequisites](#local_prereq) in [**Building documentation locally**](#building-documentation-locally)
-### Steps:
+### Steps to preview in IIS:
 1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
 
-1. Download the artifact `preview-artifact`from the your build.
+1. Download the artifact `github-pages`from the your build.
 
+1. Move the artifact to a folder in the C drive.
+
+1. Create a website in IIS pointing to the folder containing the artifact
+
+1. Extract the files from the artifact.
+
+1. open the website from IIS.
+
+### Steps to preview using jekyll:
+1. Download the artifact `github-pages`from the your build.
 1. Extract the files from the artifact and navigate to the directory of the extracted files.
 
 1. Run `jekyll serve` and browse <http://127.0.0.1:4000/developer.laserfiche.com/>
