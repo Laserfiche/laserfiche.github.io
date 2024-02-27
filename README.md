@@ -68,22 +68,17 @@ To redirect from a list of links to a page, add a redirect-from key in the front
 
 ### Steps to preview in IIS:
 1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
-
-1. Download the artifact `github-pages`from the your build.
-
-1. Move the artifact to a folder in the C drive.
-
-1. Create a website in IIS pointing to the folder containing the artifact
-
-1. Extract the files from the artifact.
-
-1. open the website from IIS.
+1. Download the artifact `github-pages` from the your build.
+1. Extract the `artifact.tar` file from the artifact.
+1. Extract the files from the `artifact.tar` file.
+1. Create a website in IIS pointing to the folder containing the extracted files. NOTE: IIS may not work if the folder is under `Users/your.name`.
+1. Open the website from IIS.
 
 ### Steps to preview using jekyll:
+1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
 1. Download the artifact `github-pages`from the your build.
 1. Extract the files from the artifact and navigate to the directory of the extracted files.
-
-1. Run `jekyll serve` and browse <http://127.0.0.1:4000/developer.laserfiche.com/>
+1. Run `jekyll serve` and browse <http://127.0.0.1:4000/>
 
 ## Pushing to production
 To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. You can view the results on [Github Pages](https://laserfiche.github.io/developer.laserfiche.com/).
