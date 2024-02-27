@@ -44,29 +44,6 @@ jobs:
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
-        with: 
-          name: page-artifact
-
-      - name: Upload preview artifact
-        run: |
-          mkdir -p ./docs_temp
-          cp -r ./_site/* ./docs_temp
-          cd docs_temp
-          touch _config.yml
-          echo "baseurl: /" >> _config.yml
-
-      - name: Upload preview artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: preview-artifact
-          path: ${{ github.workspace }}/docs_temp
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test path
-        run: pwd
-
 
   # Deployment job
   deploy:
@@ -79,7 +56,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_name: page-artifact
-          preview: "true"
+        uses: actions/deploy-pages@v4
+
