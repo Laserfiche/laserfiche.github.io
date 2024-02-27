@@ -3,7 +3,7 @@ layout: default
 title: Guide II
 redirect_from:
    - /docs/Guides/Guide2
-nav_order: 3
+nav_order: 4
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.

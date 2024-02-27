@@ -138,3 +138,222 @@ HTTP 200 OK
   ]
 }
 ```
+
+To request the second batch of upload URLs, we make the following call, setting the value of <i>uploadId</i> to the one received in the response of the first call.
+<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/CreateMultipartUploadUrls</p>
+
+```json
+{
+  "uploadId": "YjBjMDBhZTUtNjMxMC00M2U0LThhZmMt==",
+  "startingPartNumber": 6,
+  "numberOfParts": 5
+}
+```
+The API will return a 200 HTTP response status code, with a response similar to that of the first call. The value of <i>uploadId</i> is the same as the first call, but the set of URLs is new. Below, the value of the upload URLs are replaced with "..." for the purpose of brevity.
+```json
+HTTP 200 OK
+{
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.CreateMultipartUploadUrlsResponse",
+  "uploadId": "YjBjMDBhZTUtNjMxMC00M2U0LThhZmMt==",
+  "urls": [
+    "...",
+    "...",
+    "...",
+    "...",
+    "..."
+  ]
+}
+```
+### Step 2: Writing the File Chunks
+Having requested 10 upload URLs, the file can be split into 10 chunks and each chunk directly written to one of the upload URLs. An <i>ETag</i> is returned for each chunk successfully written to an upload URL.
+
+Below, is a sample C# program that takes two inputs:
+1. A JSON file which includes the upload URLs. This file has the same schema as the response of the <code>CreateMultipartUploadUrls</code> API. The <code>uploadId</code> property is not used by the following program, but is considered to be present in the JSON file. This is intended to make it easier to use the following program by passing it the response received from the <code>CreateMultipartUploadUrls</code> API.
+```json
+{
+  "uploadId": "string",
+  "urls": [
+    "string"
+  ]
+}
+```
+2. The file to be written to the upload URLs.
+
+This program splits the input file into a number of chunks, and writes the chunks into the upload URLs. Finally, it prints the resulting <code>ETags</code>.
+
+```c#
+public class FileWriter
+{
+  static async Task Main(string[] args)
+  {
+    if (args.Count() != 2)
+    {
+      Console.WriteLine("Usage: FileWriter {urls_file} {file_to_be_uploaded}");
+    }
+    else
+    {
+      string urlsFilePath = args[0];
+      string filePath = args[1];
+      var eTags = await SplitAndWriteAsync(urlsFilePath, filePath);
+      Console.WriteLine(string.Join(", ", eTags));
+    }
+  }
+
+  private static async Task<string[]> SplitAndWriteAsync(string jsonFile, string filePath)
+  {
+    Schema schema;
+    using (StreamReader reader = new StreamReader(jsonFile))
+    {
+      string json = reader.ReadToEnd();
+      schema = JsonConvert.DeserializeObject<Schema>(json);
+    }
+
+    var uploadUrls = schema.Urls;
+    var chunkSizeInMB = DetermineChunkSize(filePath, schema.Urls.Length);
+    List<string> eTags = new List<string>();
+    using (FileStream fs = File.OpenRead(filePath))
+    {
+      int BUFFER_SIZE = chunkSizeInMB * 1024 * 1024;
+      byte[] buffer = new byte[BUFFER_SIZE];
+
+      int partNumber = 1;
+      while (true)
+      {
+        int effectiveLength = fs.Read(buffer, 0, BUFFER_SIZE);
+        var chunk = new byte[effectiveLength];
+        Array.Copy(buffer, chunk, effectiveLength);
+        var eTag = await WriteAsync(partNumber, uploadUrls[partNumber - 1], chunk);
+        eTags.Add(eTag);
+        if (effectiveLength != BUFFER_SIZE)
+          break;
+        partNumber++;
+      }
+    }
+    return eTags.ToArray();
+  }
+
+  private static int DetermineChunkSize(string filePath, int chunkCount)
+  {
+    FileInfo fileInfo = new FileInfo(filePath);
+    var length = fileInfo.Length;
+    var chunkSizeInMB = (1L * length / chunkCount) / (1024 * 1024);
+    if (chunkSizeInMB * 1024L * 1024 * chunkCount != length)
+    {
+      chunkSizeInMB++;
+    }
+    if (chunkSizeInMB < 5)
+    {
+      throw new Exception("File chunks would be less than 5MB.");
+    }
+    Console.WriteLine($"Chunk size in MB: {chunkSizeInMB}");
+    return (int)chunkSizeInMB;
+  }
+
+  private static async Task<string> WriteAsync(int partNumber, string url, byte[] chunk)
+  {
+    string eTag = null;
+    Console.WriteLine($"Writing chunk #{partNumber} ...");
+    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+    request.Method = "PUT";
+
+    if (chunk.Length > 0)
+    {
+      using (var memStream = new MemoryStream(chunk))
+      {
+        await memStream.CopyToAsync(request.GetRequestStream());
+      }
+    }
+    else
+    {
+      request.ContentLength = 0;
+    }
+
+    using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+    {
+      var statusCode = response.StatusCode;
+      if (statusCode != HttpStatusCode.OK)
+      {
+        throw new Exception($"Writing chunk {partNumber} failed.");
+      }
+      eTag = response.Headers["ETag"];
+    }
+    return eTag;
+  }
+
+}
+
+class Schema
+{
+  [JsonProperty("uploadId")]
+  public string UploadId { get; set; }
+
+  [JsonProperty("urls")]
+  public string[] Urls { get; set; }
+}
+```
+### Step 3: Importing the Uploaded Parts
+<p>Having written the file parts into the upload URLs, we can import the uploaded parts, as a single document, with the Laserfiche API by using the following JSON request. The values of <i>partETags</i> is replaced with fake values for the purpose of brevity.</p>
+<p><b>Request Overview</b></p>            
+<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/<i>{parentEntryId}</i>/Folder/ImportUploadedParts</p>
+
+The following multipart/form request will:
+- Create a document named "LFAPI created large document" in the folder with ID <i>{parentEntryId}</i>.
+- Assign two field values and two tags to the document.
+- Trigger <i>Document Page Generation</i> during import, using <i>Standard Color</i> as the image type for the document pages.
+- Keep original PDF file when generating pages during import.
+
+```json
+{
+  "uploadId": "YjBjMDBhZTUtNjMxMC00M2U0LThhZmMt==",
+  "partETags": [
+    "etag1", "etag2", "etag3", "etag4", "etag5",
+    "etag6", "etag7", "etag8", "etag9", "etag10", 
+  ],  
+  "name": "LFAPI created large document",
+  "autoRename": true,
+  "pdfOptions": {
+    "generatePages": true,
+    "generatePagesImageType": "StandardColor",
+    "keepPdfAfterImport": true
+  },
+  "metadata": {
+    "templateName": "Email",
+    "fields": [
+      {
+        "name": "Sender",
+        "values": [
+          "sender@laserfiche.com"
+        ]
+      },
+      {
+        "name": "Recipients",
+        "values": [
+          "recipient_1@laserfiche.com",
+          "recipient_2@laserfiche.com",
+          "recipient_3@laserfiche.com",
+        ]
+      }
+    ],
+    "tags": [
+      "Information tag 1",
+      "Information tag 2",
+    ]
+  }
+}
+```
+
+<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">The request body for chunked import has the same structure as the simple import, except that for chunked import, there are two additional parameters: <i>uploadId</i> and <i>partETags</i>.</p>
+
+As the chunked import uses asynchronous style, the API will return a <i>task ID</i> which can be used to check the status of the import task.
+```json
+HTTP 200 OK
+{
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.StartTaskResponse",
+  "taskId": "2f12f540-db06-49bf-abe5-77a30279dfa4"
+}
+```
+
+
+<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;"><b>Note:</b> For details about the <i>Chunked Import</i> limits, see <a href="../guide_api-limits.html">this page</a>.</p>
+  
+<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;"><b>Note:</b> To import text or images as an Edoc, set the <code>importAsElectronicDocument</code> parameter in the request body to <code>true</code>.</p>
