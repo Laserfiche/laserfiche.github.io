@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guide I
-nav_order: 3
+nav_order: 2
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
