@@ -7,27 +7,31 @@ parent: Guides
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
 
-<h1> Import Document (V2) </h1>
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">To see the guide for V1, click <a href="../guide_importing-documents.html">here</a>.</p>
+# Import Document (V2)
+
+{: .note }
+To see the guide for V1, click [here](../guide_importing-documents.html)
 
 Laserfiche API V2 provides two types of APIs for importing a document:
-<ul>
-    <li><b>Simple Import:</b> this is intended to be used for importing <i>small</i> documents in a <i>synchronous</i> style. The current maximum file size limit for this API is 100 MB.</li>
-    <li><b>Chunked Import:</b> this is intended to be used for importing <i>large</i> documents in an <i>asynchronous</i> style, i.e. using the <a href="guide_long-operations-v2.html">long operation</a> pattern. The current maximum file size limit for this API is 64 GB.</li>
-</ul>
+- **Simple Import:** this is intended to be used for importing *small* documents in a *synchronous* style. The current maximum file size limit for this API is 100 MB.
+- **Chunked Import:** this is intended to be used for importing *large* documents in an *asynchronous* style, i.e. using the [long operation](guide_long-operations-v2.html) pattern. The current maximum file size limit for this API is 64 GB.
 
-<h2>Simple Import</h2>
-<p>Create a document with the Laserfiche API by using the following multipart/form POST request.</p>
-<p><b>Request Overview</b></p>            
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/<i>{parentEntryId}</i>/Folder/Import</p>
-<p>As an example, the following multipart/form request will:</p> 
-<ul>
-<li>Create a document named "LFAPI created document" in the folder with ID <i>{parentEntryId}</i>.</li>
-<li>Assign two field values and two tags to the document.</li>
-<li>Trigger <i>Document Page Generation</i> during import, using <i>Standard Color</i> as the image type for the document pages.</li>
-<li>Keep original PDF file when generating pages during import.</li>
-</ul>
-<p>For this, it is assumed that we place a PDF file into the "file" portion of the form, and the following JSON into the "request" part of the form.</p>
+## Simple Import
+Create a document with the Laserfiche API by using the following multipart/form POST request.
+
+
+**Request Overview**
+
+{: .note}
+POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{parentEntryId}*/Folder/Import
+As an example, the following multipart/form request will: 
+
+- Create a document named "LFAPI created document" in the folder with ID *{parentEntryId}*.
+- Assign two field values and two tags to the document.
+- Trigger *Document Page Generation* during import, using *Standard Color* as the image type for the document pages.
+- Keep original PDF file when generating pages during import.
+
+For this, it is assumed that we place a PDF file into the "file" portion of the form, and the following JSON into the "request" part of the form.
 
 ```json
 {
@@ -64,9 +68,11 @@ Laserfiche API V2 provides two types of APIs for importing a document:
 }
 ```
 
-<p>If the document is created successfully, the API will return a 201 HTTP response status code with the details of the created entry in the response body. In addition, the URI for the created entry is returned in the <i>location</i> HTTP response header.</p>
-```json
+If the document is created successfully, the API will return a 201 HTTP response status code with the details of the created entry in the response body. In addition, the URI for the created entry is returned in the *location* HTTP response header.
+```
 HTTP 201 Created
+```
+```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Entries/Laserfiche.Repository.Document/$entity",
   "@odata.type": "#Laserfiche.Repository.Document",
@@ -99,21 +105,22 @@ HTTP 201 Created
 }
 ```
        
-<h2>Chunked Import</h2>
-<p>This is a 3-step process:</p>
-<ol>
-    <li>Requesting the <i>upload URLs</i> by calling the <i>CreateMultipartUploadUrls</i> API.</li>
-    <li>Splitting the file into parts (not necessarily of equal size), and writing each part into one of the upload URLs obtained in the previous step.</li>
-    <ul>
-    <li>The Laserfiche APIs are not involved in this step, i.e. the client needs to directly write the file parts into the upload URLs.</li>
-    </ul>
-    <li>Importing the uploaded parts by calling the <i>ImportUploadedParts</i> API.</li>
-</ol>
-<p>Next, we provide an example for importing a large PDF file using the process introduced above.</p>
-<h3>Step 1: Requesting the Upload URLs</h3>
-<p>Assuming that we intend to import the large file in 10 chunks, it is needed to request 10 upload URLs. This can be done either through one call or multiple calls to the <i>CreateMultipartUploadUrls</i> API. Here, we request the upload URLs through 2 calls, i.e. 5 upload URLs in each call.</p>
-<p><b>Request Overview</b></p>            
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/CreateMultipartUploadUrls</p>
+## Chunked Import
+This is a 3-step process:
+1. Requesting the *upload URLs* by calling the *CreateMultipartUploadUrls* API.
+1. Splitting the file into parts (not necessarily of equal size), and writing each part into one of the upload URLs obtained in the previous step.
+  - The Laserfiche APIs are not involved in this step, i.e. the client needs to directly write the file parts into the upload URLs.
+1. Importing the uploaded parts by calling the *ImportUploadedParts* API.
+
+Next, we provide an example for importing a large PDF file using the process introduced above.
+### Step 1: Requesting the Upload URLs
+Assuming that we intend to import the large file in 10 chunks, it is needed to request 10 upload URLs. This can be done either through one call or multiple calls to the *CreateMultipartUploadUrls* API. Here, we request the upload URLs through 2 calls, i.e. 5 upload URLs in each call.
+
+**Request Overview**    
+
+{:.note}
+POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/CreateMultipartUploadUrls
+
 ```json
 {
   "startingPartNumber": 1,
@@ -123,9 +130,11 @@ HTTP 201 Created
 }
 ```
 
-<p>The API will return a 200 HTTP response status code, with a <i>UploadId</i> and a set of URLs. The <i>UploadId</i> is unique as per execution of the 3-step process introduced above. Below, the value of the upload URLs are replaced with "..." for the purpose of brevity.</p>
-```json
+The API will return a 200 HTTP response status code, with a *UploadId* and a set of URLs. The *UploadId* is unique as per execution of the 3-step process introduced above. Below, the value of the upload URLs are replaced with "..." for the purpose of brevity.
+```
 HTTP 200 OK
+```
+```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.CreateMultipartUploadUrlsResponse",
   "uploadId": "YjBjMDBhZTUtNjMxMC00M2U0LThhZmMt==",
@@ -139,8 +148,10 @@ HTTP 200 OK
 }
 ```
 
-To request the second batch of upload URLs, we make the following call, setting the value of <i>uploadId</i> to the one received in the response of the first call.
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/CreateMultipartUploadUrls</p>
+To request the second batch of upload URLs, we make the following call, setting the value of *uploadId* to the one received in the response of the first call.
+
+{: .note }
+POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/CreateMultipartUploadUrls
 
 ```json
 {
@@ -149,9 +160,11 @@ To request the second batch of upload URLs, we make the following call, setting 
   "numberOfParts": 5
 }
 ```
-The API will return a 200 HTTP response status code, with a response similar to that of the first call. The value of <i>uploadId</i> is the same as the first call, but the set of URLs is new. Below, the value of the upload URLs are replaced with "..." for the purpose of brevity.
-```json
+The API will return a 200 HTTP response status code, with a response similar to that of the first call. The value of *uploadId* is the same as the first call, but the set of URLs is new. Below, the value of the upload URLs are replaced with "..." for the purpose of brevity.
+```
 HTTP 200 OK
+```
+```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.CreateMultipartUploadUrlsResponse",
   "uploadId": "YjBjMDBhZTUtNjMxMC00M2U0LThhZmMt==",
@@ -165,10 +178,10 @@ HTTP 200 OK
 }
 ```
 ### Step 2: Writing the File Chunks
-Having requested 10 upload URLs, the file can be split into 10 chunks and each chunk directly written to one of the upload URLs. An <i>ETag</i> is returned for each chunk successfully written to an upload URL.
+Having requested 10 upload URLs, the file can be split into 10 chunks and each chunk directly written to one of the upload URLs. An *ETag* is returned for each chunk successfully written to an upload URL.
 
 Below, is a sample C# program that takes two inputs:
-1. A JSON file which includes the upload URLs. This file has the same schema as the response of the <code>CreateMultipartUploadUrls</code> API. The <code>uploadId</code> property is not used by the following program, but is considered to be present in the JSON file. This is intended to make it easier to use the following program by passing it the response received from the <code>CreateMultipartUploadUrls</code> API.
+1. A JSON file which includes the upload URLs. This file has the same schema as the response of the ```CreateMultipartUploadUrls``` API. The ```uploadId``` property is not used by the following program, but is considered to be present in the JSON file. This is intended to make it easier to use the following program by passing it the response received from the ```CreateMultipartUploadUrls``` API.
 ```json
 {
   "uploadId": "string",
@@ -179,7 +192,7 @@ Below, is a sample C# program that takes two inputs:
 ```
 2. The file to be written to the upload URLs.
 
-This program splits the input file into a number of chunks, and writes the chunks into the upload URLs. Finally, it prints the resulting <code>ETags</code>.
+This program splits the input file into a number of chunks, and writes the chunks into the upload URLs. Finally, it prints the resulting ```Etags```.
 
 ```c#
 public class FileWriter
@@ -292,14 +305,17 @@ class Schema
 }
 ```
 ### Step 3: Importing the Uploaded Parts
-<p>Having written the file parts into the upload URLs, we can import the uploaded parts, as a single document, with the Laserfiche API by using the following JSON request. The values of <i>partETags</i> is replaced with fake values for the purpose of brevity.</p>
-<p><b>Request Overview</b></p>            
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">POST https://api.laserfiche.com/repository/v2/Repositories/<i>{repositoryId}</i>/Entries/<i>{parentEntryId}</i>/Folder/ImportUploadedParts</p>
+Having written the file parts into the upload URLs, we can import the uploaded parts, as a single document, with the Laserfiche API by using the following JSON request. The values of *partETags* is replaced with fake values for the purpose of brevity.
+
+**Request Overview** 
+
+{:.note}
+POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{parentEntryId}*/Folder/ImportUploadedParts
 
 The following multipart/form request will:
-- Create a document named "LFAPI created large document" in the folder with ID <i>{parentEntryId}</i>.
+- Create a document named "LFAPI created large document" in the folder with ID *{parentEntryId}*.
 - Assign two field values and two tags to the document.
-- Trigger <i>Document Page Generation</i> during import, using <i>Standard Color</i> as the image type for the document pages.
+- Trigger *Document Page Generation* during import, using *Standard Color* as the image type for the document pages.
 - Keep original PDF file when generating pages during import.
 
 ```json
@@ -342,11 +358,14 @@ The following multipart/form request will:
 }
 ```
 
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;">The request body for chunked import has the same structure as the simple import, except that for chunked import, there are two additional parameters: <i>uploadId</i> and <i>partETags</i>.</p>
+{: .note}
+The request body for chunked import has the same structure as the simple import, except that for chunked import, there are two additional parameters: *uploadId* and *partETags*.
 
-As the chunked import uses asynchronous style, the API will return a <i>task ID</i> which can be used to check the status of the import task.
-```json
+As the chunked import uses asynchronous style, the API will return a *task ID* which can be used to check the status of the import task.
+```
 HTTP 200 OK
+```
+```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.StartTaskResponse",
   "taskId": "2f12f540-db06-49bf-abe5-77a30279dfa4"
@@ -354,6 +373,8 @@ HTTP 200 OK
 ```
 
 
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;"><b>Note:</b> For details about the <i>Chunked Import</i> limits, see <a href="../guide_api-limits.html">this page</a>.</p>
+{: .note}
+**Note:** For details about the *Chunked Import* limits, see [this page](../guide_api-limits.html).
   
-<p style="background-color:#FFEEC1;margin:1.2rem 0;padding:1.5rem;"><b>Note:</b> To import text or images as an Edoc, set the <code>importAsElectronicDocument</code> parameter in the request body to <code>true</code>.</p>
+{: .note} 
+**Note:** To import text or images as an Edoc, set the ```importAsElectronicDocument``` parameter in the request body to ```true```.
