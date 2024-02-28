@@ -117,3 +117,12 @@ $media-queries: (
   lg: $content-width + $nav-width,
   xl: 87.5rem,
 ) !default;
+
+// Laserfiche variables for footer
+$base-unit: 10px;
+
+$font-size0:1rem;
+
+$color-dark: #222930;
+$color-footer: #9ea7ae; /*random gray in the 206 range*/
+$color-white: #fff;

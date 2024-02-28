@@ -30,12 +30,10 @@ layout: table_wrappers
         </div>
       </div>
     </div>
-    <div class="footer-container">
-      {% include components/footer.html %}
-      {% if site.search_enabled != false %}
-          {% include components/search_footer.html %}
-        {% endif %}
-    </div>
+    {% include components/footer.html %}
+    {% if site.search_enabled != false %}
+        {% include components/search_footer.html %}
+      {% endif %}
   </div>
 
   {% if site.mermaid %}
