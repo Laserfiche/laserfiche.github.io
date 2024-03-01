@@ -2,7 +2,7 @@
   {%- include footer_custom.html -%}
 {% endcapture %}
 {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
-  <footer>
+  <div id="footer">
     {% if site.back_to_top %}
       <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
     {% endif %}
@@ -29,5 +29,5 @@
         {% endif %}
       </div>
     {% endif %}
-  </footer>
+    </div>
 {% endif %}
