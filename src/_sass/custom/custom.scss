@@ -1,1 +1,75 @@
-// custom SCSS (or CSS) goes here
+footer {
+  background-color: rgb(252, 252, 252);
+  a:not([class]) {
+    text-decoration: none;
+  }
+  ul, ol {
+    list-style-type:none;
+    padding-inline-start:0px;
+    margin: 10px;
+  }
+
+  .container {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    span {
+      font-weight: bold;
+      color:$lf-orange;
+      margin: 10px;
+    }
+
+    .Resources, .about-footer-menu{
+      padding: 10px;
+      .intermediate-menu {
+        display:flex;
+        flex-direction: row;
+        align-items: space-around;
+        span {
+          color: #8ba1b0;
+          font-weight:bold;
+        }
+        .sub-menu {
+          span {
+            color: #222c33;
+            font-weight:normal;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .social-menu {
+    display: block;
+    ul {
+        list-style-type:none;
+        display: flex;
+        flex-direction: row;
+        li {
+            margin:10px;
+        }
+
+    }
+}
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal !important;
+  border: 0;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
