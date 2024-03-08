@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Export Document (V2)
-nav_order: 2
+nav_order: 5
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
@@ -23,6 +23,7 @@ Retrieve a document from the repository in a synchronous style, using the follow
 
 {: .note }
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Export?pageRange=*{pageRange}*
+
 - The **pageRange** parameter is a comma-separated range of pages to include. Ex: 1,3,4 or 1-3,5-7,9. This value is ignored when exporting the document as **Edoc**. If no value is given, the API will export all pages.
 - A Laserfiche administrator may configure the document repository to have audit reasons that can be selected when performing various actions. These audit reasons include "Export" audit reasons, which give specific reasons on why a document may need to be exported. You can include an auditReasonId and optionally a comment in the request body. The available audit reasons for a repository can be retrieved through this GET request: 
 ```

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Import Document (V2)
-nav_order: 1
+nav_order: 8
 redirect_from:
    - /guides/v2/guide_importing-documents-v2.html
 parent: Guides
