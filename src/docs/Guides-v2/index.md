@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guides
+title: Guides (V2)
 nav_order: 4
 has_children: true
 ---

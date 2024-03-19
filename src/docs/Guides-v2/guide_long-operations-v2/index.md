@@ -4,7 +4,7 @@ title: Repository Long Operations (V2)
 nav_order: 9
 redirect_from:
    - /guides/v2/guide_long-operations-v2.html
-parent: Guides
+parent: Guides (V2)
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

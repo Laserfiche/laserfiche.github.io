@@ -4,7 +4,7 @@ title: Simple Search (V2)
 nav_order: 13
 redirect_from:
    - /guides/v2/guide_simple-search-v2.html
-parent: Guides
+parent: Guides (V2)
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
