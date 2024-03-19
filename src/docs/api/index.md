@@ -5,7 +5,7 @@ nav_order: 2
 has_children: true
 redirect_from:
     - api/index.html
-    - API.html
+    - api.html
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

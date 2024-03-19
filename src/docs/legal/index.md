@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Legal
-nav_order: 9
+nav_order: 11
 redirect_from:
     - legal.html
 ---

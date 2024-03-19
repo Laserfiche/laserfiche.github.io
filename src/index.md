@@ -1,30 +1,29 @@
 ---
-layout: home
+layout: default
 title: Overview
 nav_order: 1
+redirect_from:
+    - guide.html
+    - guides/index.html
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
-## A note about the site
 
-This site demonstrates how technical documentation can be easily maintained. Each page in the table of contents to the left is written in markdown, compiled via jekyll into a static page, and served on github pages. For comparison, the content currently served on [developer.laserfiche.com](https://developer.laserfiche.com) is pictured below.
+# How-to Guides
 
-![](./assets/images/otherWebsite.png)
+## Overview of the Laserfiche API
 
-Here is a table:
+Get started with the Laserfiche API basics, including how to use it and how it works. [Learn More](./guide_overview-of-the-laserfiche-api)
 
-| column 1 | col 2 | col 3|
-| --- | --- | --- |
-| row1 | row1 | row1 |
-| row2 | row2 | row2 |
-| row3 | row3 | row3 |
-| row4 | row4 | row4 |
 
-Here is a javascript snippet:
-```js
-function getName(i: int) {
-    for (let i = 0; i < n; ++i){
-        console.log("hello, world");
-    }
-}
-```
+## Authenticating to the Laserfiche API
+
+Learn how to create a secure connection to Laserfiche Cloud and authenticate each API request. [Learn More](guide_authenticating-to-the-laserfiche-api)
+
+## Authenticating to the Swagger Playground
+
+Follow our step-by-step guide to authenticate and interact with our Swagger Playground.[Learn More](guide_authenticating-to-the-swagger-playground)
+
+## Building Laserfiche Apps
+
+Start building apps using building block libraries that streamline the process of consuming the Laserfiche API.[Learn More](guide_building-apps) 

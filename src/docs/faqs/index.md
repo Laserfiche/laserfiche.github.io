@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FAQS
-nav_order: 8
+nav_order: 10
 redirect_from:
     - faqs.html
 ---

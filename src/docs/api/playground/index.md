@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Swagger Playground
-nav_order: 2
+nav_order: 9
 redirect_from:
     - api/API.html
     - api/playground.html

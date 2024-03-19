@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Server
-nav_order: 1
+title: Self-Hosted Server
+nav_order: 10
 redirect_from:
     - api/server/index.html
 parent: API
