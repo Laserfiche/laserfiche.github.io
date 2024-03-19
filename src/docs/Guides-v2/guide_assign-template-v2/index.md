@@ -2,6 +2,8 @@
 layout: default
 title: Assign Template (V2)
 nav_order: 3
+redirect_from:
+   - /guides/v2/guide_assign-template-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
@@ -168,4 +170,4 @@ HTTP 200 Ok
 
 Here's what the fields would look like when viewed in the Laserfiche web client.
 
-<a href="./assets/images/doc-assign-template-01.png"><img src="./assets/images/doc-assign-template-01.png" style="margin:10px" alt="example.png"></a>
+![](./assets/images/doc-assign-template-01.png)

@@ -2,6 +2,8 @@
 layout: default
 title: Assign Links (V2)
 nav_order: 1
+redirect_from:
+   - /guides/v2/guide_assign-links-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.

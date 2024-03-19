@@ -2,6 +2,8 @@
 layout: default
 title: Create Folder (V2)
 nav_order: 4
+redirect_from:
+   - /guides/v2/guide_creating-folders-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.

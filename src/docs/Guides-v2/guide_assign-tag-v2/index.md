@@ -2,6 +2,8 @@
 layout: default
 title: Assign Tags (V2)
 nav_order: 2
+redirect_from:
+   - /guides/v2/guide_assign-tag-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.

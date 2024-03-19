@@ -2,6 +2,8 @@
 layout: default
 title: Get Dynamic Field Logic Values (V2)
 nav_order: 6
+redirect_from:
+   - /guides/v2/guide_get-dynamic-field-logic-values-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
@@ -21,7 +23,7 @@ Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.
 {: .note }
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Fields/GetDynamicFieldLogicValue
 
-The example retrieves the child field values that correlate to the given parent field value <b>California</b> of field <b>US States</b> on template ID <b>1234</b>.
+The example retrieves the child field values that correlate to the given parent field value **California** of field **US States** on template ID **1234**.
 
 ```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/12345/Fields/GetDynamicFieldLogicValue

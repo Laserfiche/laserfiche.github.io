@@ -2,6 +2,8 @@
 layout: default
 title: Get Folder Contents (V2)
 nav_order: 7
+redirect_from:
+   - /guides/v2/guide_get-folder-listing-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
@@ -23,7 +25,7 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries
 
 For this example scenario, we will retrieve the list of entries from a folder called Invoices. Here's what the listing would look like when viewed in the Laserfiche web client.
 
-<img src="./assets/images/doc-listing-01.png" class="img-fluid" loading="lazy">
+![](./assets/images/doc-listing-01.png)
 
 There is no request body for this API since it is a GET request.
 

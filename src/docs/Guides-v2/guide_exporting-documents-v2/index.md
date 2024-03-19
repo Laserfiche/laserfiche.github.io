@@ -2,6 +2,8 @@
 layout: default
 title: Export Document (V2)
 nav_order: 5
+redirect_from:
+   - /guides/v2/guide_exporting-documents-v2.html
 parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
