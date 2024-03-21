@@ -1,7 +1,7 @@
 ---
 layout: default
-title: API
-nav_order: 4
+nav_order: 3
+title: Guides
 has_children: true
 ---
 <!--Copyright (c) Laserfiche.
