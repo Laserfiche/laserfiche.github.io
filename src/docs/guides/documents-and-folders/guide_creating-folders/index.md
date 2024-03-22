@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Creating Folders (V1)
-nav_order: 1
+title: Create Folders (V1)
+nav_order: 2
 redirect_from:
     - guides/guide_creating-folders.html
     - guide_creating-folders.html
-parent: Create Folder (V2)
-grand_parent: Repository Folders and Documents
+parent: Repository Folders and Documents
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
@@ -20,7 +20,7 @@ Folders are the basis for organizing all of the content in your repository. You 
 POST https://api.laserfiche.com/repository/v1/Repositories/repoId/Entries/entryId/Laserfiche.Repository.Folder/children
 ```
 
-In the example scenario below, we will create a folder for a new employee named "Jane Smith" in our HR deparment.
+In the example scenario below, we will create a folder for a new employee named "Jane Smith" in our HR department.
 
 ```xml
 POST https://api.laserfiche.com/repository/v1/Repositories/r-abcd1234/Entries/908/Laserfiche.Repository.Folder/children

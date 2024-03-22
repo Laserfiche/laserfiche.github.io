@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Assign Template (V1)
-nav_order: 1
+nav_order: 2
 redirect_from:
     - guides/guide_assign-template.html
     - guide_assign-template.html  
-grand_parent: Metadata
-parent: Assign Template (V2)
+parent: Repository Metadata
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Importing Documents (V1)
-nav_order: 1
+title: Import Documents (V1)
+nav_order: 6
 redirect_from:
     - guides/guide_importing-documents.html
     - guide_importing-documents.html
-parent: Import Document (V2)
-grand_parent: Documents and Folders
+grand_parent: Guides
+parent: Repository Folders and Documents
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

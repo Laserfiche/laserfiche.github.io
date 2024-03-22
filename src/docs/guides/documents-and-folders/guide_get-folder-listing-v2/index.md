@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Get Folder Contents (V2)
-nav_order: 2
+nav_order: 3
 redirect_from:
    - /guides/v2/guide_get-folder-listing-v2.html
-parent: Documents and Folders
+parent: Repository Folders and Documents
+grand_parent: Guides
 has_children: true
 ---
 <!--Copyright (c) Laserfiche.

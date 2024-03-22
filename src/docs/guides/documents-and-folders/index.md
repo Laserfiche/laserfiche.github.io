@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Repository Folders And Documents
+title: Repository Folders and Documents
 nav_order: 1
 has_children: true
 parent: Guides

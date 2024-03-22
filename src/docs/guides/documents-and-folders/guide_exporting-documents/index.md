@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Exporting Documents (V1)
-nav_order: 1
+nav_order: 8
 redirect_from:
     - guides/guide_exporting-documents.html
     - guide_exporting-documents.html
-parent: Export Document (V2)
-grand_parent: Documents and Folders
+parent: Repository Folders and Documents
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
