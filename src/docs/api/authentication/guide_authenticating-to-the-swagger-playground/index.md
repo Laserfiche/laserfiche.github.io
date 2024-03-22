@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Authenticate from the Swagger UI Sandbox
-nav_order: 6
+nav_order: 1
 redirect_from:
     - guides/guide_authenticating-to-the-swagger-playground.html
     - guide_authenticating-to-the-swagger-playground.html
 parent: Authentication
+grand_parent: API
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

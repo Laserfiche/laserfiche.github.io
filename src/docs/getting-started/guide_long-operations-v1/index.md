@@ -5,7 +5,7 @@ nav_order: 1
 redirect_from:
     - guides/guide_long-operations.html
     - guide_long-operations.html
-parent: Long Operations (V2)
+parent: Long Operations
 grand_parent: Getting Started
 ---
 <!--Copyright (c) Laserfiche.

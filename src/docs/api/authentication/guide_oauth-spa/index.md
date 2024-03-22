@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Create OAuth SPA
-nav_order: 2
+title: Create OAuth Single-Page App
+nav_order: 4
 redirect_from:
   - guides/guide_oauth-spa.html
   - guide_oauth-spa.html
 parent: Authentication
+grand_parent: API
 ---
 
 <!--Copyright (c) Laserfiche.

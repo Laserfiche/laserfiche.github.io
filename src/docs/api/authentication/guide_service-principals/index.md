@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Service Principals
-nav_order: 4
+nav_order: 2
 redirect_from:
   - guides/guide_service-principals.html
   - guide_service-principals.html
 parent: Authentication
+grand_parent: API
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

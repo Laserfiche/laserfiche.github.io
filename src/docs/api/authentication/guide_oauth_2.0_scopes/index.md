@@ -1,11 +1,12 @@
 ---
 layout: default
 title: OAuth 2.0 Scopes
-nav_order: 5
+nav_order: 6
 redirect_from:
   - guides/guide_oauth_2.0_scopes.html
   - guide_oauth_2.0_scopes.html
 parent: Authentication
+grand_parent: API
 ---
 
 <!--Copyright (c) Laserfiche.

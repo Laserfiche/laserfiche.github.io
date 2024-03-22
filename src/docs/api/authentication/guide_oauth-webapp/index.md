@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Create OAuth Web App
-nav_order: 3
+nav_order: 5
 redirect_from:
   - guides/guide_oauth-webapp.html
   - guide_oauth-webapp.html
 parent: Authentication
+grand_parent: API
 ---
 
 <!--Copyright (c) Laserfiche.

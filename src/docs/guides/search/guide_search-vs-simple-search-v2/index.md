@@ -4,8 +4,8 @@ title: Search vs. Simple Search (V2)
 nav_order: 1
 redirect_from:
    - /guides/v2/guide_search-vs-simple-search-v2.html
-parent: Search
-has_children: true
+parent: Repository Search
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

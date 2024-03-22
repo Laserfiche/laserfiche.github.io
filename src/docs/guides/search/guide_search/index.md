@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Search 
-nav_order: 1
+title: Search (V1)
+nav_order: 4
 redirect_from:
   - guides/guide_search.html
   - guide_search.html
-parent: Search (V2)
-grand_parent: Search
+parent: Repository Search
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Write Field Values (V1)
-nav_order: 1
+nav_order: 4
 redirect_from:
   - guides/guide_write-field-values.html
   - guide_write-field-values.html
   - guides/guide_update-field-values.html
   - guide_update-field-values.html
-parent: Write Field Values (V2)
-grand_parent: Metadata
+parent: Repository Metadata
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

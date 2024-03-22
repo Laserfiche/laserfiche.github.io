@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Get Dynamic Field Values (V1)
-nav_order: 1
+nav_order: 10
 redirect_from:
     - guides/guide_get-dynamic-field-logic-values.html
     - guide_get-dynamic-field-logic-values.html
-parent: Get Dynamic Field Values (V2)
-grand_parent: Metadata
+parent: Repository Metadata
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

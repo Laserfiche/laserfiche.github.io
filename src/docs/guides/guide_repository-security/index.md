@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Repository Security
-nav_order: 3
+nav_order: 6
 redirect_from:
   - guides/guide_repository-security.html
   - guide_repository-security.html
-parent: Other Guides
+parent: Guides
 ---
 
 <!--Copyright (c) Laserfiche.

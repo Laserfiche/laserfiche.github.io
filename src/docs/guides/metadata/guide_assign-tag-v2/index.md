@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Assign Tags (V2)
-nav_order: 2
+nav_order: 5
 redirect_from:
    - /guides/v2/guide_assign-tag-v2.html
-parent: Metadata
-has_children: true
+parent: Repository Metadata
+grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

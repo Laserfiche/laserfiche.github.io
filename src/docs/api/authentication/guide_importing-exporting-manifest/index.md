@@ -6,6 +6,7 @@ redirect_from:
     - guides/guide_importing-exporting-manifest.html
     - guide_importing-exporting-manifest.html
 parent: Authentication
+grand_parent: API
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->

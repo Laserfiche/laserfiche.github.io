@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Libraries
-nav_order: 8
+nav_order: 2
 redirect_from:
     - libraries.html
 parent: API

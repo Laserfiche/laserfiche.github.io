@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Create OAuth Service App
-nav_order: 1
+nav_order: 3
 redirect_from:
   - guides/guide_oauth-service.html
   - guide_oauth-service.html
 parent: Authentication
+grand_parent: API
 ---
 
 <!--Copyright (c) Laserfiche.

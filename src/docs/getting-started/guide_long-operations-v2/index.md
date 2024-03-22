@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Long Operations (V2)
+title: Long Operations
 nav_order: 3
 redirect_from:
    - /guides/v2/guide_long-operations-v2.html
