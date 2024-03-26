@@ -18,28 +18,28 @@ Want to jump right in and start making some API calls now? Check out our guide t
 
 ## Authenticate to the Swagger Playground
 
-Follow our step-by-step guide to authenticate and interact with our Swagger Playground. [Learn More](guide_authenticating-to-the-swagger-playground.html)
+Follow our step-by-step guide to authenticate and interact with our Swagger Playground. [Learn More](../../api/authentication/guide_authenticating-to-the-swagger-playground/)
 
 Looking for core repository functionality? Learn how you can authenticate to the Laserfiche API, create some folders, write field values and import documents to your repository.
 
 ## Authenticate to the Laserfiche API
-Learn how to create a secure connection to Laserfiche and authenticate each API request. [Learn More](guide_authenticating-to-the-laserfiche-api.html)
+Learn how to create a secure connection to Laserfiche and authenticate each API request. [Learn More](../../api/authentication/guide_authenticate-to-the-laserfiche-api/)
 
 ## Create Folders
 
-Create the folder structure in your repository.[Learn More](v2/guide_creating-folders-v2.html)
+Create the folder structure in your repository.[Learn More](../../guides/documents-and-folders/guide_creating-folders-v2/)
 
 ## Write Field Values
 
-Assign values to Laserfiche fields. [Learn More](v2/guide_write-field-values-v2.html)
+Assign values to Laserfiche fields. [Learn More](../../guides/metadata/guide_write-field-values-v2/)
 
 ## Import documents
 
-Learn how to import documents. [Learn More](guide_importing-documents.html)
+Learn how to import documents. [Learn More](../../guides/documents-and-folders/guide_importing-documents/)
 
 ## Where can I use the Laserfiche API?
 
-The Laserfiche API is available for Laserfiche Cloud and [Self-Hosted](/api/server/index.html) Laserfiche instances.
+The Laserfiche API is available for Laserfiche Cloud and [Self-Hosted](../../api/server/) Laserfiche instances.
 
 ## What can I build with the Laserfiche API?
 
@@ -50,5 +50,5 @@ Leverage the Laserfiche API to build integrations with other enterprise platform
 - **CRM integration.** The sales department uses a CRM platform to manage all customer data. They'd like to store copies of all customer emails and communications in the Laserfiche repository. With the Laserfiche API, an integration can automatically push customer-related documents from the CRM platform to the repository for archival and retention.
 
 ## Next Steps:
-- Check out our [Guides](/guides/index.html) page for more walk-throughs and tutorials about the Laserfiche API.
-- If you're new to RESTful web APIs, check out our [overview](guide_overview-of-the-laserfiche-api.html) to learn what the API looks like and how it works.
+- Check out our [Guides](../../guides/) page for more walk-throughs and tutorials about the Laserfiche API.
+- If you're new to RESTful web APIs, check out our [overview](../../overview/guide_overview-of-the-laserfiche-api/) to learn what the API looks like and how it works.

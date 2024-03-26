@@ -13,11 +13,11 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Export Document (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_exporting-documents.html)
+To see the guide for V1, click [here](../guide_exporting-documents/)
 
 Laserfiche API V2 provides two types of APIs for retrieving a document from the repository:
   - **Simple Export:** this is for exporting documents in a *synchronous* style. The export may time out, and hence fail, if it takes longer than 60 seconds.
-  - **Async Export:** this is for exporting documents in an *asynchronous* style, i.e. using the [long operation](guide_long-operations-v2.html).
+  - **Async Export:** this is for exporting documents in an *asynchronous* style, i.e. using the [long operation](../../../getting-started/guide_long-operations-v2/).
 
 ## Simple Export
 Retrieve a document from the repository in a synchronous style, using the following POST request.

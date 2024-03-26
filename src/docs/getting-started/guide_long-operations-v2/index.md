@@ -13,7 +13,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Repository Long Operations (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_long-operations.html).
+To see the guide for V1, click [here](../guide_long-operations-v1/).
 
 Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API follows the [Asynchronous Request-Reply](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply) pattern, where the call will return a *task ID* representing the work of the request. Client applications can then use this task ID to retrieve the status of the operation and the completed result of the action.
 
@@ -116,7 +116,7 @@ HTTP 200 Ok
 **Note:** For Laserfiche Cloud, only a limited number of concurrent long operations can be run per user session, i.e. per valid OAuth access token. If you start an operation and then decide to cancel the operation, use the `DELETE https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?taskIds={taskId}` API to stop the operation. Stopping an operation while it is in progress can yield partial results of the original operation. For example, when copying a folder, some entries may be created prior to the operation stopping.
 
 {: .note }
-**Note:** For more details about the API limits, see [this page](../guide_api-limits.html).
+**Note:** For more details about the API limits, see [this page](../guide_api-limits/).
 
 {: .note }
 **Note:** A task ID will expire 15 minutes after its corresponding operation has completed.

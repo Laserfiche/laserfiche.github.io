@@ -21,20 +21,20 @@ Create an OAuth Web App when you want to write a web app where you can store ser
 
 ## Register your Web App in the Developer Console
 
-1. Sign in to the [Developer Console](/developer-console.html).
+1. Sign in to the [Developer Console](../../../getting-started/developer-console/).
 1. Click **New** to display the **Create Application** dialog box. Select the option to create a new app and then select the **Web App** app type and give the app a name.
 
 1. On the **App Configuration** page, specify a redirect URI. The redirect URI must be a valid endpoint in the integration application. The OAuth service will send  an authorization code and access token to the Redirect URI in the OAuth flow. Only URIs with HTTPS or HTTP schemes are allowed. And HTTP is only supported for local hosts, e.g., http://localhost/callback  or http://localhost:11111/callback. Each Web App can have a maximum of 10 Redirect URIs registered.
 
 1. Take note of the generated Client ID and Client Secret, as they will be necessary when communicating with the OAuth service.
 
-1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your application to function properly. See [OAuth 2.0 Scopes for Laserfiche APIs](guide_oauth_2.0_scopes.html) for more details.
+1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your application to function properly. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
 
 
 ## OAuth Authorization Code Grant Flow
 
-1. Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Web apps can optionally use the Proof Key for Code Exchange (PKCE) extension for additional security to avoid an authorization code interception attack. For more details on how to use the code challenge and code verifier from the PKCE extension, view the [SPA OAuth flow guide](guide_oauth-spa.html).
+1. Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Web apps can optionally use the Proof Key for Code Exchange (PKCE) extension for additional security to avoid an authorization code interception attack. For more details on how to use the code challenge and code verifier from the PKCE extension, view the [SPA OAuth flow guide](../guide_oauth-spa/).
     - Call the OAuth service authorization endpoint, including the *client_id* and *redirect_uri* query parameters for the registered app. See the following example authorization request.
         - ```xml
             GET https://signin.laserfiche.com/oauth/authorize?client_id=app1&response_type=code&state=someappstate&redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback&customerId=123456789&scope=repository.Read+repository.Write
@@ -44,7 +44,7 @@ Create an OAuth Web App when you want to write a web app where you can store ser
     - The **response_type** parameter is used by the application to inform the authorization server of the desired grant type. The value must be **code** for authorization code grant flow.
     - The **state** query parameter is optional but recommended. It is used to maintain the web application state between the request and callback. The parameter should be used to prevent cross-site request forgery as specified in the OAuth specification found in [RFC 6749 section 4.1](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.1).
     - The **customerId** parameter should be the same Laserfiche Cloud Account ID  used during the web app registration process.
-    - The **scope** parameter determines the OAuth 2.0 scopes requested by the app. Scopes are case-sensitive and space-delimited. See [OAuth 2.0 Scopes for Laserfiche APIs](guide_oauth_2.0_scopes.html) for more details.
+    - The **scope** parameter determines the OAuth 2.0 scopes requested by the app. Scopes are case-sensitive and space-delimited. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
 1. After sending the authorization request, the user will be redirected to sign in to Laserfiche Cloud if they are not already signed in. The user must sign in using the same Account ID as the one used for registering the web app. Otherwise, the OAuth service will return an error. If the user is already signed in to another Laserfiche Cloud service, the browser should already have the associated Laserfiche Cloud cookies. If the cookies exist, the process will skip the sign-in step and will show the consent page in next step directly.
 

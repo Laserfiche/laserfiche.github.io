@@ -13,11 +13,11 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 The Laserfiche API Server provides programmatic access to Laserfiche for self-hosted systems.
 
-The self-hosted Laserfiche API Server can be installed to connect with your self-hosted Laserfiche Server. The APIs available are almost the same as the APIs available for Cloud. We also provide [client libraries](/libraries/index.html) you can use to speed up the development process when integrating with Laserfiche using the Laserfiche APIs. The same client libraries can be used for both Cloud and Self-Hosted.
+The self-hosted Laserfiche API Server can be installed to connect with your self-hosted Laserfiche Server. The APIs available are almost the same as the APIs available for Cloud. We also provide [client libraries](../libraries/) you can use to speed up the development process when integrating with Laserfiche using the Laserfiche APIs. The same client libraries can be used for both Cloud and Self-Hosted.
 
 ### Differences between Cloud and Self-Hosted Laserfiche API
 
-- Authentication: The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](/guides/guide_authenticating-to-the-laserfiche-api.html) whereas the Laserfiche API Server for self-hosted systems supports [username/password authentication](#authenticate).
+- Authentication: The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/guide_authenticate-to-the-laserfiche-api/) whereas the Laserfiche API Server for self-hosted systems supports [username/password authentication](#authenticating-with-the-self-hosted-laserfiche-api).
 - APIs: The deprecated Cloud ServerSession APIs are not available in the Laserfiche API Server for self-hosted systems.
 - Volume Support: The Laserfiche API Server supports choosing volumes when creating new entries while the Laserfiche API in Cloud does not.
 
@@ -106,5 +106,5 @@ Now you're ready to make any Laserfiche API call.
 
 ## Try out your installation with a sample application
 
-Try our [Sample Projects](/libraries/index.html) to learn how to use our client libraries to access your self-hosted Laserfiche API Server.
+Try our [Sample Projects](../libraries/) to learn how to use our client libraries to access your self-hosted Laserfiche API Server.
 

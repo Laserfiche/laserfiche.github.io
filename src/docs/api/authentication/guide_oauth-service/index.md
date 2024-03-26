@@ -45,7 +45,7 @@ Create an OAuth Service App when you want to write a service application that ma
 
 ### Generate an HMAC Client Credential
 
-If a long-lasting **authorization key** was created, then the authorization key can be used as the HMAC client credential. Skip below to [Request an Access Token](#request-access-token).
+If a long-lasting **authorization key** was created, then the authorization key can be used as the HMAC client credential. Skip below to [Request an Access Token](#request-an-access-token).
 
 If a public **access key** was created, an HMAC client credential will need to be generated. The HMAC client credential is a JWT and should contain the following claims.
 

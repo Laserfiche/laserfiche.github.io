@@ -136,13 +136,13 @@ The Laserfiche API import can be made from the Postman tool.`
     - The `{repositoryId}` in the request URL is your **Laserfiche repository ID**.
     - The `{parentFolderId}` in the request URL is the **Laserfiche entry ID** of the folder the file will be imported to.
     - The `{documentName}` in the request URL is the **filename** when imported to the Laserfiche repository.
-    - The `{accessToken}` in the Authorization request header is a valid [access token](../guide_authenticating-to-the-laserfiche-api).
+    - The `{accessToken}` in the Authorization request header is a valid [access token](../../../api/authentication/guide_authenticate-to-the-laserfiche-api).
     - The `electronicDocument` in the request body can be **selected** using the file picker.
     - As an example, the `request` in the request body assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository.
 1. **Send** the request to import a document. If an error occurs, verify that:
     - The user or service principal associated with the access token has access to the repository and has the right to import to the selected folder.
     - The template and field definitions being assigned to the entry exist in the repository. Alternatively, send a request without assigning any metadata by setting the `request` in the request body to `{}`.
-    - If a 403 Forbidden HTTP response status code is returned, the access token may need the "repository.Write" scope. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes) for more details.
+    - If a 403 Forbidden HTTP response status code is returned, the access token may need the "repository.Write" scope. See [OAuth 2.0 Scopes for Laserfiche APIs](../../../api/authentication/guide_oauth_2.0_scopes/) for more details.
 
 ## Next Steps
-- Check out how to [import a document with low-code tools](../guide_low-code-tools).
+- Check out how to [import a document with low-code tools](../../../getting-started/guide_low-code-tools-v1/).

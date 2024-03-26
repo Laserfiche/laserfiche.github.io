@@ -15,7 +15,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 Use the search API to find entries in your Laserfiche Cloud repository.
 
-A search operation follows the [long operation](guide_long-operations.html) pattern.
+A search operation follows the [long operation](../../../getting-started/guide_long-operations-v1/) pattern.
 
 1. The client application launches a search query by calling the search API
 1. The API call will immediately return a token while the search continues running in Laserfiche Cloud. 
@@ -112,7 +112,7 @@ HTTP 200 Ok
 ```
 
 {: .note }
-**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](guide_get-folder-listing.html#fields).
+**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing#retrieve-field-metadata-for-each-document).
 
 To get the text context hits for a document in the search results, we can call GET https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Searches/*searchToken*/Results/*rowNumber*/ContextHits with the appropriate row number of the search result.
 

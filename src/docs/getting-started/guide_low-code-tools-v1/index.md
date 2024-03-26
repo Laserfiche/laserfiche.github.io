@@ -21,10 +21,10 @@ HTTP Requests to the Laserfiche API will require an Access Token for authenticat
 ### Laserfiche Cloud
 
 {: .note }
-**Note:** The following section only applies to Laserfiche Cloud. For Self-Hosted, see the [Self-Hosted Laserfiche](#self-hosted-authentication) section.
+**Note:** The following section only applies to Laserfiche Cloud. For Self-Hosted, see the [Self-Hosted Laserfiche](#self-hosted-laserfiche) section.
 
-The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](guide_authenticating-to-the-laserfiche-api.html). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
-1. Follow this guide to [register an OAuth service app in the Developer Console with a long-lasting authorization key](guide_oauth-service.html).
+The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/guide_authenticate-to-the-laserfiche-api/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
+1. Follow this guide to [register an OAuth service app in the Developer Console with a long-lasting authorization key](../../api/authentication/guide_oauth-service/).
 1. Create an HTTP action in your low-code solution to obtain an Access Token given a long-lasting `{authorizationKey}` obtained during the application registration.
     - ```xml
     POST https://signin.laserfiche.com/oauth/token
@@ -46,14 +46,14 @@ The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](guide_auth
     }
     ```
     - {: .note } **Note:** Authorization Keys and Access Tokens should be securely stored.
-1. The Access Token obtained from the **Get Laserfiche Access Token** action can then be used by downstream HTTP actions that interact with the Laserfiche APIs. For example, [import a document using a low-code tool](#use-case-import-document).
+1. The Access Token obtained from the **Get Laserfiche Access Token** action can then be used by downstream HTTP actions that interact with the Laserfiche APIs. For example, [import a document using a low-code tool](#use-case-importing-a-document-from-microsoft-onedrive-into-laserfiche-using-microsoft-power-automate).
           
 ### Self-Hosted Laserfiche
 
 {: .note }
-**Note:** The following section only applies to Self-Hosted Laserfiche. For Cloud, see the [Laserfiche Cloud](#cloud-authentication) section.
+**Note:** The following section only applies to Self-Hosted Laserfiche. For Cloud, see the [Laserfiche Cloud](#laserfiche-cloud) section.
 
-HTTP requests to Laserfiche API Server require the Authorization header to contain an Access Token. See [Obtaining an Access Token using username/password authentication](../api/server/index.html#authenticate).
+HTTP requests to Laserfiche API Server require the Authorization header to contain an Access Token. See [Obtaining an Access Token using username/password authentication](../../api/server/#authenticating-with-the-self-hosted-laserfiche-api).
 ```xml
 POST https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Token
 Content-Type: application/x-www-form-urlencoded
@@ -81,7 +81,7 @@ HTTP 200 OK
 
 Prerequisite: obtain an Access Token. See [Authentication](#authentication).
 
-See the [importing a document guide](guide_importing-documents.html) for more details on the import API.
+See the [importing a document guide](../../guides/documents-and-folders/guide_importing-documents/) for more details on the import API.
 
 1. In Microsoft Power Automate, create a OneDrive **Get file metadata** action and select a document to import into Laserfiche.
 1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.
@@ -167,4 +167,4 @@ See the [importing a document guide](guide_importing-documents.html) for more de
     }
     ```
 ## Next Steps
-- Check out additional [Guides](index.html) for more walk-throughs and tutorials about the Laserfiche API.
+- Check out additional [Guides](../../guides) for more walk-throughs and tutorials about the Laserfiche API.

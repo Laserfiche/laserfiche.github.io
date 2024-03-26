@@ -129,4 +129,4 @@ In some cases, a response body can return a large amount of data that would be i
 - Learn how to [import a document into your repository](../../guides/documents-and-folders/guide_importing-documents-v2/).
 - Learn how to [create folders in your repository](../../guides/documents-and-folders/guide_creating-folders-v2/).
 - Learn how to [assign values to Laserfiche fields](../../guides/metadata/guide_write-field-values-v2/).
-- Check out additional [Guides](/guides/index.html) for more walk-throughs and tutorials about the Laserfiche API.
+- Check out additional [Guides](../../guides/) for more walk-throughs and tutorials about the Laserfiche API.

@@ -12,10 +12,10 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 # Search (V2)
 {: .note }
-To see the guide for V1, click [here](../guide_search.html).
+To see the guide for V1, click [here](../guide_search/).
 
 Use the search API to find entries in your Laserfiche Cloud repository.
-A search operation follows the [long operation](guide_long-operations-v2.html) pattern:
+A search operation follows the [long operation](../../../getting-started/guide_long-operations-v2/) pattern:
 
 1. The client application launches a search query by calling the search API.
 1. The API call will immediately return a task ID while the search continues running in Laserfiche Cloud.
@@ -114,7 +114,7 @@ HTTP 200 Ok
 ```
 
 {: .note }
-**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](guide_get-folder-listing-v2.html#fields).
+**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing-v2#retrieve-field-metadata-for-each-document).
 
 To get the text context hits for a document in the search results, we can call `GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Searches/{taskId}/Results/{rowNumber}/ContextHits` with the appropriate row number of the search result.
 ```xml
@@ -169,7 +169,7 @@ HTTP 200 Ok
 **Note:** Only a limited number of searches can be active per user session, i.e. per valid OAuth access token. If you started a search and want to cancel the search, use the `DELETE https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?taskIds={taskId}` call to remove the search.
 
 {: .note }
-**Note:** For more details about the API limits, see [this page](../guide_api-limits.html).
+**Note:** For more details about the API limits, see [this page](../../../getting-started/guide_api-limits/).
 
 {: .note }
 **Note:** Once the search operation is completed, the search results are cached by your session and the search will still be considered open. If you are finished using the results of the search, it is a recommended practice to DELETE the search.

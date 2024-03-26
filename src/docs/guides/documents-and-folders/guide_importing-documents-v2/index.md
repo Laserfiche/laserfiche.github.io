@@ -13,11 +13,11 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Import Document (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_importing-documents.html)
+To see the guide for V1, click [here](../guide_importing-documents/)
 
 Laserfiche API V2 provides two types of APIs for importing a document:
 - **Simple Import:** this is intended to be used for importing *small* documents in a *synchronous* style. The current maximum file size limit for this API is 100 MB.
-- **Chunked Import:** this is intended to be used for importing *large* documents in an *asynchronous* style, i.e. using the [long operation](guide_long-operations-v2.html) pattern. The current maximum file size limit for this API is 64 GB.
+- **Chunked Import:** this is intended to be used for importing *large* documents in an *asynchronous* style, i.e. using the [long operation](../../../getting-started/guide_long-operations-v2/) pattern. The current maximum file size limit for this API is 64 GB.
 
 ## Simple Import
 Create a document with the Laserfiche API by using the following multipart/form POST request.
@@ -377,7 +377,7 @@ HTTP 200 OK
 
 
 {: .note}
-**Note:** For details about the *Chunked Import* limits, see [this page](../guide_api-limits.html).
+**Note:** For details about the *Chunked Import* limits, see [this page](../../../getting-started/guide_api-limits/).
   
 {: .note} 
 **Note:** To import text or images as an Edoc, set the ```importAsElectronicDocument``` parameter in the request body to ```true```.

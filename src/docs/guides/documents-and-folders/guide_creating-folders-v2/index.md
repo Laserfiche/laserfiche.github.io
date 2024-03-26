@@ -17,7 +17,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Create Folder (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_creating-folders.html).
+To see the guide for V1, click [here](../guide_creating-folders/).
 
 
 Folders are the basis for organizing all of the content in your repository. You can create folders with the Laserfiche API by using the following POST API.

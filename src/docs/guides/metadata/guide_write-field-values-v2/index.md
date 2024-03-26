@@ -13,7 +13,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Write Field Values (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_write-field-values.html).
+To see the guide for V1, click [here](../guide_write-field-values/).
 
 Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Fields_and_Templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
 

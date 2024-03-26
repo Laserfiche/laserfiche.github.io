@@ -13,7 +13,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Using the Laserfiche API with Low-Code Tools (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_low-code-tools.html).
+To see the guide for V1, click [here](../guide_low-code-tools-v1/).
 
 Use the Laserfiche API to access Laserfiche from low-code tools. This guide will demonstrate how to import a document into Laserfiche with Microsoft Power Automate. Other low-code tools may follow a similar model.
 
@@ -26,9 +26,9 @@ HTTP Requests to the Laserfiche API will require an Access Token for authenticat
 {: .note }
 **Note:** The following section only applies to Laserfiche Cloud.
 
-The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](guide_authenticating-to-the-laserfiche-api.html). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
+The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/guide_authenticate-to-the-laserfiche-api/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
 
-  1. Follow [this guide](guide_oauth-service.htm) to register an OAuth service app in the Developer Console with a long-lasting authorization key.
+  1. Follow [this guide](../../api/authentication/guide_oauth-service) to register an OAuth service app in the Developer Console with a long-lasting authorization key.
 
   1. Create an HTTP action in your low-code solution to obtain an Access Token given a long-lasting `{authorizationKey}`obtained during the application registration.
   ```xml
@@ -52,7 +52,7 @@ The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](guide_auth
   }
   ```
   
-  1. The Access Token obtained from the **Get Laserfiche Access Token** action can then be used by downstream HTTP actions that interact with the Laserfiche APIs. For example, [import a document using a low-code tool](#use-case-import-document).
+  1. The Access Token obtained from the **Get Laserfiche Access Token** action can then be used by downstream HTTP actions that interact with the Laserfiche APIs. For example, [import a document using a low-code tool](#use-case-importing-a-document-from-microsoft-onedrive-into-laserfiche-using-microsoft-power-automate).
 
 {: .note }
   **Note:** Authorization Keys and Access Tokens should be securely stored.
@@ -61,7 +61,7 @@ The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](guide_auth
 
 Prerequisite: obtain an Access Token. See [Authentication](#authentication).
 
-See the [this guide](guide_importing-documents-v2.html) for more details on the Laserfiche import APIs.
+See the [this guide](../../guides/documents-and-folders/guide_importing-documents-v2) for more details on the Laserfiche import APIs.
 
   1. In Microsoft Power Automate, create a OneDrive **Get file metadata** action and select a document to import into Laserfiche.
   1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.
@@ -162,4 +162,4 @@ See the [this guide](guide_importing-documents-v2.html) for more details on the 
   ```
 
 ## Next Steps
-  - Check out additional [Guides](../../index.html) for more walk-throughs and tutorials about the Laserfiche API.
+  - Check out additional [Guides](../../guides/) for more walk-throughs and tutorials about the Laserfiche API.

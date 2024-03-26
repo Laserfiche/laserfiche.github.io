@@ -15,7 +15,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Get Folder Contents (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_get-folder-listing.html).
+To see the guide for V1, click [here](../guide_get-folder-listing/).
 
 Folders are the basis for organizing all of the content in your repository. In this guide, we will review how to retrieve the contents of a folder. The following GET API is used to return the list of entries of a specified folder.
 

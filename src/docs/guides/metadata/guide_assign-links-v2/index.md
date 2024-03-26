@@ -12,7 +12,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 # Assign Links (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_assign-links.html).
+To see the guide for V1, click [here](../guide_assign-links/).
 
 [Links](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
 
