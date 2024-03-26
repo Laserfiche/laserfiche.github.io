@@ -11,6 +11,7 @@ grand_parent: Guides
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
 
 # Search (V2)
+
 {: .note }
 To see the guide for V1, click [here](../guide_search/).
 

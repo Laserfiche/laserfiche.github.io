@@ -10,7 +10,8 @@ grand_parent: Guides
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
 
-## Search vs. Simple Search (V2)
+# Search vs. Simple Search (V2)
+
 {: .note }
 To see the guide for V1, click [here](../guide_search-vs-simple-search/).
 

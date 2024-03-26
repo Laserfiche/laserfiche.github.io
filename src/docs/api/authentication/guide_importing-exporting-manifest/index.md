@@ -12,6 +12,7 @@ grand_parent: API
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
 
 # Import and Export Application Manifest
+
 {: .note }
 **Note:** The following guide only applies to Laserfiche Cloud.
 

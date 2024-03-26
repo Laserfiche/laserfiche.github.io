@@ -28,7 +28,9 @@ Sample Projects: [Node.js](https://github.com/Laserfiche/lf-sample-repository-ap
 The .NET Standard 2.0 library for .NET applications.
 
 Client Core API: [Documentation](https://laserfiche.github.io/lf-api-client-core-dotnet/docs/1.x/index.html), [NuGet Package](https://www.nuget.org/packages/Laserfiche.Api.Client.Core)
+
 Repository API: [Documentation](https://laserfiche.github.io/lf-repository-api-client-dotnet/docs/v2/index.html), [NuGet Package](https://www.nuget.org/packages/Laserfiche.Repository.Api.Client.V2)
+
 Sample Projects: [Console Application](https://github.com/Laserfiche/lf-sample-repository-api-dotnet-srv)
 
 ### Java

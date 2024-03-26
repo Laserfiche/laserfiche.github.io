@@ -6,7 +6,6 @@ redirect_from:
    - /guides/v2/guide_get-folder-listing-v2.html
 parent: Repository Folders and Documents
 grand_parent: Guides
-has_children: true
 ---
 <!--Copyright (c) Laserfiche.
 Licensed under the MIT License. See LICENSE in the project root for license information.-->
@@ -246,6 +245,7 @@ HTTP 200 OK
 Different properties are supported for different entry types. Note that you may include multiple properties, in a comma-separated format, in the `$select` OData query parameter.
 
 Here is the list of default properties that can apply to *all entry types*. Note that when the `$select` OData query parameter is not used, all of these properties are returned by default.
+
 | --- |
 | `id` |
 | `name` |
@@ -264,6 +264,7 @@ Here is the list of default properties that can apply to *all entry types*. Note
 | `isLeaf` |
 
 Here is the list of properties specific to the *Document* entry type that you can `$select` on.
+
 | --- |
 | `extension` |
 | `electronicDocumentSize` (in bytes) |
