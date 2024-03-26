@@ -31,7 +31,7 @@ An application should be designed to provide useful limited functionality when o
 ### Configure Pre-Approved Scopes in the Developer Console
 
 Before an app can request an access token with scopes, a Developer Console Administrator must first pre-approve the scopes that can be requested. This is to ensure the app cannot request unapproved scopes and be granted inappropriate access to Laserfiche resources.
-1. Sign in to the [Developer Console](/developer-console.html).
+1. Sign in to the [Developer Console](../../../getting-started/developer-console/).
 1. In the Applications listing, select the app you want to configure.
 1. On the **App Configuration** page, select the **Authentication** tab.
 1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your app to function properly.
@@ -40,9 +40,9 @@ Before an app can request an access token with scopes, a Developer Console Admin
 
 When web applications and single-page applications request access tokens with scopes as part of the authorization flow, a user will be prompted with a consent form to grant or deny the requested scopes. For service applications, the pre-approved scopes are the scopes granted if requested by the app. See the below guides on how to request an access token with scopes for your app type.
 
-- Learn how to [create a connection for your OAuth Service App](guide_oauth-service.html).
-- Learn how to [create a connection for your OAuth Single-Page App](guide_oauth-spa.html).
-- Learn how to [create a connection for your OAuth Web App](guide_oauth-webapp.html).
+- Learn how to [create a connection for your OAuth Service App](../guide_oauth-service/).
+- Learn how to [create a connection for your OAuth Single-Page App](../guide_oauth-spa/).
+- Learn how to [create a connection for your OAuth Web App](../guide_oauth-webapp/).
 
 ## Available Scopes
 
@@ -104,8 +104,8 @@ The OAuth scope required to access each API is documented on the [Swagger Playgr
 
 ## Next Steps
 
-- Learn how to [get a user access token](guide_authenticating-to-the-laserfiche-api.html).
-- Learn how to [create a connection for your OAuth Service App](guide_oauth-service.html).
-- Learn how to [create a connection for your OAuth Single-Page App](guide_oauth-spa.html).
-- Learn how to [create a connection for your OAuth Web App](guide_oauth-webapp.html).
-- Check out additional [Guides](/guides/index.html) for more walk-throughs and tutorials about the Laserfiche API.
+- Learn how to [get a user access token](../guide_authenticate-to-the-laserfiche-api/).
+- Learn how to [create a connection for your OAuth Service App](../guide_oauth-service).
+- Learn how to [create a connection for your OAuth Single-Page App](../guide_oauth-spa/).
+- Learn how to [create a connection for your OAuth Web App](../guide_oauth-webapp/).
+- Check out additional [Guides](../../../guides/) for more walk-throughs and tutorials about the Laserfiche API.

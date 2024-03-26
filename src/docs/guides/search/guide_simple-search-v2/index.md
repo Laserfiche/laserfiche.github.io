@@ -13,9 +13,9 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 ## Simple Search (V2)
 
 {: .note }
-To see the guide for V1, click [here](../guide_simple-search.html).
+To see the guide for V1, click [here](../guide_simple-search/).
 
-The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. See [this guide](guide_search-vs-simple-search-v2.html) to view the differences between simple search and search.
+The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. See [this guide](../guide_search-vs-simple-search-v2/) to view the differences between simple search and search.
 
 In the following simple search, we want to find entries with a specific value in the *Purchase Order ID* field.
 
@@ -59,6 +59,6 @@ Simple searches will automatically time out if the search operation exceeds **15
 A single session, distinguished by a valid OAuth access token, can only have a limited number of searches running at one time. This limit does not differentiate between search and simple search.
 
 {: .note }
-- For more information about the API limits, see [this page](../guide_api-limits.html).
+- For more information about the API limits, see [this page](../../../getting-started/guide_api-limits/).
 - See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Template_Field.htm).
-- See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](guide_get-folder-listing-v2.html#fields).
+- See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing-v2/#retrieve-field-metadata-for-each-document).

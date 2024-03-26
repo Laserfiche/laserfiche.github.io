@@ -20,11 +20,11 @@ A single-page app (SPA) is a web application that runs entirely in the browser. 
 
 ## Register your Single-Page App in the Developer Console
 
-1. Sign in to the [Developer Console](/developer-console.html).
+1. Sign in to the [Developer Console](../../../getting-started/developer-console/)
 1. Click **New** to display the **Create Application** dialog box. Select the option to create a new app and then select the **Single-page App** app type and give the app a name.
 1. On the **App Configuration** page, specify a redirect URI. The redirect URI must be a valid endpoint in the integration application. The OAuth service will send  an authorization code and access token to the Redirect URI in the OAuth flow. Only URIs with HTTPS or HTTP schemes are allowed. And HTTP is only supported for local hosts, e.g., http://localhost/callback  or http://localhost:11111/callback. Each SPA can have a maximum of 10 Redirect URIs registered.
 1. Take note of the generated Client ID, as it will be necessary when communicating with the OAuth service.
-1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your application to function properly. See [OAuth 2.0 Scopes for Laserfiche APIs](guide_oauth_2.0_scopes.html) for more details.
+1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your application to function properly. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
 ## Generating a PKCE Code Verifier and Code Challenge
 
@@ -45,7 +45,7 @@ A single-page app (SPA) is a web application that runs entirely in the browser. 
             .TrimEnd('=')
             .Replace('+', '-')
             .Replace('/', '_');
-    ```
+        ```
 
     - The **code_verifier** and **code_challenge** values should have a length between 43 and 128 characters and can only contain a-z, A-Z, 0-9, "-", ".", "_", or "~" characters.
     - The **code_challenge** is generated from the **code_verifier** by SHA256 the **code_verifier** and then base64url encoded the value.
@@ -54,10 +54,10 @@ A single-page app (SPA) is a web application that runs entirely in the browser. 
 
 1. Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Call the OAuth service authorization endpoint, including the *client_id* and *redirect_uri* query parameters for the registered app. The PKCE extension requires *code_challenge* and *code_challenge_method* query parameters. See the following example authorization request.
     - ```xml
-    GET https://signin.laserfiche.com/oauth/authorize?client_id=app1&response_type=code&state=someappstate&
-        redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback&customerId=123456789&
-        code_challenge=some_code_challenge_value&code_challenge_method=S256&scope=repository.Read+repository.Write
-    ```
+        GET https://signin.laserfiche.com/oauth/authorize?client_id=app1&response_type=code&state=someappstate&
+            redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback&customerId=123456789&
+            code_challenge=some_code_challenge_value&code_challenge_method=S256&scope=repository.Read+repository.Write
+        ```
     - The **client_id** parameter is the Client ID generated during the application registration process. It can be found on the Developer Console.
     - The **redirect_uri** parameter determines where the OAuth service redirects to after the authorization part. The value must match one of the redirect URIs specified during the application registration process. If the value is not found in application registration, it will return an error in the user's browser and no redirect will happen.
     - The **response_type** parameter is used by the application to inform the authorization server of the desired grant type. The value must be **code** for authorization code grant flow.
@@ -65,7 +65,7 @@ A single-page app (SPA) is a web application that runs entirely in the browser. 
     - The **customerId** parameter should be the same Laserfiche Cloud Account ID  used during the web app registration process.
     - The **code_challenge** should be the value generated in the first step.
     - The **code_challenge_method** is used to inform the authorization server the type of code_challenge used. The value must be S256
-    - The **scope** parameter determines the OAuth 2.0 scopes requested by the app. Scopes are case-sensitive and space-delimited. See [OAuth 2.0 Scopes for Laserfiche APIs](guide_oauth_2.0_scopes.html) for more details.
+    - The **scope** parameter determines the OAuth 2.0 scopes requested by the app. Scopes are case-sensitive and space-delimited. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
 1. After sending the authorization request, the user will be redirected to sign in to Laserfiche Cloud if they are not already signed in. The user must sign in using the same Account ID as the one used for registering the SPA. Otherwise, the OAuth service will return an error. If the user is already signed in to another Laserfiche Cloud service, the browser should already have the associated Laserfiche Cloud cookies. If the cookies exist, the process will skip the sign-in step and will show the consent page in next step directly.
 1. The consent page will then be shown to the user to decide whether to grant the SPA access to their credentials. The user will have 5 minutes to either confirm or deny the consent. After 5 minutes of inactivity, the OAuth service will return an error and they will need to start the authorization flow from the beginning.

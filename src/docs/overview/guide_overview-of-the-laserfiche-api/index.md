@@ -17,7 +17,7 @@ The Laserfiche API is a set of RESTful web APIs that allows you interact with La
 
 ## Cloud vs Self-Hosted
 
-We provide a REST API for Laserfiche Cloud and Self-Hosted systems.  More information on how to download and install the Laserfiche API Server for your self-hosted system can be found [here](/api/server/index.html).
+We provide a REST API for Laserfiche Cloud and Self-Hosted systems.  More information on how to download and install the Laserfiche API Server for your self-hosted system can be found [here](../../api/server/).
 
 ## API Requests
 
@@ -25,12 +25,12 @@ All Laserfiche API request URLs can be broken down in the following parts:
 
 **{HTTP method} https://{host}/{API set}/{version}/{resource}?{query parameters}**
 
-- [{HTTP method}](#http_method) — The HTTP method used for the request
+- [{HTTP method}](#http-method) — The HTTP method used for the request
 - {host} — The host name of the Laserfiche Cloud API `api.laserfiche.com`, `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc.
-- [{API set}](#api_set) — The API set
+- [{API set}](#api-set) — The API set
 - [{version}](#version) — The API version to use (for Repository API only)
 - [{resource}](#resource) — The path to the Laserfiche resource that you're referencing
-- [{query parameters}](#query_parameters) — Optional OData query options or REST method parameters that customize the response
+- [{query parameters}](#query-parameters) — Optional OData query options or REST method parameters that customize the response
 
 ### HTTP Method
 
@@ -100,7 +100,7 @@ After the `table` segment, the resource can be interpreted as "in the MyTable re
 
 ### Query Parameters
 
-Query parameters attached to the end of a request can alter the behavior of the API calls. Some calls support standard OData query parameters, and some API calls may have additional custom query parameters specific to the call. To learn more about specific OData query parameters, see [this example](guide_get-folder-listing.html#query_parameters) on retrieving an entry listing from a folder. 
+Query parameters attached to the end of a request can alter the behavior of the API calls. Some calls support standard OData query parameters, and some API calls may have additional custom query parameters specific to the call. To learn more about specific OData query parameters, see [this example](../../guides/documents-and-folders/guide_get-folder-listing/#customizing-the-listing-response-with-query-parameters) on retrieving an entry listing from a folder. 
 
 ## API Responses
 
@@ -125,8 +125,8 @@ In some cases, a response body can return a large amount of data that would be i
 
 ### Next Steps
 
-- Learn how to [get a user access token](guide_authenticating-to-the-laserfiche-api.html).
-- Learn how to [import a document into your repository](v2/guide_importing-documents-v2.html).
-- Learn how to [create folders in your repository](v2/guide_creating-folders-v2.html).
-- Learn how to [assign values to Laserfiche fields](v2/guide_write-field-values-v2.html).
+- Learn how to [get a user access token](../../api/authentication/guide_authenticate-to-the-laserfiche-api/).
+- Learn how to [import a document into your repository](../../guides/documents-and-folders/guide_importing-documents-v2/).
+- Learn how to [create folders in your repository](../../guides/documents-and-folders/guide_creating-folders-v2/).
+- Learn how to [assign values to Laserfiche fields](../../guides/metadata/guide_write-field-values-v2/).
 - Check out additional [Guides](/guides/index.html) for more walk-throughs and tutorials about the Laserfiche API.

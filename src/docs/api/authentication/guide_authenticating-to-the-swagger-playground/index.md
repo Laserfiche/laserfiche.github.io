@@ -13,10 +13,10 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 # Authenticate from the Swagger UI Sandbox
 
-The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting [Laserfiche REST Swagger Playground](../api/playground.html).
+The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting [Laserfiche REST Swagger Playground](../../playground/).
 
 
-For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](/api/server/index.html#authenticate).
+For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](../../server/#authenticating-with-the-self-hosted-laserfiche-api).
 
 ## Using an OAuth Access Token on Swagger UI
 
@@ -29,7 +29,7 @@ For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](/a
 **Note:** These steps can be skipped if your app is a Web App or Single-Page App.
 
 
-1. Follow the guide on [Creating an OAuth Service App](guide_oauth-service.html). After going through the guide, you will have registered your service app on the Developer Console and gone through the OAuth Client Credentials Grant Flow to get an **OAuth Access Token**.
+1. Follow the guide on [Creating an OAuth Service App](../guide_oauth-service/). After going through the guide, you will have registered your service app on the Developer Console and gone through the OAuth Client Credentials Grant Flow to get an **OAuth Access Token**.
 1. On the Swagger UI Sandbox, scroll to the top of the page, (switch to the **v1** or later definition for Repository API), and click **Authorize** to display the following dialog box. ![](./assets/images/api-swagger-04.png)
 1. In the dialog box, find the **Authorization (http, Bearer)** option. Within **Value**, enter the OAuth Access Token value from step 1.
 1. Click **Authorize**.
@@ -43,7 +43,7 @@ For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](/a
 {: .note }
 **Note:** These steps can be skipped if your app is a Service App.
 
-1. Register your app on the Developer Console. For more information, follow the first section in the guide on [Creating an OAuth Web App](guide_oauth-webapp.html) or [Creating an OAuth Single-Page App](guide_oauth-spa.html) depending on your app type.
+1. Register your app on the Developer Console. For more information, follow the first section in the guide on [Creating an OAuth Web App](../guide_oauth-webapp) or [Creating an OAuth Single-Page App](../guide_oauth-spa) depending on your app type.
 1. On the App Configuration page, add the following URI to the list of redirect URIs. The redirect URI depends on where your Laserfiche Cloud resides. 
 
 1. **Repository API**

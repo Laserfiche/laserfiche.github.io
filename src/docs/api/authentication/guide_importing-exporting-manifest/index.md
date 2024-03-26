@@ -21,13 +21,13 @@ An application manifest is a JSON file that contains information about the appli
 
 ## Add a Manifest to Your Existing Application
 
-1. In the [Developer Console](/developer-console.html), click the application that you want to add manifest information
+1. In the [Developer Console](../../../getting-started/developer-console/), click the application that you want to add manifest information
             to.
 1. On the App Configuration page, in the "Developer Info" section, fill in details about your app. and save your changes. ![](./assets/images/manifest-02.png)
 
 ## Create an Application from a Manifest
 
-1. In the [Developer Console](/developer-console.html), on the Applications listing page, click the **New** button to register a new application.
+1. In the [Developer Console](../../../getting-started/developer-console/), on the Applications listing page, click the **New** button to register a new application.
 1. On the **Create Application** dialog box, select the **Create an app from a manifest** option.
           ![](./assets/images/manifest-03.png)
 1. Click **Choose file** to select the manifest file that you want to use to create the application.
@@ -41,7 +41,7 @@ An application manifest is a JSON file that contains information about the appli
 
 ## Export a Manifest from an Existing Application
 
-1. In the [Developer Console](/developer-console.html), select to the application that you want to export.
+1. In the [Developer Console](../../../getting-started/developer-console/), select to the application that you want to export.
 1. In the App Configuration page, click **Export manifest** in the upper right corner.
           ![](./assets/images/manifest-05.png)
 1. In the top right corner of the preview, click the clipboard button to save the contents of the manifest to the clipboard. You can also choose to download the manifest as a JSON file by clicking the **Download as .json file** button.

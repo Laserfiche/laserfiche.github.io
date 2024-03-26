@@ -13,7 +13,7 @@ Licensed under the MIT License. See LICENSE in the project root for license info
 
 # Simple Search
 
-The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](guide_search-vs-simple-search.html).
+The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](../guide_search-vs-simple-search/).
 
 In the following simple search, we want to find entries with a specific value in the *Purchase Order ID* field.
 
@@ -59,4 +59,4 @@ A single session can only have two searches running at one time. This limit does
 
 {: .note }
 - See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Template_Field.htm).
-- See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](guide_get-folder-listing.html#fields).
+- See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing/#retrieve-field-metadata-for-each-document).
