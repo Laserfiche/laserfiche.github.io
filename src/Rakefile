@@ -6,9 +6,8 @@ require 'html-proofer'
 
 task :htmlproof do
   sh "bundle exec jekyll build"
-  options = { :ignore_urls => "/.*https?.*/" }
   HTMLProofer.check_directory('_site/', opts = {
-    :ignore_urls => ["/https?/"]
+    :ignore_urls => [/https?/]
   }).run
 end
 
