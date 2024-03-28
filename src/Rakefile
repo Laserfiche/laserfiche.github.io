@@ -1,0 +1,13 @@
+# Copyright (c) Laserfiche.
+# Licensed under the MIT License. See LICENSE in the project root for license information.
+
+require 'html-proofer'
+
+
+task :htmlproof do
+  sh "bundle exec jekyll build"
+  options = { :assume_extension => '.html',:only_4xx => true, }
+  HTMLProofer.check_directory('_site/', options).run
+end
+
+task default: %w[htmlproof]

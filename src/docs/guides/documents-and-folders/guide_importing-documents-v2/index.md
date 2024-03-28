@@ -4,6 +4,7 @@ title: Import Document (V2)
 nav_order: 5
 redirect_from:
    - /guides/v2/guide_importing-documents-v2.html
+   - /guide_importing-documents-v2.html
 parent: Repository Folders and Documents
 grand_parent: Guides
 ---

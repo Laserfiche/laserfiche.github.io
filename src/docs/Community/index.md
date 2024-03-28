@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Community
+redirect_from:
+    - /community.html
 nav_order: 9
 ---
 <!--Copyright (c) Laserfiche.
