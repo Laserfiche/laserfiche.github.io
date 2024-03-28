@@ -45,7 +45,7 @@ jobs:
       - name: run html-proofer
         run: |
           cd ./src
-          bundle exec rake
+          rake
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
