@@ -6,7 +6,7 @@ require 'html-proofer'
 
 task :htmlproof do
   sh "bundle exec jekyll build"
-  options = { :assume_extension => '.html',:only_4xx => true, }
+  options = { :only_4xx => true, }
   HTMLProofer.check_directory('_site/', options).run
 end
 
