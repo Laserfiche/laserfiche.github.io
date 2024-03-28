@@ -63,6 +63,12 @@ To redirect from a list of links to a page, add a redirect-from key in the front
   ---
   ```
 
+## Using html-proofer to test the relative links
+To check if there are any dead relative links in the project, navigate to src, and run
+```
+jekyll build
+bundle exec rake
+```
 
 ## Previewing pages from build artifact
 
