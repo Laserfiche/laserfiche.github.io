@@ -41,11 +41,15 @@ jobs:
         with:
           source: ./src
           destination: ./_site
-          
-      - name: run html-proofer
-        run: |
-          cd ./src
-          rake
+
+      - name: Run Rake
+        uses: ruby/setup-ruby@v1
+        with:
+          source: ./src
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: bundle exec rake
+
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
