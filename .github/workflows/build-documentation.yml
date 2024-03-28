@@ -50,6 +50,7 @@ jobs:
           bundler-cache: true
       - run: |
           cd ./src
+          bundle install
           bundle exec rake
           cd ..
 
