@@ -43,9 +43,9 @@ jobs:
           destination: ./_site
           
       - name: run html-proofer
-        run: bundle exec rake
-        with:
-          source: ./src
+        run: |
+          cd ./src
+          bundle exec rake
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
