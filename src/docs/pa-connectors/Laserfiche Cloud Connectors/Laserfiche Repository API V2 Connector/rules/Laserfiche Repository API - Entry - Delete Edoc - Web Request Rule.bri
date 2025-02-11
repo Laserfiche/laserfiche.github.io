@@ -1,0 +1,129 @@
+{
+    "BusinessRules": [
+        {
+            "RuleList": [
+                {
+                    "AutoName": null,
+                    "BusinessUnitId": "00000000-0000-0000-0000-000000000000",
+                    "Description": "Deletes the edoc associated with an entry.",
+                    "DisplayName": null,
+                    "Name": "Laserfiche Repository API - Entry - Delete Edoc",
+                    "Parameters": {
+                        "InputParameters": [
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 0,
+                                "Name": "repoId",
+                                "Type": 0
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 0,
+                                "Name": "entryId",
+                                "Type": 0
+                            }
+                        ],
+                        "OutputParameters": [
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Request_Succeeded",
+                                "Type": 5
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Content",
+                                "Type": 0
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Headers",
+                                "Type": 7
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Status",
+                                "Type": 0
+                            }
+                        ]
+                    },
+                    "ResourceContext": null,
+                    "ResourceContextId": null,
+                    "ResponseOutput": {
+                        "OutputItems": {
+                            "Request_Succeeded": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 1,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Content": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 0,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Headers": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 3,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Status": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 2,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            }
+                        }
+                    },
+                    "RuleType": 7,
+                    "SubType": 0,
+                    "Template": {
+                        "Boundary": "",
+                        "ContentType": "",
+                        "CustomHeaders": [
+                        ],
+                        "Encoding": "",
+                        "Method": "DELETE",
+                        "Payload": null,
+                        "RequestUri": "/repository/v2/Repositories/%(Name: repoId; Type: Text)/Entries/%(Name: entryId; Type: Text)/Document/edoc"
+                    },
+                    "ValidationOnly": false
+                }
+            ],
+            "RuleType": 7
+        }
+    ],
+    "LinkedObjects": {
+    }
+}
