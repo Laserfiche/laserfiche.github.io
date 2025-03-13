@@ -45,7 +45,7 @@ For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Playground]
     | --- | --- | --- |
     | United States | https://api.laserfiche.com/repository/swagger/oauth2-redirect.html | https://api.laserfiche.com/odata4/swagger/oauth2-redirect.html |
     | Canada | https://api.laserfiche.ca/repository/swagger/oauth2-redirect.html | https://api.laserfiche.ca/odata4/swagger/oauth2-redirect.html |
-    | Europe | https://api.laserfiche.ca/repository/swagger/oauth2-redirect.html | https://api.eu.laserfiche.com/odata4/swagger/oauth2-redirect.html |
+    | Europe | https://api.eu.laserfiche.com/repository/swagger/oauth2-redirect.html | https://api.eu.laserfiche.com/odata4/swagger/oauth2-redirect.html |
     
     ![](./assets/images/api-swagger-oauth-web-app-01.png)
 1. On the Swagger UI Playground, scroll to the top of the page, (switch to the **v1** or later definition for Repository API), and click **Authorize** to display the following dialog box. ![](./assets/images/api-swagger-oauth-web-app-02.png)
