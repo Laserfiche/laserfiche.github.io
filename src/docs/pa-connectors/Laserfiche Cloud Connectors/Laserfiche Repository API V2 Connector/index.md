@@ -17,12 +17,12 @@ License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICEN
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/web-request-rule.htm?TocPath=Process%2520Automation%257CRules%257C_____10) to access [Laserfiche Repository API v2](https://developer.laserfiche.com/docs/api/playground/#laserfiche-repository-api) endpoint.
+A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/web-request-rule.htm?TocPath=Process%2520Automation%257CRules%257C_____10) to access [Laserfiche Repository API v2](https://developer.laserfiche.com/docs/api/playground/#laserfiche-repository-api) endpoints.
 
 Connector use cases:
 
-- Access Laserfiche Cloud Repository API features that are not be available as Workflows Activities.
-- Access Laserfiche Cloud Repository in a different Cloud Account.
+- Access Laserfiche Cloud Repository API features that are not available as Workflows Activities.
+- Access a Laserfiche Cloud Repository in a different Cloud Account.
 
 See [overview of Laserfiche APIs](https://developer.laserfiche.com/docs/api/guide_overview-of-the-laserfiche-api/) for more information.
 
