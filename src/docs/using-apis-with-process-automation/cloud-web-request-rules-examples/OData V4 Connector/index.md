@@ -3,8 +3,8 @@ layout: default
 nav_order: 8
 title: OData V4 Connector
 has_children: false
-parent: Laserfiche Cloud Connectors
-grand_parent: Process Automation Connectors
+parent: Laserfiche Cloud Web Request Rules examples
+grand_parent: Calling APIs from Laserfiche Process Automation
 ---
 
 <!--© 2024 Laserfiche.
@@ -29,7 +29,7 @@ Connector use cases:
 - Configure a new [Web Service Connection](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm?_gl=1*131rcwp*_gcl_au*NzQ5MzM2MDY0LjE3MzMzMzk1NzM.#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Web-Services.htm?TocPath=Process%2520Automation%257CIntegrations%257C_____5):
   - Configure Web Service Connection Authentication per data provider instructions
   - Set the Web Service Connection `Base URL` to the `OData Service Document` endpoint.
-- If connecting to [Laserfiche OData Table API](https://developer.laserfiche.com/docs/api/odata-api-reference/), follow these instructions: [How to configure a Web Service Connection to Laserfiche Cloud API](../How%20to%20configure%20a%20Web%20Service%20Connection%20to%20Laserfiche%20Cloud%20API/)
+- If connecting to [Laserfiche OData Table API](https://developer.laserfiche.com/docs/api/odata-api-reference/), follow these instructions: [How to configure a Web Service Connection to Laserfiche Cloud API](../../laserfiche-cloud-api-web-service-connections/)
 
 ## 2. OData Web Request Rules
 

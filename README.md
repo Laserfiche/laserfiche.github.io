@@ -86,7 +86,7 @@ NOTE: If `rake` fails with error `Could not open library 'libcurl.dll'`
 
 ## Previewing pages from build artifact
 
-### Steps to preview in IIS:
+### Steps to preview in IIS
 
 1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
 1. Download the artifact `github-pages` from the your build.
@@ -95,7 +95,7 @@ NOTE: If `rake` fails with error `Could not open library 'libcurl.dll'`
 1. Create a website in IIS pointing to the folder containing the extracted files. NOTE: IIS may not work if the folder is under `Users/your.name`.
 1. Open the website from IIS.
 
-### Steps to preview using jekyll:
+### Steps to preview using jekyll
 
 1. Trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) from your feature branch.
 1. Download the artifact `github-pages`from the your build.

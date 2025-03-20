@@ -3,8 +3,8 @@ layout: default
 nav_order: 8
 title: OData V4 Connector
 has_children: false
-parent: Laserfiche Self-Hosted Connectors
-grand_parent: Process Automation Connectors
+parent: Laserfiche Self-Hosted HTTP Web Request Activities examples
+grand_parent: Calling APIs from Laserfiche Process Automation
 ---
 
 <!--© 2024 Laserfiche.

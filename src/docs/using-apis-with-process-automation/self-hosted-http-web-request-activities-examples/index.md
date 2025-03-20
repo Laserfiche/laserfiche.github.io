@@ -1,15 +1,15 @@
 ---
 layout: default
 nav_order: 6
-title: Laserfiche Self-Hosted Connectors
+title: Laserfiche Self-Hosted HTTP Web Request Activities examples
 has_children: true
-parent: Process Automation Connectors
+parent: Calling APIs from Laserfiche Process Automation
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Laserfiche Connectors for Process Automation Self-Hosted
+# Laserfiche Self-Hosted HTTP Web Request Activities examples
 
 {: .note }
 **Note:** This section applies to Laserfiche 11 and Laserfiche 12.

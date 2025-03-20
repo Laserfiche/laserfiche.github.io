@@ -3,8 +3,8 @@ layout: default
 nav_order: 2
 title: Laserfiche Repository API V2 Connector
 has_children: false
-parent: Laserfiche Cloud Connectors
-grand_parent: Process Automation Connectors
+parent: Laserfiche Cloud Web Request Rules examples
+grand_parent: Calling APIs from Laserfiche Process Automation
 ---
 
 <!--© 2024 Laserfiche.
@@ -28,7 +28,7 @@ See [overview of Laserfiche APIs](https://developer.laserfiche.com/docs/api/guid
 
 ## 1. Configure a Web Service Connection to Laserfiche Cloud API
 
-[How to configure a Web Service Connection to Laserfiche Cloud API](../How%20to%20configure%20a%20Web%20Service%20Connection%20to%20Laserfiche%20Cloud%20API/)
+[How to configure a Web Service Connection to Laserfiche Cloud API](../../laserfiche-cloud-api-web-service-connections/)
 
 ## 2. Laserfiche API Web Request Rules
 
