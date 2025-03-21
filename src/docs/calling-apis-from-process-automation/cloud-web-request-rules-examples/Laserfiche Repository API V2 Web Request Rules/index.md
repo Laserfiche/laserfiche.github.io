@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_order: 2
-title: Laserfiche Repository API V2 Connector
+title: Laserfiche Repository API V2 Web Request Rules
 has_children: false
 parent: Laserfiche Cloud Web Request Rules examples
 grand_parent: Calling APIs from Laserfiche Process Automation
@@ -10,16 +10,16 @@ grand_parent: Calling APIs from Laserfiche Process Automation
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Laserfiche Repository API V2 Connector
+# {{ page.title }}
 
 License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICENSE-CODE)
 
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/web-request-rule.htm?TocPath=Process%2520Automation%257CRules%257C_____10) to access [Laserfiche Repository API v2](https://developer.laserfiche.com/docs/api/playground/#laserfiche-repository-api) endpoints.
+A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm?tocpath=Process%20Automation%7CRules%7C_____10) to access [Laserfiche Repository API v2](https://developer.laserfiche.com/docs/api/playground/#laserfiche-repository-api) endpoints.
 
-Connector use cases:
+Use cases:
 
 - Access Laserfiche Cloud Repository API features that are not available as Workflows Activities.
 - Access a Laserfiche Cloud Repository in a different Cloud Account.
@@ -28,7 +28,7 @@ See [overview of Laserfiche APIs](https://developer.laserfiche.com/docs/api/guid
 
 ## 1. Configure a Web Service Connection to Laserfiche Cloud API
 
-[How to configure a Web Service Connection to Laserfiche Cloud API](../../laserfiche-cloud-api-web-service-connections/)
+[How to configure a Web Service Connection to Laserfiche Cloud API](../../laserfiche-cloud-api-web-service-connections/#laserfiche-repository-api-web-service-connection)
 
 ## 2. Laserfiche API Web Request Rules
 

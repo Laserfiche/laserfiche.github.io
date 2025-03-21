@@ -10,7 +10,7 @@ grand_parent: Calling APIs from Laserfiche Process Automation
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# OData V4 Connector
+# {{ page.title }}
 
 License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICENSE-CODE)
 
@@ -19,7 +19,7 @@ License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICEN
 
 A collection of Web Request Workflow Activities to access [OData V4](https://www.odata.org/documentation/) endpoints.
 
-Connector use cases:
+Use cases:
 
 - Connect to any OData V4 compliant data source.
 - Connect to [Laserfiche OData Table API](https://developer.laserfiche.com/docs/api/odata-api-reference/)
@@ -27,7 +27,7 @@ Connector use cases:
 ## 1. Create a Web Connection
 
 - Create a [Web Service](<https://doc.laserfiche.com/laserfiche.documentation/12/userguide/en-us/content/process-act-web-service-(http-web-request).htm>).
-- Configure: TODO
+- Configure
 
 ## 2. Configure a Web Service connection
 
