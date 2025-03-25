@@ -160,6 +160,7 @@ grant_type=refresh_token&refresh_token=some_refresh_token_value
 - The **grant_type** in the request body should be **refresh_token**.
 - The **refresh_token** value should be the one returned along with access token in the previous get access token step.
 - The **Authorization** header should be **Basic** authorization with the **client_id** and **client_secret** base64url encoded and used as the username and password respectively. Both **client_id** and **client_secret** are generated during the application registration process and can be found on the Developer Console.
+  - If you are using the Swagger UI API Playground, authorize your app first using the **Basic Authentication (http)** option. See [Authorize your OAuth Service App on Swagger UI](https://developer.laserfiche.com/docs/api/authentication/guide_authenticating-to-the-swagger-playground/#authorize-your-oauth-service-app-on-swagger-ui).
 
 **Example successful refresh token response**
 
