@@ -1,0 +1,53 @@
+[
+    {
+        "AutoName": null,
+        "BusinessUnitId": "00000000-0000-0000-0000-000000000000",
+        "ConnectionInfo": {
+            "DefaultHeaders": {
+            },
+            "HttpMethod": {
+                "Method": "GET"
+            },
+            "OAuth2ConnectionInfo": {
+                "AuthenticationBodyFields": {
+                    "54": {
+                        "IsSecure": false,
+                        "Name": "grant_type",
+                        "SecretId": "54",
+                        "Value": "client_credentials"
+                    },
+                    "56": {
+                        "IsSecure": false,
+                        "Name": "scope",
+                        "SecretId": "56",
+                        "Value": "project/Global table.Read table.Write"
+                    }
+                },
+                "AuthenticationHeaders": {
+                    "44": {
+                        "IsSecure": false,
+                        "Name": "Authorization",
+                        "SecretId": "44",
+                        "Value": "Bearer <Enter your Service Application long-lasting authorizationKey from Developer Console>"
+                    }
+                },
+                "TokenEndpoint": "https://signin.eu.laserfiche.com/oauth/token"
+            },
+            "ServiceUrl": "https://api.eu.laserfiche.com/odata4/table",
+            "TestEndpoint": "",
+            "Username": ""
+        },
+        "CredentialProperties": {
+            "KeyMap": null,
+            "Method": 6
+        },
+        "Description": "Web Service Connection for Laserfiche Cloud API. https://developer.laserfiche.com/",
+        "DisplayName": null,
+        "Name": "Laserfiche API OData Table Europe Cloud",
+        "RemoteAgentPoolId": "00000000-0000-0000-0000-000000000000",
+        "ResourceContext": null,
+        "ResourceContextId": null,
+        "SubType": 0,
+        "ValidationOnly": false
+    }
+]

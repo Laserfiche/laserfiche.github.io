@@ -1,0 +1,145 @@
+{
+    "BusinessRules": [
+        {
+            "RuleList": [
+                {
+                    "AutoName": null,
+                    "BusinessUnitId": "00000000-0000-0000-0000-000000000000",
+                    "Description": null,
+                    "DisplayName": null,
+                    "Name": "OData Get Service Document",
+                    "Parameters": {
+                        "InputParameters": [
+                        ],
+                        "OutputParameters": [
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Request_Succeeded",
+                                "Type": 5
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Content",
+                                "Type": 0
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Headers",
+                                "Type": 7
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 4,
+                                "Name": "Response_Status",
+                                "Type": 0
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 6,
+                                "Name": "value",
+                                "Type": 0
+                            },
+                            {
+                                "ContentType": "",
+                                "DefaultValue": [
+                                ],
+                                "Description": "",
+                                "Flag": 6,
+                                "Name": "",
+                                "Type": 0
+                            }
+                        ]
+                    },
+                    "ResourceContext": null,
+                    "ResourceContextId": null,
+                    "ResponseOutput": {
+                        "OutputItems": {
+                            "": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 0,
+                                "OutputType": 2,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": ""
+                            },
+                            "Request_Succeeded": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 1,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Content": {
+                                "Expression": null,
+                                "ExpressionType": 1,
+                                "Field": 0,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Headers": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 3,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "Response_Status": {
+                                "Expression": null,
+                                "ExpressionType": 0,
+                                "Field": 2,
+                                "OutputType": 0,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            },
+                            "value": {
+                                "Expression": "$.value",
+                                "ExpressionType": 1,
+                                "Field": 0,
+                                "OutputType": 1,
+                                "ResponseContentType": 0,
+                                "ResponseHeaderName": null
+                            }
+                        }
+                    },
+                    "RuleType": 7,
+                    "SubType": 0,
+                    "Template": {
+                        "Boundary": "",
+                        "ContentType": "",
+                        "CustomHeaders": [
+                        ],
+                        "Encoding": "",
+                        "Method": "GET",
+                        "Payload": null,
+                        "RequestUri": ""
+                    },
+                    "ValidationOnly": false
+                }
+            ],
+            "RuleType": 7
+        }
+    ],
+    "LinkedObjects": {
+    }
+}

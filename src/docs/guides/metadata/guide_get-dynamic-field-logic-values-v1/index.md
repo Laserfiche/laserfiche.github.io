@@ -7,7 +7,7 @@ redirect_from:
   - guide_get-dynamic-field-logic-values.html
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Get Dynamic Field Logic Values

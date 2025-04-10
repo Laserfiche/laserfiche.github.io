@@ -5,7 +5,7 @@ nav_order: 1
 parent: Overview
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Integrating with Laserfiche using APIs

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Designer Version="12.0.2503.2695">
+    <SequentialWorkflowActivityProxy Type="Laserfiche.Workflow.Activities.Proxies.LfSequentialWorkflowProxy, Laserfiche.Workflow.Designer.Base, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="41912030-226d-459c-b2d9-25993e95164e" ActivityCountHint="10">
+        <Name>Repository API - Get Attributes</Name>
+        <SafeName>RepositoryAPIGetAttributes</SafeName>
+        <Enabled>True</Enabled>
+        <Description ShowDescription="null" ShowSummary="null" />
+        <AttachedProperties>
+            <Property Key="ProfileCollection" PropertyType="Profiles">
+                <LinkedProperties Default="">
+                    <LinkedProperty>
+                        <Name>int-repo</Name>
+                        <Id>-1</Id>
+                        <Uuid>6a689be9-4600-4ea7-9163-3b1326ff5fc2</Uuid>
+                        <Offline><ConnectionProfile Version="3" xmlns="http:\laserfiche\workflow\connection"><ProfileId>PHjUpZB6fr9lyAOsFAIuHWIuVS5uWtPGIBscbm43xyI=</ProfileId><EncryptedData xmlns="http://www.w3/.org/2001/04/xmlenc#"><CipherData><CipherValue>JaQE2WLBWFsTilYI3gcm9FMFPCw1TjNXHgG9/1Zebt7IOBq1SSWVLZO4buzUULDzf4eUmWpA6rpYLUGr7exRsNnKMXNfwGK6yfjqtfYajuqsdXmPu38DZa3sa8IxDLx7zHAeVRBwq7HqKAm5QNetD1paZTaEkEThz25F7aA61FW4viXI0WNY8GqhMIg2F3t++q8lOTzUZmSVeQdsn1jiz5mYghPWiXx5dKAl/M1aqCaerDSEN6YJ0gPPkCdVlH336Io/8YlgKO3xH1nlR3F5rc9VONIWWr5srI0J9EpyxaDWECokW+O7b/wiEhl/Rss4wafcJhFGaXi9bkhlPNgobL8VniLvcueeSG2K82Pv23QQH0wJrxn+puN71qjUbboX3065xWkV1PYAbMJ32aBv4MPakxCB4bXJ4IvRGrd4vM6SZXwSraTQ9by51ISfK1SewsFDox1H5rqxzO5CzcASY7PdVauTdpQMnQwcsJ9XGYfiU3qEwqysLUVm19GU+gzLTp3CzW9e/r/LEkd8oVI8sIq1+SF5UgJW+n/Xr3mTHsvPBqvb+bChFV1WQEtScBSSrvb1jwy6g85pypScZnxbDSqBeBobGFcF4sLObUiq6+GOLQDF8GW1gt8x3mjWDGlObXXNdBT+oAqJWRduVEJNv/b3QBT2ZA7ClRk5J+wezIsJcq1rv3akX619FFTPWvRVg9a3gKO3WcQuSpExQ9hkmgqzNC6DHUvwSu8g5HwdBbguAYchrYkvqsX2Yg0bcxd4wOBFC4ctIGzYoVZXCbRHlRjWbZgT+X6tiArP9AdXuqtooPx//bcfuu7ewAmIiXs2zPnodB9U8qZJPrw+0D+2R9ZwPzJCVH8YhlPSFKBQp6k9yR+dfUwIqfXvu0Zu3ZTsxq9KpyGfYGp20jXxZuO2Ea///Lf4bM2BdEyML7B88DAcRR/N4+K449NHhCo8FfJ0cUj982Byr3bjsfVa//4XJkWIAEdn35s8gXlWk4gFOHCxISnxQhzcTIOBaAeUEaHvApSeQUV3E0H0MifRCvSy9Eg0mstApTW+qvFZgsVKyt9a06udFMajXVix6TcsJpASpNrCtECQOgN6zlQpD701HL4AE3y6cVGwesayWfIKX+Bm187ch83U0F8wPp/mgJkMqKidmGskWDY3ODbmH5AfximwfhGcGsh1wPyzd42Mpy8ItsxA8sntqS6oBtH0lqlhWQJlfK3Y0hYzQPJfoO8G1g==-m2feZgX2h3D9qPJIJgFesA==</CipherValue></CipherData></EncryptedData></ConnectionProfile></Offline>
+                    </LinkedProperty>
+                </LinkedProperties>
+            </Property>
+            <Property Key="WorkflowWebServiceCollection" PropertyType="WebServices">
+                <LinkedProperties Default="">
+                    <LinkedProperty ServiceURL="https://example.com/LFRepositoryAPI/v1/Repositories/" User="" Type="Custom" UseOAuth="false" ClientId="">
+                        <Name>Laserfiche Repository API v1</Name>
+                        <Id>14</Id>
+                        <Uuid>a665250a-488b-4eb7-8ec3-d000c0a4ac5a</Uuid>
+                        <Offline />
+                    </LinkedProperty>
+                </LinkedProperties>
+            </Property>
+        </AttachedProperties>
+        <Projects>
+            <CSharpProject />
+            <VBProject />
+        </Projects>
+        <WorkflowBusinessProcessOptions LfProcessId="0" ProfileId="6a689be9-4600-4ea7-9163-3b1326ff5fc2" Flags="AllowStartingFromClients, CreateBusinessProcessEntity, RecordMilestoneEvents, RecordStepEvents, SetStartingMilestone, SetCompletedMilestone, SetCanceledMilestone" Enabled="false">
+            <Milestones>
+                <Starting>Running</Starting>
+                <Completed>Completed</Completed>
+                <Canceled>Terminated</Canceled>
+            </Milestones>
+            <CustomInstanceName />
+        </WorkflowBusinessProcessOptions>
+        <WorkflowParameters SetOutputValuesViaTokens="true" />
+        <Cultures>
+            <Culture>en-us</Culture>
+        </Cultures>
+        <MetadataStore Attributes="ExpectsStartingEntry, ValidateDesign">
+            <VersionHistory>
+            </VersionHistory>
+            <Metadata>
+                <Value Item="Author" Type="String">laserfiche</Value>
+                <Value Item="PublishedDate" Type="DateTime">2025-04-10T15:51:14.137-07:00</Value>
+                <Value Item="WorkflowId" Type="Int32">3</Value>
+                <Value Item="WorkflowVersion" Type="Int32">2</Value>
+                <Value Item="WorkflowServerURL" Type="String">V-INT-LFS-V104</Value>
+                <Value Item="WorkflowServerId" Type="String">2046b9e7-4407-4ad4-9bf8-3971b05a8800</Value>
+                <Value Item="WorkflowFilePath" Type="String"></Value>
+            </Metadata>
+        </MetadataStore>
+        <Activities>
+            <Activity Type="Laserfiche.Workflow.Activities.CreateToken.CreateTokenActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="43225fdf-7bb9-4a26-baa9-5d06fbffe3ea">
+                <Name>Assign Token Values</Name>
+                <SafeName>AssignTokenValues</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="null" ShowSummary="null">Creates new tokens and updates the values of existing tokens.</Description>
+                <Options>
+                    <Tokens>
+                        <TokenInformation Id="f7021394-a5f5-4550-a653-bc1f2d33f8ea" IsMultivalued="false" UpdateExistingToken="false" AppendValues="false" TokenType="String">
+                            <TokenName>repositoryId </TokenName>
+                            <TokenFullName />
+                            <ActivityName />
+                            <TokenValues>
+                                <TokenValue xml:space="preserve">your-repository-name</TokenValue>
+                            </TokenValues>
+                        </TokenInformation>
+                    </Tokens>
+                </Options>
+            </Activity>
+            <Activity Type="Laserfiche.Workflow.Activities.Web.WebForm.WebFormActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="853b8e1a-322b-4488-b966-8c0d72527584">
+                <Name>GET API Access Token</Name>
+                <SafeName>GETAPIAccessToken</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="null" ShowSummary="null">Sends a multipart/form-data POST request to a Web service and stores the result as a token.</Description>
+                <HttpWebRequestProxyOptions Id="a665250a-488b-4eb7-8ec3-d000c0a4ac5a">
+                    <HttpWebRequestOptions Timeout="100000" UrlFragment="%(repositoryId )/Token" HttpMethod="Post" RequestBodyType="multipart/form-data; boundary=----Boundaryd4452aa42afe41d4bc89c4bfa5a6267f" RequestBodyIsFilePath="false">
+                        <RequestBody>------Boundaryd4452aa42afe41d4bc89c4bfa5a6267f
+Content-Disposition: form-data; name="grant_type"
+
+password
+------Boundaryd4452aa42afe41d4bc89c4bfa5a6267f
+Content-Disposition: form-data; name="username"
+
+ENTER-USER-NAME
+------Boundaryd4452aa42afe41d4bc89c4bfa5a6267f
+Content-Disposition: form-data; name="password"
+
+ENTER-PASSWORD
+------Boundaryd4452aa42afe41d4bc89c4bfa5a6267f--
+</RequestBody>
+                    </HttpWebRequestOptions>
+                    <HttpResultOptions Accept="JSON" CustomFormat="" />
+                    <HttpWebRequestHeadersOptions>
+                        <HttpHeaderCollection>
+                            <HttpHeader Name="Accept" Value="application/json" />
+                        </HttpHeaderCollection>
+                    </HttpWebRequestHeadersOptions>
+                    <HttpWebResponseHeadersOptions />
+                    <HttpWebRequestAdvancedOptions WarnOnFailedRequest="true" AllowAutoRedirect="false" CloneSourceCookieJar="false" />
+                </HttpWebRequestProxyOptions>
+                <FormDataOptions>
+                    <FormFieldCollection>
+                        <FormField Name="grant_type" Value="password" HasFile="false">
+                            <AdvancedFormOptions IsFile="false" AutoConfigure="true" FieldType="Text" ContentDisposition="form-data" ContentType="" ContentTransferEncoding="" Filename="" />
+                            <FileBookmark MIMEType="" FileName="" Extension="" WorkflowFilePath="" FileLength="0" SourceParent="" SourcePath="" SourceId="" SourceType="" SourceName="" />
+                        </FormField>
+                        <FormField Name="username" Value="ENTER-USER-NAME" HasFile="false">
+                            <AdvancedFormOptions IsFile="false" AutoConfigure="true" FieldType="Text" ContentDisposition="form-data" ContentType="" ContentTransferEncoding="" Filename="" />
+                            <FileBookmark MIMEType="" FileName="" Extension="" WorkflowFilePath="" FileLength="0" SourceParent="" SourcePath="" SourceId="" SourceType="" SourceName="" />
+                        </FormField>
+                        <FormField Name="password" Value="ENTER-PASSWORD" HasFile="false">
+                            <AdvancedFormOptions IsFile="false" AutoConfigure="true" FieldType="Text" ContentDisposition="form-data" ContentType="" ContentTransferEncoding="" Filename="" />
+                            <FileBookmark MIMEType="" FileName="" Extension="" WorkflowFilePath="" FileLength="0" SourceParent="" SourcePath="" SourceId="" SourceType="" SourceName="" />
+                        </FormField>
+                    </FormFieldCollection>
+                </FormDataOptions>
+                <Binding Name="InputCookies">
+                    <BindingPath Activity="Repository API - Get Attributes" Property="WorkflowCookies" />
+                </Binding>
+            </Activity>
+            <Activity Type="Laserfiche.Workflow.Activities.Json.ReadJsonActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="3de0213a-53df-4b15-a8f5-8e427f4c68bf">
+                <Name>JSON Parse API access_token</Name>
+                <SafeName>JSONParseAPIaccess_token</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="null" ShowSummary="null">Create tokens from JSON</Description>
+                <ReadJsonOptions InputJsonIsFileToken="false">
+                    <InputJson>%(GETAPIAccessToken_Content)</InputJson>
+                    <ParsingOptions TokenId="144acfd7-2edc-4a99-be04-0bf285dcac4b" ItemName="api_access_token" MatchType="FirstMatch">
+                        <JPathExpression>$.access_token</JPathExpression>
+                    </ParsingOptions>
+                    <ParsingOptions TokenId="4cad8ae1-8241-4493-a643-3eedc3116857" ItemName="api_.token_type" MatchType="FirstMatch">
+                        <JPathExpression>$.token_type</JPathExpression>
+                    </ParsingOptions>
+                </ReadJsonOptions>
+            </Activity>
+            <Activity Type="Laserfiche.Workflow.Activities.Web.HttpWebRequestActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="40eb7abe-682c-4cce-af7d-fbc165b2b30b">
+                <Name>Get Repository Attributes</Name>
+                <SafeName>GetRepositoryAttributes</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="null" ShowSummary="null">Sends a request to a Web service and stores the response in a token.</Description>
+                <HttpWebRequestProxyOptions Id="a665250a-488b-4eb7-8ec3-d000c0a4ac5a">
+                    <HttpWebRequestOptions Timeout="100000" UrlFragment="%(repositoryId )/Attributes" HttpMethod="Get" RequestBodyType="" RequestBodyIsFilePath="false">
+                        <RequestBody />
+                    </HttpWebRequestOptions>
+                    <HttpResultOptions Accept="JSON" CustomFormat="" />
+                    <HttpWebRequestHeadersOptions>
+                        <HttpHeaderCollection>
+                            <HttpHeader Name="Authorization" Value="%(JSONParseAPIaccess_token_api_.token_type) %(JSONParseAPIaccess_token_api_access_token)" />
+                        </HttpHeaderCollection>
+                    </HttpWebRequestHeadersOptions>
+                    <HttpWebResponseHeadersOptions />
+                    <HttpWebRequestAdvancedOptions WarnOnFailedRequest="true" AllowAutoRedirect="false" CloneSourceCookieJar="false" />
+                </HttpWebRequestProxyOptions>
+            </Activity>
+            <Activity Type="Laserfiche.Workflow.Activities.Condition.IfElseConditionProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="852212db-8861-456f-a43e-f67330a35612">
+                <Name>HTTP  status code</Name>
+                <SafeName>HTTPstatuscode</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="true" ShowSummary="null" />
+                <ProfileId>6a689be9-4600-4ea7-9163-3b1326ff5fc2</ProfileId>
+                <Activities>
+                    <Activity Type="Laserfiche.Workflow.Activities.Condition.RoutingDecisionBranchProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="041552a0-5e94-4b4f-b3f1-ad0fbf4d16b3">
+                        <Name>HTTP Success</Name>
+                        <SafeName>HTTPSuccess</SafeName>
+                        <Enabled>True</Enabled>
+                        <Description ShowDescription="null" ShowSummary="null">Contains activities that will run if the branch conditions are satisfied.</Description>
+                        <Condition Version="12.0.2503.2695" Name="" Negated="false" IsConjunction="true" ConditionType="Composite" Description="">
+                            <Conditions>
+                                <Condition ConditionType="Token" Operator="In">
+                                    <Token Name="Response Status" Length="0" MetaType="Integer">
+                                        <Activity Display="Get Repository Attributes" Append="true">GetRepositoryAttributes</Activity>
+                                    </Token>
+                                    <Values>
+                                        <Value>200</Value>
+                                        <Value>201</Value>
+                                    </Values>
+                                </Condition>
+                            </Conditions>
+                        </Condition>
+                        <Activities>
+                            <Activity Type="Laserfiche.Workflow.Activities.Json.ReadJsonActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="4fc5e383-a3b6-4df1-a2f9-2e3b4d351360">
+                                <Name>JSON Parse Repository Attributes</Name>
+                                <SafeName>JSONParseRepositoryAttributes</SafeName>
+                                <Enabled>True</Enabled>
+                                <Description ShowDescription="null" ShowSummary="null">Create tokens from JSON</Description>
+                                <ReadJsonOptions InputJsonIsFileToken="false">
+                                    <InputJson>%(GetRepositoryAttributes_Content)</InputJson>
+                                    <ParsingOptions TokenId="8680220a-8b07-48e0-b2d4-2fc28d3f4210" ItemName="repository_attributes_keys" MatchType="AllMatchesMV">
+                                        <JPathExpression>$.value[*].key</JPathExpression>
+                                    </ParsingOptions>
+                                    <ParsingOptions TokenId="ec5805ee-2ab5-4c70-b79a-1d1c4af82ef6" ItemName="repository_attributes_value" MatchType="AllMatchesMV">
+                                        <JPathExpression>$.value[*].value</JPathExpression>
+                                    </ParsingOptions>
+                                </ReadJsonOptions>
+                            </Activity>
+                        </Activities>
+                        <FaultHandlers />
+                    </Activity>
+                    <Activity Type="Laserfiche.Workflow.Activities.Condition.RoutingDecisionBranchProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="0eedad27-a059-4b49-b8f3-ab97246b6d2f">
+                        <Name>HTTP Failure</Name>
+                        <SafeName>HTTPFailure</SafeName>
+                        <Enabled>True</Enabled>
+                        <Description ShowDescription="null" ShowSummary="null">Contains activities that will run if the branch conditions are satisfied.</Description>
+                        <Activities>
+                            <Activity Type="Laserfiche.Workflow.Activities.EndWorkflow.EndWorkflowActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="7b4437c5-fce2-4192-b446-427206ec4f90">
+                                <Name>End Workflow</Name>
+                                <SafeName>EndWorkflow</SafeName>
+                                <Enabled>True</Enabled>
+                                <Description ShowDescription="null" ShowSummary="null">Completes or terminates a workflow.</Description>
+                                <Options Flags="RunOnSelf">
+                                    <Reason>Error: Get reposiotry attributes HTTP %(GetRepositoryAttributes_Response Status)</Reason>
+                                </Options>
+                            </Activity>
+                        </Activities>
+                        <FaultHandlers />
+                    </Activity>
+                </Activities>
+                <FaultHandlers />
+            </Activity>
+            <Activity Type="Laserfiche.Workflow.Activities.Tracking.TrackTokenActivityProxy, Laserfiche.Workflow.Activities.83, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda" Key="d7bcdaa2-a5ea-4ef0-923f-761d26c66401">
+                <Name>Track Tokens</Name>
+                <SafeName>TrackTokens</SafeName>
+                <Enabled>True</Enabled>
+                <Description ShowDescription="null" ShowSummary="null">Records the values of selected tokens when the workflow runs. You can view these values in the Tokens tab in the workflow's Search Details pane.</Description>
+                <Options TrackTokenManager="true">
+                    <Tokens />
+                </Options>
+            </Activity>
+        </Activities>
+        <FaultHandlers />
+    </SequentialWorkflowActivityProxy>
+    <CanvasUI>
+        <Expanded>True</Expanded>
+        <Activity Name="Assign Token Values" Key="43225fdf-7bb9-4a26-baa9-5d06fbffe3ea" />
+        <Activity Name="GET API Access Token" Key="853b8e1a-322b-4488-b966-8c0d72527584" />
+        <Activity Name="JSON Parse API access_token" Key="3de0213a-53df-4b15-a8f5-8e427f4c68bf" />
+        <Activity Name="Get Repository Attributes" Key="40eb7abe-682c-4cce-af7d-fbc165b2b30b" />
+        <Activity Name="HTTP  status code" Key="852212db-8861-456f-a43e-f67330a35612">
+            <Expanded>True</Expanded>
+            <Activity Name="HTTP Success" Key="041552a0-5e94-4b4f-b3f1-ad0fbf4d16b3">
+                <Expanded>True</Expanded>
+                <Activity Name="JSON Parse Repository Attributes" Key="4fc5e383-a3b6-4df1-a2f9-2e3b4d351360" />
+            </Activity>
+            <Activity Name="HTTP Failure" Key="0eedad27-a059-4b49-b8f3-ab97246b6d2f">
+                <Expanded>True</Expanded>
+                <Activity Name="End Workflow" Key="7b4437c5-fce2-4192-b446-427206ec4f90" />
+            </Activity>
+        </Activity>
+        <Activity Name="Track Tokens" Key="d7bcdaa2-a5ea-4ef0-923f-761d26c66401" />
+        <UseCompactLayout>false</UseCompactLayout>
+        <ZoomLevel>2.0</ZoomLevel>
+    </CanvasUI>
+</Designer>

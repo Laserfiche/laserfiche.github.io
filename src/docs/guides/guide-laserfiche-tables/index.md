@@ -6,7 +6,7 @@ has_children: false
 parent: Guides
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Accessing Lookup Tables from Reporting Applications

@@ -7,7 +7,7 @@ redirect_from:
 nav_exclude: true
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Using the Laserfiche API with Low-Code Tools
