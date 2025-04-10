@@ -35,4 +35,8 @@ Use cases:
 
 - Laserfiche Workflow - Repository API example [download](./assets/laserfiche-repository-api-workflow.wfx):
 
-![Self-Hosted Laserfiche Workflow - Repository API example](./assets/laserfiche-repository-api-workflow.png)
+  ![Self-Hosted Laserfiche Workflow - Repository API example](./assets/laserfiche-repository-api-workflow.png)
+
+- Setting the Laserfiche API credentials in the 'GET API Access Token' Activity:
+
+  ![Self-Hosted Laserfiche Workflow - Repository API example](./assets/get-api-token-password.png)
