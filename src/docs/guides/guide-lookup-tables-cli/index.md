@@ -5,7 +5,7 @@ nav_order: 7
 parent: Guides
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Using the Lookup Tables CLI For Laserfiche Cloud

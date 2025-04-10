@@ -7,7 +7,7 @@ redirect_from:
   - guide_simple-search.html
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Simple Search

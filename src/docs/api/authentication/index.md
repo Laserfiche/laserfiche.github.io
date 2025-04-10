@@ -10,7 +10,7 @@ has_children: true
 parent: Laserfiche APIs
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Authentication

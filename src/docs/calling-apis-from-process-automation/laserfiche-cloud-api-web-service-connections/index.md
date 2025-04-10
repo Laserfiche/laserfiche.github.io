@@ -5,7 +5,7 @@ has_children: false
 nav_exclude: true
 ---
 
-<!--© 2024 Laserfiche.
+<!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # {{ page.title }}
