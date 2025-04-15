@@ -23,6 +23,5 @@ Laserfiche Workflows and Business Processes provide Rules or Activities that ena
 These pre-configured Rules and Activities are provided under [MIT Licensed](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICENSE-CODE) and can be freely used when building [Laserfiche Process Automation](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Get-Started.htm?tocpath=Process%20Automation%7C_____1) solutions.
 
 - Laserfiche Cloud [Web Request Rules examples](./cloud-web-request-rules-examples/)
-- Laserfiche Self-Hosted [HTTP Web Request Activities examples](./self-hosted-http-web-request-activities-examples/)
 
 Do you want to contribute? See [Contributing to Laserfiche developer portal](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/CONTRIBUTING.md)
