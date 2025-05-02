@@ -128,6 +128,7 @@ GEM
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     unicode-display_width (2.6.0)
+    wdm (0.2.0)
     webrick (1.9.0)
     yell (2.2.2)
     zeitwerk (2.7.1)
@@ -143,6 +144,7 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-include-cache
   jekyll-redirect-from
+  wdm (>= 0.2.0)
 
 BUNDLED WITH
    2.3.26

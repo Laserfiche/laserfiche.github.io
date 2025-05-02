@@ -90,7 +90,7 @@ If a public **access key** was created, an HMAC client credential will need to b
 
 The JWT will also need to be signed by the **access key**. See the links below for how to create a signed JWT using the [Laserfiche Client Core API client libraries](../../libraries/).
 
-- [JavaScript/TypeScript](https://github.com/Laserfiche/lf-api-client-core-js/blob/2ebf041d89d7a656a409052f3b2efe191a5c8cc0/lib/OAuth/AccessKey.ts#L60)
+- [JavaScript/TypeScript](https://github.com/Laserfiche/lf-api-js/blob/e19211429dc6c1a853824f63a782b02fdb7c648d/packages/lf-api-client-core-js/lib/OAuth/AccessKey.ts#L64)
 - [.NET](https://github.com/Laserfiche/lf-api-client-core-dotnet/blob/b6a696a93169a1f7cca16774db0fb888bb2163b0/src/Utils/JwtUtils.cs#L22)
 - [Java](https://github.com/Laserfiche/lf-api-client-core-java/blob/601f693e7d167f7dd5dcd85a628fb43a9b1c0a7d/src/main/java/com/laserfiche/api/client/tokenclients/TokenClientUtils.java#L44)
 

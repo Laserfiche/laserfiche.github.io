@@ -17,14 +17,14 @@ License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICEN
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm?tocpath=Process%20Automation%7CRules%7C_____10) to access [Laserfiche Repository API v2](https://developer.laserfiche.com/docs/api/playground/#laserfiche-repository-api) endpoints.
+A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm) to access [Laserfiche Repository API v2](../../../api/playground/#laserfiche-repository-api) endpoints.
 
 Use cases:
 
 - Access Laserfiche Cloud Repository API features that are not available as Workflows Activities.
 - Access a Laserfiche Cloud Repository in a different Cloud Account.
 
-See [overview of Laserfiche APIs](https://developer.laserfiche.com/docs/api/guide_overview-of-the-laserfiche-api/) for more information.
+See [overview of Laserfiche APIs](../../../api/guide_overview-of-the-laserfiche-api/) for more information.
 
 ## 1. Configure a Web Service Connection to Laserfiche Cloud API
 

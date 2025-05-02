@@ -1,7 +1,7 @@
 <!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Contributing to Laserfiche developer portal
+# Contributing to Laserfiche Developer Documentation
 
 We encourage and appreciate feedback and contribution from the community!
 

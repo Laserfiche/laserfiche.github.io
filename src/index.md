@@ -11,7 +11,8 @@ has_children: true
 <!--© 2025 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Build Custom Integrations with Laserfiche API
+# Laserfiche Developer Center
+
 With robust resources and how-to guides, the Laserfiche Developer Center provides everything you need to know about the Laserfiche API and how to use our RESTful web APIs to incorporate the Laserfiche platform into your tech stack.
 
 ## Overview

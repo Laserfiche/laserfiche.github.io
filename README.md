@@ -1,6 +1,6 @@
 # developer.laserfiche.com
 
-Laserfiche developer portal: https://developer.laserfiche.com
+Laserfiche Developer Documentation: https://developer.laserfiche.com
 First published 5/23/2024
 
 ## Building documentation locally
