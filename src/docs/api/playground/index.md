@@ -54,6 +54,6 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 
 Use the [Laserfiche OData Table API](../odata-api-reference/) to access and manage data in a Laserfiche Lookup Tables.
 
-- [Try the Table API](https://api.laserfiche.com/odata4/swagger/index.html) (United States Data Center)
-- [Try the Table API](https://api.laserfiche.ca/odata4/swagger/index.html) (Canadian Data Center)
-- [Try the Table API](https://api.eu.laserfiche.com/odata4/swagger/index.html) (European Data Center)
+- [Try the OData Table API API](https://api.laserfiche.com/odata4/swagger/index.html) (United States Data Center)
+- [Try the OData Table API API](https://api.laserfiche.ca/odata4/swagger/index.html) (Canadian Data Center)
+- [Try the OData Table API API](https://api.eu.laserfiche.com/odata4/swagger/index.html) (European Data Center)

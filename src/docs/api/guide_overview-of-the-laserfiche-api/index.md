@@ -35,7 +35,7 @@ The Laserfiche API allows you interact with Laserfiche services from low-code an
 | API Endpoints | - [Canada](../playground/) Data Center<br/> - [European Union](../playground/) Data Center<br/> - [United States](../playground/) Data Center | Self-Hosted [Laserfiche API Server](../server/) |
 |API Explorer|[Swagger Playground](../playground/)|  [Swagger UI](https://swagger.io/tools/swagger-ui/) at<br/>https://[YOUR-LASERFICHE-API-SERVER](../server/)/LFRepositoryAPI/ |
 |Authentication<br/>Frameworks |  - OAuth 2.0 client_credentials (Service Principals)<br/>- OAuth 2.0 authorization_code & refresh_token (User Sign-in Page)<br/>- HTTP Basic supported for [Laserfiche OData API](../odata-api-reference/) | - Token endpoint (username & password)<br/> - Coming soon: User Sign-in Page|
-| Authentication<br/>User Types  | - Full Users<br/>- Service Principal | - LFDS Users<br/>- Repository Users<br/>- Keyed Integrator Licenses |
+| Authentication<br/>User Types  | - Users<br/>- Service Principal | - LFDS Users<br/>- Repository Users<br/>- Keyed Integrator Licenses |
 | OAuth 2.0<br/>Application Types |- [Service App](../authentication/guide_oauth-service/)<br/>- [SPA (Single Page App)](../authentication/guide_oauth-spa/)<br/>- [Web App](../authentication/guide_oauth-webapp/)| N/A |
 |Security features| - JWT Access Token<br/>- [OAuth 2.0 Scopes](../authentication/guide_oauth_2.0_scopes/)<br/>- Optional User Consent Form on first Sign-in<br/>- [Requires App registration in Developer Console](../../getting-started/developer-console/) | - JWT Access Token |
 |Service Limits| [API Limits](../../getting-started/guide_api-limits/) | N/A |
