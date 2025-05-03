@@ -106,7 +106,7 @@ The beta tag indicates that the API is undergoing only minor revision and will g
 - Possibly not well-documented
 - Kept around until after the next stable version is published
 
-### Resources
+### Resource
 
 Resources in Laserfiche Cloud are represented in the URL of the API call. The naming convention for Laserfiche-defined resources are upper case, plural nouns that are typically followed by a unique identifier. Multiple resources are strung together to show the hierarchical relationship between them. For example:
 
