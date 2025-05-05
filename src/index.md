@@ -5,7 +5,7 @@ nav_order: 1
 redirect_from:
   - guide.html
   - guides/index.html
-has_children: true
+has_children: false
 ---
 
 <!--© 2025 Laserfiche.

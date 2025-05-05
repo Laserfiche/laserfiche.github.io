@@ -1,8 +1,9 @@
 ---
 layout: default
-title: How to configure a Web Service Connection to Laserfiche Cloud API
+title: Laserfiche Cloud API Web Service Connections
+parent: Calling APIs from Laserfiche Process Automation
 has_children: false
-nav_exclude: true
+nav_exclude: false
 ---
 
 <!--© 2025 Laserfiche.
@@ -12,8 +13,6 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
-
-Accessing the Laserfiche Cloud APIs requires setting up a Service Application in the Laserfiche Developer Console.
 
 Follow the steps below to obtain the credentials needed to configure [Web Service Connections](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm?_gl=1*131rcwp*_gcl_au*NzQ5MzM2MDY0LjE3MzMzMzk1NzM.#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Web-Services.htm?TocPath=Process%2520Automation%257CIntegrations%257C_____5) used by Web Request Rules to access Laserfiche Cloud APIs:
 

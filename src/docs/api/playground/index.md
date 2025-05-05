@@ -18,6 +18,8 @@ The Swagger Playground is a visual, interactive documentation tool that allows d
 {: .note }
 **WARNING:** Swagger Playground API calls are **_live_** and can delete or modify resources in the connected system.
 
+See guide: [Authenticate from the Swagger UI Playground](../authentication/guide_authenticating-to-the-swagger-playground/)
+
 ## Laserfiche OAuth 2.0 Authorization Server API
 
 - The OAuth 2.0 **Authorize** endpoint sign-in page allows users to authenticate and grant permission for a third-party application to access their protected resources. The **Authorization Code** returned by a successful authorization process is typically exchanged with an **Access Token** using the **Token** endpoint.
@@ -38,7 +40,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 
 ### Laserfiche Self-Hosted Repository API endpoint
 
-- Self-Hosted [Laserfiche API Server](../server/) typically exposes the Swagger UI at <https://YOUR-SERVER.EXAMPLE.COM/LFRepositoryAPI/>.
+- Self-Hosted [Laserfiche API Server](../server/) typically exposes the Swagger UI at `https://YOUR-SERVER.EXAMPLE.COM/LFRepositoryAPI/`.
 
 ### Laserfiche Cloud Repository API regional endpoints
 

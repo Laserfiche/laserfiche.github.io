@@ -21,8 +21,8 @@ The Laserfiche API allows you interact with Laserfiche services from low-code an
 
 | API / SDK | Laserfiche<br>Cloud | Laserfiche<br/>Self-Hosted | Client Compatibility| Description |
 | --- | :---: | :---: | --- |
-| Laserfiche Repository API V2 | &#x2713;<br/>[Changelog](https://api.laserfiche.com/repository/v2/changelog) | Coming Soon | HTTP REST, [client libraries](../libraries/) | Interact with Laserfiche's repositories, documents, and metadata |
-| Laserfiche Repository API V1 | &#x2713;<br/>[Changelog](https://api.laserfiche.com/repository/v1/changelog) | &#x2265; 11<br/>Requires [Laserfiche API Server](../server/) | HTTP REST, [client libraries](../libraries/) |  Interact with Laserfiche's repositories, documents, and metadata |
+| [Laserfiche Repository API V2](../repository-api-reference/) | &#x2713;<br/>[Changelog](https://api.laserfiche.com/repository/v2/changelog) | Coming Soon | HTTP REST, [client libraries](../libraries/) | Interact with Laserfiche's repositories, documents, and metadata |
+| [Laserfiche Repository API V1](../repository-api-reference/) | &#x2713;<br/>[Changelog](https://api.laserfiche.com/repository/v1/changelog) | &#x2265; 11<br/>Requires [Laserfiche API Server](../server/) | HTTP REST, [client libraries](../libraries/) |  Interact with Laserfiche's repositories, documents, and metadata |
 | [Laserfiche OData API](../odata-api-reference/) | &#x2713; | N/A | HTTP REST, OData v4 | Access and manage data in a Laserfiche Cloud Lookup Tables |
 | [Laserfiche OAuth 2.0](../authentication/) | &#x2713; | N/A |  HTTP REST, OAuth 2.0  | Authorize Sign-In page and Token endpoint |
 | [Laserfiche SDK](https://support.laserfiche.com/product/sdk/) | &#x2713; | &#x2713; | .NET Framework 4.8 | Interact with Laserfiche's repositories, documents, and metadata |
@@ -35,9 +35,9 @@ The Laserfiche API allows you interact with Laserfiche services from low-code an
 | API Endpoints | - [Canada](../playground/) Data Center<br/> - [European Union](../playground/) Data Center<br/> - [United States](../playground/) Data Center | Self-Hosted [Laserfiche API Server](../server/) |
 |API Explorer|[Swagger Playground](../playground/)|  [Swagger UI](https://swagger.io/tools/swagger-ui/) at<br/>https://[YOUR-LASERFICHE-API-SERVER](../server/)/LFRepositoryAPI/ |
 |Authentication<br/>Frameworks |  - OAuth 2.0 client_credentials (Service Principals)<br/>- OAuth 2.0 authorization_code & refresh_token (User Sign-in Page)<br/>- HTTP Basic supported for [Laserfiche OData API](../odata-api-reference/) | - Token endpoint (username & password)<br/> - Coming soon: User Sign-in Page|
-| Authentication<br/>User Types  | - Users<br/>- Service Principal | - LFDS Users<br/>- Repository Users<br/>- Keyed Integrator Licenses |
+| Authentication<br/>User Types  | - [Full](https://doc.laserfiche.com/laserfiche/en-us/Content/userlicensetypes.htm) Users<br/> - [Participant](https://doc.laserfiche.com/laserfiche/en-us/Content/userlicensetypes.htm) Users (Read Only Access)<br/> - [Community](https://doc.laserfiche.com/laserfiche/en-us/Content/userlicensetypes.htm) Users (Read Only Access)<br/> - [Service Principals](../authentication/guide_service-principals/) | - LFDS Users<br/>- Repository Users<br/>- Keyed Integrator Licenses |
 | OAuth 2.0<br/>Application Types |- [Service App](../authentication/guide_oauth-service/)<br/>- [SPA (Single Page App)](../authentication/guide_oauth-spa/)<br/>- [Web App](../authentication/guide_oauth-webapp/)| N/A |
-|Security features| - JWT Access Token<br/>- [OAuth 2.0 Scopes](../authentication/guide_oauth_2.0_scopes/)<br/>- Optional User Consent Form on first Sign-in<br/>- [Requires App registration in Developer Console](../../getting-started/developer-console/) | - JWT Access Token |
+|Security features| - JWT Access Token<br/>- [OAuth 2.0 Scopes](../authentication/guide_oauth_2.0_scopes/)<br/>- User Consent Form on first Sign-in (can be disabled)<br/>- [Requires App registration in Developer Console](../../getting-started/developer-console/) | - JWT Access Token |
 |Service Limits| [API Limits](../../getting-started/guide_api-limits/) | N/A |
 
 ## Laserfiche REST API - HTTP Requests
