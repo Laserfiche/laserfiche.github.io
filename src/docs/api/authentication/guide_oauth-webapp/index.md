@@ -50,6 +50,7 @@ Create an OAuth Web App when you want to write a web app where you can store ser
 1. The consent page will then be shown to the user to decide whether to grant the web app access to their credentials. The user will have 5 minutes to either confirm or deny the consent. After 5 minutes of inactivity, the OAuth service will return an error and they will need to start the authorization flow from the beginning.
 
    - If the user grants access, an authorization code will be generated and sent to the redirect_uri specified in the query parameter and the user's browser will be redirected to redirect_uri. If the state query parameter was used in the first step, it will be sent back with the authorization code. An example successful redirect request is shown below:
+
      ```
        https://app.example.com/callback?scope=repository.Read+repository.Write&code=some_auth_code_value&state=someappstate
      ```
@@ -67,58 +68,69 @@ Create an OAuth Web App when you want to write a web app where you can store ser
 1. After getting the authorization code, the application can exchange it for an access token by calling the token endpoint. The authorization code has a lifetime of 10 minutes. If not used within its lifetime, it will expire and the application must restart the authorization flow.
 
 **Example Access Token Request**
-  ```
-    POST https://signin.laserfiche.com/oauth/token HTTP/1.1
-    Authorization: Basic *base64url-encoded-client_id-client_secret*
-    Content-Type: application/x-www-form-urlencoded
 
-    grant_type=authorization_code&code=some_auth_code_value&redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback
-  ```
-  - The **grant_type** should be **authorization_code**.
-  - The **code** should be the authorization code returned in the previous authorization step.
-  - The **redirect_uri** should be identical to the one passed to the */authorize* endpoint in the previous authorization step.
-  - The **Authorization** header should be **Basic** authorization with the **client_id** and **client_secret** base64url encoded and used as the username and password respectively. Both **client_id** and **client_secret** are generated during the application registration process and can be found on the Developer Console.
+```
+  POST https://signin.laserfiche.com/oauth/token HTTP/1.1
+  Authorization: Basic *base64url-encoded-client_id-client_secret*
+  Content-Type: application/x-www-form-urlencoded
+
+  grant_type=authorization_code&code=some_auth_code_value&redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback
+```
+
+- The **grant_type** should be **authorization_code**.
+- The **code** should be the authorization code returned in the previous authorization step.
+- The **redirect_uri** should be identical to the one passed to the _/authorize_ endpoint in the previous authorization step.
+- The **Authorization** header should be **Basic** authorization with the **client_id** and **client_secret** base64url encoded and used as the username and password respectively. Both **client_id** and **client_secret** are generated during the application registration process and can be found on the Developer Console.
+
+  {: .note }
+  **Note:** If you are using the Laserfiche OAuth 2.0 Authorization Server API Swagger Playground, authorize your app first using the **Basic Authentication (http, Basic)** option. See [Authorize your OAuth Service App on Swagger UI](../../../api/authentication/guide_authenticating-to-the-swagger-playground/#authorize-your-oauth-service-app-on-swagger-ui).
 
 **Example Successful Access Token Response**
-  ```
-    HTTP/1.1 200 OK
-    Content-Type: application/json; charset=UTF-8
-  ```
-  ```json
-    {
-    "access_token": "some_access_token_value",
-    "token_type": "bearer",
-    "expires_in": 3600,
-    "refresh_token": "some_refresh_token_value",
-    "scope": "repository.Read repository.Write"
-    }
-  ```
-  - The returned access token includes an expiration time in seconds. Upon expiration, the application can use the refresh token to get a new one. The refresh token has a lifetime of around 8 hours from the time it was issued. The refresh token can also be invalidated when the user signs out from Laserfiche Cloud.
-  - The returned scope is the granted scope by the OAuth Server.
+
+```
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+```
+
+```json
+{
+  "access_token": "some_access_token_value",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "refresh_token": "some_refresh_token_value",
+  "scope": "repository.Read repository.Write"
+}
+```
+
+- The returned access token includes an expiration time in seconds. Upon expiration, the application can use the refresh token to get a new one. The refresh token has a lifetime of around 8 hours from the time it was issued. The refresh token can also be invalidated when the user signs out from Laserfiche Cloud.
+- The returned scope is the granted scope by the OAuth Server.
 
 **Example error response**
-  ```
-    HTTP/1.1 401 Unauthorized
-    Content-Type: application/json; charset=UTF-8
-  ```
-  ```json
-    {
-    "error": "invalid_client",
-    "error_description": "The client credentials are invalid or authentication failed.",
-    "type": "invalid_client",
-    "title": "The client credentials are invalid or authentication failed.",
-    "status": 401,
-    "instance": "/Token",
-    "operationId": "07f50babe09746a4b62346c3e89c4839",
-    "traceId": "00-55eea5e3876a0c42a06ad1c78922e247-53d1e1ec0b933944-00"
-    }
-  ```
-  - Error types include:
-    - **unsupported_grant_type:** grant_type is not authorization_code.
-    - **invalid_request:** Required field is missing.
-    - **invalid_client:** The client authentication is missing or failed, or the client_id is invalid.
-    - **unauthorized_client:** The application type is not a web app.
-    - **invalid_grant:** redirect_uri does not match the one that started the authorization flow, or the authorization code is invalid or expired.
+
+```
+  HTTP/1.1 401 Unauthorized
+  Content-Type: application/json; charset=UTF-8
+```
+
+```json
+{
+  "error": "invalid_client",
+  "error_description": "The client credentials are invalid or authentication failed.",
+  "type": "invalid_client",
+  "title": "The client credentials are invalid or authentication failed.",
+  "status": 401,
+  "instance": "/Token",
+  "operationId": "07f50babe09746a4b62346c3e89c4839",
+  "traceId": "00-55eea5e3876a0c42a06ad1c78922e247-53d1e1ec0b933944-00"
+}
+```
+
+- Error types include:
+  - **unsupported_grant_type:** grant_type is not authorization_code.
+  - **invalid_request:** Required field is missing.
+  - **invalid_client:** The client authentication is missing or failed, or the client_id is invalid.
+  - **unauthorized_client:** The application type is not a web app.
+  - **invalid_grant:** redirect_uri does not match the one that started the authorization flow, or the authorization code is invalid or expired.
 
 ## Cross-Origin Resource Sharing (CORS) Policy Information
 
@@ -150,6 +162,7 @@ Authorization: Bearer some_access_token_value
 When an access token expires, the web application can use the refresh token to get a new one.
 
 **Example refresh token request**
+
 ```
 POST https://signin.laserfiche.com/oauth/token HTTP/1.1
 Authorization: Basic base64url-encoded-client_id-client_secret
@@ -157,6 +170,7 @@ Content-Type: application/x-www-form-urlencoded
 
 grant_type=refresh_token&refresh_token=some_refresh_token_value
 ```
+
 - The **grant_type** in the request body should be **refresh_token**.
 - The **refresh_token** value should be the one returned along with access token in the previous get access token step.
 - The **Authorization** header should be **Basic** authorization with the **client_id** and **client_secret** base64url encoded and used as the username and password respectively. Both **client_id** and **client_secret** are generated during the application registration process and can be found on the Developer Console.
@@ -164,17 +178,19 @@ grant_type=refresh_token&refresh_token=some_refresh_token_value
 **Example successful refresh token response**
 
 In a successful response, the OAuth service will return a new access token with a new refresh token in the response. The new access token will have the same scope as the previous access token.
+
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=UTF-8
 ```
+
 ```json
 {
-"access_token": "another_access_token_value",
-"token_type": "bearer",
-"expires_in": 3600,
-"refresh_token": "another_refresh_token_value",
-"scope": "repository.Read repository.Write"
+  "access_token": "another_access_token_value",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "refresh_token": "another_refresh_token_value",
+  "scope": "repository.Read repository.Write"
 }
 ```
 
@@ -188,16 +204,17 @@ For security reasons, if an old refresh token is reused, the OAuth service will 
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json; charset=UTF-8
 ```
+
 ```json
 {
-"error": "invalid_grant",
-"error_description": "The use of a previously used refresh token has been detected. As a security precaution, the refresh token has been invalidated.",
-"type": "invalid_grant",
-"title": "The use of a previously used refresh token has been detected. As a security precaution, the refresh token has been invalidated.",
-"status": 400,
-"instance": "/Token",
-"operationId": "e59562d544154c88a17d8b842dd51c97",
-"traceId": "00-5ec73ccfad5c6041b09001999b61aca4-87df063e7465a449-00"
+  "error": "invalid_grant",
+  "error_description": "The use of a previously used refresh token has been detected. As a security precaution, the refresh token has been invalidated.",
+  "type": "invalid_grant",
+  "title": "The use of a previously used refresh token has been detected. As a security precaution, the refresh token has been invalidated.",
+  "status": 400,
+  "instance": "/Token",
+  "operationId": "e59562d544154c88a17d8b842dd51c97",
+  "traceId": "00-5ec73ccfad5c6041b09001999b61aca4-87df063e7465a449-00"
 }
 ```
 

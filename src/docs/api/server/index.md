@@ -42,16 +42,22 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 1. Navigate to the directory `%ProgramData%\Laserfiche\API Server\LFRepositoryAPI` and **open** `appsettings.json` using a text editor as an administrator.
 1. In `appsettings.json`, set the value of **"LaserficheServerName"** to the fully qualified domain name of your Laserfiche Server in your network. If your Laserfiche Server is using a non-default port, append the port to the fully qualified domain name (e.g., "myLaserficheServer.myOrganization.com:123").
 1. Optional configuration settings
+
    - (Optional) In `appsettings.json`, set the value of **"EnableLaserficheServerSSL"** to false if the connection to the Laserfiche Server is **NOT** secured using TLS/SSL.
-   - (Optional) In `appsettings.json`, set the value of **"EnableGetRepositoryListApi"** to true if you would like to enable the GET /Repositories API that returns the list of repositories. **Note that using this API does not require an access token.**
+   - (Optional) In `appsettings.json`, set the value of **"EnableGetRepositoryListApi"** to true if you would like to enable the GET /Repositories API that returns the list of repositories.
+
+     {: .note }
+     **SECURITY CONSIDERATION:** When **"EnableGetRepositoryListApi"** is set to **true**, getting the list of Repositories does not require an access token.
+
    - (Optional) In `appsettings.json`, set the value of **"KeyedConcurrentLicense"** to your "Keyed Concurrent License".
    - (Optional) In `appsettings.json`, set the value of **"LaserficheWebClientHostUrl"** to your "Laserfiche Web Client Host URL" (e.g., "https://_{LaserficheWebClientHostName}_/laserfiche").
    - (Optional) To modify the file upload (document import) size limit:
-     1. Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "web.config" using a text editor as an administrator. Change the value of **"maxAllowedContentLength"** in "&lt;requestLimits maxAllowedContentLength="104857600" /&gt;" to the desired value in **bytes**.
-     1. Do one of the following depending on the version of the Laserfiche API Server
-        - **Laserfiche API Server 1.1:** Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "microservice.json" using a text editor as an administrator. Change the value of **"UploadFileSizeLimitBytes"** under the "Operation" section to the desired value in **bytes**.
-        - **Laserfiche API Server 1.0:** Navigate to the directory "%ProgramData%\Laserfiche\API Server\LFRepositoryAPI" and **open** `appsettings.json` using a text editor as an administrator. Set the value of **"UploadFileSizeLimitMb"** to the desired value in **MB**.
+
+      1. Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "web.config" using a text editor as an administrator. Change the value of **"maxAllowedContentLength"** in "&lt;requestLimits maxAllowedContentLength="104857600" /&gt;" to the desired value in **bytes**.
+      1. Navigate to the directory "%ProgramData%\Laserfiche\API Server\LFRepositoryAPI" and **open** `appsettings.json` using a text editor as an administrator. Set the value of **"UploadFileSizeLimitMb"** to the desired value in **MB**.
+
    - (Optional) To override the default log settings, navigate to the installation directory (e.g., "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and open "nlog.config" using a text editor as an administrator. For example, the last logging rule's "minLevel" can be increased to reduce trace logging.
+
 1. **Save** `appsettings.json` and **restart** IIS Server.
 
 ### Verify your Installation
@@ -87,6 +93,7 @@ If successful, the API will return a 200 HTTP response status code and the respo
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "access_token": "...",

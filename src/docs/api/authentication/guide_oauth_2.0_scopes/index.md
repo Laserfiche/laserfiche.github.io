@@ -26,6 +26,8 @@ OAuth access tokens authorize access to protected resources. Scopes further defi
 
 An application should be designed to provide useful limited functionality when only a subset of the requested scopes is granted. As a best practice, request the least privileged scopes that your app needs in order to access data and function correctly. The effective permissions granted to your app may be further constrained by the privileges of the signed-in user.
 
+![API client effective permissions](./api-client-effective-permissions.png)
+
 ## Using Scopes
 
 ### Configure Pre-Approved Scopes in the Developer Console

@@ -14,7 +14,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 {: .note }
 **Note:** This section applies to Laserfiche Cloud.
 
-Examples of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm?tocpath=Process%20Automation%7CRules%7C_____10) for Laserfiche Cloud [Process Automation](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Get-Started.htm?tocpath=Process%20Automation%7C_____1):
+Examples of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm) for Laserfiche Cloud [Process Automation](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Get-Started.htm):
 
 {% for item in site.pages %}
 {% assign item_crumbs = item.url | remove_first: page.dir | split: '/' %}
