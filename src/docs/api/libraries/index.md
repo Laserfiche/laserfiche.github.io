@@ -31,7 +31,7 @@ The .NET Standard 2.0 library for .NET applications.
 
 Client Core API: [Documentation](https://developer.laserfiche.com/lf-api-client-core-dotnet/docs/1.x/index.html), [NuGet Package](https://www.nuget.org/packages/Laserfiche.Api.Client.Core){:target="_blank"}
 
-Repository API: [Documentation](https://developer.laserfiche.com/lf-repository-api-client-dotnet/docs/v2/index.html), [NuGet Package](https://www.nuget.org/packages/Laserfiche.Repository.Api.Client.V2){:target="_blank"}
+Repository API: [Documentation](https://developer.laserfiche.com/lf-repository-api-client-dotnet/docs/v2/1.x/index.html), [NuGet Package](https://www.nuget.org/packages/Laserfiche.Repository.Api.Client.V2){:target="_blank"}
 
 Sample Projects: [Console Application](https://github.com/Laserfiche/laserfiche-api-use-cases-dotnet){:target="_blank"}
 
