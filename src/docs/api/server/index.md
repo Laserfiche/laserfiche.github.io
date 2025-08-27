@@ -57,6 +57,9 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
       1. Navigate to the directory "%ProgramData%\Laserfiche\API Server\LFRepositoryAPI" and **open** `appsettings.json` using a text editor as an administrator. Set the value of **"UploadFileSizeLimitMb"** to the desired value in **MB**.
 
    - (Optional) To override the default log settings, navigate to the installation directory (e.g., "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and open "nlog.config" using a text editor as an administrator. For example, the last logging rule's "minLevel" can be increased to reduce trace logging.
+   - (Optional) To allow "double-escaping" (i.e. A document name with encoded characters):
+
+      1. Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "web.config" using a text editor as an administrator. Change &lt;requestFiltering&gt;{...}&lt;/requestFiltering&gt; to &lt;requestFiltering allowDoubleEscaping="true"&gt;{...}&lt;/requestFiltering&gt;.
 
 1. **Save** `appsettings.json` and **restart** IIS Server.
 
