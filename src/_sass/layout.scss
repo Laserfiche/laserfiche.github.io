@@ -16,29 +16,55 @@
   }
 
   @include mq(lg) {
-    width: $nav-width;
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
     min-width: $nav-width;
+  }
+
+  & + .main {
+    @include mq(md) {
+      margin-left: $nav-width-md;
+    }
+
+    @include mq(lg) {
+      // stylelint-disable function-name-case
+      // disable for Max(), we want to use the CSS max() function
+      margin-left: Max(
+        #{$nav-width},
+        calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+      );
+      // stylelint-enable function-name-case
+    }
+
+    .main-header {
+      display: none;
+      background-color: $sidebar-color;
+
+      @include mq(md) {
+        display: flex;
+        background-color: $body-background-color;
+      }
+
+      &.nav-open {
+        display: block;
+
+        @include mq(md) {
+          display: flex;
+        }
+      }
+    }
   }
 }
 
 .main {
-  min-height: 100vh;
+  margin: auto;
+
   @include mq(md) {
     position: relative;
-    margin-left: $nav-width-md;
-  }
-
-  @include mq(lg) {
-    // stylelint-disable function-name-case
-    // disable for Max(), we want to use the CSS max() function
-    margin-left: $nav-width;
-    // stylelint-enable function-name-case
+    max-width: $content-width;
   }
 }
 
 .main-content-wrap {
-  min-height: calc(100vh - #{$header-height} - #{$min-footer-height});
-
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
 
@@ -47,56 +73,28 @@
   @include mq(md) {
     padding-top: $gutter-spacing;
     padding-bottom: $gutter-spacing;
-    max-width: $content-width;
-  }
-
-  @include mq(lg) {
-    // stylelint-disable function-name-case
-    // disable for Max(), we want to use the CSS max() function
-    margin-left: 
-      calc((100% - #{$content-width}) / 2);
-    // stylelint-enable function-name-case
   }
 }
 
 .main-header {
   z-index: 0;
-  display: none;
-  background-color: $sidebar-color;
+  border-bottom: $border $border-color;
 
   @include mq(md) {
     display: flex;
     justify-content: space-between;
     height: $header-height;
-    background-color: $body-background-color;
-    border-bottom: $border $border-color;
-  }
-
-  &.nav-open {
-    display: block;
-
-    @include mq(md) {
-      display: flex;
-    }
   }
 }
 
 .site-nav,
-.site-header {
+.site-header,
+.site-footer {
   width: 100%;
 
   @include mq(lg) {
     width: $nav-width;
   }
-}
-
-#page-container {
-  position: relative;
-  min-height: 100%;
-}
-
-.text-start {
-  text-align: left!important;
 }
 
 .site-nav {
@@ -127,19 +125,21 @@
   }
 }
 
-.site-title { 
+.site-title {
   flex-grow: 1;
   display: flex;
   height: 100%;
   align-items: center;
-  padding-top: $sp-4;
+  padding-top: $sp-3;
   padding-bottom: $sp-3;
   color: $body-heading-color;
+
   @include container;
+
   @include fs-6;
 
   @include mq(md) {
-    padding-top: $sp-4;
+    padding-top: $sp-2;
     padding-bottom: $sp-2;
   }
 }
@@ -150,7 +150,7 @@
     height: 100%;
     background-image: url($logo);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left center;
     background-size: contain;
   }
 }
@@ -199,6 +199,24 @@ body {
 }
 
 // stylelint-enable selector-max-type
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: $sp-4;
+  padding-bottom: $sp-4;
+  color: $grey-dk-000;
+
+  @include container;
+
+  @include fs-2;
+
+  @include mq(md) {
+    position: static;
+    justify-self: end;
+  }
+}
 
 .icon {
   width: $sp-5;

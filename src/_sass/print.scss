@@ -1,12 +1,18 @@
 // stylelint-disable selector-max-specificity, selector-max-id, selector-max-type, selector-no-qualifying-type
 
 @media print {
+  .site-footer,
   .site-button,
   #edit-this-page,
   #back-to-top,
   .site-nav,
   .main-header {
     display: none !important;
+  }
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .side-bar {
