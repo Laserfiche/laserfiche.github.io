@@ -1,9 +1,8 @@
 // Typography
 
 // prettier-ignore
-$body-font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-  roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji" !default;
-$mono-font-family: "SFMono-Regular", menlo, consolas, monospace !default;
+$body-font-family: "trade-gothic-next", Arial, sans-serif;
+$mono-font-family: 'SFMono-Regular', menlo, consolas, monospace !default;
 $root-font-size: 16px !default; // DEPRECATED: previously base font-size for rems
 $body-line-height: 1.4 !default;
 $content-line-height: 1.6 !default;
@@ -24,8 +23,6 @@ $font-size-8: 2rem !default; // h1
 $font-size-9: 2.25rem !default;
 $font-size-10: 2.625rem !default;
 $font-size-10-sm: 3rem !default;
-
-// Colors
 
 $white: #fff !default;
 $grey-dk-000: #959396 !default;
@@ -57,11 +54,13 @@ $red-000: #f77e7e !default;
 $red-100: #f96e65 !default;
 $red-200: #e94c4c !default;
 $red-300: #dd2e2e !default;
-
+$note-bg-color: #FFEEC1;
+$lf-orange: #e35205 !default;
+$lf-blue: #083e66 !default;
+$lf-link: #005abc !default;
 // Spacing
 
 $spacing-unit: 1rem; // 1rem == 16px
-
 $spacers: (
   sp-0: 0,
   sp-1: $spacing-unit * 0.25,
@@ -92,21 +91,19 @@ $border: 1px solid !default;
 $border-radius: 4px !default;
 $border-color: $grey-lt-100 !default;
 
-// Grid system
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 16.5rem !default;
-$nav-width-md: 15.5rem !default;
+$nav-width: 20rem !default;
+$nav-width-md: 17rem !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
-$content-width: 50rem !default;
+$content-width: 80rem !default;
 $header-height: 3.75rem !default;
+$min-footer-height: 29rem !default;
 $search-results-width: $content-width - $nav-width !default;
 $transition-duration: 400ms;
-
-// Media queries in pixels
 
 $media-queries: (
   xs: 20rem,

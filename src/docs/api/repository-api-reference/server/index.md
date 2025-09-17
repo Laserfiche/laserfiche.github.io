@@ -21,7 +21,7 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 
 ## Limits
 
-There are no limits imposed on the API for self-hosted, but the [number of concurrent API calls](./selfhosted-connections/) is limited by the number of connections available to your user.
+There are no limits imposed on the API for self-hosted, but the [number of concurrent API calls](./selfhosted-FAQ/) a user can make is limited dependent on license type and server configuration.
 
 ## Try out your installation with a sample application
 

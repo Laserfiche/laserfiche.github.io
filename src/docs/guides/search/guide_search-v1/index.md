@@ -197,19 +197,19 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 
 ### Cloud
 
-- Only a limited number of searches can be active per user session, i.e. per valid OAuth access token. Searches are considered "active" for a period of time after completion so that you can access the results. If you are done with the search results, it is highly recommended to use the `DELETE https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Searches/{searchToken}` endpoint to remove the search.
+- Only a limited number of searches can be active per user session, i.e. per valid OAuth access token. Searches are considered active for a period of time after completion so that you can access the results. If you are done with the search results, it is highly recommended to use the `DELETE https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Searches/{searchToken}` endpoint to remove the search.
 
 {: .note }
-**Note:** For more details about the API limits, see [this page](../../../getting-started/guide_api-limits/).
+**Note:** For more details about the API limits, see [this page](../../../api/repository-api-reference/).
 
-- Search results are considered "active" and count against your API limits until one of the following occurs:
+- Search results are considered active and count against your API limits until one of the following occurs:
   - 5 minutes has passed since the user made any API call
   - The `delete` endpoint is called for the search
 
 ## Self-hosted
 
-- The number of "active" searches is limited to the number of concurrent connections allowed by your user for your Laserfiche server. Searches are considered "active" for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent connections limitations can be found on the [Making API Calls with Self-Hosted](../../../api/server/self-hosted-licensing/) page.
+- The number of active searches is limited to the number of concurrent API calls allowed by your user for your Laserfiche server. Searches are considered active for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent API limitations can be found in the [FAQ](../../../api/server/self-hosted-licensing/).
 
-- Search results are considered "active" and count against your connection limits until one of the following occurs:
+- Search results are considered active and count against your connection limits until one of the following occurs:
   - 5 minutes has passed since the search completed or the user called the results or context hits endpoints for the search in question.
   - The `delete` endpoint is called for the search
