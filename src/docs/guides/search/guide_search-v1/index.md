@@ -20,7 +20,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 Use the search API to find entries in your Laserfiche repository.
 
-A search operation follows the [long operation](../../../getting-started/guide_long-operations-v1/) pattern.
+A search operation follows the [long operation](../../../api/repository-api-reference/long-operations/) pattern.
 
 1. The client application launches a search query by calling the search API
 1. The API call will immediately return a task ID while the search continues running in Laserfiche.
@@ -208,7 +208,7 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 
 ## Self-hosted
 
-- The number of active searches is limited to the number of concurrent API calls allowed by your user for your Laserfiche server. Searches are considered active for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent API limitations can be found in the [FAQ](../../../api/server/self-hosted-licensing/).
+- The number of active searches is limited to the number of concurrent API calls allowed by your user for your Laserfiche server. Searches are considered active for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent API limitations can be found in the [FAQ](../../../api/repository-api-reference/server/selfhosted-FAQ/).
 
 - Search results are considered active and count against your connection limits until one of the following occurs:
   - 5 minutes has passed since the search completed or the user called the results or context hits endpoints for the search in question.

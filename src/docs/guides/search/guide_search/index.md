@@ -17,7 +17,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 <sup>[See Repository API v1](../guide_search-v1/).</sup>
 
 Use the search API to find entries in your Laserfiche repository.
-A search operation follows the [long operation](../../../getting-started/guide_long-operations/) pattern:
+A search operation follows the [long operation](../../../api/repository-api-reference/long-operations/) pattern:
 
 1. The client application launches a search query by calling the search API.
 1. The API call will immediately return a task ID while the search continues running in Laserfiche Cloud.

@@ -4,6 +4,8 @@ title: Repository API Long Operations
 nav_order: 1
 has_children: false
 parent: Repository API
+redirect_from:
+- /docs/getting-started/guide_long-operations-v1
 ---
 
 <!--© 2025 Laserfiche.

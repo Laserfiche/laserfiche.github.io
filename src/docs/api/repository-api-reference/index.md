@@ -42,7 +42,7 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 
 | Functionality | Self-hosted | Cloud |
 | --- | --- | --- |
-| Authentication| Laserfiche API Server for self-hosted systems supports [username/password authentication](./authenticating-with-the-self-hosted-laserfiche-api) | The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/) |
+| Authentication| Laserfiche API Server for self-hosted systems supports [username/password authentication](./server/authenticating-with-selfhosted/) | The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/) |
 | Repository Volumes | Supported | N/A |
 | Long operation management | The number of long operations you make is limited based on [license type and server configuration](./server/selfhosted-FAQ/). It is highly recommended to call the `delete` endpoint for operations such as search after you are done retrieving the results to free available connections. | N/A |
 | Search result availability | Results are available until search is cancelled or 5 minutes after last call for results or context hits. | Results are available until search is cancelled or 5 minutes after last API call by the user. |
