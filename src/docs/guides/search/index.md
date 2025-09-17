@@ -6,8 +6,8 @@ redirect_from:
   - /guides/v2/guide_search-vs-simple-search-v2.html
   - guides/guide_search-vs-simple-search.html
   - guide_search-vs-simple-search.html
-  - /guides/search/guide_search-vs-simple-search
-  - /guides/search/guide_search-vs-simple-search-v1
+  - /docs/guides/search/guide_search-vs-simple-search/
+  - /docs/guides/search/guide_search-vs-simple-search-v1/
 has_children: true
 parent: Guides
 ---
