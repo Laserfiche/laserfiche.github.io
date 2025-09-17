@@ -15,7 +15,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 <br/>
 <sup>[See Repository API v2](../guide_simple-search/).</sup>
 
-The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](../guide_search-vs-simple-search/).
+The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](../).
 
 In the following simple search, we want to find entries with a specific value in the _Purchase Order ID_ field.
 
