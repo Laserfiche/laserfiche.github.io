@@ -50,12 +50,10 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 
 | Operation | Self-hosted | Cloud |
 | --- | --- | --- |
-| Operations that return result immediately (no task id) | No limit as long as at least one concurrent call is available. Concurrent synchronous calls only count as one concurrent API call.&#x002A; |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
-| Copy, Delete | Limited by the number of calls available to the user.&#x002A; | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
+| Operations that return result immediately (no task id) | No limit as long as at least user has a connection available to the repository. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
+| Copy, Delete | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
 | Import, Export | N/A |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm)|
-| Task-based Search | Limited by the number of calls available to the user. <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. |
-
-&#x002A; For self-hosted [see the documentation](./../server/) for more details on the number of concurrent calls available per user.
+| Task-based Search | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections.<br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. |
 
 ## Try it out
 

@@ -208,7 +208,7 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 
 ## Self-hosted
 
-- The number of active searches is limited to the number of concurrent API calls allowed by your user for your Laserfiche server. Searches are considered active for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent API limitations can be found in the [FAQ](../../../api/repository-api-reference/server/selfhosted-FAQ/).
+- The number of active searches is limited to the number of concurrent API calls allowed by your user for your Laserfiche server. Searches are considered active for a period of time after completion so that you can access the results. Details regarding how to determine your concurrent API limitations can be found in the [self-hosted documentation](../../../api/repository-api-reference/server#limits).
 
 - Search results are considered active and count against your connection limits until one of the following occurs:
   - 5 minutes has passed since the search completed or the user called the results or context hits endpoints for the search in question.
