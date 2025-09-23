@@ -50,10 +50,10 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 
 | Operation | Self-hosted | Cloud |
 | --- | --- | --- |
-| Operations that return result immediately (no task id) | No limit as long as at least user has a connection available to the repository. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
-| Copy, Delete | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) |
-| Import, Export | N/A |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm)|
-| Task-based Search | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections.<br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm) <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. |
+| Operations that return result immediately (no task id) | No limit as long as at least user has a connection available to the repository. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) |
+| Copy, Delete | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) |
+| Import, Export | N/A |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits)|
+| Task-based Search | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections.<br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. |
 
 ## Try it out
 
