@@ -199,6 +199,4 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 **Note:** For more details about the API limits, see [this page](../../../getting-started/guide_api-limits/).
 
 {: .note }
-**Note:** In cloud, search results are considered "active" and count against your limit until one of the following occurs: <br/>
-    - The user has not used the API for 5 minutes <br/>
-    - The `delete` endpoint is called for the search
+**Note:** Once the search operation is completed, the search results are cached by your session and the search will still be considered open. If you are finished using the results of the search, it is a recommended practice to DELETE the search.

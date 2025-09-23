@@ -21,7 +21,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 | Delete    | &#x2713; | &#x2713; |       |
 | Import    | X        | &#x2713; |       |
 | Export    | X        | &#x2713; |       |
-| Search    | &#x2713; | &#x2713; | Search has some nuances. Details can be found on the [search page.](./../../../guides/search/)  |
+| Search    | &#x2713; | &#x2713; | See [search page](./../../../guides/search/) for details |
 
 ## Summary
 The flow of calls is summarized below:
