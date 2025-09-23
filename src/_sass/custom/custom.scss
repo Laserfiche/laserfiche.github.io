@@ -1,5 +1,6 @@
-#footer {
+.site-footer {
   min-height: $min-footer-height;
+  width: 100%;
   background-color: $body-background-color;
   a:not([class]) {
     text-decoration: none;
