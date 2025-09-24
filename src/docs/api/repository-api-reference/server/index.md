@@ -33,7 +33,7 @@ There are no limits imposed on the API for self-hosted, but a user is limited by
   - The number of additional connections is configured in LFDS when creating or updating the license for your Laserfiche server. Once updated and configured for use by the API those connections can be shared by all users of your API.
   - There is no separate username/password for the Keyed Integrator license. The connections allocated to the license will be used by any user of the API once configured
   - The number of connections a user has available to them is equal to the number of calls alloted to them by their license + any currently unused keyed integrator connections on the server.
-  - In order to make keyed concurrent license connections available to the API, follow the instructions on the [installation page](./../installing-and-configuring/#installation-configuration).
+  - In order to make keyed concurrent license connections available to the API, follow the instructions on the [installation page](./../server/installing-and-configuring/).
 
 ### Determining how long the API call will count against the user's session limit
 
