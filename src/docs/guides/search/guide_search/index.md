@@ -196,7 +196,7 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 **Note:** Only a limited number of searches can be active per user session, i.e. per valid OAuth access token. Searches are considered "active" for a period of time after completion so that you can access the results. If you are done with the search, it is recommended to use the `DELETE https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?taskIds={taskId}` endpoint to remove the search.
 
 {: .note }
-**Note:** For more details about the API limits, see [this page](../../../getting-started/guide_api-limits/).
+**Note:** For more details about the API limits, see [this page](../../../api/repository-api-reference#limits).
 
 {: .note }
 **Note:** Once the search operation is completed, the search results are cached by your session and the search will still be considered open. If you are finished using the results of the search, it is a recommended practice to DELETE the search.

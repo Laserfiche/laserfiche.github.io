@@ -32,4 +32,4 @@ Multiple Laserfiche APIs utilize this pattern and typically follow:
 **Note:** If you start an operation and then decide to cancel the operation, use the `DELETE https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?taskIds={taskId}` API to stop the operation. Stopping an operation while it is in progress can yield partial results of the original operation. For example, when copying a folder, some entries may be created prior to the operation stopping.
 
 {: .note }
-**Note:** Long operations can be limited based on the API or user type. For more details about the API limits, see [this page](../guide_api-limits/).
+**Note:** Long operations can be limited based on the API or user type. For more details about the API limits, see [the specific API](../../api/guide_overview-of-the-laserfiche-api/).
