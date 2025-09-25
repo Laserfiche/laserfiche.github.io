@@ -7,7 +7,7 @@ redirect_from:
   - guide_overview-of-the-laserfiche-api.html
   - api/index.html
   - api.html
-  - /docs/guides/guide_api-limits/
+  - /docs/getting-started/guide_api-limits/
 has_children: true
 ---
 
@@ -39,7 +39,7 @@ The Laserfiche API allows you interact with Laserfiche services from low-code an
 | Authentication<br/>User Types  | - [Full](https://doc.laserfiche.com/laserfiche/en-us/Content/userlicensetypes.htm) Users<br/> - [Participant](https://doc.laserfiche.com/laserfiche/en-us/Content/userlicensetypes.htm) Users (Read Only Access)<br/> - [Service Principals](../authentication/guide_service-principals/)<br/> - Other license types (i.e. No license or CustomerAssist) are unable to authenticate with the API | - Any user with repository access can use the repository API. (i.e. Repository Named User, Directory Named User) <br/> - Number of concurrent API calls is limited by [user license and Laserfiche server configuration](./../repository-api-reference/server/). |
 | OAuth 2.0<br/>Application Types |- [Service App](../authentication/guide_oauth-service/)<br/>- [SPA (Single Page App)](../authentication/guide_oauth-spa/)<br/>- [Web App](../authentication/guide_oauth-webapp/)| N/A |
 |Security features| - JWT Access Token<br/>- [OAuth 2.0 Scopes](../authentication/guide_oauth_2.0_scopes/)<br/>- User Consent Form on first Sign-in (can be disabled)<br/>- [Requires App registration in Developer Console](../../getting-started/developer-console/) | - JWT Access Token |
-|Service Limits| [API Limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) | No explicit service limits. The number of concurrent API calls available to a user is dependent on the [ type of API call, user license type, and server configuration](../repository-api-reference/server/). |
+|Service Limits| [API Limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) | No explicit service limits. The number of concurrent API calls available to a user is dependent on the [type of API call, user license type, and server configuration](../repository-api-reference/server/). |
 
 ## Laserfiche REST API - HTTP Requests
 

@@ -27,7 +27,7 @@ There are no limits imposed on the API for self-hosted, but a user is limited by
 
 - The number of concurrent connections a user can make is equal to the number of connections allowed by their license, plus any additional connections they are allowed via a keyed integrator license.
   - For example, a standard **Repository Named User** can have up to 4 concurrent calls and a standard **Directory Named User** can have up to 8 concurrent calls.
-  - Note: The API shares these connections with other applications, so if the user is logged into Web Client separately that will also monopolize one of the user's connections, making it unavailable to the API.
+  - Note: The API shares these connections with other Laserfiche applications, so if the user is logged into a different application such as Web Client that will use one of the user's connections and make one less unavailable to the API.
 
 - Keyed Integrator licenses can make additional connections available to users of the API.
   - The number of additional connections is configured in LFDS when creating or updating the license for your Laserfiche server. Once updated and configured for use by the API those connections can be shared by all users of your API.
@@ -48,6 +48,7 @@ There are no limits imposed on the API for self-hosted, but a user is limited by
     - Operations will remain open and results will be available until one of the following occurs:
       - 5 minutes have passed search completion/failure OR last call to get search results or context hits for that listing
       - The `delete` endpoint is called for the search in question
+- Note: You can use the Laserfiche management console to see active connections per user and for more license details you can use [Windows Performance Counter](https://support.laserfiche.com/resources/3898/using-windows-performance-monitor-with-laserfiche?_gl=1*1fevcr4*_gcl_au*NTU3MTMyNTcxLjE3NTI2OTQ2MDQ.) to monitor the keyed license session count over time.
 
 ## Try out your installation with a sample application
 
