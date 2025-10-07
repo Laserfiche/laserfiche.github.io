@@ -20,7 +20,7 @@ Take advantage of pre-built libraries to accelerate your Laserfiche app developm
 A library containing utility functions and a reusable localization service.
 
 - [JavaScript/TypeScript library on npm](https://www.npmjs.com/package/@laserfiche/lf-js-utils)
-- **Documentation**: [lf-js-utils](https://developer.laserfiche.com/lf-api-js/modules/_laserfiche_lf_js_utils.html)
+- **Documentation**: [lf-js-utils](https://developer.laserfiche.com/lf-api-js/modules/_laserfiche_lf-js-utils.html)
 - **Source Code**: [lf-js-utils](https://github.com/Laserfiche/lf-api-js/tree/main/packages/lf-js-utils)
 
 ## lf-resource-library
