@@ -59,3 +59,11 @@ Use the [Laserfiche OData Table API](../odata-api-reference/) to access and mana
 - [Try the OData Table API](https://api.laserfiche.com/odata4/swagger/index.html) (United States Data Center)
 - [Try the OData Table API](https://api.laserfiche.ca/odata4/swagger/index.html) (Canadian Data Center)
 - [Try the OData Table API](https://api.eu.laserfiche.com/odata4/swagger/index.html) (European Data Center)
+
+## Laserfiche Cloud Collections API
+
+Use the Laserfiche Cloud Collections API to manage and query collections of vectorized documents.
+
+- [Try the Collections API](https://api.laserfiche.com/ai/collections/v1/ui/) (United States Data Center)
+- [Try the Collections API](https://api.laserfiche.ca/ai/collections/v1/ui/) (Canadian Data Center)
+- [Try the OData Table API](https://api.eu.laserfiche.com/ai/collections/v1/ui/) (European Data Center)
