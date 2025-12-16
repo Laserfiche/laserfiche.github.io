@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "powerHeader.commentMode": "line",
   "powerHeader.autoInsert.enable": true,
   "powerHeader.autoInsert.allow": "all",

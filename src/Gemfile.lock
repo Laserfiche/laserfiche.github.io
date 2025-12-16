@@ -154,6 +154,7 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-include-cache
   jekyll-redirect-from
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.3.26
