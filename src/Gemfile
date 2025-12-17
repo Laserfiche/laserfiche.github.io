@@ -10,3 +10,5 @@ gem "html-proofer", "~> 5.0", :group => :development
 gem 'jekyll-redirect-from'
 
 gem 'wdm', '>= 0.2.0' if Gem.win_platform?
+
+gem "webrick", "~> 1.9"
