@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Swagger Playground
-nav_order: 3
+nav_order: 8
 redirect_from:
   - api/API.html
   - api/playground.html
@@ -42,7 +42,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 
 - Self-Hosted [Laserfiche API Server](../server/) typically exposes the Swagger UI at `https://YOUR-SERVER.EXAMPLE.COM/LFRepositoryAPI/`.
 
-### Laserfiche Cloud Repository API regional endpoints
+### Laserfiche Repository API regional endpoints
 
 - [Try the Repository API](https://api.laserfiche.com/repository/swagger/index.html) (United States Data Center)
 - [Try the Repository API](https://api.laserfiche.ca/repository/swagger/index.html) (Canadian Data Center)
@@ -52,7 +52,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 **Note:** Repository API V2 offers enhanced functionality compared to V1 and is the recommended version.
 ![image](./swagger-api-v2.png)
 
-## Laserfiche Cloud OData Table API
+## Laserfiche OData Table API
 
 Use the [Laserfiche OData Table API](../odata-api-reference/) to access and manage data in a Laserfiche Lookup Tables.
 
@@ -60,10 +60,10 @@ Use the [Laserfiche OData Table API](../odata-api-reference/) to access and mana
 - [Try the OData Table API](https://api.laserfiche.ca/odata4/swagger/index.html) (Canadian Data Center)
 - [Try the OData Table API](https://api.eu.laserfiche.com/odata4/swagger/index.html) (European Data Center)
 
-## Laserfiche Cloud Collections API
+## Laserfiche Collections API
 
-Use the Laserfiche Cloud Collections API to manage and query collections of vectorized documents.
+Use the Laserfiche Collections API to manage and query collections of vectorized documents.
 
 - [Try the Collections API](https://api.laserfiche.com/ai/collections/v1/ui/) (United States Data Center)
 - [Try the Collections API](https://api.laserfiche.ca/ai/collections/v1/ui/) (Canadian Data Center)
-- [Try the OData Table API](https://api.eu.laserfiche.com/ai/collections/v1/ui/) (European Data Center)
+- [Try the Collections API](https://api.eu.laserfiche.com/ai/collections/v1/ui/) (European Data Center)
