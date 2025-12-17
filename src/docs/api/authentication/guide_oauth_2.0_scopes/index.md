@@ -51,6 +51,12 @@ When web applications and single-page applications request access tokens with sc
 
 See the following lists of available OAuth 2.0 scopes.
 
+### Collections API
+
+| Scopes          | Description                                                        |
+| --------------- | ------------------------------------------------------------------ |
+| collections.All | Allows full access to collections on behalf of the signed-in user. |
+
 ### Repository API
 
 | Scopes           | Description                                                                                      |
@@ -84,14 +90,14 @@ All scopes must be both configured in the developer console and requested in the
 {: .note }
 For tables, the resulting rights of the app are an intersection of the table read/write scopes configured, the project scopes configured, and whether the user or service principal has access to the specified projects. See the [table API security overview](./../../odata-api-reference/#security) for more details.
 
-| Scopes      | Description                                                                                       |
-| ----------- | ------------------------------------------------------------------------------------------------- |
-| table.Read  | Allows the app to read the content of Laserfiche lookup tables on behalf of the signed-in user.   |
-| table.Write | Allows the app to modify the content of Laserfiche lookup tables on behalf of the signed-in user. |
+| Scopes         | Description                                                                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| table.Read     | Allows the app to read the content of Laserfiche lookup tables on behalf of the signed-in user.                                                                                                                                                        |
+| table.Write    | Allows the app to modify the content of Laserfiche lookup tables on behalf of the signed-in user.                                                                                                                                                      |
 | project scopes | Allows the app to have access to resources in a specific project. To access global resources, add the "project/Global" scope. If no projects are specified the app will NOT have access to any tables even if table.Read and table.Write are specified |
 
 {: .note }
- An application can ONLY access tables within the projects specified and only IF the signed-in user or service principal has the rights to those projects as well. See [table API security overview](./../../odata-api-reference/#security) for more information on how access rights and project scopes work together.
+An application can ONLY access tables within the projects specified and only IF the signed-in user or service principal has the rights to those projects as well. See [table API security overview](./../../odata-api-reference/#security) for more information on how access rights and project scopes work together.
 
 ### Table API Granular (Read/Write) Scopes
 
