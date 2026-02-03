@@ -31,4 +31,4 @@ For Laserfiche Cloud, version 1 and later of the APIs follow the OAuth model.
 
 ## Creating a connection in self-hosted systems
 
-- Learn how to [create a connection using the password flow](../server/#authenticating-with-the-self-hosted-laserfiche-api).
+- Learn how to [create a connection using the password flow](../repository-api-reference/server/authenticating-with-selfhosted/).

@@ -1,6 +1,9 @@
 // © 2025 Laserfiche.
 // See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.
 
+// © 2025 Laserfiche.
+// See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.
+
 (() => {
   const setThemeIcon = (theme) => {
     const toggleDarkMode = document.getElementById('theme-toggle');
@@ -18,7 +21,7 @@
     if (theme === null) {
       theme =
         window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches
+        window.matchMedia('(prefers-color-scheme: dark)').matches
           ? 'dark'
           : 'light';
     }
@@ -46,5 +49,4 @@
         setThemeAndIcon(newColorScheme);
       }
     });
-
 })(window.jtd);

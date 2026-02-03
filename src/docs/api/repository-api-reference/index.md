@@ -3,6 +3,7 @@ layout: default
 title: Repository API
 nav_order: 1
 parent: Laserfiche APIs
+has_children: true
 ---
 
 <!--© 2025 Laserfiche.
@@ -24,6 +25,35 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 - [Create, list, import, and export documents and folders](../../guides/documents-and-folders/)
 - [Read/Write entry metadata](../../guides/metadata/)
 - [Search the Repository](../../guides/search/)
+
+## V1 vs. V2 Comparison
+
+| | V1 | V2 | Notes |
+| Synchronous import/export | &#x2713; | &#x2713; | Limits to the number of results. May time out if operation takes too long. |
+| Asynchronous import/export | X | &#x2713; | |
+| Simple Search | &#x2713; |&#x2713;| Limited to 100 results and 15 seconds|
+| Asynchronous Search |&#x2713; | &#x2713; | Endpoints are different for V1 vs. V2 |
+| Long operation management |&#x2713; | &#x2713; | Client should call the `delete` Tasks (`delete` Searches in v1) endpoint once done, to free resources for additional calls. |
+| Export document text | X | &#x2713; | |
+| Export document pages | X | &#x2713; | |
+| Generate pages on import | X | &#x2713; | |
+| Import image files as image pages | X | &#x2713; | |
+
+## Cloud vs. Self-hosted Comparison
+
+| Functionality | Self-hosted | Cloud |
+| --- | --- | --- |
+| Authentication| Laserfiche API Server for self-hosted systems supports [username/password authentication](./server/authenticating-with-selfhosted/) | The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/) |
+| Repository Volumes | Supported | N/A |
+
+## Limits
+
+| Operation | Self-hosted | Cloud |
+| --- | --- | --- |
+| Operations that return result immediately (no task id) | No limit as long as at least user has a connection available to the repository. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) |
+| Copy, Delete | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) |
+| Import, Export | N/A |See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits)|
+| Task-based Search | Limited by the number of calls available to the user. See [self-hosted limits](./server/#limits) to determine the user's allowed number of connections.<br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. | See [Laserfiche API limits](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) <br/>NOTE: Searches will remain active and count against your limit for a period of time after search completion unless deleted. |
 
 ## Try it out
 

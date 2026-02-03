@@ -16,7 +16,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 <br/>
 <sup>[See Repository API v1](../guide_simple-search-v1/).</sup>
 
-The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. See [this guide](../guide_search-vs-simple-search/) to view the differences between simple search and search.
+The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. See [this guide](../) to view the differences between simple search and search.
 
 In the following simple search, we want to find entries with a specific value in the _Purchase Order ID_ field.
 
@@ -66,6 +66,6 @@ A single session, distinguished by a valid OAuth access token, can only have a l
 
 {: .note }
 
-- For more information about the API limits, see [this page](../../../getting-started/guide_api-limits/).
+- For more information about the API limits, see [this page](../../../api/repository-api-reference#limits).
 - See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Template_Field.htm).
 - See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing/#retrieve-field-metadata-for-each-document).

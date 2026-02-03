@@ -388,7 +388,7 @@ HTTP 200 OK
 ```
 
 {: .note}
-**Note:** For details about the _Chunked Import_ limits, see [this page](../../../getting-started/guide_api-limits/).
+**Note:** For details about the _Chunked Import_ limits, see [this page](../../../api/repository-api-reference#limits).
 
 {: .note}
 **Note:** To import text or images as an Edoc, set the `importAsElectronicDocument` parameter in the request body to `true`.

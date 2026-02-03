@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Libraries
+title: Client Libraries
 nav_order: 5
 redirect_from:
   - libraries.html

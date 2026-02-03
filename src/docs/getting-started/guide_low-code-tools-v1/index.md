@@ -62,7 +62,7 @@ The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/
 {: .note }
 **Note:** The following section only applies to Self-Hosted Laserfiche. For Cloud, see the [Laserfiche Cloud](#laserfiche-cloud) section.
 
-HTTP requests to Laserfiche API Server require the Authorization header to contain an Access Token. See [Obtaining an Access Token using username/password authentication](../../api/server/#authenticating-with-the-self-hosted-laserfiche-api).
+HTTP requests to Laserfiche API Server require the Authorization header to contain an Access Token. See [Obtaining an Access Token using username/password authentication](../../api/repository-api-reference/server/authenticating-with-selfhosted/).
 
 ```
 POST https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Token

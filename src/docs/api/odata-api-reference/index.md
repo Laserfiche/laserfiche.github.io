@@ -23,6 +23,12 @@ In order to authenticate, follow the instructions in [Authenticate to the Swagge
 
 There are some security considerations to keep in mind when using the table API which are noted below.
 
+## Limits
+
+The Laserfiche Table API imposes certain limitations in order to sustain the quality and integrity of our cloud services for all customers. In the event of extraordinary resource contention, Laserfiche may impose temporary limits in addition to the **Laserfiche API limits** listed in the [Service Limits page](https://doc.laserfiche.com/laserfiche/en-us/Content/service/Service-Limits.htm#LaserficheAPIlimits) in order to maintain system stability for all customers.
+
+We are always looking to provide the optimal performance and experience for our customers. If you are consistently hitting these limits or these limits are a blocker for your integration's solution, please contact your Solution Provider to reach out to our Support team and we can work to resolve the issue.
+
 ## Security
 
 The Table API is secured using project-based security. This will match the already existing security for resources in process automation (learn more [here](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Teams/projects.htm)). To perform actions on a specific table the user or service principal must have access to the project that the table is a member of, OR global resources if the table is a global resource. In addition, all users of the API will need to have some form of “Process Automation” role through ACS to access tables, which is detailed below. One additional security detail to note - for the OAuth application to perform actions on the specified table, it will also need to have access to the project in which the table resides using scopes specified in the developer console. This is in addition to the existing table scopes (Read/Write).
