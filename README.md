@@ -52,7 +52,14 @@ has_children: true
 ---
 ```
 
-to view changes in the browser, run `jekyll serve --watch` and browse <http://localhost:4000>. Refresh to see changes.
+To view changes in the browser:
+
+```bash
+  cd src
+  bundle exec jekyll serve --livereload`
+```
+
+Browse <http://localhost:4000>
 
 ## Configuring Redirects
 
