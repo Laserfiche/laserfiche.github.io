@@ -11,11 +11,12 @@ redirect_from:
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Templates
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_assign-template/).</sup>
 
-Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Fields_and_Templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
+Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche/en-us/content/meta-fields-templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
 
 A field contains a piece of information about a document, such as an author name, an invoice number, a phone number, or an address. A template is a collection of related fields. Assigning a template to a document or folder allows you to assign multiple related fields at once. Only one template may be applied to a document or folder at a time. Fields can be added to the entry either individually or through a template, and there is no limit to how many fields can be added.
 
@@ -30,23 +31,24 @@ The example request assigns the **Email** template to the entry with entry ID **
 ```
 PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/template
 ```
+
 ```json
 {
-  "templateName":"Email",
-  "fields":{
-    "Sender":{
-      "values":[
+  "templateName": "Email",
+  "fields": {
+    "Sender": {
+      "values": [
         {
-          "value":"sender@laserfiche.com",
-          "position":1
+          "value": "sender@laserfiche.com",
+          "position": 1
         }
       ]
     },
-    "Recipients":{
+    "Recipients": {
       "values": [
         {
-          "value":"recipient1@laserfiche.com",
-          "position":1
+          "value": "recipient1@laserfiche.com",
+          "position": 1
         },
         {
           "value": "recipient2@laserfiche.com",
@@ -57,8 +59,8 @@ PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345
     "Subject": {
       "values": [
         {
-          "value":"Sample Subject field value",
-          "position":1
+          "value": "Sample Subject field value",
+          "position": 1
         }
       ]
     }
@@ -71,9 +73,10 @@ A successful return response will include the updated entry with assigned templa
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
-  "id":12345,
+  "id": 12345,
   "name": "Sample Document Name",
   "parentId": 1,
   "fullPath": "\\Sample Document Name",
@@ -114,6 +117,7 @@ In the next example, we will assign a template that has a multi-value field grou
 ```
 PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/template
 ```
+
 ```json
 {
   "templateName": "Shopping List",
@@ -151,9 +155,10 @@ A successful return response will include the updated entry with assigned templa
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
-  "id":12345,
+  "id": 12345,
   "name": "Sample Document Name",
   "parentId": 1,
   "fullPath": "\\Sample Document Name",
@@ -164,10 +169,7 @@ HTTP 200 Ok
   "entryType": "Document",
   "templateName": "Shopping List",
   "templateId": 2,
-  "templateFieldNames": [
-    "Item",
-    "Price"
-  ],
+  "templateFieldNames": ["Item", "Price"],
   "volumeName": "DEFAULT000000",
   "rowNumber": 0,
   "elecDocumentSize": 210494,

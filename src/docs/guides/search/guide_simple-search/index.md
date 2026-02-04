@@ -12,6 +12,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Simple Search
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_simple-search-v1/).</sup>
@@ -23,9 +24,10 @@ In the following simple search, we want to find entries with a specific value in
 ```
 POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/SimpleSearches
 ```
+
 ```json
 {
-"searchCommand":"{[]:[Purchase Order ID]=\"789\"}"
+  "searchCommand": "{[]:[Purchase Order ID]=\"789\"}"
 }
 ```
 
@@ -34,7 +36,7 @@ The response will include a listing of the entries that matched the search query
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Entry)",
-  "value":[
+  "value": [
     {
       "@odata.type": "#Laserfiche.Repository.SearchResultEntry",
       "id": 1234,

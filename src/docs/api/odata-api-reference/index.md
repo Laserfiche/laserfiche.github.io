@@ -25,7 +25,7 @@ There are some security considerations to keep in mind when using the table API 
 
 ## Security
 
-The Table API is secured using project-based security. This will match the already existing security for resources in process automation (learn more [here](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Teams/projects.htm)). To perform actions on a specific table the user or service principal must have access to the project that the table is a member of, OR global resources if the table is a global resource. In addition, all users of the API will need to have some form of “Process Automation” role through ACS to access tables, which is detailed below. One additional security detail to note - for the OAuth application to perform actions on the specified table, it will also need to have access to the project in which the table resides using scopes specified in the developer console. This is in addition to the existing table scopes (Read/Write).
+The Table API is secured using project-based security. This will match the already existing security for resources in process automation (learn more [here](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-teams-projects.htm)). To perform actions on a specific table the user or service principal must have access to the project that the table is a member of, OR global resources if the table is a global resource. In addition, all users of the API will need to have some form of “Process Automation” role through ACS to access tables, which is detailed below. One additional security detail to note - for the OAuth application to perform actions on the specified table, it will also need to have access to the project in which the table resides using scopes specified in the developer console. This is in addition to the existing table scopes (Read/Write).
 
 ### How security works
 
@@ -37,7 +37,6 @@ In order to authenticate, follow the steps for [Authenticating to the Laserfiche
    - This scope is the intersection of the scopes that are configured in developer console, the scopes that were requested when obtaining an access token, and the projects that the signed-in user has access to.
    - Both table read/write scopes AND project scopes must be selected.
 1. The project access of the signed-in user or service principal
-
    - A user AND application must have access to the specified project in order to access tables under that project
    - Users have different rights for project resources based on their project role
 
@@ -59,9 +58,9 @@ In order to authenticate, follow the steps for [Authenticating to the Laserfiche
 1. Verify user's access rights
    - Any user that is using the app must have process automation rights. This includes service principals.
    - Go to the Account Administration page and ensure the user has “Access to Process Automation” as a minimum. In order to have access to Global resources they must have at least the “Process Asset Administrator” role. See the following links for more information on the rights needed to access Project/Team resources.
-     - [Managing Account Administration](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Managing-Account-Administration.htm)
-     - [Getting Started with Team Management](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Forms-Current/Getting-Started-with-Team-Management.htm)
-     - [Determining Access Rights](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Teams/determining-access-rights.htm)
+     - [Managing Account Administration](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-ovw.htm)
+     - [Getting Started with Team Management](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-teams-project-manage.htm)
+     - [Determining Access Rights](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-teams-access-rights.htm)
 1. Add scopes when requesting an access token.
    1. For any Web App, SPA, or a Service App generating its own access token follow the existing instructions for requesting an access token with one important note:
    - In addition to requesting table and repository scopes you will also need to specify project scopes

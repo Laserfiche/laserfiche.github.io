@@ -17,7 +17,7 @@ License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICEN
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm?tocpath=Process%20Automation%7CRules%7C_____10) to access [OData V4](https://www.odata.org/documentation/) endpoints.
+A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/content/pa-rl-web-requests-ovw.htm?tocpath=Process%20Automation%7CRules%7C_____10) to access [OData V4](https://www.odata.org/documentation/) endpoints.
 
 Use cases:
 
@@ -26,7 +26,7 @@ Use cases:
 
 ## 1. Configure a Web Service Connection for the target OData endpoint
 
-- Configure a new [Web Service Connection](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm?_gl=1*131rcwp*_gcl_au*NzQ5MzM2MDY0LjE3MzMzMzk1NzM.#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Web-Services.htm?TocPath=Process%2520Automation%257CIntegrations%257C_____5):
+- Configure a new [Web Service Connection](https://doc.laserfiche.com/laserfiche/en-us/content/pa-in-web-services.htm):
   - Configure Web Service Connection Authentication per data provider instructions
   - Set the Web Service Connection `Base URL` to the `OData Service Document` endpoint.
 - If connecting to [Laserfiche OData Table API](../../../api/odata-api-reference/), follow these instructions: [How to configure a Web Service Connection to Laserfiche Cloud API](../../laserfiche-cloud-api-web-service-connections/#laserfiche-odata-table-api-web-service-connection)

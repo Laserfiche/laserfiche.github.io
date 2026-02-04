@@ -12,11 +12,12 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Links
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_assign-links-v1/).</sup>
 
-[Links](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
+[Links](https://doc.laserfiche.com/laserfiche/en-us/content/meta-doc-relationships.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
 
 For example, you might connect documents of different types that are related in some way, such as an agenda and its packet or an email message and its attached document. You might also use document relationships to indicate document status, such as a document that has been superseded and the document that superseded it.
 
@@ -33,6 +34,7 @@ The entry ID in the request URI will be the email. The request body contains a l
 ```
 PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/10/Links
 ```
+
 ```json
 {
   "links": [
@@ -43,7 +45,7 @@ PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/10/Li
       "customProperties": {
         "custom_property_1": "value of custom property 1",
         "custom_property_2": "value of custom property 2",
-        "custom_property_3": "value of custom property 3",
+        "custom_property_3": "value of custom property 3"
       }
     }
   ]
@@ -57,6 +59,7 @@ The response will contain the list of all links assigned to the source entry. Ea
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Link)",
@@ -64,7 +67,7 @@ HTTP 200 OK
     {
       "id": 5,
       "sourceId": 10,
-      "sourceFullPath":"\\Email",
+      "sourceFullPath": "\\Email",
       "sourceLabel": "Email",
       "targetId": 15,
       "targetFullPath": "\\EmailAttachment",
@@ -76,7 +79,7 @@ HTTP 200 OK
       "customProperties": {
         "custom_property_1": "value of custom property 1",
         "custom_property_2": "value of custom property 2",
-        "custom_property_3": "value of custom property 3",
+        "custom_property_3": "value of custom property 3"
       }
     }
   ]

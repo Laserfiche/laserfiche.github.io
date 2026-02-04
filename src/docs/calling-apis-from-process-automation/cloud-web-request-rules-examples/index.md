@@ -14,11 +14,12 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 {: .note }
 **Note:** This section applies to Laserfiche Cloud.
 
-Examples of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Rules/web-request-rule.htm) for Laserfiche Cloud [Process Automation](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Get-Started.htm):
+Examples of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/content/pa-rl-web-requests-ovw.htm) for Laserfiche Cloud [Process Automation](https://doc.laserfiche.com/laserfiche/en-us/content/pa-ovw.htm):
 
 {% for item in site.pages %}
 {% assign item_crumbs = item.url | remove_first: page.dir | split: '/' %}
 {% if item_crumbs.size == 1 and item.name == 'index.md' %}
+
 - [{{ item.title }}]({{ item.url | relative_url }})
-{% endif %}
-{% endfor %}
+  {% endif %}
+  {% endfor %}

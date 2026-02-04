@@ -19,7 +19,7 @@ An **entry** in Laserfiche refers to any item stored in the Laserfiche **Reposit
 
 Each entry can have associated **metadata** such as **fields** and **templates** to store specific pieces of information (like invoice numbers or client names).
 
-Laserfiche Repository API enables programmatic access to [Cloud](https://doc.laserfiche.com/laserfiche/en-us/Content/Overview.htm) and [Self-Hosted](https://doc.laserfiche.com/laserfiche.documentation/12/userguide/en-us/content/intro-getting-started.htm) Laserfiche Repositories:
+Laserfiche Repository API enables programmatic access to [Cloud](https://doc.laserfiche.com/laserfiche/en-us/content/intro-welcome-to-laserfiche.htm) and [Self-Hosted](https://doc.laserfiche.com/laserfiche.documentation/12/userguide/en-us/content/intro-getting-started.htm) Laserfiche Repositories:
 
 - [Create, list, import, and export documents and folders](../../guides/documents-and-folders/)
 - [Read/Write entry metadata](../../guides/metadata/)
