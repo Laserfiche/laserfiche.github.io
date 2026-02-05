@@ -12,6 +12,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Search
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_search-v1/).</sup>
@@ -29,24 +30,26 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 ```
 POST https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/SearchAsync
 ```
+
 ```json
 {
-    "searchCommand":"{LF:Basic~=\"Windham Ave\",option=\"DFANLT\"}&amp;({LF:LOOKIN=\"\\Meeting Minutes\"})"
+  "searchCommand": "{LF:Basic~=\"Windham Ave\",option=\"DFANLT\"}&amp;({LF:LOOKIN=\"\\Meeting Minutes\"})"
 }
 ```
 
 {: .note }
-**Note:** See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Basic_Search.htm) and [Fuzzy Search](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/publicportal/Content/Search_Options_Tab.htm).
+**Note:** See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Basic_Search.htm) and [Fuzzy Search](https://doc.laserfiche.com/laserfiche/en-us/content/config-portal-search-options.htm).
 
 This call will return a task ID that represents the running search operation.
 
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-"@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.StartTaskResponse",
-"taskId": "f1201c58-0dd0-4e39-abcc-450acff1b791"
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.StartTaskResponse",
+  "taskId": "f1201c58-0dd0-4e39-abcc-450acff1b791"
 }
 ```
 
@@ -58,24 +61,25 @@ The response will return the status of the operation, for example:
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-"@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Tasks",
-"value": [
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Tasks",
+  "value": [
     {
-    "id": "f1201c58-0dd0-4e39-abcc-450acff1b791",
-    "taskType": "SearchEntry",
-    "percentComplete": 100,
-    "status": "Completed",
-    "startTime": "2023-09-08T18:53:03.2303165Z",
-    "lastUpdateTime": "2023-09-08T18:53:41.6424258Z",
-    "errors": [],
-    "result": {
+      "id": "f1201c58-0dd0-4e39-abcc-450acff1b791",
+      "taskType": "SearchEntry",
+      "percentComplete": 100,
+      "status": "Completed",
+      "startTime": "2023-09-08T18:53:03.2303165Z",
+      "lastUpdateTime": "2023-09-08T18:53:41.6424258Z",
+      "errors": [],
+      "result": {
         "entryId": 0,
         "uri": "https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/f1201c58-0dd0-4e39-abcc-450acff1b791/Results"
+      }
     }
-    }
-]
+  ]
 }
 ```
 
@@ -86,6 +90,7 @@ The response will contain a list of entries representing the results of your sea
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
     "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Results",
@@ -143,6 +148,7 @@ The call will return all of the context hits with "Windham Ave" that was found i
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
 "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.SearchContextHit)",

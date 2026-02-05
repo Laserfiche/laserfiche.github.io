@@ -11,11 +11,12 @@ redirect_from:
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Tags
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_assign-tag/).</sup>
 
-Tags are a [metadata type](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Tags.htm) in Laserfiche that provide a way to categorize documents and folders. You can use tags to indicate information such as the entry's status, contents, or handling instructions, or to specify that certain documents should be restricted to certain users. Tag information is stored with the document.
+Tags are a [metadata type](https://doc.laserfiche.com/laserfiche/en-us/content/meta-tags.htm) in Laserfiche that provide a way to categorize documents and folders. You can use tags to indicate information such as the entry's status, contents, or handling instructions, or to specify that certain documents should be restricted to certain users. Tag information is stored with the document.
 
 Tags are used to categorize entries on an entry-by-entry basis. You can also use tags to help with document retrieval, since you can search for documents categorized with a particular tag.
 
@@ -30,11 +31,10 @@ This example assigns the "Approval Pending" tag to the entry with ID 12345 and w
 ```
 PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/tags
 ```
+
 ```json
 {
-  "tags": [
-    "Approval Pending"
-  ]
+  "tags": ["Approval Pending"]
 }
 ```
 
@@ -46,15 +46,16 @@ The response will contain a list of all assigned tags and the tag properties. In
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "value": [
     {
-      "id":10,
-      "name":"Approval Pending",
-      "description":"",
-      "isSecure":false,
-      "watermark":null
+      "id": 10,
+      "name": "Approval Pending",
+      "description": "",
+      "isSecure": false,
+      "watermark": null
     }
   ]
 }

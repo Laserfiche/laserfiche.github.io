@@ -11,6 +11,7 @@ redirect_from:
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Simple Search
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_simple-search/).</sup>
@@ -22,9 +23,10 @@ In the following simple search, we want to find entries with a specific value in
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/repoId/SimpleSearches
 ```
+
 ```json
 {
-"searchCommand":"{[]:[Purchase Order ID]=\"789\"}"
+  "searchCommand": "{[]:[Purchase Order ID]=\"789\"}"
 }
 ```
 
@@ -33,23 +35,24 @@ The response will include a listing of the entries that matched the search query
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
-  "value":[
+  "value": [
     {
-      "id":1234,
-      "name":"PurchaseOrder",
-      "parentId":1,
-      "fullPath":"",
-      "folderPath":"",
-      "creator":"Guide User",
-      "creationTime":"2020-12-12T12:00:00-00:00",
-      "lastModifiedTime":"2020-12-12T12:00:00-00:00",
-      "entryType":"Document",
-      "templateName":null,
-      "templateId":0,
-      "templateFieldNames":[],
-      "volumeName":"DEFAULTVOLUME"
+      "id": 1234,
+      "name": "PurchaseOrder",
+      "parentId": 1,
+      "fullPath": "",
+      "folderPath": "",
+      "creator": "Guide User",
+      "creationTime": "2020-12-12T12:00:00-00:00",
+      "lastModifiedTime": "2020-12-12T12:00:00-00:00",
+      "entryType": "Document",
+      "templateName": null,
+      "templateId": 0,
+      "templateFieldNames": [],
+      "volumeName": "DEFAULTVOLUME"
     }
   ]
 }

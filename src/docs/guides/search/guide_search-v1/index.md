@@ -13,6 +13,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Search
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_search/).</sup>
@@ -31,23 +32,25 @@ In the following example, we'll search a specific folder, _Meeting Minutes_, for
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Searches
 ```
+
 ```json
 {
-    "searchCommand":"{LF:Basic~=\"Windham Ave\",option=\"DFANLT\"}&amp;({LF:LOOKIN=\"\\Meeting Minutes\"})"
+  "searchCommand": "{LF:Basic~=\"Windham Ave\",option=\"DFANLT\"}&amp;({LF:LOOKIN=\"\\Meeting Minutes\"})"
 }
 ```
 
 {: .note }
-**Note:** See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Basic_Search.htm).
+**Note:** See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Basic_Search.htm).
 
 This call will return a token that represents the running search operation.
 
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-    "token": "12345678-abcd-efgh-ijkl-123456789012"
+  "token": "12345678-abcd-efgh-ijkl-123456789012"
 }
 ```
 
@@ -62,13 +65,14 @@ If the search is still running, the response will return the status of the opera
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-    "operationToken": "12345678-abcd-efgh-ijkl-123456789012",
-    "operationType":"Search",
-    "percentComplete":50,
-    "status":"InProgress",
-    "errors":[]
+  "operationToken": "12345678-abcd-efgh-ijkl-123456789012",
+  "operationType": "Search",
+  "percentComplete": 50,
+  "status": "InProgress",
+  "errors": []
 }
 ```
 
@@ -83,6 +87,7 @@ The response will contain a list of entries representing the results of your sea
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
     "value":[
@@ -137,6 +142,7 @@ The call will return all of the context hits with "Windham Ave" that was found i
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
   "value": [

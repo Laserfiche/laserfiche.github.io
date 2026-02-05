@@ -20,7 +20,7 @@ Laserfiche Workflows and Business Processes provide Rules or Activities that ena
 
 ## Examples of pre-configured Rules and Activities for HTTP based API calls.
 
-These pre-configured Rules and Activities are provided under [MIT Licensed](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICENSE-CODE) and can be freely used when building [Laserfiche Process Automation](https://doc.laserfiche.com/laserfiche/en-us/Content/Resources/Get-Started.htm) solutions.
+These pre-configured Rules and Activities are provided under [MIT Licensed](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICENSE-CODE) and can be freely used when building [Laserfiche Process Automation](https://doc.laserfiche.com/laserfiche/en-us/content/pa-ovw.htm) solutions.
 
 - Laserfiche Cloud [Web Request Rules examples](./cloud-web-request-rules-examples/)
 

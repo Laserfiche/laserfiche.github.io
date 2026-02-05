@@ -16,7 +16,7 @@ LookupTables command line utility is an executable available for Windows and Lin
 
 - Listing Lookup Tables names.
 - Querying a Lookup Table and optionally saving the result in a CSV or JSON file.
-- Replacing all the rows in a Lookup Table with the ones from a CSV or XLSX file. See [Lookup Tables documentation](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Entities/lookup-tables.htm) for more information.
+- Replacing all the rows in a Lookup Table with the ones from a CSV or XLSX file. See [Lookup Tables documentation](https://doc.laserfiche.com/laserfiche/en-us/content/pa-dm-lookup-tables-ovw.htm) for more information.
 
 [Project link](https://github.com/Laserfiche/lf-lookup-tables-cli) in GitHub.
 
@@ -29,13 +29,13 @@ LookupTables command line utility is an executable available for Windows and Lin
 - Extract folder on target machine
 - On Linux, give `LookupTables` file execute permissions, for example
 
-   ```sh
-   sudo chmod 744 LookupTables   
-   ```
+  ```sh
+  sudo chmod 744 LookupTables
+  ```
 
 ## Enabling CLI access to Lookup Tables
 
-Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data Management -> Lookup Tables` and belong to either `Global` or a specific Process Automation Project which defines the security scope. You can read more about Projects in Process Automation [here](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Teams/projects.htm?TocPath=Process%2520Automation%257CTeams%257CProjects%257C_____0).
+Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data Management -> Lookup Tables` and belong to either `Global` or a specific Process Automation Project which defines the security scope. You can read more about Projects in Process Automation [here](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-teams-projects.htm).
 
 {: .note }
 **Note:** Lookup Tables CLI uses the [OData Table API](./../../api/odata-api-reference/) which requires security scopes e.g. `project/Global` or `project/YourProjectName` and table access permission scopes such as `table.Read` and `table.Write` to be configured in a Service App in the Developer Console.
@@ -61,13 +61,13 @@ Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data 
 {: .note }
 **Note:** Select at least one project in `Project Scopes`.
 
-   ![Set scopes in developer console](./assets/images/DevConsoleScopes.png){: width="1000"}
+![Set scopes in developer console](./assets/images/DevConsoleScopes.png){: width="1000"}
 
 ### 4. Generate App Access Key
 
 - Create Access Key for the Service App: Select 'Access Key' and download as 'base-64 string'
 
-   ![Create key in developer console](./assets/images/DevConsoleCreateKey.png){: width="500"}
+  ![Create key in developer console](./assets/images/DevConsoleCreateKey.png){: width="500"}
 
 - Store the 'Service Principal key' and the 'base-64 Access Key' securely. These strings represent the credentials required by the Lookup Tables CLI tool. See [Usage examples](#lookup-tables-cli-usage-examples).
 
@@ -76,11 +76,11 @@ Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data 
 - Option 1: Pass the 'Service Principal key' and the 'base-64 Access Key' as command line parameters.
 - Option 2: Store credentials in a file named `.env` and place it in the same folder as `LookupTables` executable. File format:
 
-   ```sh
-   AUTHORIZATION_TYPE="CLOUD_ACCESS_KEY"
-   SERVICE_PRINCIPAL_KEY="<Service Principal Key created from step 1>"
-   ACCESS_KEY="<base-64 Access Key string created from step 2>"
-   ```
+  ```sh
+  AUTHORIZATION_TYPE="CLOUD_ACCESS_KEY"
+  SERVICE_PRINCIPAL_KEY="<Service Principal Key created from step 1>"
+  ACCESS_KEY="<base-64 Access Key string created from step 2>"
+  ```
 
 {: .note }
 **Note:** The .env file contains secrets. Keep in a secure location.

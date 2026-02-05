@@ -14,7 +14,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-Follow the steps below to obtain the credentials needed to configure [Web Service Connections](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm?_gl=1*131rcwp*_gcl_au*NzQ5MzM2MDY0LjE3MzMzMzk1NzM.#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Web-Services.htm?TocPath=Process%2520Automation%257CIntegrations%257C_____5) used by Web Request Rules to access Laserfiche Cloud APIs:
+Follow the steps below to obtain the credentials needed to configure [Web Service Connections](https://doc.laserfiche.com/laserfiche/en-us/content/pa-in-web-services.htm) used by Web Request Rules to access Laserfiche Cloud APIs:
 
 - [Laserfiche Repository API v2](./../../api/playground/#laserfiche-repository-api).
 - [Laserfiche OData Table API](./../../api/odata-api-reference/)
@@ -24,7 +24,7 @@ Follow the steps below to obtain the credentials needed to configure [Web Servic
 - You'll need to select an existing Service Principal account, or create a new one, and then generate a Service Principal Key (record the key string, you'll need it later). Review our [dedicated guide](./../../api/authentication/guide_service-principals/) on this topic for more details.
 
 {: .note }
-**Note:** The Service Principal account must be granted the roles needed to access resources to be exposed via Laserfiche API. For more information see [Repository Security](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Security.htm?TocPath=Documents%257CRepository%2520Security%257C_____0).
+**Note:** The Service Principal account must be granted the roles needed to access resources to be exposed via Laserfiche API. For more information see [Repository Security](https://doc.laserfiche.com/laserfiche/en-us/content/sec-overview.htm).
 
 - Create a Service App in the Laserfiche Developer Console to represent the integration with Laserfiche Cloud API. Follow instructions [here](./../../api/authentication/guide_oauth-service/). You must select the **long-lasting Authorization Key** option when creating the Authorization Key.
 

@@ -15,7 +15,7 @@ The Laserfiche Lookup Table API supports the OData 4 standard, which enables it 
 
 ## 1. Configure a Lookup Table
 
-Lookup Tables are configured in `Process Automation -> Data Management -> Lookup Tables` and belong to either `Global` or a specific Process Automation Project which defines the security scope. You can read more about Projects in Process Automation [here](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Teams/projects.htm?TocPath=Process%2520Automation%257CTeams%257CProjects%257C_____0).
+Lookup Tables are configured in `Process Automation -> Data Management -> Lookup Tables` and belong to either `Global` or a specific Process Automation Project which defines the security scope. You can read more about Projects in Process Automation [here](https://doc.laserfiche.com/laserfiche/en-us/content/pa-sec-teams-projects.htm).
 
 {: .note }
 **Note:** The security scopes e.g. `project/Global` or `project/YourProjectName` and `table.Read` must be configured in the Service App and included in the credentials.
@@ -39,21 +39,21 @@ Lookup Tables are configured in `Process Automation -> Data Management -> Lookup
 
 **The following screenshots show how to generate a username/password to access global resources:**
 
-   1. Create Service App in Developer Console
+1.  Create Service App in Developer Console
 
-      ![Create developer console application](./assets/images/DevConsoleCreateApp.png){: width="500" }
+    ![Create developer console application](./assets/images/DevConsoleCreateApp.png){: width="500" }
 
-   1. Configure OAuth Scopes for Service App in the Authentication tab
+1.  Configure OAuth Scopes for Service App in the Authentication tab
 
-      ![Set scopes in developer console](./assets/images/DevConsoleScopes.png){: width="800"}
+    ![Set scopes in developer console](./assets/images/DevConsoleScopes.png){: width="800"}
 
-   1. Create Access Key for Service App: Select username/password
+1.  Create Access Key for Service App: Select username/password
 
-      ![Create key in developer console](./assets/images/DevConsoleCreateKey.png){: width="500"}
+    ![Create key in developer console](./assets/images/DevConsoleCreateKey.png){: width="500"}
 
-   1. Input Service Principal Key and scopes to generate credentials
+1.  Input Service Principal Key and scopes to generate credentials
 
-      ![Generate username and password](./assets/images/DevConsoleKeyandScopes.png){: width="600"}
+    ![Generate username and password](./assets/images/DevConsoleKeyandScopes.png){: width="600"}
 
 ## 4. Create an OData Connection to the Laserfiche API
 
@@ -66,7 +66,6 @@ At this point, you should be ready to set up your reporting tool of choice to ac
    ![Excel OData feed](./assets/images/ExcelOdataFeed.png){: width="500"}
 
 1. In the Odata Feed window, enter the appropriate URL (see below) for your Laserfiche Cloud environment and click "OK".
-
    - US Cloud Customers: <https://api.laserfiche.com/odata4/table/>
    - CA Cloud Customers: <https://api.laserfiche.ca/odata4/table/>
    - EU Cloud Customers: <https://api.eu.laserfiche.com/odata4/table/>
@@ -90,7 +89,6 @@ At this point, you should be ready to set up your reporting tool of choice to ac
    ![PowerBI OData Feed](./assets/images/PowerBIOData.png){: width="500"}
 
 1. In the Odata Feed window, enter the appropriate URL (see below) for your Laserfiche Cloud environment and click "OK".
-
    - US Cloud Customers: <https://api.laserfiche.com/odata4/table/>
    - CA Cloud Customers: <https://api.laserfiche.ca/odata4/table/>
    - EU Cloud Customers: <https://api.eu.laserfiche.com/odata4/table/>
@@ -116,7 +114,6 @@ At this point, you should be ready to set up your reporting tool of choice to ac
    ![Tableau OData menu](./assets/images/TableauOdataMenu.png){: width="600"}
 
 1. In the Odata window, enter the appropriate URL (see below) for your Laserfiche Cloud environment. Then select the "Basic" authentication option and enter the Username and Password you created in the Developer Console.
-
    - US Cloud Customers: <https://api.laserfiche.com/odata4/table/>
    - CA Cloud Customers: <https://api.laserfiche.ca/odata4/table/>
    - EU Cloud Customers: <https://api.eu.laserfiche.com/odata4/table/>

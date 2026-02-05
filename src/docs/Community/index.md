@@ -21,9 +21,9 @@ Visit the [Laserfiche Answers](https://answers.laserfiche.com/) forum to connect
 {: .note }
 **Tip:** Be sure to tag your post under the [Laserfiche API](https://answers.laserfiche.com/questions/topic/67/Laserfiche-API) topic and include "Cloud" or the Self-Hosted Version you are using.
 
-For the latest Laserfiche Cloud updates, visit the [Cloud Changelog](https://doc.laserfiche.com/laserfiche/en-us/Content/service/changelog.htm).
+For the latest Laserfiche Cloud updates, visit the [Cloud Changelog](https://doc.laserfiche.com/laserfiche/en-us/content/service/changelog.htm).
 
-For the latest Laserfiche 12 updates, visit the [Laserfiche 12 Release Information](https://doc.laserfiche.com/laserfiche.documentation/12/userguide/en-us/content/intro-release-information.htm).
+For the latest Laserfiche 12 updates, visit the [Laserfiche 12 Release Information](https://doc.laserfiche.com/laserfiche.docuemntation/12/userguide/en-us/content/intro-release-information.htm).
 
 For the latest API changes, visit [Overview of the Laserfiche API](../api/guide_overview-of-the-laserfiche-api/).
 
