@@ -70,7 +70,7 @@ Now you're ready to make any Laserfiche API call.
 
 ### Configuration
 
-- See instructions for [installing and configuring the API Server with LFDSSTS](./../installing-and-configuring/index.md#installation-configuration)
+- See instructions for [installing and configuring the API Server with LFDSSTS](./../installing-and-configuring/#installation-configuration)
 
 ### Getting an access token
 

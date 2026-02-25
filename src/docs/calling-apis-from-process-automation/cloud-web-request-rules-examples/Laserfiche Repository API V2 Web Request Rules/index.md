@@ -17,7 +17,7 @@ License: [MIT](https://github.com/Laserfiche/laserfiche.github.io/blob/1.x/LICEN
 {: .note }
 **Note:** Applies to: Laserfiche Cloud.
 
-A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/content/pa-rl-web-requests-ovw.htm) to access [Laserfiche Repository API v2](../../../api/playground/#laserfiche-repository-api) endpoints.
+A collection of [Web Request Rules](https://doc.laserfiche.com/laserfiche/en-us/content/pa-rl-web-requests-ovw.htm) to access [Laserfiche Repository API v2](../../../getting-started/playground/#laserfiche-repository-api) endpoints.
 
 Use cases:
 
