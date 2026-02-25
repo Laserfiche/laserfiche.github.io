@@ -14,9 +14,9 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Authenticate from the Swagger UI Playground
 
-The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting [Laserfiche REST Swagger Playground](../../playground/).
+The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting [Laserfiche REST Swagger Playground](./../../../getting-started/playground/).
 
-For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Playground](../../server/#authenticating-with-the-self-hosted-laserfiche-api).
+For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Playground](../../server/authentication/).
 
 ## Using an OAuth Access Token on Swagger UI
 

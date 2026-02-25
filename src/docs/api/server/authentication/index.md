@@ -17,7 +17,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 - There are two ways to obtain this Bearer token.
 - V1 only supports username/password authentication.
 
-## Username/password Authentication
+## Username/Password Authentication
 
 - The request to get an access token requires the repository ID associated with your Laserfiche Server and a username and password to log in. Grant_type is always set to "password".
 - The username and password key-value pair can be a Laserfiche repository user, a Laserfiche Directory Server user, or a Windows domain user. When using a "Keyed Integration License", the password grant type is still used in association with a user account, but the allowed concurrent sessions will match those in the license.
