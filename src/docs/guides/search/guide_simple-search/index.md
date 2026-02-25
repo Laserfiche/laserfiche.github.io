@@ -64,7 +64,7 @@ The response will include a listing of the entries that matched the search query
 Simple searches are limited to a maximum of **100** results. An HTTP _206 Partial Content_ status code indicates that the search results are truncated. A non-truncated search response will include an HTTP _200 OK_ status code.
 
 Simple searches will automatically time out if the search operation exceeds **15** seconds.
-A single session, distinguished by a valid OAuth access token, can only have a limited number of searches running at one time. This limit does not differentiate between search and simple search.
+A single session, distinguished by a valid access token, can only have a limited number of searches running at one time. This limit does not differentiate between search and simple search.
 
 {: .note }
 

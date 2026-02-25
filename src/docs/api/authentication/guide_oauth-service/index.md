@@ -35,13 +35,11 @@ Create an OAuth Service App when you want to write a service application that ma
 1. Take note of the auto-generated Client ID.
 1. On the **Authentication** tab in the **OAuth 2.0 Scopes** section, select the allowed scopes for your application. These are the scopes that you will be able to request when obtaining an access token. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 1. Use the Authentication tab to generate the access key most suitable to your use case. Service applications support the following options:
-
    - Option 1: Using a **Public 'Access Key' and 'Service Principal Key'** to obtain an API Access Token.
      - Choose this option if the service app uses the [Laserfiche API client libraries](../../libraries/) or is capable of generating an HMAC client credential.
      - You will generate a **Public 'Access Key'** which you can then use with a **Service Principal Key** to generate an HMAC credential.
      - Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to generate an HMAC client credential and request an access token.
    - Option 2: Using a long-lasting **Authorization Key** to obtain an API Access Token.
-
      - Choose this option if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools/) that require a static secret to connect to Laserfiche APIs.
      - Creating an **Authorization Key** requires entering a valid service principal key for the selected service principal
 
@@ -51,7 +49,6 @@ Create an OAuth Service App when you want to write a service application that ma
      - Once generated, continue to the [Request an Access Token](#request-an-access-token) section to obtain your token.
 
    - Option 3: Using a **username** and **password** to directly access the API.
-
      - Choose this option if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API.
      - Creating a **username** and **password** requires a valid service principal key for the selected service principal
 
@@ -59,11 +56,11 @@ Create an OAuth Service App when you want to write a service application that ma
        **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
 
      - To create a **username** and **password** you must specify requested scopes. This is required since you do not have the additional step of specifying scopes when requesting an access token using this option. These should fall within the allowed scopes of your application, the scopes your application will have access to will be the intersection of the allowed and requested scopes.
-         - For the OData Table API it is important that you specify project scopes as well as table read/write scopes. For example:
-             - For read access to global resources: "table.Read project/Global"
-             - For read/write access to global resources: "table.Read table.Write project/Global"
-             - For read/write access to a project named "Example Project": "table.Read table.Write project/Example+Project"
-         - See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
+       - For the OData Table API it is important that you specify project scopes as well as table read/write scopes. For example:
+         - For read access to global resources: "table.Read project/Global"
+         - For read/write access to global resources: "table.Read table.Write project/Global"
+         - For read/write access to a project named "Example Project": "table.Read table.Write project/Example+Project"
+       - See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
      - Once generated, you can skip the next step for the OAuth credentials flow and go directly to the [Use the credentials to access Laserfiche APIs](#use-the-credentials-to-access-laserfiche-apis) section.
 
 1. When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
@@ -97,7 +94,6 @@ The JWT will also need to be signed by the **access key**. See the links below f
 ### Request an Access Token
 
 1.  The service application can then issue a POST request with the generated HMAC client credential JWT or Authorization Key in the Bearer Authorization header to request an access token.
-
     - ```
         POST https://signin.laserfiche.com/oauth/token HTTP/1.1
         Authorization: Bearer jwt-containing-client_id-and-client_secret-here
@@ -110,33 +106,29 @@ The JWT will also need to be signed by the **access key**. See the links below f
     - The **scope** parameter determines the OAuth 2.0 scopes requested by the app. Scopes are case-sensitive and space-delimited. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
 1.  The OAuth service will attempt to authenticate the client credentials.
-
     - On success, the OAuth service will return an access token in the response.
-
       - ```
           HTTP/1.1 200 OK
           Content-Type: application/json; charset=UTF-8
         ```
         ```json
-          {
+        {
           "access_token": "some_access_token_value",
           "token_type": "bearer",
           "expires_in": 43200,
           "scope": "repository.Read repository.Write"
-          }
+        }
         ```
 
     {: .note }
     For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
-
     - On failure, the OAuth service will return an error response.
-
       - ```
           HTTP/1.1 401 Unauthorized
           Content-Type: application/json; charset=UTF-8
         ```
         ```json
-          {
+        {
           "error": "invalid_client",
           "error_description": "The client_id is invalid or authentication failed.",
           "type": "invalid_client",
@@ -145,7 +137,7 @@ The JWT will also need to be signed by the **access key**. See the links below f
           "instance": "/token",
           "operationId": "07f50babe09746a4b62346c3e89c4839",
           "traceId": "00-55eea5e3876a0c42a06ad1c78922e247-53d1e1ec0b933944-00"
-          }
+        }
         ```
 
 Error types include:

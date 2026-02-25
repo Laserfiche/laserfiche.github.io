@@ -70,7 +70,6 @@ favicon_ico: '/assets/favicon.ico'
 callouts_level: quiet
 callouts:
   note:
-    title: Note
     color: yellow
   warning:
     title: Warning
