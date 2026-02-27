@@ -17,10 +17,10 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ### Installation prerequisites
 
-- Operating System: 64-bit Windows Server 2012 R2 or later, Windows 11 or later.
+- Operating System: 64-bit Windows Server 2012 R2 or later, Windows 10 or later.
 - Internet Information Services (IIS)
 - .NET 8
-- The Laserfiche API Server supports connecting to Laserfiche Server 12 repositories.
+- The Laserfiche API Server supports connecting to Laserfiche Server 11 repositories.
 
 ### Installation steps
 
