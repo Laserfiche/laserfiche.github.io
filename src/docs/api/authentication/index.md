@@ -32,4 +32,4 @@ For Laserfiche Cloud, version 1 and later of the APIs follow the OAuth model.
 ## Creating a connection in self-hosted systems
 
 - Learn how to [create a connection using the password flow](../server/authentication/#usernamepassword-authentication).
-- Learn how to [create a connection using the authorization_code flow with LFDS](../server/authentication/#lfdssts-based-authentication).
+- Learn how to [create a connection using the authorization_code flow with LFDS](../server/authentication/#authorize-code-flow-with-lfds).

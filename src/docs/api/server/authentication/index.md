@@ -14,7 +14,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Authenticating with the Self-Hosted Laserfiche API
 
 - To start using the self-hosted Laserfiche APIs, you will need an access token to send with each request.
-- There are two ways to obtain this Bearer token.
+- There are two ways to obtain this Bearer token: Username/Password Authentication and Authorize Code Flow with LFDS.
 - V1 only supports username/password authentication.
 
 ## Username/Password Authentication
@@ -61,20 +61,20 @@ Authorization: Bearer {accessToken}
 
 Now you're ready to make any Laserfiche API call.
 
-## LFDSSTS-based Authentication
+## Authorize Code Flow with LFDS
 
 - This form of authentication is only supported in V2.
-- This flow follows the Cloud OAuth 2.0 `authorization_code` flow very closely.
+- This flow follows the [Cloud OAuth 2.0 `authorization_code` flow](./../../authentication/guide_oauth-spa/) very closely.
 - There is some additional configuration needed to use this authentication flow.
-- Different from cloud, there is no registration in Developer Console required. The redirect URI must be specified in appsettings.json.
+- There is no separate service to register the application like there is in cloud. All configuration is done using `appsettings.json` and whitelisting in LFDS
 
 ### Configuration
 
-- See instructions for [installing and configuring the API Server with LFDSSTS](./../installing-and-configuring/#installation-configuration)
+- See instructions for [installing and configuring the API Server with LFDS](./../installing-and-configuring/#installation-configuration)
 
 ### Getting an access token
 
-1.  Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Call the OAuth service authorization endpoint, including and _redirect_uri_ query parameter for the registered app. The [PKCE extension](#generating-a-pkce-code-verifier-and-code-challenge) requires _code_challenge_ and _code_challenge_method_ query parameters. See the following example authorization request.
+1.  Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Call the OAuth service authorization endpoint, including and _redirect_uri_ query parameter for the application. The [PKCE extension](#generating-a-pkce-code-verifier-and-code-challenge) requires _code_challenge_ and _code_challenge_method_ query parameters. See the following example authorization request.
 
     ```
        GET https://{fullyQualifiedAPIServerDomain}/LFRepositoryAPI/v2/authorize?response_type=code&state=someappstate&
@@ -82,7 +82,7 @@ Now you're ready to make any Laserfiche API call.
            code_challenge=some_code_challenge_value&code_challenge_method=S256&scope=repository.Read+repository.Write
     ```
 
-    - The **redirect_uri** parameter determines where the OAuth service redirects to after the authorization part. The value must match one of the redirect URIs specified during the application registration process. If no matching value is found in the application registration, it will return an error in the user's browser and no redirect will happen.
+    - The **redirect_uri** parameter determines where the OAuth service redirects to after the authorization part. The value must match one of the `WhitelistedRedirectUris` specified during [application configuration](./../installing-and-configuring/) in `appsettings.json`. If no matching value is found in the application registration, it will return an error in the user's browser and no redirect will happen.
     - The **response_type** parameter is used by the application to inform the authorization server of the desired grant type. The value must be **code** for authorization code grant flow.
     - The **state** query parameter is optional but recommended. It is used to maintain the web application state between the request and callback. The parameter should be used to prevent cross-site request forgery as specified in the OAuth specification found in [RFC 6749 section 4.1](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.1).
     - The **code_challenge** should be the value generated in the first step.
