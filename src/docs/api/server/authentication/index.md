@@ -255,3 +255,8 @@ SPAs run entirely in the browser and do not have the ability to store server-sid
 
 - The **code_verifier** and **code_challenge** values should have a length between 43 and 128 characters and can only contain a-z, A-Z, 0-9, "-", ".", "\_", or "~" characters.
 - The **code_challenge** is generated from the **code_verifier** by generating a SHA256 hash of the **code_verifier** and then base64url encoding the SHA256 hash.
+
+## Session Management
+
+- With the release of version 2.0.202603.X of the self-hosted API, there is no longer a login/logout event for every API call. The session associated with the API call will be reused whenever possible. This applies to both the V1 and V2 APIs installed using version 2.0.202603.X or later.
+- A new property in `appsettings.json` for `IdleSessionTimeout` specifies the amount of time in minutes that a token will remain valid after inactivity. If this timeout is hit before the specified access token lifetime expires (as specified by `AccessTokenExpirationLimit`) then the token will return a 401 regardless of the expiration limit. In this case, as with any 401, you must call for a new token.
