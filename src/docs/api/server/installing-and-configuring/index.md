@@ -20,7 +20,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 - Operating System: 64-bit Windows Server 2012 R2 or later, Windows 10 or later.
 - Internet Information Services (IIS)
 - .NET 8
-- The Laserfiche API Server supports connecting to Laserfiche Server 11 repositories.
+- The Laserfiche API Server supports connecting to Laserfiche Server 11 and 12 repositories.
 
 ### Installation steps
 
