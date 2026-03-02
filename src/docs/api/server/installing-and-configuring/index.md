@@ -33,12 +33,12 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 1. Navigate to the directory `%ProgramData%\Laserfiche\API Server\LFRepositoryAPI` and **open** `appsettings.json` using a text editor as an administrator.
 1. In `appsettings.json`, set the following required values:
    - **"LaserficheServerName"**: The fully qualified domain name of your Laserfiche Server in your network. If your Laserfiche Server is using a non-default port, append the port to the fully qualified domain name (e.g., "myLaserficheServer.myOrganization.com:123").
-1. If you are planning on using the LFDS (authorization_code) login flow
+1. If you are planning on using the Laserfiche Directory Server (authorization_code) login flow
    1. Set the following values in `appsettings.json`:
-      - **LFDSSTSBaseUrl**: The URI of an LFDSSTS service that has access to the LFDS server configured for your repository. This LFDSSTS service must be accessible by the API server. (i.e. `https://{serverName}/LFDSSTS`)
+      - **LFDSSTSBaseUrl**: The URI of an Laserfiche Directory Server STS service that has access to the Laserfiche Directory Server configured for your repository. This Laserfiche Directory Server STS must be accessible by the API server. (i.e. `https://{serverName}/LFDSSTS`)
       - **WhitelistedRedirectUris**: A comma or semi-colon delimited lists of redirectURIs that can be used with the Authorize/Token authorization_code flow.
-   1. Whitelist the repository API server in LFDSSTS
-      1. Navigate to the web.config for your LFDSSTS service (i.e. `C:\Program Files\Laserfiche\Directory Server\Web\WebSTS\Web.config`)
+   1. Whitelist the repository API server in the Laserfiche Directory Server STS
+      1. Navigate to the web.config for your Laserfiche Directory Server STS (i.e. `C:\Program Files\Laserfiche\Directory Server\Web\WebSTS\Web.config`)
       1. Open the file in administrator mode.
       1. Add the URI `https://{serverName}/LFRepositoryAPI/LFLogin` to the `EmbeddedPostbackWhitelist` property.
 1. Review and set any additional optional settings:

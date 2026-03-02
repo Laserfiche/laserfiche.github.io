@@ -18,7 +18,7 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 
 ### Differences between Cloud and Self-Hosted Laserfiche API
 
-- [Authentication](./authentication/): V1 of the Repository API only supports username/password authentication. V2 supports both username/password authentication as well as an `authorization_code` flow similar to the Cloud Laserfiche API [OAuth 2.0 authorization model](../authentication/) which allows authentication via LFDS.
+- [Authentication](./authentication/): V1 of the Repository API only supports username/password authentication. V2 supports both username/password authentication as well as an `authorization_code` flow similar to the Cloud Laserfiche API [OAuth 2.0 authorization model](../authentication/) which allows authentication via Laserfiche Directory Server.
 - APIs:
   - V1: APIs are equivalent
   - V2: APIs are nearly equivalent. Self-hosted does not support the chunked import.

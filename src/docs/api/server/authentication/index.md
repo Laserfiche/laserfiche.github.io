@@ -14,7 +14,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Authenticating with the Self-Hosted Laserfiche API
 
 - To start using the self-hosted Laserfiche APIs, you will need an access token to send with each request.
-- There are two ways to obtain this Bearer token: Username/Password Authentication and Authorize Code Flow with LFDS.
+- There are two ways to obtain this Bearer token: Username/Password Authentication and Authorize Code Flow with Laserfiche Directory Server.
 - V1 only supports username/password authentication.
 
 ## Username/Password Authentication
@@ -23,7 +23,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 - The username and password key-value pair can be a Laserfiche repository user, a Laserfiche Directory Server user, or a Windows domain user. When using a "Keyed Integration License", the password grant type is still used in association with a user account, but the allowed concurrent sessions will match those in the license.
 
 {: .note }
-**Note:** When authenticating with a Windows domain account, the API expects the username to be in either UPN format (**username@domain**) or down-level logon name format (**domain\username**). Windows Domain accounts password authentication requires connectivity to LFDS or LDAP server.
+**Note:** When authenticating with a Windows domain account, the API expects the username to be in either UPN format (**username@domain**) or down-level logon name format (**domain\username**). Windows Domain accounts password authentication requires connectivity to Laserfiche Directory Server or LDAP server.
 
 ```
 POST https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Token
@@ -61,16 +61,16 @@ Authorization: Bearer {accessToken}
 
 Now you're ready to make any Laserfiche API call.
 
-## Authorize Code Flow with LFDS
+## Authorize Code Flow with Laserfiche Directory Server
 
 - This form of authentication is only supported in V2.
 - This flow follows the [Cloud OAuth 2.0 `authorization_code` flow](./../../authentication/guide_oauth-spa/) very closely.
 - There is some additional configuration needed to use this authentication flow.
-- There is no separate service to register the application like there is in cloud. All configuration is done using `appsettings.json` and whitelisting in LFDS
+- There is no separate service to register the application like there is in cloud. All configuration is done using `appsettings.json` and whitelisting in Laserfiche Directory Server
 
 ### Configuration
 
-- See instructions for [installing and configuring the API Server with LFDS](./../installing-and-configuring/#installation-configuration)
+- See instructions for [installing and configuring the API Server with Laserfiche Directory Server](./../installing-and-configuring/#installation-configuration)
 
 ### Getting an access token
 
@@ -88,7 +88,7 @@ Now you're ready to make any Laserfiche API call.
     - The **code_challenge** should be the value generated in the first step.
     - The **code_challenge_method** is used to inform the authorization server the type of code_challenge used. The value must be S256
 
-1.  After sending the authorization request, the user will be redirected to sign in to LFDSSTS if they are not already signed in. Otherwise, the OAuth service will return an error. If the user is already signed in to the repository using LFDSSTS, the browser should already have the associated Laserfiche cookies. If the cookies exist, the process will skip the sign-in step.
+1.  After sending the authorization request, the user will be redirected to sign in to the Laserfiche Directory STS if they are not already signed in. Otherwise, the OAuth service will return an error. If the user is already signed in to the repository using the Laserfiche Directory Server STS, the browser should already have the associated Laserfiche cookies. If the cookies exist, the process will skip the sign-in step.
 1.  An authorization code will be generated and sent to the redirect_uri specified in the query parameter and the user's browser will be redirected to redirect_uri. If the state query parameter was used in the first step, it will be sent back with the authorization code. An example successful redirect request is shown below:
 
     ```
