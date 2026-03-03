@@ -66,7 +66,7 @@ Now you're ready to make any Laserfiche API call.
 - This form of authentication is only supported in V2.
 - This flow follows the [Cloud OAuth 2.0 `authorization_code` flow](./../../authentication/guide_oauth-spa/) very closely.
 - There is some additional configuration needed to use this authentication flow.
-- There is no separate service to register the application like there is in cloud. All configuration is done using `appsettings.json` and whitelisting in Laserfiche Directory Server
+- There is no separate service to register the application like there is in cloud. All configuration is done using `appsettings.json` and an allow list in Laserfiche Directory Server
 
 ### Configuration
 
@@ -260,4 +260,4 @@ SPAs run entirely in the browser and do not have the ability to store server-sid
 
 - With the release of version 2.0.202603.X of the self-hosted API, there is no longer a login/logout event for every API call. The session associated with the API call will be reused whenever possible. This applies to both the V1 and V2 APIs installed using version 2.0.202603.X or later.
 - A new property in `appsettings.json` for `IdleSessionTimeout` specifies the amount of time in minutes that a token will remain valid after inactivity. If this timeout is hit before the specified access token lifetime expires (as specified by `AccessTokenExpirationLimit`) then the token will return a 401 regardless of the expiration limit. In this case, as with any 401, you must call for a new token.
-- Because a session is re-used for as long as possible and not necessarily regenerated on getting a new token, if rights are changed/updated the administrator may have to manually kill the session in the server management console in order to immediately prompt an update.
+- Because a session is reused for as long as possible and not necessarily regenerated on getting a new token, if rights are changed/updated, the administrator may have to manually end the session in the server management console in order to immediately prompt an update.

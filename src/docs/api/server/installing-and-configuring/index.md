@@ -37,7 +37,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
    1. Set the following values in `appsettings.json`:
       - **LFDSSTSBaseUrl**: The URI of an Laserfiche Directory Server STS service that has access to the Laserfiche Directory Server configured for your repository. This Laserfiche Directory Server STS must be accessible by the API server. (i.e. `https://{serverName}/LFDSSTS`)
       - **WhitelistedRedirectUris**: A comma or semi-colon delimited lists of redirectURIs that can be used with the Authorize/Token authorization_code flow.
-   1. Whitelist the repository API server in the Laserfiche Directory Server STS
+   1. Add the repository API server to the allow list in the Laserfiche Directory Server STS
       1. Navigate to the web.config for your Laserfiche Directory Server STS (i.e. `C:\Program Files\Laserfiche\Directory Server\Web\WebSTS\Web.config`)
       1. Open the file in administrator mode.
       1. Add the URI `https://{serverName}/LFRepositoryAPI/LFLogin` to the `EmbeddedPostbackWhitelist` property.
