@@ -5,6 +5,7 @@ nav_order: 8
 redirect_from:
   - api/API.html
   - api/playground.html
+  - /docs/api/playground/
 parent: Getting Started
 ---
 
