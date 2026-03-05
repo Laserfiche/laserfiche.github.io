@@ -16,7 +16,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 Follow the steps below to obtain the credentials needed to configure [Web Service Connections](https://doc.laserfiche.com/laserfiche/en-us/content/pa-in-web-services.htm) used by Web Request Rules to access Laserfiche Cloud APIs:
 
-- [Laserfiche Repository API v2](./../../api/playground/#laserfiche-repository-api).
+- [Laserfiche Repository API v2](./../../getting-started/playground/#laserfiche-repository-api).
 - [Laserfiche OData Table API](./../../api/odata-api-reference/)
 
 ## 1. Create a Service Application in the Laserfiche Developer Console

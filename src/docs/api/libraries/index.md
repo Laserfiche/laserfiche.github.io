@@ -45,4 +45,4 @@ Repository API: [Documentation](https://developer.laserfiche.com/lf-repository-a
 
 Sample Projects: [Console Application](https://github.com/Laserfiche/lf-sample-repository-api-java){:target="\_blank"}
 
-Looking to use the Laserfiche API in a different programming language? The Laserfiche API is OpenAPI compliant, so you can generate your own client library in the language of your choice. Check out the [Swagger Playground](../playground/){:target="\_blank"} for a copy of the swagger.json file.
+Looking to use the Laserfiche API in a different programming language? The Laserfiche API is OpenAPI compliant, so you can generate your own client library in the language of your choice. Check out the [Swagger Playground](./../../getting-started/playground/){:target="\_blank"} for a copy of the swagger.json file.

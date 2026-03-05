@@ -33,7 +33,6 @@ Create an OAuth Web App when you want to write a web app where you can store ser
 ## OAuth Authorization Code Grant Flow
 
 1. Start the OAuth authorization code flow to get an access token that can be used to authenticate with the Laserfiche API. Web apps can optionally use the Proof Key for Code Exchange (PKCE) extension for additional security to avoid an authorization code interception attack. For more details on how to use the code challenge and code verifier from the PKCE extension, view the [SPA OAuth flow guide](../guide_oauth-spa/).
-
    - Call the OAuth service authorization endpoint, including the _client_id_ and _redirect_uri_ query parameters for the registered app. See the following example authorization request.
      - ```
          GET https://signin.laserfiche.com/oauth/authorize?client_id=app1&response_type=code&state=someappstate&redirect_uri=https%3A%2F%2Fapp%2Eexample%2Ecom%2Fcallback&customerId=123456789&scope=repository.Read+repository.Write
@@ -48,7 +47,6 @@ Create an OAuth Web App when you want to write a web app where you can store ser
 1. After sending the authorization request, the user will be redirected to sign in to Laserfiche Cloud if they are not already signed in. The user must sign in using the same Account ID as the one used for registering the web app. Otherwise, the OAuth service will return an error. If the user is already signed in to another Laserfiche Cloud service, the browser should already have the associated Laserfiche Cloud cookies. If the cookies exist, the process will skip the sign-in step and will show the consent page in next step directly.
 
 1. The consent page will then be shown to the user to decide whether to grant the web app access to their credentials. The user will have 5 minutes to either confirm or deny the consent. After 5 minutes of inactivity, the OAuth service will return an error and they will need to start the authorization flow from the beginning.
-
    - If the user grants access, an authorization code will be generated and sent to the redirect_uri specified in the query parameter and the user's browser will be redirected to redirect_uri. If the state query parameter was used in the first step, it will be sent back with the authorization code. An example successful redirect request is shown below:
 
      ```

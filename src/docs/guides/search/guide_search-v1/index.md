@@ -18,12 +18,12 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 <br/>
 <sup>[See Repository API v2](../guide_search/).</sup>
 
-Use the search API to find entries in your Laserfiche Cloud repository.
+Use the search API to find entries in your Laserfiche repository.
 
 A search operation follows the [long operation](../../../getting-started/guide_long-operations-v1/) pattern.
 
 1. The client application launches a search query by calling the search API
-1. The API call will immediately return a token while the search continues running in Laserfiche Cloud.
+1. The API call will immediately return a token while the search continues running in Laserfiche.
 1. The client application can check the status of the operation by using the token returned in step 2.
 1. When the operation completes, the result of the operation can also be retrieved by using the same token returned in step 2.
 

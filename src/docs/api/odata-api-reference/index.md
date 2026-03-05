@@ -12,11 +12,11 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ## Overview
 
-The Lookup Table OData API allows users to interact with data stored in lookup tables in Laserfiche Cloud. It follows the [OData version 4 standard](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html) which allows you to use that standard to access and perform CRUD on your Laserfiche Lookup Tables from any application. Major use cases include reporting in Power BI or Excel. For more information on how to use an OData API [see the OData documentation](https://www.odata.org/getting-started/basic-tutorial/). You can explore the API using the [Swagger playground](./../../api/playground/). Lookup tables are secured using project-based security.
+The Lookup Table OData API allows users to interact with data stored in lookup tables in Laserfiche Cloud. It follows the [OData version 4 standard](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html) which allows you to use that standard to access and perform CRUD on your Laserfiche Lookup Tables from any application. Major use cases include reporting in Power BI or Excel. For more information on how to use an OData API [see the OData documentation](https://www.odata.org/getting-started/basic-tutorial/). You can explore the API using the [Swagger playground](./../../getting-started/playground/). Lookup tables are secured using project-based security.
 
 ## Try it out
 
-- Use [swagger](./../playground/) to explore the API's possibilities.
+- Use [swagger](./../../getting-started/playground/) to explore the API's possibilities.
 - Use the [Lookup Tables command line utility](../../guides/guide-lookup-tables-cli/)
 
 In order to authenticate, follow the instructions in [Authenticate to the Swagger playground](./../authentication/guide_authenticating-to-the-swagger-playground/) or [Authenticate to the Laserfiche API](./../authentication/). The table API supports both Bearer access token authentication and Basic username/password authentication for use with applications like Excel and Power BI. Those details can be found in the links above.

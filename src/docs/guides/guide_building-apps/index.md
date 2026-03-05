@@ -36,5 +36,5 @@ A collection of UI Web Components to be used to interact with Laserfiche.
 
 - [lf-ui-components library on npm](https://www.npmjs.com/package/@laserfiche/lf-ui-components)
 - [types-lf-ui-components library on npm](https://www.npmjs.com/package/@laserfiche/types-lf-ui-components)
-- **Documentation**: 
+- **Documentation**:
   - [lf-ui-components](https://developer.laserfiche.com/lf-ui-components/#/)

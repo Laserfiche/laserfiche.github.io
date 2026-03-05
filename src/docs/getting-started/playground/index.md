@@ -5,7 +5,8 @@ nav_order: 8
 redirect_from:
   - api/API.html
   - api/playground.html
-parent: Laserfiche APIs
+  - /docs/api/playground/
+parent: Getting Started
 ---
 
 <!--© 2025 Laserfiche.
@@ -18,7 +19,7 @@ The Swagger Playground is a visual, interactive documentation tool that allows d
 {: .note }
 **WARNING:** Swagger Playground API calls are **_live_** and can delete or modify resources in the connected system.
 
-See guide: [Authenticate from the Swagger UI Playground](../authentication/guide_authenticating-to-the-swagger-playground/)
+See guide: [Authenticate from the Swagger UI Playground](./../../api/authentication/guide_authenticating-to-the-swagger-playground/)
 
 ## Laserfiche OAuth 2.0 Authorization Server API
 
@@ -40,7 +41,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 
 ### Laserfiche Self-Hosted Repository API endpoint
 
-- Self-Hosted [Laserfiche API Server](../server/) typically exposes the Swagger UI at `https://YOUR-SERVER.EXAMPLE.COM/LFRepositoryAPI/`.
+- Self-Hosted [Laserfiche API Server](./../../api/server/) typically exposes the Swagger UI at `https://YOUR-SERVER.EXAMPLE.COM/LFRepositoryAPI/`.
 
 ### Laserfiche Repository API regional endpoints
 
@@ -54,7 +55,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. You
 
 ## Laserfiche OData Table API
 
-Use the [Laserfiche OData Table API](../odata-api-reference/) to access and manage data in a Laserfiche Lookup Tables.
+Use the [Laserfiche OData Table API](./../../api/odata-api-reference/) to access and manage data in a Laserfiche Lookup Tables.
 
 - [Try the OData Table API](https://api.laserfiche.com/odata4/swagger/index.html) (United States Data Center)
 - [Try the OData Table API](https://api.laserfiche.ca/odata4/swagger/index.html) (Canadian Data Center)

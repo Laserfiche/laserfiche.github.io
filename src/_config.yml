@@ -1,5 +1,7 @@
 # Jekyll Documentation Generator Configuration File
 
+theme: just-the-docs
+
 title: Laserfiche Developer Documentation
 
 exclude:
@@ -17,8 +19,8 @@ exclude:
   # specific to the theme website:
   - bin/
   - lib/
-  - "*.gemspec"
-  - "*.gem"
+  - '*.gemspec'
+  - '*.gem'
   - LICENSE.txt
   - package.json
   - package-lock.json
@@ -63,5 +65,16 @@ plugins:
 
 heading_anchors: true
 color_scheme: lf-styles
-favicon_ico: "/assets/favicon.ico"
-logo: "/assets/logo.svg"
+favicon_ico: '/assets/favicon.ico'
+
+callouts_level: quiet
+callouts:
+  note:
+    color: yellow
+  warning:
+    title: Warning
+    color: red
+  important:
+    title: Important
+    color: blue
+logo: '/assets/logo.svg'

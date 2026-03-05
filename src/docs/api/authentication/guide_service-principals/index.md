@@ -55,10 +55,10 @@ A Service Principal can have two keys at any given time. Either of the keys may 
 
 1. To regenerate a new key, click the "Rotate" action for the desired key that you want to rotate. ![](./assets/images/service-principals-04.png)
 
-    {: .note }
-    Note: Two keys are given to a Service Principal in order to seamlessly rotate a Principal's credentials without any down time. For instance, let's say your Service Principal is powering an integration in the production environment using Key #1. In order to follow security best practices, you'd like to rotate the password of the Principal. You may replace the Principal's credentials in your integration code with Key #2. You can then go back and disable Key #1. The next time you want to rotate the Principal's key, you can regenerate a new key for Key #1 using the Rotate action.
+   {: .note }
+   Note: Two keys are given to a Service Principal in order to seamlessly rotate a Principal's credentials without any down time. For instance, let's say your Service Principal is powering an integration in the production environment using Key #1. In order to follow security best practices, you'd like to rotate the password of the Principal. You may replace the Principal's credentials in your integration code with Key #2. You can then go back and disable Key #1. The next time you want to rotate the Principal's key, you can regenerate a new key for Key #1 using the Rotate action.
 
-1.  By default, Service Principal keys will expire after 90 days. You can change this behavior under the Settings tab of Account Administration, on the Integration Configuration subsection ![](./assets/images/service-principals-05.png)
+1. By default, Service Principal keys will expire after 90 days. You can change this behavior under the Settings tab of Account Administration, on the Integration Configuration subsection ![](./assets/images/service-principals-05.png)
 
 ### Applying Security
 

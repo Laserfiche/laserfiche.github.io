@@ -15,7 +15,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 The Laserfiche API is a set of RESTful web APIs that allow you to build custom integrations between third-party applications and Laserfiche. These frequently asked questions and how-to guides will help you start building seamless integrations with Laserfiche.
 
-Want to jump right in and start making some API calls now? Check out our guide to using our [Swagger Playground](../../api/playground/).
+Want to jump right in and start making some API calls now? Check out our guide to using our [Swagger Playground](./../playground/).
 
 ## Authenticate to the Swagger Playground
 
@@ -39,5 +39,5 @@ Leverage the Laserfiche API to build integrations with other enterprise platform
 
 ## Next Steps:
 
-- Check out our [Guides](../../guides/) page for  walk-throughs and tutorials about the Laserfiche API.
+- Check out our [Guides](../../guides/) page for walk-throughs and tutorials about the Laserfiche API.
 - If you're new to RESTful web APIs, check out our [overview](../../api/guide_overview-of-the-laserfiche-api/) to learn what the API looks like and how it works.

@@ -22,5 +22,5 @@ The Collections of vectorized documents can be used as the targeted scope for cu
 
 ## Try it out
 
-- Use [swagger](./../playground/) to explore the API's possibilities.
+- Use [swagger](./../../getting-started/playground/) to explore the API's possibilities.
 - See required [OAuth 2.0 scopes](../authentication/guide_oauth_2.0_scopes/#collections-api).

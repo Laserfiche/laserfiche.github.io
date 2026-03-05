@@ -29,4 +29,4 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 
 - [Getting Started](../../getting-started/guide_getting-started/)
 - [Long Operations](../../getting-started/guide_long-operations/)
-- [Swagger Playground](../../api/playground/)
+- [Swagger Playground](../../getting-started//playground/)
