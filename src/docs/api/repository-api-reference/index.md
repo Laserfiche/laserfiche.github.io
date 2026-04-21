@@ -22,6 +22,9 @@ Each entry can have associated **metadata** such as **fields** and **templates**
 Laserfiche Repository API enables programmatic access to [Cloud](https://doc.laserfiche.com/laserfiche/en-us/content/intro-welcome-to-laserfiche.htm) and [Self-Hosted](https://doc.laserfiche.com/laserfiche.documentation/12/userguide/en-us/content/intro-getting-started.htm) Laserfiche Repositories:
 
 - [Create, list, import, and export documents and folders](../../guides/documents-and-folders/)
+- [Update documents — electronic document, metadata, and image pages](../../guides/documents-and-folders/guide_updating-documents/)
+- [Manipulate pages — create, replace, rotate, move, copy, and delete](../../guides/documents-and-folders/guide_page-manipulation/)
+- [Manage document locks and versions — lock / unlock, check-in / check-out](../../guides/documents-and-folders/guide_document-lifecycle/)
 - [Read/Write entry metadata](../../guides/metadata/)
 - [Search the Repository](../../guides/search/)
 
