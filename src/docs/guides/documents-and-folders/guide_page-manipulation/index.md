@@ -67,10 +67,10 @@ Set `?pageNumber=5`. Three empty pages are inserted at positions 5, 6, 7; existi
 **JavaScript**
 
 ```javascript
-import { RepositoryApiClient, CreatePagesRequest } from '@laserfiche/lf-repository-api-client-v2';
+import { RepositoryApiClient, PagesContentRequest } from '@laserfiche/lf-repository-api-client-v2';
 
 const client = RepositoryApiClient.createFromAccessKey(servicePrincipalKey, accessKey);
-const request = new CreatePagesRequest();
+const request = new PagesContentRequest();
 request.textPages = ['Searchable text for the page'];
 
 await client.entriesClient.createPages({
@@ -96,7 +96,7 @@ await client.EntriesClient.CreatePagesAsync(new CreatePagesParameters
     {
         new FileParameter(pngStream, "scan.png", "image/png"),
     },
-    Request = new CreatePagesRequest
+    Request = new PagesContentRequest
     {
         TextPages = new List<string> { "Searchable text for the page" },
     },
@@ -118,7 +118,7 @@ Same multipart shape and pairing semantics as `POST Pages`. If both `imageFiles`
 Overwrite the image part, text part, or both of an existing page. Parts not provided are left unchanged.
 
 ```
-PUT https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages({pageNumber})
+PUT https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages/{pageNumber}
 ```
 
 Request parts:
@@ -196,7 +196,7 @@ POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entrie
 Rotate the image on a single page. Text on the page is unaffected.
 
 ```
-POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages({pageNumber})/Image/Rotate
+POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages/{pageNumber}/Image/Rotate
 ```
 
 ```json
@@ -212,8 +212,8 @@ Accepted angles: `0`, `90`, `180`, `270`.
 Per-page GETs return the image binary or the text content directly.
 
 ```
-GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages({pageNumber})/Image
-GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages({pageNumber})/Text
+GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages/{pageNumber}/Image
+GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages/{pageNumber}/Text
 ```
 
 `Image` returns a binary stream (typically TIFF, JPG, or PNG depending on how the page was produced). `Text` returns a JSON body with a `text` property.
