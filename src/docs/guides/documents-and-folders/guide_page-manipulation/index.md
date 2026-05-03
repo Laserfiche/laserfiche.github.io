@@ -228,6 +228,32 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries
 
 `pageRange` is optional; when omitted, metadata is returned for every page.
 
+### Paginating page metadata
+
+`ListPageInfos` returns a paged OData collection. The default page size is **150**; the response envelope includes `value` (the list), `@odata.count` (total when `$count=true`), and `@odata.nextLink` when more pages remain.
+
+```
+GET .../Document/Pages?$top=50&$count=true
+```
+
+```json
+{
+  "@odata.count": 1240,
+  "value": [ /* up to 50 PageInfoResponse items */ ],
+  "@odata.nextLink": "https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document/Pages?%24skiptoken=..."
+}
+```
+
+Supported query options: `$top`, `$count`, `$select`, `$skiptoken`. `$orderby` is not supported — pages are inherently ordered by page number. To set the page size via the OData header convention instead of `$top`, send `Prefer: odata.maxpagesize=N`.
+
+`pageRange` composes with paging — the range is applied first, then paging is applied to the filtered result. For example, fetch page metadata 100-300 in chunks of 50:
+
+```
+GET .../Document/Pages?pageRange=100-300&$top=50
+```
+
+To page through, follow `@odata.nextLink` until it is no longer returned.
+
 ## Generate Text for All Image Pages
 
 Trigger server-side OCR across every image page in the document. Existing text is overwritten per page.
