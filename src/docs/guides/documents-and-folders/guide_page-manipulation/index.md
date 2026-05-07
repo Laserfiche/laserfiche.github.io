@@ -10,7 +10,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Manipulate Document Pages
-**Applies to**: Repository API v2.
+**Applies to**: Repository API v2 Cloud.
 
 A Laserfiche document is a composite object with three independent components: an optional electronic document (the original source file — PDF, DOCX, etc.), image pages (rasterized page images), and text pages (searchable text per page). Page manipulation operations in this guide target image and text pages only; the electronic document is covered by the [Update Documents guide](../guide_updating-documents/).
 

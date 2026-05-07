@@ -10,7 +10,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Update Documents
-**Applies to**: Repository API v2.
+**Applies to**: Repository API v2 Cloud.
 
 A Laserfiche document has three independent components: an optional electronic document (the original source file, e.g. PDF), image pages, and text pages. This guide covers creating documents from nothing, updating their electronic document, updating their metadata, and managing their template assignment. For per-page image and text operations see the [Manipulate Document Pages guide](../guide_page-manipulation/).
 
@@ -50,7 +50,7 @@ Example `request` body:
 
 ```json
 {
-  "name": "LFAPI created document with image pages",
+  "name": "Email with scanned attachments",
   "autoRename": true,
   "generateImagePagesText": true,
   "metadata": {

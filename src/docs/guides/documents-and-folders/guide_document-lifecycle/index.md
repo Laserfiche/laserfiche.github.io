@@ -10,7 +10,7 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Document Lifecycle — Locks and Version Control
-**Applies to**: Repository API v2.
+**Applies to**: Repository API v2 Cloud.
 
 Laserfiche documents support two related but distinct coordination mechanisms: **persistent locks**, which prevent concurrent modifications, and **version control** (check-in / check-out), which integrates with the repository's version history. Version control uses locks internally but adds the concept of explicit versions, check-out state, and undo.
 
@@ -201,15 +201,15 @@ The document entry returned by `GET /Entries/{entryId}` surfaces both lock and v
 | Property | Type | Description |
 |---|---|---|
 | `isLocked` | bool | Whether the document has a persistent lock. |
-| `lockedBy` | string (nullable) | Account name of the lock holder, or null if not locked. |
+| `lockedBy` | string (nullable) | Display name of the lock holder, or null if not locked. |
 | `isLockedByAnotherUser` | bool | True if locked by a user other than the caller. |
 | `isCheckedOut` | bool | Whether the document is checked out. |
-| `checkedOutBy` | string (nullable) | Account name of the user holding the check-out, or null. |
+| `checkedOutBy` | string (nullable) | Display name of the user holding the check-out, or null. |
 | `isCheckedOutByAnotherUser` | bool | True if checked out by a user other than the caller. |
 | `isUnderVersionControl` | bool | Whether the document is under version control. |
 | `currentVersion` | int | Version number; `0` if not under version control. |
 
-`lockedBy` and `checkedOutBy` resolve the stored SID to an account name. `isLockedByAnotherUser` and `isCheckedOutByAnotherUser` let clients distinguish their own hold from a foreign hold without comparing account names.
+`lockedBy` and `checkedOutBy` are display names — useful for UI rendering, but not unique across users. To distinguish your own hold from a foreign hold reliably, use `isLockedByAnotherUser` and `isCheckedOutByAnotherUser`; these are computed server-side from stable principal identifiers, not from the display name.
 
 ## See also
 
