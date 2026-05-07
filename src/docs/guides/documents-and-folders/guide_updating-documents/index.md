@@ -151,27 +151,6 @@ POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entrie
 
 Returns a 202 Accepted with a task ID — poll `/Tasks?taskIds={taskId}` for completion. The async path is caller-managed for version control: pre-`CheckOut` the document if you need a single-version outcome. The connector does not auto-wrap async updates in CheckOut/CheckIn.
 
-## Download the Electronic Document
-
-```
-GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{entryId}/Document
-```
-
-Returns the electronic document as a binary stream. The response's `Content-Type` header reflects the stored MIME type.
-
-**.NET**
-
-```csharp
-using var response = await client.EntriesClient.GetDocumentAsync(new GetDocumentParameters
-{
-    RepositoryId = repositoryId,
-    EntryId = entryId,
-});
-
-using var outputFile = File.Create("downloaded.pdf");
-await response.Stream.CopyToAsync(outputFile);
-```
-
 ## Delete the Electronic Document
 
 Remove the electronic document without affecting image pages, text pages, or metadata. Useful when the electronic document is no longer canonical but the image pages remain the authoritative representation.
