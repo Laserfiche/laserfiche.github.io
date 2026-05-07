@@ -22,6 +22,11 @@ Laserfiche API V2 provides two types of APIs for importing a document:
 - **Simple Import:** this is intended to be used for importing _small_ documents in a _synchronous_ style. The current maximum file size limit for this API is 100 MB.
 - **Chunked Import:** this is intended to be used for importing _large_ documents in an _asynchronous_ style, i.e. using the [long operation](../../../getting-started/guide_long-operations/) pattern. The current maximum file size limit for this API is 64 GB.
 
+The Import endpoint also supports two adjacent flows beyond a traditional file upload:
+
+- **Empty document:** omit the `file` part (or supply a zero-length file) to create a document entry with no electronic document and no pages. See the [Update Documents guide](../guide_updating-documents/) for adding an electronic document and pages later.
+- **Document with image pages:** supply an optional `imageFiles` part alongside (or instead of) a `file` to attach image pages as part of import. See the [Manipulate Document Pages guide](../guide_page-manipulation/) for per-page operations.
+
 ## Simple Import
 
 Create a document with the Laserfiche API by using the following multipart/form POST request.
