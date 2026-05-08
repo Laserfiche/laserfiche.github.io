@@ -110,9 +110,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     metrics (0.15.0)
-    nokogiri (1.18.10-x64-mingw-ucrt)
+    nokogiri (1.19.3-x64-mingw-ucrt)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
+    nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -145,7 +145,6 @@ GEM
     typhoeus (1.5.0)
       ethon (>= 0.9.0, < 0.16.0)
     unicode-display_width (2.6.0)
-    wdm (0.2.0)
     webrick (1.9.2)
     yell (2.2.2)
     zeitwerk (2.7.4)
@@ -162,7 +161,6 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-redirect-from
   just-the-docs (~> 0.12.0)
-  wdm (>= 0.2.0)
   webrick (~> 1.9)
 
 BUNDLED WITH
