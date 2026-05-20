@@ -3,6 +3,10 @@ layout: default
 nav_order: 3
 title: Guides
 has_children: true
+redirect_from:
+  - guides/guide_building-apps.html
+  - docs/guides/guide_building-apps/
+  - guide_building-apps.html
 ---
 
 <!--© 2025 Laserfiche.

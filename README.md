@@ -14,7 +14,9 @@ First published 5/23/2024
    - Verify installation running [check.rb](https://github.com/rubygems/ruby-ssl-check/blob/master/check.rb)
    - run `gem install bundler`
    - run `gem install jekyll`
-     - If fails to download a package, you may need to manually download and install it. E.g. `gem install ffi -v 1.17.0`
+     - If fails to download a package, you may need to manually download the gem and install it. E.g. switch to the download folder and run:
+       - `gem install ffi`
+       - `gem install google-protobuf`
 1. navigate to the src directory
 1. remove the Gemfile.lock, if it exists
 1. run `bundle install`
@@ -25,7 +27,7 @@ First published 5/23/2024
   ```sh
   gem --version
   bundle --version
-  jekyll --version
+  bundle exec jekyll --version
   ```
 
 ### Build the static website and serve locally
