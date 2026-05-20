@@ -12,7 +12,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (2.0.1)
-    addressable (2.8.8)
+    addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     afm (1.0.0)
     async (2.35.0)
@@ -122,7 +122,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    public_suffix (7.0.0)
+    public_suffix (7.0.5)
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.3.1)
@@ -145,7 +145,6 @@ GEM
     typhoeus (1.5.0)
       ethon (>= 0.9.0, < 0.16.0)
     unicode-display_width (2.6.0)
-    wdm (0.2.0)
     webrick (1.9.2)
     yell (2.2.2)
     zeitwerk (2.7.4)
@@ -162,7 +161,6 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-redirect-from
   just-the-docs (~> 0.12.0)
-  wdm (>= 0.2.0)
   webrick (~> 1.9)
 
 BUNDLED WITH
