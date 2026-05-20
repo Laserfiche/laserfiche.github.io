@@ -58,11 +58,10 @@ jobs:
         working-directory: ./src
         run: bundle exec rake
 
-      - name: Upload pages artifact        
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./src/_site
-
 
   # Deployment job
   deploy:
