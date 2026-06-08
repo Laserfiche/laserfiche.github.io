@@ -20,15 +20,15 @@ The Laserfiche software development kit (SDK) includes tools that allow you to c
 
 The Laserfiche SDK includes various versions of these core assemblies/libraries:
 
-- <madcap:toggler targets="RA;RA1">Laserfiche.RepositoryAccess.dll</madcap:toggler>
+- Laserfiche.RepositoryAccess.dll
 
     RepositoryAccess (RA) is a .NET assembly that allows a third-party application to manipulate a Laserfiche repository. RepositoryAccess is an object-oriented interface that allows you to manipulate Laserfiche data. It has similarities with LFSO, but also introduces collections of static methods that streamline retrieving and manipulating Laserfiche data.
 
     RA supports Laserfiche Server 8.2 and later.
-- <madcap:toggler targets="DS">Laserfiche.DocumentServices.dll</madcap:toggler>
+- Laserfiche.DocumentServices.dll
 
     DocumentServices (DS) is a .NET assembly for file import and export actions. DocumentServices retains the functionality of DocumentProcessor, while providing new features such as support for a new [XML-based import list format](https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/ImportAgent/Content/Importing-List-Files.htm). DocumentServices also includes PDF export functionality previously only available through PDFExporter.
-- <madcap:toggler targets="LFSO;LFSO1">LFSOxx.dll</madcap:toggler>
+- LFSOxx.dll
 
     Laserfiche Server Objects (LFSO) is an object-oriented application programming 
  interface that allows a third-party application to manipulate a Laserfiche 
@@ -41,21 +41,22 @@ The Laserfiche SDK includes various versions of these core assemblies/libraries:
  object, permitting you to edit documents, manage users and groups, and 
  perform practically any other function of the Laserfiche client and administration 
  console through your own custom interface or third-party application.
-- <madcap:toggler targets="DP">DocumentProcessorxx.dll</madcap:toggler>
+- DocumentProcessorxx.dll
 
     DocumentProcessor 
 (DP) provides a COM interface for file import and export actions, accessing the OCR engine, and performing text extraction operations.
-- <madcap:toggler targets="PDF">PdfExporterxx.dll</madcap:toggler>
+- PdfExporterxx.dll
 
     PDFExporter is a .NET assembly that includes PDF export functionality not available through DocumentProcessor.
-- <madcap:toggler targets="IE">LFImageEnable80.dll and Laserfiche.ImageEnable.dll</madcap:toggler>
+- LFImageEnable80.dll and Laserfiche.ImageEnable.dll
 
     ImageEnable provides a COM interface for controlling certain aspects of the Laserfiche Client.
-- <madcap:toggler targets="CAT">ClientAutomation.dll</madcap:toggler>
+- ClientAutomation.dll
 
     Laserfiche Client Automation Tools (CAT) is a .NET assembly that contains an API for manipulating the Laserfiche Client.
-- <madcap:toggler targets="JRA;JRA1;JRA2">JRA-10.4.0.jar</madcap:toggler>
+- JRA-10.4.0.jar
 
     Java Repository Access (JRA) is a Java library that provides access to select document management functionality. JRA does not support all the functionality available through RepositoryAccess. It provides basic document management functionality. See the section on [using JRA](../../other-apis-cmis-and-jra/java-repository-access/) for more information.
 
     JRA supports Laserfiche Server 8.2.1 and later.
+

@@ -12,8 +12,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Search Syntax
 
-## 
-            <madcap:keyword term="Search"></madcap:keyword>Search Syntax Overview
+## Search Syntax Overview
 
 This reference describes the Laserfiche Search Syntax. You can combine the different elements of the language to create a customized search of your repository.
 

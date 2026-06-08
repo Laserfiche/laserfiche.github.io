@@ -79,28 +79,14 @@ On the form, the `propertyId` inputs are hidden, as there is no advantage to all
 <h3> Create a document from an HTML form: </h3>
 <form id="createdochtmlid" action="" target="createresultframe" enctype="multipart/form-data" onsubmit="prepareCreate()" method="post">
 <fieldset>
- <table>
-  <tr>
-	<td><label for="name">Document Name:</label></td>
-	<td><input name="propertyValue[0]" type="text" id="name" value="My Document"/></td>
-  </tr>
-  <tr>
-	<td><label for="typeId">Type-Id:</label></td>
-	<td><input name="propertyValue[1]" type="text" id="typeId" value="cmis:document"/></td>
-  </tr>
-  <tr>
-	<td><label for="folderId">Folder-Id:</label></td>
-	<td><input type="text" id="folderId" name="objectId" value="1"/></td>
-  </tr>
-  <tr>
-	<td><label for="contentId">Content:</label></td>
-	<td><input id="contentId" name="content" type="file"/></td>
-  </tr>
-  <tr>
-	<td><input id="createdochtml" type="submit" value="Create Doc!"/></td>
-		  <td></td>
-  </tr>       
- </table>	    
+ 
+| Document Name: |  |
+| --- | --- |
+| Type-Id: |  |
+| Folder-Id: |  |
+| Content: |  |
+|  |  |
+	    
 </fieldset>
 <input name="propertyId[0]" type="hidden" value="cmis:name" />
 <input name="propertyId[1]" type="hidden" value="cmis:objectTypeId" />

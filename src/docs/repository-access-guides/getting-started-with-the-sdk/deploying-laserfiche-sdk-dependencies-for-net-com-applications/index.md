@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Deploying Laserfiche SDK Dependencies for .NET/COM Applications
 
 ## 
-            <madcap:keyword term="Merge Modules;Distributing SDK;Runtime Installation;Distributing: LFSO Application;Distributing: RA Application"></madcap:keyword>Distributing Your Applications
+            Distributing Your Applications
 
 This topic covers the various dependencies to take into account when deploying your custom programs.
 
@@ -64,34 +64,251 @@ In most situations, it is recommended that you use **LaserficheSDKRuntimeInstall
 
 | Your custom application is x86 and uses: | Include: |
 | --- | --- |
-| RepositoryAccess 10.4<br>DocumentServices 10.4 | <ul><br>                            <li>LFNet4SDK104-Win32.msm</li><br>                            <li>ICU621-Win32.msm</li><br>                            <li>ICU621SxS-Win32.msm</li><br>                            <li>LfWicUtil104_Win32.msm</li><br>                            <li>Net4LaserficheImaging104_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider104-Win32.msm</li><br>                        </ul> |
-| ClientAutomationTools 10.4 | <ul><br>                            <li>Net4ClientAutomation104_Win32.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10.2<br>DocumentProcessor 10.4 | <ul><br>                            <li>lfso104-Win32.msm</li><br>                            <li>ICU621-Win32.msm</li><br>                            <li>DocPrc104-Win32.msm</li><br>                            <li>LfWicUtil104_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider104-Win32.msm</li><br>                            <li>PDFExporter104.msm</li><br>                        </ul> |
-| ImageEnable 10.4 | <ul><br>                            <li>Net4ClientAutomation104_Win32.msm</li><br>                        </ul> |
-| RepositoryAccess 10.2<br>DocumentServices 10.2 | <ul><br>                            <li>LFNet4SDK102-Win32.msm</li><br>                            <li>ICU571-Win32.msm</li><br>                            <li>ICU571SxS-Win32.msm</li><br>                            <li>LfWicUtil102_Win32.msm</li><br>                            <li>Net4LaserficheImaging102_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider102-Win32.msm</li><br>                        </ul> |
-| ClientAutomationTools 10.2 | <ul><br>                            <li>Net4ClientAutomation102_Win32.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10.2<br>DocumentProcessor 10.2 | <ul><br>                            <li>lfso102-Win32.msm</li><br>                            <li>ICU571-Win32.msm</li><br>                            <li>DocPrc102-Win32.msm</li><br>                            <li>LfWicUtil102_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider102-Win32.msm</li><br>                            <li>PDFExporter102.msm</li><br>                        </ul> |
-| ImageEnable 10.2 | <ul><br>                            <li>Net4ClientAutomation102_Win32.msm</li><br>                        </ul> |
-| RepositoryAccess 10<br>DocumentServices 10 | <ul><br>                            <li>LFNet4SDK100-Win32.msm</li><br>                            <li>ICU551-Win32.msm</li><br>                            <li>ICU551SxS-Win32.msm</li><br>                            <li>LfWicUtil100_Win32.msm</li><br>                            <li>Net4LaserficheImaging100_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider100-Win32.msm</li><br>                        </ul> |
-| ClientAutomationTools 10 | <ul><br>                            <li>Net4ClientAutomation100.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10<br>DocumentProcessor 10 | <ul><br>                            <li>lfso100-Win32.msm</li><br>                            <li>ICU551-Win32.msm</li><br>                            <li>DocPrc100-Win32.msm</li><br>                            <li>LfWicUtil100_Win32.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider100-Win32.msm</li><br>                            <li>PDFExporter100.msm</li><br>                        </ul> |
-| ImageEnable 10 | <ul><br>                            <li>Net4ClientAutomation100.msm</li><br>                        </ul> |
+| RepositoryAccess 10.4<br>DocumentServices 10.4 | 
+- LFNet4SDK104-Win32.msm
+
+- ICU621-Win32.msm
+
+- ICU621SxS-Win32.msm
+
+- LfWicUtil104\_Win32.msm
+
+- Net4LaserficheImaging104\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider104-Win32.msm
+ |
+| ClientAutomationTools 10.4 | 
+- Net4ClientAutomation104\_Win32.msm
+ |
+| LaserficheServerObjects 10.2<br>DocumentProcessor 10.4 | 
+- lfso104-Win32.msm
+
+- ICU621-Win32.msm
+
+- DocPrc104-Win32.msm
+
+- LfWicUtil104\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider104-Win32.msm
+
+- PDFExporter104.msm
+ |
+| ImageEnable 10.4 | 
+- Net4ClientAutomation104\_Win32.msm
+ |
+| RepositoryAccess 10.2<br>DocumentServices 10.2 | 
+- LFNet4SDK102-Win32.msm
+
+- ICU571-Win32.msm
+
+- ICU571SxS-Win32.msm
+
+- LfWicUtil102\_Win32.msm
+
+- Net4LaserficheImaging102\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider102-Win32.msm
+ |
+| ClientAutomationTools 10.2 | 
+- Net4ClientAutomation102\_Win32.msm
+ |
+| LaserficheServerObjects 10.2<br>DocumentProcessor 10.2 | 
+- lfso102-Win32.msm
+
+- ICU571-Win32.msm
+
+- DocPrc102-Win32.msm
+
+- LfWicUtil102\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider102-Win32.msm
+
+- PDFExporter102.msm
+ |
+| ImageEnable 10.2 | 
+- Net4ClientAutomation102\_Win32.msm
+ |
+| RepositoryAccess 10<br>DocumentServices 10 | 
+- LFNet4SDK100-Win32.msm
+
+- ICU551-Win32.msm
+
+- ICU551SxS-Win32.msm
+
+- LfWicUtil100\_Win32.msm
+
+- Net4LaserficheImaging100\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider100-Win32.msm
+ |
+| ClientAutomationTools 10 | 
+- Net4ClientAutomation100.msm
+ |
+| LaserficheServerObjects 10<br>DocumentProcessor 10 | 
+- lfso100-Win32.msm
+
+- ICU551-Win32.msm
+
+- DocPrc100-Win32.msm
+
+- LfWicUtil100\_Win32.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider100-Win32.msm
+
+- PDFExporter100.msm
+ |
+| ImageEnable 10 | 
+- Net4ClientAutomation100.msm
+ |
 
 | Your custom application is x64 and uses: | Include: |
 | --- | --- |
-| RepositoryAccess 10.4<br>DocumentServices 10.4 | <ul><br>                            <li>LFNet4SDK104-x64.msm</li><br>                            <li>ICU621-x64.msm</li><br>                            <li>ICU621SxS-x64.msm</li><br>                            <li>LfWicUtil104_x64.msm</li><br>                            <li>Net4LaserficheImaging104_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider104-x64.msm</li><br>                        </ul> |
-| ClientAutomationTools 10.4 | <ul><br>                            <li>Net4ClientAutomation104-x64.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10.4<br>DocumentProcessor 10.2 | <ul><br>                            <li>lfso104-x64.msm</li><br>                            <li>ICU621-x64.msm</li><br>                            <li>DocPrc104-x64.msm</li><br>                            <li>LfWicUtil104_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider104-x64.msm</li><br>                            <li>PDFExporter104_x64.msm</li><br>                        </ul> |
-| ImageEnable 10.4 | <ul><br>                            <li>Net4ClientAutomation104_x64.msm</li><br>                        </ul> |
-| RepositoryAccess 10.2<br>DocumentServices 10.2 | <ul><br>                            <li>LFNet4SDK102-x64.msm</li><br>                            <li>ICU571-x64.msm</li><br>                            <li>ICU571SxS-x64.msm</li><br>                            <li>LfWicUtil102_x64.msm</li><br>                            <li>Net4LaserficheImaging102_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider102-x64.msm</li><br>                        </ul> |
-| ClientAutomationTools 10.2 | <ul><br>                            <li>Net4ClientAutomation102-x64.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10.2<br>DocumentProcessor 10.2 | <ul><br>                            <li>lfso102-x64.msm</li><br>                            <li>ICU571-x64.msm</li><br>                            <li>DocPrc102-x64.msm</li><br>                            <li>LfWicUtil102_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider102-x64.msm</li><br>                            <li>PDFExporter102_x64.msm</li><br>                        </ul> |
-| ImageEnable 10.2 | <ul><br>                            <li>Net4ClientAutomation102_x64.msm</li><br>                        </ul> |
-| RepositoryAccess 10<br>DocumentServices 10 | <ul><br>                            <li>LFNet4SDK100-x64.msm</li><br>                            <li>ICU551-x64.msm</li><br>                            <li>ICU551SxS-x64.msm</li><br>                            <li>LfWicUtil100_x64.msm</li><br>                            <li>Net4LaserficheImaging100_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider100-x64.msm</li><br>                        </ul> |
-| ClientAutomationTools 10 | <ul><br>                            <li>Net4ClientAutomation100-x64.msm</li><br>                        </ul> |
-| LaserficheServerObjects 10<br>DocumentProcessor 10 | <ul><br>                            <li>lfso100-x64.msm</li><br>                            <li>ICU551-x64.msm</li><br>                            <li>DocPrc100-x64.msm</li><br>                            <li>LfWicUtil100_x64.msm</li><br>                            <li>iTextAsian.msm</li><br>                            <li>iTextSharp417.msm</li><br>                            <li>TextProvider100-x64.msm</li><br>                            <li>PDFExporter100_x64.msm</li><br>                        </ul> |
-| ImageEnable 10 | <ul><br>                            <li>Net4ClientAutomation100_x64.msm</li><br>                        </ul> |
+| RepositoryAccess 10.4<br>DocumentServices 10.4 | 
+- LFNet4SDK104-x64.msm
+
+- ICU621-x64.msm
+
+- ICU621SxS-x64.msm
+
+- LfWicUtil104\_x64.msm
+
+- Net4LaserficheImaging104\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider104-x64.msm
+ |
+| ClientAutomationTools 10.4 | 
+- Net4ClientAutomation104-x64.msm
+ |
+| LaserficheServerObjects 10.4<br>DocumentProcessor 10.2 | 
+- lfso104-x64.msm
+
+- ICU621-x64.msm
+
+- DocPrc104-x64.msm
+
+- LfWicUtil104\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider104-x64.msm
+
+- PDFExporter104\_x64.msm
+ |
+| ImageEnable 10.4 | 
+- Net4ClientAutomation104\_x64.msm
+ |
+| RepositoryAccess 10.2<br>DocumentServices 10.2 | 
+- LFNet4SDK102-x64.msm
+
+- ICU571-x64.msm
+
+- ICU571SxS-x64.msm
+
+- LfWicUtil102\_x64.msm
+
+- Net4LaserficheImaging102\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider102-x64.msm
+ |
+| ClientAutomationTools 10.2 | 
+- Net4ClientAutomation102-x64.msm
+ |
+| LaserficheServerObjects 10.2<br>DocumentProcessor 10.2 | 
+- lfso102-x64.msm
+
+- ICU571-x64.msm
+
+- DocPrc102-x64.msm
+
+- LfWicUtil102\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider102-x64.msm
+
+- PDFExporter102\_x64.msm
+ |
+| ImageEnable 10.2 | 
+- Net4ClientAutomation102\_x64.msm
+ |
+| RepositoryAccess 10<br>DocumentServices 10 | 
+- LFNet4SDK100-x64.msm
+
+- ICU551-x64.msm
+
+- ICU551SxS-x64.msm
+
+- LfWicUtil100\_x64.msm
+
+- Net4LaserficheImaging100\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider100-x64.msm
+ |
+| ClientAutomationTools 10 | 
+- Net4ClientAutomation100-x64.msm
+ |
+| LaserficheServerObjects 10<br>DocumentProcessor 10 | 
+- lfso100-x64.msm
+
+- ICU551-x64.msm
+
+- DocPrc100-x64.msm
+
+- LfWicUtil100\_x64.msm
+
+- iTextAsian.msm
+
+- iTextSharp417.msm
+
+- TextProvider100-x64.msm
+
+- PDFExporter100\_x64.msm
+ |
+| ImageEnable 10 | 
+- Net4ClientAutomation100\_x64.msm
+ |
 
 **Note:**  By default, architecture specific merge modules only include either 32-bit or 64-bit files. The **LaserficheImaging** and **ICU\_\_\_SxS** modules are exceptions. The 64-bit versions of these modules also include all of the 32-bit files. This means that the Win32 versions of these modules are mutually exclusive with the corresponding x64 module. For example, Net4LaserficheImaging100\_Win32.msm and LaserficheImaging100\_x64.msm cannot be merged into the same installation project. You should only include 1 of them in your custom installation msi.
 
 **Important:** If your Visual Studio project referencing RepositoryAccess and DocumentServices targets the Any CPU architecture, Visual Studio will automatically include the x86 versions of I8ln & LaserficheImaging. This causes the built binaries to be effectively x86. In a web application, this can cause IIS to return assembly binding errors unless the IIS application pool is also configured to run x86 applications. If you do not explicitly need to support 32-bit, it is recommended that your project target x64 and to reference the x64 versions of I8ln and LaserficheImaging.
+

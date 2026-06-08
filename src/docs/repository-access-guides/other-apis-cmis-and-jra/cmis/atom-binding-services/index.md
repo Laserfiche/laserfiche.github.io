@@ -42,102 +42,48 @@ Consult our [summary of services and objects](../services-and-object-types/) to 
 
 ##### [getTypeChildren](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-1750003)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col style="width: 67px;">
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>includeFieldListValues</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Returns a list of the values in a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFMobileInstall/Content/App_Topics/Field-Types.htm?Highlight=list field" target="_blank">Laserfiche list field</a>. The default value is false.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| includeFieldListValues | Query |  | Returns a list of the values in a Laserfiche list field. The default value is false. |
+
+            
+        
         
 ##### [getTypeDescendants](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-1790004)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>includeFieldListValues</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Returns a list of the values in a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFMobileInstall/Content/App_Topics/Field-Types.htm?Highlight=list field" target="_blank">Laserfiche list field</a>. The default value is false.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| includeFieldListValues | Query |  | Returns a list of the values in a Laserfiche list field. The default value is false. |
+
+            
+        
         
 ##### [getTypeDefinition](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-1830005)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>includeFieldListValues</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Returns a list of the values in a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFMobileInstall/Content/App_Topics/Field-Types.htm?Highlight=list field" target="_blank">Laserfiche list field</a>. The default value is false.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| includeFieldListValues | Query |  | Returns a list of the values in a Laserfiche list field. The default value is false. |
+
+            
+        
         
 ## Object Relationships
 
@@ -149,222 +95,35 @@ Consult our [summary of services and objects](../services-and-object-types/) to 
 
 ##### [createDocument](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-2250001)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col style="width: 273px;">
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies if <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the document's name can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename </code><![CDATA[	]]></td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Determines whether the new document will be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr madcap:conditions="">
-                            <td><code>lfInheritRetentionRule</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>This variable controls the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/RecordsManagement/life_cycle_concept.htm%3FTocPath%3DLaserfiche%2520Administration%2520Guide|Laserfiche%2520Records%2520Management|_____3" target="_self">records management properties</a> of the document.</p>
-                                <p>If a record is being created, its cutoff rule, permanent status, vital record properties, and disposition authority will always be inherited from its parent, regardless of this option's value.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfImportConversionList</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <p>Comma delimited list</p>
-                                <p><b>Example:</b> <code>"tif,bmp,pcx,jpg,txt,png"</code></p>
-                            </td>
-                            <td>
-                                <p>Documents with an extension included in this comma-delimited list will be converted to Laserfiche pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm" target="_blank">[Options]ImportConversionList</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfExtractEdocTextOnImport</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Determines if text is extracted from imported documents. </p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]MImportFlags will be followed. If [Settings]MImportFlags=4, then <code>lfExtractEdocTextOnImport</code> will be true. Otherwise <code>lfExtractEdocTextOnImport</code> will be false.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfBurnPdfAnnotationsOnImage</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>When generating pages for a PDF, this parameter determines whether PDF annotations will be burned directly onto the Laserfiche image.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]BurnPDFAnnotationsOnLFImage will be followed. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPreservePdfAnnotations</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>When generating pages during import, this parameter determines whether PDF annotations will be converted into Laserfiche annotations.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]ImportPreservePdfAnnotations will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPdfImportMonochrome</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p> 	Determines whether PDF pages will be converted to monochrome on import.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]PdfImportMonochrome will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfGeneratePagesOnPdfImport</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>When generating pages during import, this parameter determines whether PDF pages will be converted into Laserfiche pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm" target="_blank">[Settings]ImportPDFPages</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPdfImportResolution</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Specifies the resolution used when converting PDF pages to Laserfiche pages during import.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]PdfImportResolution will be followed. </p>
-                                <p><b>Note:</b> This parameter is ignored if you are importing the PDF in monochrome.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfKeepPdfFile</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p>When generating pages during import, this parameter specifies whether the original PDF electronic document will be kept.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]KeepPDFFile will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfTextLinesPerPage</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Specifies the number of lines per page when splitting text into pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]MImportBreak will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>pdfPassword</code>
-                            </td>
-                            <td>Query</td>
-                            <td>string</td>
-                            <td>Specifies the password, if the imported PDF requires a password.</td>
-                        </tr>
-                        <tr>
-                            <td><code>versioningState </code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippetblock src="../Resources/Snippets/versioningState.flsnp"></madcap:snippetblock>
-                            </td>
-                            <td>Specifies the version state of the document.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:originalfile</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td>string</td>
-                            <td>Specifies the original file name of the document.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:inheritRights</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies whether the document will inherit rights from its parent or ancestors. The default value is false.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:scope</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td>
-                                <madcap:snippetblock src="../Resources/Snippets/scopeOptions.flsnp"></madcap:snippetblock>
-                            </td>
-                            <td>
-                                <p> 	Specifies the scope of <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/best_practices__access_control.htm" target="_blank">entry access rights</a> for this entry. The default value is None.</p>
-                                <p>The values can be interpreted as follows:</p><ul>
-                                    <li>None:&#160;No access granted</li>
-                                    <li>thisobject: Access granted only to the object in question, not to any of its descendants.</li>
-                                    <li>folders: Access granted only to the object and subfolders in the object.</li>
-                                    <li>all: Access granted to the object, its subfolders, and its documents.</li>
-                                    <li>notthisobject:&#160;Access granted to the object's subfolders and documents only, but not to the object itself.</li>
-                                    <li>foldersonly: Access granted to the object's subfolders only, not to the object itself.</li>
-                                    <li>documentsonly: Access granted to the object's documents only, not to the object itself.</li>
-                                    <li>immediate:&#160;Access granted to the object and its immediate children.</li>
-                                    <li>immediatechildren: Access granted to the object's immediate children only, not to the object itself.</li>
-                                    <li>immediatedocuments:&#160;Access granted to documents that are immediate children of the object, but not to anything else.</li>
-                                </ul>
-                                <p>Consult <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Inheriting_Entry_Access_Rights.htm?Highlight=scope" target="_blank">this chart</a> for a finer-grained description of each option's meaning.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:deny </code><![CDATA[	]]></td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Specifies whether entry access rights for this entry are set to <b>Deny</b>. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query |  | Specifies if tokens defined in the document's name can be substituted. The default value is true. |
+| autoRename | Query |  | Determines whether the new document will be automatically renamed if a name conflict occurs. The default value is true. |
+| lfInheritRetentionRule | Query |  | This variable controls the records management properties of the document. If a record is being created, its cutoff rule, permanent status, vital record properties, and disposition authority will always be inherited from its parent, regardless of this option's value. |
+| lfImportConversionList | Query | Comma delimited list Example: "tif,bmp,pcx,jpg,txt,png" | Documents with an extension included in this comma-delimited list will be converted to Laserfiche pages. If this parameter is not specified, the trustee attribute [Options]ImportConversionList will be followed. |
+| lfExtractEdocTextOnImport | Query |  | Determines if text is extracted from imported documents. If this parameter is not specified, the trustee attribute [Settings]MImportFlags will be followed. If [Settings]MImportFlags=4, then lfExtractEdocTextOnImport will be true. Otherwise lfExtractEdocTextOnImport will be false. |
+| lfBurnPdfAnnotationsOnImage | Query |  | When generating pages for a PDF, this parameter determines whether PDF annotations will be burned directly onto the Laserfiche image. If this parameter is not specified, the trustee attribute [Settings]BurnPDFAnnotationsOnLFImage will be followed. |
+| lfPreservePdfAnnotations | Query |  | When generating pages during import, this parameter determines whether PDF annotations will be converted into Laserfiche annotations. If this parameter is not specified, the trustee attribute [Settings]ImportPreservePdfAnnotations will be followed. |
+| lfPdfImportMonochrome | Query |  | Determines whether PDF pages will be converted to monochrome on import. If this parameter is not specified, the trustee attribute [Settings]PdfImportMonochrome will be followed. |
+| lfGeneratePagesOnPdfImport | Query |  | When generating pages during import, this parameter determines whether PDF pages will be converted into Laserfiche pages. If this parameter is not specified, the trustee attribute [Settings]ImportPDFPages will be followed. |
+| lfPdfImportResolution | Query |  | Specifies the resolution used when converting PDF pages to Laserfiche pages during import. If this parameter is not specified, the trustee attribute [Settings]PdfImportResolution will be followed. Note: This parameter is ignored if you are importing the PDF in monochrome. |
+| lfKeepPdfFile | Query |  | When generating pages during import, this parameter specifies whether the original PDF electronic document will be kept. If this parameter is not specified, the trustee attribute [Settings]KeepPDFFile will be followed. |
+| lfTextLinesPerPage | Query |  | Specifies the number of lines per page when splitting text into pages. If this parameter is not specified, the trustee attribute [Settings]MImportBreak will be followed. |
+| pdfPassword | Query | string | Specifies the password, if the imported PDF requires a password. |
+| versioningState | Query |  | Specifies the version state of the document. |
+| lf:originalfile | Extend in XML | string | Specifies the original file name of the document. |
+| lf:inheritRights | Extend in XML |  | Specifies whether the document will inherit rights from its parent or ancestors. The default value is false. |
+| lf:scope | Extend in XML |  | Specifies the scope of entry access rights for this entry. The default value is None. The values can be interpreted as follows: None: No access granted thisobject: Access granted only to the object in question, not to any of its descendants. folders: Access granted only to the object and subfolders in the object. all: Access granted to the object, its subfolders, and its documents. notthisobject: Access granted to the object's subfolders and documents only, but not to the object itself. foldersonly: Access granted to the object's subfolders only, not to the object itself. documentsonly: Access granted to the object's documents only, not to the object itself. immediate: Access granted to the object and its immediate children. immediatechildren: Access granted to the object's immediate children only, not to the object itself. immediatedocuments: Access granted to documents that are immediate children of the object, but not to anything else. Consult this chart for a finer-grained description of each option's meaning. |
+| lf:deny | Extend in XML |  | Specifies whether entry access rights for this entry are set to Deny. The default value is false. |
+
+            
+        
 
 **Example:**
 
@@ -380,336 +139,96 @@ Create a file with the original file name "long.TIF". In place of `...`, you sho
 
 ##### [createFolder](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-2330003)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col style="width: 232px;">
-                    <col style="width: 64px;">
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies if <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the folder's name can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename 	</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Determines whether the new folder will be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>applyChangesToChildren</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. </td>
-                        </tr>
-                        <tr madcap:conditions="">
-                            <td><code>lfInheritRetentionRule</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>This variable controls the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/RecordsManagement/life_cycle_concept.htm%3FTocPath%3DLaserfiche%2520Administration%2520Guide|Laserfiche%2520Records%2520Management|_____3" target="_blank">record management properties</a> of the folder.</p>
-                                <p>If a record folder is being created, it determines whether the record folder will inherit the cutoff rule, retention rule, permanent status, vital record properties, and disposition authority from its parent.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:inheritRights</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Determines whether the folder will inherit rights from its parent or ancestors. The default value is false.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:scope</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/scopeOptions.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p> 	Specifies the scope of <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/best_practices__access_control.htm" target="_blank">entry access rights</a> for this entry. The default value is None.</p>
-                                <p>The values can be interpreted as follows:</p><ul>
-                                    <li>None:&#160;No access granted</li>
-                                    <li>thisobject: Access granted only to the object in question, not to any of its descendants.</li>
-                                    <li>folders: Access granted only to the object and subfolders in the object.</li>
-                                    <li>all: Access granted to the object, its subfolders, and its documents.</li>
-                                    <li>notthisobject:&#160;Access granted to the object's subfolders and documents only, but not to the object itself.</li>
-                                    <li>foldersonly: Access granted to the object's subfolders only, not to the object itself.</li>
-                                    <li>documentsonly: Access granted to the object's documents only, not to the object itself.</li>
-                                    <li>immediate:&#160;Access granted to the object and its immediate children.</li>
-                                    <li>immediatechildren: Access granted to the object's immediate children only, not to the object itself.</li>
-                                    <li>immediatedocuments:&#160;Access granted to documents that are immediate children of the object, but not to anything else.</li>
-                                </ul>
-                                <p>Consult <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Inheriting_Entry_Access_Rights.htm?Highlight=scope" target="_blank">this chart</a> for a finer-grained description of each option's meaning.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:deny 	</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Specifies whether entry access rights for this entry are set to <b>Deny</b>. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query |  | Specifies if tokens defined in the folder's name can be substituted. The default value is true. |
+| autoRename | Query |  | Determines whether the new folder will be automatically renamed if a name conflict occurs. The default value is true. |
+| applyChangesToChildren | Query |  | Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. |
+| lfInheritRetentionRule | Query |  | This variable controls the record management properties of the folder. If a record folder is being created, it determines whether the record folder will inherit the cutoff rule, retention rule, permanent status, vital record properties, and disposition authority from its parent. |
+| lf:inheritRights | Extend in XML |  | Determines whether the folder will inherit rights from its parent or ancestors. The default value is false. |
+| lf:scope | Extend in XML |  | Specifies the scope of entry access rights for this entry. The default value is None. The values can be interpreted as follows: None: No access granted thisobject: Access granted only to the object in question, not to any of its descendants. folders: Access granted only to the object and subfolders in the object. all: Access granted to the object, its subfolders, and its documents. notthisobject: Access granted to the object's subfolders and documents only, but not to the object itself. foldersonly: Access granted to the object's subfolders only, not to the object itself. documentsonly: Access granted to the object's documents only, not to the object itself. immediate: Access granted to the object and its immediate children. immediatechildren: Access granted to the object's immediate children only, not to the object itself. immediatedocuments: Access granted to documents that are immediate children of the object, but not to anything else. Consult this chart for a finer-grained description of each option's meaning. |
+| lf:deny | Extend in XML |  | Specifies whether entry access rights for this entry are set to Deny. The default value is false. |
+
+            
+        
         
 ##### [createItem](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-2450006)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies whether <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the folder's name can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename </code><![CDATA[	]]></td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Determines whether the new shortcut will be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:inheritRights</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Determines whether the object will inherit rights from its parent or ancestors. The default value is false.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:scope</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td>
-                                <madcap:snippetblock src="../Resources/Snippets/scopeOptions.flsnp"></madcap:snippetblock>
-                            </td>
-                            <td>
-                                <p> 	Specifies the scope of entry access rights for the shortcut. The default value is None.</p>
-                                <p>The values can be interpreted as follows:</p><ul>
-                                    <li>None:&#160;No access granted</li>
-                                    <li>thisobject: Access granted only to the object in question, not to any of its descendants.</li>
-                                    <li>folders: Access granted only to the object and subfolders in the object.</li>
-                                    <li>all: Access granted to the object, its subfolders, and its documents.</li>
-                                    <li>notthisobject:&#160;Access granted to the object's subfolders and documents only, but not to the object itself.</li>
-                                    <li>foldersonly: Access granted to the object's subfolders only, not to the object itself.</li>
-                                    <li>documentsonly: Access granted to the object's documents only, not to the object itself.</li>
-                                    <li>immediate:&#160;Access granted to the object and its immediate children.</li>
-                                    <li>immediatechildren: Access granted to the object's immediate children only, not to the object itself.</li>
-                                    <li>immediatedocuments:&#160;Access granted to documents that are immediate children of the object, but not to anything else.</li>
-                                </ul>
-                                <p>Consult <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Inheriting_Entry_Access_Rights.htm?Highlight=scope" target="_blank">this chart</a> for a finer-grained description of each option's meaning.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:deny </code><![CDATA[	]]></td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Specifies whether entry access rights for this shortcut are set to <b>Deny</b>. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query |  | Specifies whether tokens defined in the folder's name can be substituted. The default value is true. |
+| autoRename | Query |  | Determines whether the new shortcut will be automatically renamed if a name conflict occurs. The default value is true. |
+| lf:inheritRights | Extend in XML |  | Determines whether the object will inherit rights from its parent or ancestors. The default value is false. |
+| lf:scope | Extend in XML |  | Specifies the scope of entry access rights for the shortcut. The default value is None. The values can be interpreted as follows: None: No access granted thisobject: Access granted only to the object in question, not to any of its descendants. folders: Access granted only to the object and subfolders in the object. all: Access granted to the object, its subfolders, and its documents. notthisobject: Access granted to the object's subfolders and documents only, but not to the object itself. foldersonly: Access granted to the object's subfolders only, not to the object itself. documentsonly: Access granted to the object's documents only, not to the object itself. immediate: Access granted to the object and its immediate children. immediatechildren: Access granted to the object's immediate children only, not to the object itself. immediatedocuments: Access granted to documents that are immediate children of the object, but not to anything else. Consult this chart for a finer-grained description of each option's meaning. |
+| lf:deny | Extend in XML |  | Specifies whether entry access rights for this shortcut are set to Deny. The default value is false. |
+
+            
+        
         
 ## Modifying Objects
 
 ##### [moveObject](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-28100015)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><code>null</code>/<code>true</code>/<code>false</code></td>
-                            <td>Specifies whether <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the object's name can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename </code><![CDATA[	]]></td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p>Determines whether the object will be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>sourceFolderId</code>
-                            </td>
-                            <td>Query</td>
-                            <td>string</td>
-                            <td>Specifies the source folder's ID. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query | null/true/false | Specifies whether tokens defined in the object's name can be substituted. The default value is true. |
+| autoRename | Query |  | Determines whether the object will be automatically renamed if a name conflict occurs. The default value is true. |
+| sourceFolderId | Query | string | Specifies the source folder's ID. |
+
+            
+        
         
 ##### [updateProperties](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-27300013)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    
-                    <col>
-                    
-                    <col>
-                    
-                    <col>
-                    
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies whether <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the property values can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename </code><![CDATA[	]]></td>
-                            <td>Query</td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Specifies whether the objects should be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>applyChangesToChildren</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query |  | Specifies whether tokens defined in the property values can be substituted. The default value is true. |
+| autoRename | Query |  | Specifies whether the objects should be automatically renamed if a name conflict occurs. The default value is true. |
+| applyChangesToChildren | Query |  | Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. |
+
+            
+        
         
 ##### [bulkUpdateProperties](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-27700014)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>enableTokenSubstitution</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippetblock src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippetblock>
-                            </td>
-                            <td>Specifies whether <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Tokens.htm" target="_blank">tokens</a> defined in the property values can be substituted. The default value is true. </td>
-                        </tr>
-                        <tr>
-                            <td><code>autoRename 	</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[ 	]]></td>
-                            <td>
-                                <p>Specifies whether the objects should be automatically renamed if a name conflict occurs. The default value is true. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>applyChangesToChildren</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| enableTokenSubstitution | Query |  | Specifies whether tokens defined in the property values can be substituted. The default value is true. |
+| autoRename | Query |  | Specifies whether the objects should be automatically renamed if a name conflict occurs. The default value is true. |
+| applyChangesToChildren | Query |  | Determines whether updates on record management properties on a record series are passed on to its children. The default value is false. |
+
+            
+        
         
 ##### [deleteObject](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-28500016)
 
@@ -719,159 +238,42 @@ Create a file with the original file name "long.TIF". In place of `...`, you sho
 
 ##### [getAllVersions](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-3440006)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>renditionFilter</code>
-                            </td>
-                            <td>Query</td>
-                            <td>string</td>
-                            <td><a href="http://docs.oasis-open.org/cmis/CMIS/v1.1/os/CMIS-v1.1-os.html#x1-400002" target="_blank" title="Click to see information on CMIS Renditions" alt="Click to see information on CMIS Renditions">See information on CMIS&#160;Renditions</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| renditionFilter | Query | string | See information on CMIS Renditions |
+
+            
+        
         
 ##### [query](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-3150001)
 
 See the CMIS documentation on the syntax of the [CMIS query language](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-10500014).
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:comparisonCollationRule</code>
-                            </td>
-                            <td> 	Extend in XML</td>
-                            <td>String. The options are: <code>CS</code>=CaseSensitive, <code>CI</code>=CaseInsensitive, <code>AS</code>=AccentSensitive, <code>AI</code>=AccentInsensitive. Example:<code> "CS,AI"</code></td>
-                            <td>
-                                <p> 	If this parameter is not specified, the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Search.htm" target="_blank">[Settings]UseDefaultCollation</a> trustee attribute will be followed.</p>
-                                <p>[Settings]UseDefaultCollation=true uses the default setting: Case Insensitive/accent sensitive.</p>
-                                <p>[Settings]UseDefaultCollation=false uses the value set in <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Search.htm" target="_blank">[Settings]SearchCollationRule</a>.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:contextHitLength</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Specifies the number of characters displayed in a search result hit.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Search]ContextHitLength will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:executionMode</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <p><![CDATA[	]]><code>null</code></p>
-                                <p><code>0</code>: Materialized</p>
-                                <p><code>1</code>: Streaming 	</p>
-                            </td>
-                            <td>
-                                <p>Specifies whether a materialized or streaming search will be carried out. In materialized mode, search results are displayed to the user only after the entire search has completed. In streaming mode, search results are filtered and checked for security in chunks. Control is returned to the caller after the first chunk is processed, eliminating most long delays between submitting the search and seeing the first results. </p>
-                                <p>A streaming search uses the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/How_is_Indexing_Handled_.htm%3FTocPath%3DLaserfiche%2520Administration%2520Guide|Search%2520and%2520Indexing%2520Administration|Indexed%2520Searches%2520and%2520Indexing|_____0" target="_blank">Laserfiche Full-Text Search engine</a>, which searches only indexed objects. If you want your search to cover non-indexed objects, use a materialized search.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:ftsResultLimit</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>	Specifies the maximum number of results you want returned for a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/How_is_Indexing_Handled_.htm%3FTocPath%3DLaserfiche%2520Administration%2520Guide|Search%2520and%2520Indexing%2520Administration|Indexed%2520Searches%2520and%2520Indexing|_____0" target="_blank">Laserfiche full-text search</a> .</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Search.htm" target="_blank">[Search]FullTextSearchLimit</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:fuzzyType</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <p><code> 	null</code>
-                                </p>
-                                <p><code>0</code>: Fuzzy off</p>
-                                <p><code>1</code>: Fuzzy by percentage of word</p>
-                                <p><code>2</code>: Fuzzy by number of letters</p>
-                            </td>
-                            <td>
-                                <p>Specifies <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/WLAdmin/Content/Search_Options_Tab.htm?Highlight=fuzzy search" target="_blank">fuzzy search</a> settings. </p>
-                                <p> 	If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Search.htm" target="_blank">[Search]Option</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:isStemmingEnabled</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Enables or disables <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/QuickFieldsAdmin/Content/Scan-Sources/Laserfiche-Capture-Engine-Retrieve-Entries-Search.htm?Highlight=stemming" target="_blank">stemming</a> for search results.</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Search.htm" target="_blank">[Settings]EnableStemming</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:fuzzyFactor</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Specifies either a percentage (if lf:fuzzyType=1) or number of letters (if lf:fuzzyType=2) for the fuzzy search.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Search]Error will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:timeout</code>
-                            </td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Specifies the number of seconds the user should wait for search results before the search is aborted.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| lf:comparisonCollationRule | Extend in XML | String. The options are: CS=CaseSensitive, CI=CaseInsensitive, AS=AccentSensitive, AI=AccentInsensitive. Example: "CS,AI" | If this parameter is not specified, the [Settings]UseDefaultCollation trustee attribute will be followed. [Settings]UseDefaultCollation=true uses the default setting: Case Insensitive/accent sensitive. [Settings]UseDefaultCollation=false uses the value set in [Settings]SearchCollationRule. |
+| lf:contextHitLength | Extend in XML |  | Specifies the number of characters displayed in a search result hit. If this parameter is not specified, the trustee attribute [Search]ContextHitLength will be followed. |
+| lf:executionMode | Extend in XML | null 0: Materialized 1: Streaming | Specifies whether a materialized or streaming search will be carried out. In materialized mode, search results are displayed to the user only after the entire search has completed. In streaming mode, search results are filtered and checked for security in chunks. Control is returned to the caller after the first chunk is processed, eliminating most long delays between submitting the search and seeing the first results. A streaming search uses the Laserfiche Full-Text Search engine, which searches only indexed objects. If you want your search to cover non-indexed objects, use a materialized search. |
+| lf:ftsResultLimit | Extend in XML |  | Specifies the maximum number of results you want returned for a Laserfiche full-text search . If this parameter is not specified, the trustee attribute [Search]FullTextSearchLimit will be followed. |
+| lf:fuzzyType | Extend in XML | null 0: Fuzzy off 1: Fuzzy by percentage of word 2: Fuzzy by number of letters | Specifies fuzzy search settings. If this parameter is not specified, the trustee attribute [Search]Option will be followed. |
+| lf:isStemmingEnabled | Extend in XML |  | Enables or disables stemming for search results. If this parameter is not specified, the trustee attribute [Settings]EnableStemming will be followed. |
+| lf:fuzzyFactor | Extend in XML |  | Specifies either a percentage (if lf:fuzzyType=1) or number of letters (if lf:fuzzyType=2) for the fuzzy search. If this parameter is not specified, the trustee attribute [Search]Error will be followed. |
+| lf:timeout | Extend in XML |  | Specifies the number of seconds the user should wait for search results before the search is aborted. |
+
+            
+        
 
 **Example:**
 
@@ -903,138 +305,27 @@ You can also upload documents by including their base64 encoding in a createDocu
 
 ##### [setContentStream](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-29300018)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>lfImportConversionList</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <p>Comma delimited list</p>
-                                <p><b>Example:</b> <code>"tif,bmp,pcx,jpg,txt,png"</code> </p>
-                            </td>
-                            <td>
-                                <p>Documents with an extension included in this comma-delimited list will be converted to Laserfiche pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm" target="_blank">[Options]ImportConversionList</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfExtractEdocTextOnImport</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Determines whether text will be extracted from imported documents. </p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]MImportFlags will be followed. If [Settings]MImportFlags=4, then <code>lfExtractEdocTextOnImport</code> will be true. Otherwise <code>lfExtractEdocTextOnImport</code> will be false.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfBurnPdfAnnotationsOnImage</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>When generating pages for a PDF, this parameter determines if PDF annotations will be burned directly onto the Laserfiche image.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]BurnPDFAnnotationsOnLFImage will be followed. </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPreservePdfAnnotations</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>When generating pages during import, this parameter determines whether PDF annotations will be converted into Laserfiche annotations.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]ImportPreservePdfAnnotations will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPdfImportMonochrome</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p> 	Determines whether PDF pages will be converted to monochrome.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]PdfImportMonochrome will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfGeneratePagesOnPdfImport</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>When generating pages during import, this parameter determines whether PDF pages will be converted into Laserfiche pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm" target="_blank">[Settings]ImportPDFPages</a> will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfPdf Import Resolution</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext><![CDATA[	]]></td>
-                            <td>
-                                <p>Specifies the resolution used when converting PDF pages to Laserfiche pages during import.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]PdfImportResolution will be followed. </p>
-                                <p><b>Note:</b> This parameter is ignored if you are importing the PDF in monochrome.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfKeepPdfFile</code>
-                            </td>
-                            <td>Query</td>
-                            <td><![CDATA[	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p>When generating pages during import, this parameter specifies whether the original PDF electronic document will be kept.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]KeepPDFFile will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lfTextLinesPerPage</code>
-                            </td>
-                            <td>Query</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/NullIntOutput.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>
-                                <p>Specifies the number of lines per page when splitting text into pages.</p>
-                                <p>If this parameter is not specified, the trustee attribute [Settings]MImportBreak will be followed.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>pdfPassword</code>
-                            </td>
-                            <td>Query</td>
-                            <td>string</td>
-                            <td>Specifies the password, if the imported PDF requires a password.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| lfImportConversionList | Query | Comma delimited list Example: "tif,bmp,pcx,jpg,txt,png" | Documents with an extension included in this comma-delimited list will be converted to Laserfiche pages. If this parameter is not specified, the trustee attribute [Options]ImportConversionList will be followed. |
+| lfExtractEdocTextOnImport | Query |  | Determines whether text will be extracted from imported documents. If this parameter is not specified, the trustee attribute [Settings]MImportFlags will be followed. If [Settings]MImportFlags=4, then lfExtractEdocTextOnImport will be true. Otherwise lfExtractEdocTextOnImport will be false. |
+| lfBurnPdfAnnotationsOnImage | Query |  | When generating pages for a PDF, this parameter determines if PDF annotations will be burned directly onto the Laserfiche image. If this parameter is not specified, the trustee attribute [Settings]BurnPDFAnnotationsOnLFImage will be followed. |
+| lfPreservePdfAnnotations | Query |  | When generating pages during import, this parameter determines whether PDF annotations will be converted into Laserfiche annotations. If this parameter is not specified, the trustee attribute [Settings]ImportPreservePdfAnnotations will be followed. |
+| lfPdfImportMonochrome | Query |  | Determines whether PDF pages will be converted to monochrome. If this parameter is not specified, the trustee attribute [Settings]PdfImportMonochrome will be followed. |
+| lfGeneratePagesOnPdfImport | Query |  | When generating pages during import, this parameter determines whether PDF pages will be converted into Laserfiche pages. If this parameter is not specified, the trustee attribute [Settings]ImportPDFPages will be followed. |
+| lfPdf Import Resolution | Query |  | Specifies the resolution used when converting PDF pages to Laserfiche pages during import. If this parameter is not specified, the trustee attribute [Settings]PdfImportResolution will be followed. Note: This parameter is ignored if you are importing the PDF in monochrome. |
+| lfKeepPdfFile | Query |  | When generating pages during import, this parameter specifies whether the original PDF electronic document will be kept. If this parameter is not specified, the trustee attribute [Settings]KeepPDFFile will be followed. |
+| lfTextLinesPerPage | Query |  | Specifies the number of lines per page when splitting text into pages. If this parameter is not specified, the trustee attribute [Settings]MImportBreak will be followed. |
+| pdfPassword | Query | string | Specifies the password, if the imported PDF requires a password. |
+
+            
+        
         
 ##### [deleteContentStream](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-30100020)
 
@@ -1044,64 +335,20 @@ You can also upload documents by including their base64 encoding in a createDocu
 
 ##### [applyACL](http://docs.oasis-open.org/cmis/CMIS/v1.1/errata01/os/CMIS-v1.1-errata01-os-complete.html#x1-3670001)
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Extensions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <table style="width: 100%;">
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">Parameter Name</td>
-                            <td style="font-weight: bold;">Query or Extend in XML</td>
-                            <td style="font-weight: bold;">Value</td>
-                            <td style="font-weight: bold;">Description</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:inheritRights</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/BooleanOutput3.flsnp"></madcap:snippettext></td>
-                            <td>Specifies whether the object will inherit rights from its parent or ancestors. The default value is false.</td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:scope</code>
-                            </td>
-                            <td> 	Extend in XML </td>
-                            <td><![CDATA[ 	]]><madcap:snippettext src="../Resources/Snippets/scopeOptions.flsnp"></madcap:snippettext></td>
-                            <td>
-                                <p> 	Determines the scope of  entry access rights. The default value is None.</p>
-                                <p>The values can be interpreted as follows:</p><ul>
-                                    <li>None:&#160;No access granted</li>
-                                    <li>thisobject: Access granted only to the object in question, not to any of its descendants.</li>
-                                    <li>folders: Access granted only to the object and subfolders in the object.</li>
-                                    <li>all: Access granted to the object, its subfolders, and its documents.</li>
-                                    <li>notthisobject:&#160;Access granted to the object's subfolders and documents only, but not to the object itself.</li>
-                                    <li>foldersonly: Access granted to the object's subfolders only, not to the object itself.</li>
-                                    <li>documentsonly: Access granted to the object's documents only, not to the object itself.</li>
-                                    <li>immediate:&#160;Access granted to the object and its immediate children.</li>
-                                    <li>immediatechildren: Access granted to the object's immediate children only, not to the object itself.</li>
-                                    <li>immediatedocuments:&#160;Access granted to documents that are immediate children of the object, but not to anything else.</li>
-                                </ul>
-                                <p>Consult <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/LFAdmin/Content/Inheriting_Entry_Access_Rights.htm?Highlight=scope" target="_blank">this chart</a> for a finer-grained description of the meaning of each option.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>lf:deny </code><![CDATA[	]]></td>
-                            <td>Extend in XML</td>
-                            <td>
-                                <madcap:snippettext src="../Resources/Snippets/BooleanOutput2.flsnp"></madcap:snippettext>
-                            </td>
-                            <td>Specifies whether  entry access rights for this shortcut are set to <b>Deny</b>. The default value is false. </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Extensions:
+            
+            
+                
+| Parameter Name | Query or Extend in XML | Value | Description |
+| --- | --- | --- | --- |
+| lf:inheritRights | Extend in XML |  | Specifies whether the object will inherit rights from its parent or ancestors. The default value is false. |
+| lf:scope | Extend in XML |  | Determines the scope of entry access rights. The default value is None. The values can be interpreted as follows: None: No access granted thisobject: Access granted only to the object in question, not to any of its descendants. folders: Access granted only to the object and subfolders in the object. all: Access granted to the object, its subfolders, and its documents. notthisobject: Access granted to the object's subfolders and documents only, but not to the object itself. foldersonly: Access granted to the object's subfolders only, not to the object itself. documentsonly: Access granted to the object's documents only, not to the object itself. immediate: Access granted to the object and its immediate children. immediatechildren: Access granted to the object's immediate children only, not to the object itself. immediatedocuments: Access granted to documents that are immediate children of the object, but not to anything else. Consult this chart for a finer-grained description of the meaning of each option. |
+| lf:deny | Extend in XML |  | Specifies whether entry access rights for this shortcut are set to Deny. The default value is false. |
+
+            
+        
         
 **Example:**
 

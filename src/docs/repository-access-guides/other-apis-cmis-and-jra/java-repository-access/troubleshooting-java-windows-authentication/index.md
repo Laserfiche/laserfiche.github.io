@@ -12,7 +12,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Troubleshooting Java Windows Authentication
 
 ### 
-            <madcap:keyword term="Kerberos;JRA"></madcap:keyword>Troubleshooting Java Windows Authentication
+            Troubleshooting Java Windows Authentication
 
 This topic covers some of the common configuration errors that can occur when using Windows authentication through JRA.
 

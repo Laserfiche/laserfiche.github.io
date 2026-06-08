@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Installing the Laserfiche SDK
 
 ## 
-            <madcap:keyword term="Installation"></madcap:keyword>Installing the Laserfiche SDK
+            Installing the Laserfiche SDK
 
 The Laserfiche SDK Installation installs the various assemblies, libraries, and dependencies necessary to programmatically access Laserfiche. In addition, the installation package includes documentation on select interfaces, sample Visual Studio projects, as well as a standalone redistributable and merge modules that can help you with distributing the Laserfiche components.
 
@@ -31,3 +31,4 @@ Perform the following procedure to install the Laserfiche SDK.
 
     **Note:** If you choose to activate using the Laserfiche Directory Server, you will be prompted for information on the location of your Laserfiche Directory Server.
 7. On the **Ready to Install** step, click **Install** to begin the installation process.
+

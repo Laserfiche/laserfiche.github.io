@@ -13,314 +13,299 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ## Viewing document contents and properties
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Viewing a document's properties:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> entry access right on the document</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Viewing a document's contents:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li style="font-weight: normal;"><b>Read</b> entry access right on the document</li>
-                    <li style="font-weight: normal;"><b>Read</b> volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Viewing redactions:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li style="font-weight: bold;">See Annotations <span style="font-weight: normal;">and</span> See Through Redactions <span style="font-weight: normal;">entry access rights</span></li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+        
+            
+                Viewing a document's properties:
+            
+            
+                
+- **Read** entry access right on the document
+
+            
+        
+        
+            
+                Viewing a document's contents:
+            
+            
+                
+- **Read** entry access right on the document
+- **Read** volume access right
+
+            
+        
+        
+            
+                Viewing redactions:
+            
+            
+                
+- See Annotations and See Through Redactions entry access rights
+
+            
+        
         
 ## Moving, adding, or copying document pages
 
 **Note:** "Pages" in this section refer to Laserfiche pages, not to pages in the document's electronic file.
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Appending a page to a document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Append Data</b> entry access right</li>
-                    <li><b>Modify/Delete</b> Files volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Inserting a page in the middle of a document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Append Data</b> entry access right</li>
-                    <li><b>Modify Contents</b> entry access right</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Deleting a page from a document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Delete Document Pages</b> entry access right</li>
-                    <li><b>Modify/Delete Files</b> volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Adding a new page part:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
+        
+            
+                Appending a page to a document:
+            
+            
+                
+- **Append Data** entry access right
+- **Modify/Delete** Files volume access right
+
+            
+        
+        
+            
+                Inserting a page in the middle of a document:
+            
+            
+                
+- **Append Data** entry access right
+- **Modify Contents** entry access right
+- **Modify/Delete Files** or **Add Files** volume access right
+
+            
+        
+        
+            
+                Deleting a page from a document:
+            
+            
+                
+- **Delete Document Pages** entry access right
+- **Modify/Delete Files** volume access right
+
+            
+        
+        
+            
+                Adding a new page part:
+            
+            
                 <p><b>Note:</b> This means adding a page part to an existing page in the document. For example, if you OCR an image page, you add a text part into an existing page. Copying an image into a document as a new page, for example, does not count.</p>
-                <ul>
-                    <li>
-                        <p><b>Modify Contents</b> or <b>Append Data</b> entry access right</p>
-                    </li>
-                    <li>
-                        <p><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right</p>
-                    </li>
+                
+- **Modify Contents** or **Append Data** entry access right
+- **Modify/Delete Files** or **Add Files** volume access right
+
+            
+        
+        
+            
+                Copying a page with no annotations in a document and appending it to another document:
+            
+            
+                
+- **Read** entry access right on source document
+- **Modify Contents** and **Append Data** entry access rights on target document
+- **Read** volume access right on source volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume
+
+            
+        
+        
+            
+                Copying a page with annotations in a document and appending it to another document:
+            
+            
+                
+- **Read** and **See Annotations** entry access rights on source document
+- **Modify Contents**, **Annotate**, and **Append Data** entry access rights on target document
+- **Read** volume access right on source volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume
+
+            
+        
+        
+            
+                Copying a page with no annotations and inserting it into another document:
+            
+            
+                
+- **Read** entry access right on source document
+- **Modify Contents**, **Delete Document Pages**, and **Append Data** entry access rights on target document
+- **Read** volume access right on source volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume
+
+            
+        
+        
+            
+                Copying a page with annotations and inserting it into another document:
+            
+            
+                
+- **Read** and **See Annotations** entry access rights on source document
+- **Modify Contents**, **Annotate**, **Delete Document Pages**, and **Append Data** entry access right on target document
+- **Read** volume access right on source volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume
+
+            
+        
+        
+            
+                Moving a page within the same document:
+            
+            
+                
+- Either:
+    - **Read**, **Append Data**, and **Delete Document Pages** entry access rights
+<p>or:</p>
+- **Read** and **Modify Contents** entry access rights
+</li>
                 </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Copying a page with no annotations in a document and appending it to another document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> entry access right on source document</li>
-                    <li><b>Modify Contents</b> and <b>Append Data</b> entry access rights on target document</li>
-                    <li><b>Read</b> volume access right on source volume</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Copying a page with annotations in a document and appending it to another document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> and <b>See Annotations</b> entry access rights on source document</li>
-                    <li><b>Modify Contents</b>, <b>Annotate</b>, and <b>Append Data</b> entry access rights on target document</li>
-                    <li><b>Read</b> volume access right on source volume</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Copying a page with no annotations and inserting it into another document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> entry access right on source document</li>
-                    <li><b>Modify Contents</b>, <b>Delete Document Pages</b>, and <b>Append Data</b> entry access rights on target document</li>
-                    <li><b>Read</b> volume access right on source volume</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Copying a page with annotations and inserting it into another document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> and <b>See Annotations</b> entry access rights on source document</li>
-                    <li><b>Modify Contents</b>, <b>Annotate</b>, <b>Delete Document Pages</b>, and <b>Append Data</b> entry access right on target document</li>
-                    <li><b>Read</b> volume access right on source volume</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page within the same document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li>Either:<ul><li><p><b>Read</b>, <b>Append Data</b>, and <b>Delete Document Pages</b> entry access rights</p></li></ul><p>or:</p><ul><li><p><b>Read</b> and <b>Modify Contents</b> entry access rights</p></li></ul></li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page with no annotations from one document to another document on the same volume and appending it to the second document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li>
-                        <p><b>Read</b> and <b>Delete Document Pages</b> entry access rights on source document</p>
-                    </li>
-                    <li>
-                        <p><b>Modify Contents</b> and <b>Append Data</b> entry access rights on target document</p>
-                    </li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page with annotations from one document to another document on the same volume and appending it to the second document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li>
-                        <p><b>Read</b>, <b>Delete Document Pages</b>, and <b>See Annotations</b> entry access rights on source document</p>
-                    </li>
-                    <li>
-                        <p><b>Modify Contents</b>, <b>Append Data</b>, and <b>Annotate</b> entry access rights on target document</p>
-                    </li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page with no annotations from one document to another document on the same volume and inserting the page:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li>
-                        <p><b>Read</b> and <b>Delete Document Pages</b> entry access rights on source document</p>
-                    </li>
-                    <li>
-                        <p><b>Modify Contents</b>, <b>Append Data</b>, and <b>Delete Document Pages</b> entry access rights on target document</p>
-                    </li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page with annotations from one document to another document on the same volume and inserting the page:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li>
-                        <p><b>Read</b>, <b>Delete Document Pages</b>, and <b>See Annotations</b> entry access rights on source document</p>
-                    </li>
-                    <li><b>Modify Contents</b>, <b>Append Data</b>, <b>Delete Document Pages</b>, and <b>Annotate</b> entry access rights on target document</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Moving a page with no annotations from one document to another document on a different volume and appending it to the second document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b>, <b>Delete Document Pages</b>, and <b>See Annotations</b> entry access rights on source document</li>
-                    <li><b>Modify Contents</b> and <b>Append Data</b> entry access rights on target document</li>
-                    <li>
-                        <p><b>Read</b> and <b>Modify/Delete Files</b> on source volume</p>
-                    </li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+            
+        
+        
+            
+                Moving a page with no annotations from one document to another document on the same volume and appending it to the second document:
+            
+            
+                
+- **Read** and **Delete Document Pages** entry access rights on source document
+- **Modify Contents** and **Append Data** entry access rights on target document
+
+            
+        
+        
+            
+                Moving a page with annotations from one document to another document on the same volume and appending it to the second document:
+            
+            
+                
+- **Read**, **Delete Document Pages**, and **See Annotations** entry access rights on source document
+- **Modify Contents**, **Append Data**, and **Annotate** entry access rights on target document
+
+            
+        
+        
+            
+                Moving a page with no annotations from one document to another document on the same volume and inserting the page:
+            
+            
+                
+- **Read** and **Delete Document Pages** entry access rights on source document
+- **Modify Contents**, **Append Data**, and **Delete Document Pages** entry access rights on target document
+
+            
+        
+        
+            
+                Moving a page with annotations from one document to another document on the same volume and inserting the page:
+            
+            
+                
+- **Read**, **Delete Document Pages**, and **See Annotations** entry access rights on source document
+- **Modify Contents**, **Append Data**, **Delete Document Pages**, and **Annotate** entry access rights on target document
+
+            
+        
+        
+            
+                Moving a page with no annotations from one document to another document on a different volume and appending it to the second document:
+            
+            
+                
+- **Read**, **Delete Document Pages**, and **See Annotations** entry access rights on source document
+- **Modify Contents** and **Append Data** entry access rights on target document
+- **Read** and **Modify/Delete Files** on source volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume
+
+            
+        
         
 ## Modifying and Moving Documents
 
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Adding an electronic file to a document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Modify Contents</b> entry access right</li>
-                    <li><b>Modify/Delete</b> Files or <b>Add Files</b> volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Modifying an existing electronic file:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Modify Contents</b> entry access right</li>
-                    <li><b>Modify/Delete</b> Files  volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Modifying an electronic document's MIME type:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Modify Contents</b> entry access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Deleting an electronic file from a document:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Modify Contents</b> entry access right</li>
-                    <li><b>Modify/Delete Files</b>  volume access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Creating, modifying, or deleting an annotation:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
+        
+            
+                Adding an electronic file to a document:
+            
+            
+                
+- **Modify Contents** entry access right
+- **Modify/Delete** Files or **Add Files** volume access right
+
+            
+        
+        
+            
+                Modifying an existing electronic file:
+            
+            
+                
+- **Modify Contents** entry access right
+- **Modify/Delete** Files  volume access right
+
+            
+        
+        
+            
+                Modifying an electronic document's MIME type:
+            
+            
+                
+- **Modify Contents** entry access right
+
+            
+        
+        
+            
+                Deleting an electronic file from a document:
+            
+            
+                
+- **Modify Contents** entry access right
+- **Modify/Delete Files**  volume access right
+
+            
+        
+        
+            
+                Creating, modifying, or deleting an annotation:
+            
+            
                 <p style="font-weight: bold;">Note: <span style="font-weight: normal;">Protected annotations can be modified or deleted only by their creator or the document owner.</span></p>
-                <ul>
-                    <li><b>Annotate</b> entry access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Migrating a document to another volume:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Read</b> and <b>Modify/Delete Files</b> volume access rights on source volume</li>
-                    <li><b>Create Documents</b> volume access right on target volume</li>
-                    <li><b>Modify/Delete Files</b> or <b>Add Files</b> volume access right on target volume. <b>Note</b>: If the target volume is a logical volume, you do not need either of these rights.</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Adding, modifying, or removing a document from a link group:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
-                <ul>
-                    <li><b>Write Metadata</b> entry access right</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
-        <madcap:dropdown>
-            <madcap:dropdownhead>
-                <madcap:dropdownhotspot>Deleting a document version:</madcap:dropdownhotspot>
-            </madcap:dropdownhead>
-            <madcap:dropdownbody>
+                
+- **Annotate** entry access right
+
+            
+        
+        
+            
+                Migrating a document to another volume:
+            
+            
+                
+- **Read** and **Modify/Delete Files** volume access rights on source volume
+- **Create Documents** volume access right on target volume
+- **Modify/Delete Files** or **Add Files** volume access right on target volume. **Note**: If the target volume is a logical volume, you do not need either of these rights.
+
+            
+        
+        
+            
+                Adding, modifying, or removing a document from a link group:
+            
+            
+                
+- **Write Metadata** entry access right
+
+            
+        
+        
+            
+                Deleting a document version:
+            
+            
                 <p style="font-weight: bold;">Note: <span style="font-weight: normal;">The</span> Delete Document Versions <span style="font-weight: normal;">privilege is also required.</span></p>
-                <ul>
-                    <li><b>Modify Contents</b> and <b>Write Metadata</b> entry access rights</li>
-                </ul>
-            </madcap:dropdownbody>
-        </madcap:dropdown>
+                
+- **Modify Contents** and **Write Metadata** entry access rights
+
+            
+        
+
