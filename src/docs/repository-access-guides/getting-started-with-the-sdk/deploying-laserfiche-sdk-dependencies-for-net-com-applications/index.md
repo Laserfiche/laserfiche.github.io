@@ -10,8 +10,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Deploying Laserfiche SDK Dependencies for .NET/COM Applications
 
-## 
-            Distributing Your Applications
+## Distributing Your Applications
 
 This topic covers the various dependencies to take into account when deploying your custom programs.
 

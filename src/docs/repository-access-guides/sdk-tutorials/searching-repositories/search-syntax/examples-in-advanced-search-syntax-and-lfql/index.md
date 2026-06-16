@@ -13,70 +13,65 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 This page contains examples for the following types of searches:
 
-- Searches based on volume properties
-- Date-based searches
-- Searches based on entry names and entry IDs
-- Metadata searches
-- Searching annotations
-- Searches based on check-out properties
-- Searches based on other entry properties
+- [Searches based on volume properties](#volume-related-searches)
+- [Date-based searches](#date-related-searches)
+- [Searches based on entry names and entry IDs](#searching-for-entry-names-and-ids)
+- [Metadata searches](#searching-for-document-metadata)
+- [Searching annotations](#searching-on-properties-of-annotations)
+- [Searches based on check-out properties](#searching-on-check-out-properties)
+- [Searches based on other entry properties](#searching-on-other-entry-properties)
 
-<caption style="font-size: 14pt;"><a name="Volume"></a>Volume-Related Searches</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Volume-Related Searches
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries in the volume with volume ID 1. | ```<br>{LF:volid="1"}<br>``` | ```<br>select entry_name, entry_id, volume_id, volume_name<br>  from lf.entry<br> where volume_id = 1<br>``` |
-| Search for entries in the volume that is named 'default'. | ```<br>{LF:volname="default"}<br>``` | ```<br>select entry_name, entry_id, volume_name<br>  from lf.entry<br> where volume_name = 'default'<br>``` |
+| Search for entries in the volume with volume ID 1. | ```{LF:volid="1"}``` | ```select entry_name, entry_id, volume_id, volume_name from lf.entry where volume_id = 1``` |
+| Search for entries in the volume that is named 'default'. | ```{LF:volname="default"}``` | ```select entry_name, entry_id, volume_name from lf.entry where volume_name = 'default'``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="Date"></a>Date-Related Searches</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Date-Related Searches
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Find entries created after the specified date. | ```<br>{LF:created>"2007-10-22"}<br>``` | ```<br>select entry_name, entry_id<br>  from lf.entry<br> where created_date > date '2007-10-22'<br>``` |
-| Find entries modified before the specified date. | ```<br>{LF:modified<"2007-10-22"}<br>``` | ```<br>select entry_name, entry_id<br>  from lf.entry<br> where last_modified < date '2007-10-22'<br>``` |
+| Find entries created after the specified date. | ```{LF:created>"2007-10-22"}``` | ```select entry_name, entry_id from lf.entry where created_date > date '2007-10-22'``` |
+| Find entries modified before the specified date. | ```{LF:modified<"2007-10-22"}``` | ```select entry_name, entry_id from lf.entry where last_modified < date '2007-10-22'``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="entrynamesids"></a>Searching for Entry Names and IDs</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Searching for Entry Names and IDs
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Find entries with the name "sample". | ```<br>{LF:name="sample"}<br>``` | ```<br>select entry_name, entry_id<br>  from lf.entry<br> where entry_name = 'sample'<br>``` |
-| Find entries with an ID that is a number greater than 3. | ```<br>{LF:Id>"3"}<br>``` | ```<br>select entry_name<br>  from lf.entry<br> where entry_id > 3<br>``` |
+| Find entries with the name "sample". | ```{LF:name="sample"}``` | ```select entry_name, entry_id from lf.entry where entry_name = 'sample'``` |
+| Find entries with an ID that is a number greater than 3. | ```{LF:Id>"3"}``` | ```select entry_name from lf.entry where entry_id > 3``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="metadata"></a>Searching for Document Metadata</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Searching for Document Metadata
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Find entries that have the template that is named "application". | ```<br>{LF:templatename="application"}<br>``` | ```<br>select entry_name, entry_id, pset_name<br>  from lf.entry<br> where pset_name = 'application'<br>``` |
-| Find entries that have the template with template ID 1. | ```<br>{LF:templateid="1"}<br>``` | ```<br>select entry_name, pset_id, pset_name<br>  from lf.entry where pset_id = 1<br>``` |
-| Find entries that are in a document relationship where they are labeled as the "attachment" in the relationship. | ```<br>{LF:relation="attachment"}<br>``` | ```<br>select e.entry_name, e.entry_id<br>  from lf.entry e, lf.entry_link el, lf.link_def ld<br> where el.link_id = ld.link_id<br>       and ((e.entry_id = el.src_id<br>       and src_label = 'attachment')<br>       or (e.entry_id = el.trg_id<br>       and trg_label = 'attachment'))<br>``` |
-| Find entries that have a comment on their link group containing the string "keyword". | ```<br>{LF:LinkGroupComment="keyword"}<br>``` | ```<br>select entry_name, entry_id<br>  from lf.entry<br> where ver_comment like '%keyword%'<br>``` |
-| Find comments on tags that contain the string "tag". | ```<br>{LF:tagcomment="tag"}<br>``` | ```<br>select e.entry_name, e.entry_id<br>  from lf.entry as e, lf.entry_tag as et<br> where e.entry_id = et.entry_id<br>       and et.et_descrip like '%tag%'<br>``` |
-| Find entries that have the "classified" tag. | ```<br>{LF:tags="classified"}<br>``` | ```<br>select e.entry_name, e.entry_id<br>  from lf.entry e, lf.entry_tag et, lf.tag_def td<br> where e.entry_id = et.entry_id<br>       and et.tag_id = td.tag_id<br>       and tag_name = 'classified'<br>``` |
+| Find entries that have the template that is named "application". | ```{LF:templatename="application"}``` | ```select entry_name, entry_id, pset_name from lf.entry where pset_name = 'application'``` |
+| Find entries that have the template with template ID 1. | ```{LF:templateid="1"}``` | ```select entry_name, pset_id, pset_name from lf.entry where pset_id = 1``` |
+| Find entries that are in a document relationship where they are labeled as the "attachment" in the relationship. | ```{LF:relation="attachment"}``` | ```select e.entry_name, e.entry_id from lf.entry e, lf.entry_link el, lf.link_def ld where el.link_id = ld.link_id and ((e.entry_id = el.src_id and src_label = 'attachment') or (e.entry_id = el.trg_id and trg_label = 'attachment'))``` |
+| Find entries that have a comment on their link group containing the string "keyword". | ```{LF:LinkGroupComment="keyword"}``` | ```select entry_name, entry_id from lf.entry where ver_comment like '%keyword%'``` |
+| Find comments on tags that contain the string "tag". | ```{LF:tagcomment="tag"}``` | ```select e.entry_name, e.entry_id from lf.entry as e, lf.entry_tag as et where e.entry_id = et.entry_id and et.et_descrip like '%tag%'``` |
+| Find entries that have the "classified" tag. | ```{LF:tags="classified"}``` | ```select e.entry_name, e.entry_id from lf.entry e, lf.entry_tag et, lf.tag_def td where e.entry_id = et.entry_id and et.tag_id = td.tag_id and tag_name = 'classified'``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="annot"></a>Searching on Properties of Annotations</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Searching on Properties of Annotations
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries with sticky notes containing the string "urgent". | ```<br>{LF:sticky="urgent"}<br>``` | ```<br>select entry_id, sticky_note<br>  from lf.annotation<br> where sticky_note like '%urgent%'<br>``` |
-| Search for entries with annotations with the color that has decimal value 65535. | ```<br>{LF:anncolor="65535"}<br>``` | ```<br>select entry_id, ann_color<br>  from lf.annotation<br> where ann_color = 65535<br>``` |
-| Search for entries with annotations created by the user with the username "admin". | ```<br>{LF:anncreator="admin"}<br>``` | ```<br>select entry_id, ann_creator<br>  from lf.annotation<br> where ann_creator = 'admin'<br>``` |
-| Search for entries with sticky note-type annotations | ```<br>{LF:anntype="note"}<br>``` | ```<br>select entry_id, ann_type<br>  from lf.annotation<br> where ann_type = 'note'<br>``` |
-| Search for entries with annotations on the first page. | ```<br>{LF:annpage="1"}<br>``` | ```<br>select entry_id, ann_page<br>  from lf.annotation where ann_page = 1<br>``` |
-| Search for entries with a stamp that is named "approved". | ```<br>{LF:annstampname="approved"}<br>``` | ```<br>select entry_id, ann_stamp_name<br>  from lf.annotation<br> where ann_stamp_name = 'approved'<br>``` |
+| Search for entries with sticky notes containing the string "urgent". | ```{LF:sticky="urgent"}``` | ```select entry_id, sticky_note  from lf.annotation where sticky_note like '%urgent%'``` |
+| Search for entries with annotations with the color that has decimal value 65535. | ```{LF:anncolor="65535"}``` | ```select entry_id, ann_color from lf.annotation where ann_color = 65535``` |
+| Search for entries with annotations created by the user with the username "admin". | ```{LF:anncreator="admin"}``` | ```select entry_id, ann_creator from lf.annotation where ann_creator = 'admin'``` |
+| Search for entries with sticky note-type annotations | ```{LF:anntype="note"}``` | ```select entry_id, ann_type from lf.annotation where ann_type = 'note'``` |
+| Search for entries with annotations on the first page. | ```{LF:annpage="1"}``` | ```select entry_id, ann_page from lf.annotation where ann_page = 1``` |
+| Search for entries with a stamp that is named "approved". | ```{LF:annstampname="approved"}``` | ```select entry_id, ann_stamp_name from lf.annotation where ann_stamp_name = 'approved'``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="checkout"></a>Searching on Check-Out Properties</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Searching on Check-Out Properties
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries checked out by the user with username "admin". | ```<br>{LF:checkoutuser="admin"}<br>``` | ```<br>select entry_name, entry_id<br> from lf.entry where checked_out_by = 'admin'<br>``` |
-| Search for entries checked out by the user with user ID "2". | ```<br>{LF:checkoutuserid="2"}<br>``` | ```<br>select entry_name, entry_id, checked_out_id<br> from lf.entry where checked_out_id = 2<br>``` |
+| Search for entries checked out by the user with username "admin". | ```{LF:checkoutuser="admin"}``` | ```select entry_name, entry_id from lf.entry where checked_out_by = 'admin'``` |
+| Search for entries checked out by the user with user ID "2". | ```{LF:checkoutuserid="2"}``` | ```select entry_name, entry_id, checked_out_id from lf.entry where checked_out_id = 2``` |
 
-##  
-
-<caption style="font-size: 14pt;"><a name="other"></a>Searching on Other Entry Properties</caption>| Search Description | Advanced Search Syntax | LFQL Syntax |
+## Searching on Other Entry Properties
+| Search Description | Advanced Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries that have an electronic document with the extension "pdf". | ```<br>{LF:ext="pdf"}<br>``` | ```<br>select entry_name, extension<br>  from lf.entry where extension = 'pdf'<br>``` |
-| Search for entries that were created by the user "admin". | ```<br>{LF:creator="admin"}<br>``` | ```<br>select entry_name, creator<br>  from lf.entry where creator = 'admin'<br>``` |
-| Search for entries that are in the path "\receipts". | ```<br>{LF:lookin="\receipts"}<br>``` | ```<br>select e.entry_name from lf.entry e<br> where is_descendantof(e.path, '\receipts') = 1<br>``` |
-| Search for entries that have images. | ```<br>{LF:img="y"}<br>``` | ```<br>select entry_id from lf.page<br> where has_image = 1<br>``` |
-| Search for entries that have pages. | ```<br>{LF:associatedpages="y"}<br>``` | ```<br>select entry_id, entry_name<br>  from lf.entry where has_page = 1<br>``` |
-| Search for entries that have been indexed. | ```<br>{LF:indexed="y"}<br>``` | ```<br>select entry_id, entry_name<br> from lf.entry where indexed = 1<br>``` |
-| Search for entries that have had all their pages OCRed. | ```<br>{LF:ocr="all"}<br>``` | ```<br>select entry_id, entry_name<br> from lf.entry where ocr_state = 'all'<br>``` |
+| Search for entries that have an electronic document with the extension "pdf". | ```{LF:ext="pdf"}``` | ```select entry_name, extension from lf.entry where extension = 'pdf'``` |
+| Search for entries that were created by the user "admin". | ```{LF:creator="admin"}``` | ```select entry_name, creator from lf.entry where creator = 'admin'``` |
+| Search for entries that are in the path "\receipts". | ```{LF:lookin="\receipts"}``` | ```select e.entry_name from lf.entry e where is_descendantof(e.path, '\receipts') = 1``` |
+| Search for entries that have images. | ```{LF:img="y"}``` | ```select entry_id from lf.page where has_image = 1``` |
+| Search for entries that have pages. | ```{LF:associatedpages="y"}``` | ```select entry_id, entry_name from lf.entry where has_page = 1``` |
+| Search for entries that have been indexed. | ```{LF:indexed="y"}``` | ```select entry_id, entry_name from lf.entry where indexed = 1``` |
+| Search for entries that have had all their pages OCRed. | ```{LF:ocr="all"}``` | ```select entry_id, entry_name from lf.entry where ocr_state = 'all'``` |
