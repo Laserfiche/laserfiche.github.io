@@ -1,0 +1,51 @@
+# LfCommand Class
+ 
+
+Represents a Laserfiche Query Language command which can be executed against a Laserfiche repository.
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;System.MarshalByRefObject<br />&nbsp;&nbsp;&nbsp;&nbsp;System.ComponentModel.Component<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Data.Common.DbCommand<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laserfiche.RepositoryAccess.Data.LfCommand<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Data">Laserfiche.RepositoryAccess.Data</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public sealed class LfCommand : DbCommand
+```
+
+**VB**<br />
+``` VB
+Public NotInheritable Class LfCommand
+	Inherits DbCommand
+```
+
+The LfCommand type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand__ctor">LfCommand()</a></td><td>
+Initializes an `LfCommand` object with an empty command text string and no connection.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand__ctor_1">LfCommand(String)</a></td><td>
+Initializes an `LfCommand` object with the specified command text string and no connection.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand__ctor_2">LfCommand(String, LfConnection)</a></td><td>
+Initializes an `LfCommand` object with the specified command text string and connnection.</td></tr></table>&nbsp;
+<a href="#lfcommand-class">Back to Top</a>
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_CommandText">CommandText</a></td><td> (Overrides DbCommand.CommandText.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_CommandTimeout">CommandTimeout</a></td><td> (Overrides DbCommand.CommandTimeout.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_CommandType">CommandType</a></td><td> (Overrides DbCommand.CommandType.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_ComparisonCollationRule">ComparisonCollationRule</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_Connection">Connection</a></td><td>
+Gets or sets the `LfConnection` instance associated with this instance.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td>Container</td><td> (Inherited from Component.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_DesignTimeVisible">DesignTimeVisible</a></td><td> (Overrides DbCommand.DesignTimeVisible().)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_Parameters">Parameters</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td>Site</td><td> (Inherited from Component.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_TableType">TableType</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td>Transaction</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Data_LfCommand_UpdatedRowSource">UpdatedRowSource</a></td><td> (Overrides DbCommand.UpdatedRowSource.)</td></tr></table>&nbsp;
+<a href="#lfcommand-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_BeginExecuteReader">BeginExecuteReader()</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_BeginExecuteReader_3">BeginExecuteReader(CommandBehavior)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_BeginExecuteReader_1">BeginExecuteReader(AsyncCallback, Object)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_BeginExecuteReader_2">BeginExecuteReader(AsyncCallback, Object, CommandBehavior)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_Cancel">Cancel</a></td><td> (Overrides DbCommand.Cancel().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_Close">Close</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_CreateParameter">CreateParameter</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_DescribeParameters">DescribeParameters</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Dispose</td><td> (Inherited from Component.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_EndExecuteReader">EndExecuteReader</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_ExecuteNonQuery">ExecuteNonQuery</a></td><td> (Overrides DbCommand.ExecuteNonQuery().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteNonQueryAsync()</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteNonQueryAsync(CancellationToken)</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_ExecuteReader">ExecuteReader()</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_ExecuteReader_1">ExecuteReader(CommandBehavior)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteReaderAsync()</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteReaderAsync(CancellationToken)</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteReaderAsync(CommandBehavior)</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteReaderAsync(CommandBehavior, CancellationToken)</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_ExecuteScalar">ExecuteScalar</a></td><td> (Overrides DbCommand.ExecuteScalar().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteScalarAsync()</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ExecuteScalarAsync(CancellationToken)</td><td> (Inherited from DbCommand.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_FinishParameters">FinishParameters</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_Parse">Parse</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_Prepare">Prepare</a></td><td> (Overrides DbCommand.Prepare().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Data_LfCommand_ResetParameters">ResetParameters</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Component.)</td></tr></table>&nbsp;
+<a href="#lfcommand-class">Back to Top</a>
+
+## Events
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public event](media/pubevent.gif "Public event")</td><td>Disposed</td><td> (Inherited from Component.)</td></tr></table>&nbsp;
+<a href="#lfcommand-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess_Data">Laserfiche.RepositoryAccess.Data Namespace</a><br />

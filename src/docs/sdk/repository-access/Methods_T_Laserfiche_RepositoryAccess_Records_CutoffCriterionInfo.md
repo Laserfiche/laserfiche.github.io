@@ -1,0 +1,22 @@
+# CutoffCriterionInfo Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo">CutoffCriterionInfo</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_AddEvent">AddEvent</a></td><td>
+Adds a Laserfiche records management event to the event list of the cutoff criterion that this instance represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_ClearEvents">ClearEvents</a></td><td>
+Removes all associated Laserfiche records management events from the cutoff criterion that this instance represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_ContainsEvent">ContainsEvent</a></td><td>
+Determines if a Laserfiche records management event with the specified ID is associated with this cutoff criterion.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_Delete">Delete</a></td><td>
+Marks the cutoff criterion represented by this instance for deletion when pending changes are submitted to Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheObject_GetObjectData">GetObjectData</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_Refresh">Refresh</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_LaserficheObject_Refresh">LaserficheObject.Refresh(Boolean)</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_RemoveEvent">RemoveEvent</a></td><td>
+Removes a Laserfiche records management event from the event list of the cutoff criterion that this instance represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_RemoveEventAt">RemoveEventAt</a></td><td>
+Remove an event by its index in the event list.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_Save">Save</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_LaserficheObject_Save">LaserficheObject.Save()</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo_SetEventAt">SetEventAt</a></td><td>
+Set the event ID at the specified index in the event list. Do not specify an event more than once in the list.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#cutoffcriterioninfo-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Records_CutoffCriterionInfo">CutoffCriterionInfo Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

@@ -1,0 +1,15 @@
+# IDispositionScheduleInfo Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo">IDispositionScheduleInfo</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_AddTransfer">AddTransfer</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_ClearTransfers">ClearTransfers</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_Delete">Delete</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_GetTransfer">GetTransfer</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_InsertTransfer">InsertTransfer</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Refresh">Refresh</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_RemoveTransfer">RemoveTransfer</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Save">Save</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_SetAlternateSchedule">SetAlternateSchedule</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_SetFinalDisposition">SetFinalDisposition(DispositionType, RetentionInstructions)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo_SetFinalDisposition_1">SetFinalDisposition(DispositionType, RetentionInstructions, Int32)</a></td><td /></tr></table>&nbsp;
+<a href="#idispositionscheduleinfo-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Records_IDispositionScheduleInfo">IDispositionScheduleInfo Interface</a><br /><a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

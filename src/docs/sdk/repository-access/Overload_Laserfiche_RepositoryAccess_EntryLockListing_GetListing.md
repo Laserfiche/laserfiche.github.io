@@ -1,0 +1,18 @@
+# EntryLockListing.GetListing Method 
+ 
+
+
+## Overload List
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_EntryLockListing_GetListing">GetListing(ISession)</a></td><td>
+Creates a new `EntryLockListing` instance representing a listing of all the persistent lock objects in the current Laserfiche repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_EntryLockListing_GetListing_1">GetListing(LFIdentityReference, ISession)</a></td><td>
+Creates a new `EntryLockListing` instance representing a listing of all the persistent lock objects owned by the specified user in the current Laserfiche repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_EntryLockListing_GetListing_3">GetListing(Int32, EntryLockListingSettings, ISession)</a></td><td>
+Creates a new `EntryLockListing` instance representing a listing of all the entry lock objects matching the specified criteria in the current Laserfiche repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_EntryLockListing_GetListing_4">GetListing(Int32, PersistentLockColumn, SortDirection, ISession)</a></td><td>
+Creates a new `EntryLockListing` instance representing a listing of all the persistent lock objects in the current Laserfiche repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_EntryLockListing_GetListing_2">GetListing(LFIdentityReference, Int32, PersistentLockColumn, SortDirection, ISession)</a></td><td>
+Creates a new `EntryLockListing` instance representing a listing of all the persistent lock objects owned by the specified user in the current Laserfiche repository.</td></tr></table>&nbsp;
+<a href="#entrylocklisting.getlisting-method">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_EntryLockListing">EntryLockListing Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

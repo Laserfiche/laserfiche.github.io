@@ -1,0 +1,35 @@
+# IDocumentInfo.LockPersistently Method 
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+IPersistentLock LockPersistently(
+	string comment,
+	LockExtent lockExtent = LockExtent.All
+)
+```
+
+**VB**<br />
+``` VB
+Function LockPersistently ( 
+	comment As String,
+	Optional lockExtent As LockExtent = LockExtent.All
+) As IPersistentLock
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>comment</dt><dd>Type: System.String<br /></dd><dt>lockExtent (Optional)</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_LockExtent">Laserfiche.RepositoryAccess.LockExtent</a><br /></dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_IPersistentLock">IPersistentLock</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_IDocumentInfo">IDocumentInfo Interface</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

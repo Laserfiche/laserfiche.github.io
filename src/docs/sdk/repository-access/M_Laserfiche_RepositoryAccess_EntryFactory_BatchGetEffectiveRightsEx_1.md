@@ -1,0 +1,40 @@
+# EntryFactory.BatchGetEffectiveRightsEx Method (IEnumerable(Int32), IEnumerable(LFSecurityIdentifier), ISession)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public Dictionary<int, Dictionary<LFSecurityIdentifier, DetailedEffectiveAccess>> BatchGetEffectiveRightsEx(
+	IEnumerable<int> entryIds,
+	IEnumerable<LFSecurityIdentifier> sids,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Function BatchGetEffectiveRightsEx ( 
+	entryIds As IEnumerable(Of Integer),
+	sids As IEnumerable(Of LFSecurityIdentifier),
+	session As ISession
+) As Dictionary(Of Integer, Dictionary(Of LFSecurityIdentifier, DetailedEffectiveAccess))
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>entryIds</dt><dd>Type: System.Collections.Generic.IEnumerable(Int32)<br /></dd><dt>sids</dt><dd>Type: System.Collections.Generic.IEnumerable(<a href="T_LfPortable_Security_Principal_LFSecurityIdentifier">LFSecurityIdentifier</a>)<br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+#### Return Value
+Type: Dictionary(Int32, Dictionary(<a href="T_LfPortable_Security_Principal_LFSecurityIdentifier">LFSecurityIdentifier</a>, <a href="T_Laserfiche_RepositoryAccess_DetailedEffectiveAccess">DetailedEffectiveAccess</a>))
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_IEntryFactory_BatchGetEffectiveRightsEx_1">IEntryFactory.BatchGetEffectiveRightsEx(IEnumerable(Int32), IEnumerable(LFSecurityIdentifier), ISession)</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_EntryFactory">EntryFactory Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_EntryFactory_BatchGetEffectiveRightsEx">BatchGetEffectiveRightsEx Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

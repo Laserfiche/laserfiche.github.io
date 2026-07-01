@@ -1,0 +1,28 @@
+# IndexConfiguration Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_IndexConfiguration">IndexConfiguration</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_ClearQueue">ClearQueue</a></td><td>
+Removes all pending documents from the full-text index queue.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_GetIndexingStatus">GetIndexingStatus</a></td><td>
+Returns a member of the `IndexingStatus` enumeration which specifies the current state of the Laserfiche full-text search engine indexer for the full-text catalog associated with the current Laserfiche repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_GetIndexingStatusReport">GetIndexingStatusReport</a></td><td>
+Returns an `IndexingStatusReport` instance which contains data about the current status of the Laserfiche Full Text Search Engine's indexer.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_GetIndexQueueLength">GetIndexQueueLength()</a></td><td>
+Returns the length of the index queue used by the Laserfiche full-text search engine indexer associated with the current Laserfiche repository. This is a measure of the number of documents pending for indexing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_GetIndexQueueLength_1">GetIndexQueueLength(Boolean)</a></td><td>
+Returns the length of the index queue used by the Laserfiche full-text search engine indexer associated with the current Laserfiche repository. This is a measure of the number of documents pending for indexing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_MarkAllNotIndexed">MarkAllNotIndexed</a></td><td>
+Marks all documents in the current repository as not indexed.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_PauseIndexing">PauseIndexing</a></td><td>
+Requests that the Laserfiche full-text search engine indexer associated with the current repository pause operation.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_Refresh">Refresh</a></td><td>
+Reads the currently configured full-text indexing settings from the current repository and updates the instance's data members with the retrieved settings.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_Reindex">Reindex(IndexOption)</a></td><td>
+Requests that the Laserfiche full-text search engine indexer reindex the specified portion of the repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_Reindex_1">Reindex(IndexOption, Boolean, Boolean)</a></td><td>
+Requests that the Laserfiche full-text search engine indexer or elasticsearch reindex the specified portion of the repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_ResetToDefault">ResetToDefault</a></td><td>
+Resets the indexing configuration for the current repository to the default settings.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_ResumeIndexing">ResumeIndexing</a></td><td>
+Requests that the Laserfiche full-text search engine indexer associated with the current repository resume indexing, if it was previously paused.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_IndexConfiguration_Save">Save</a></td><td>
+Saves the full-text search indexing settings represented by this class to Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#indexconfiguration-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_IndexConfiguration">IndexConfiguration Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

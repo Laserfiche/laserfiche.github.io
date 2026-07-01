@@ -1,0 +1,35 @@
+# TimeZone.GetDisplayName Method (Boolean, TimeZone.DisplayType)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_I18n">Laserfiche.I18n</a><br />**Assembly:**&nbsp;Laserfiche.I18n (in Laserfiche.I18n.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public string GetDisplayName(
+	bool daylight,
+	TimeZone.DisplayType style
+)
+```
+
+**VB**<br />
+``` VB
+Public Function GetDisplayName ( 
+	daylight As Boolean,
+	style As TimeZone.DisplayType
+) As String
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>daylight</dt><dd>Type: System.Boolean<br /></dd><dt>style</dt><dd>Type: <a href="T_Laserfiche_I18n_TimeZone_DisplayType">Laserfiche.I18n.TimeZone.DisplayType</a><br /></dd></dl>
+
+#### Return Value
+Type: String
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_I18n_TimeZone">TimeZone Class</a><br /><a href="Overload_Laserfiche_I18n_TimeZone_GetDisplayName">GetDisplayName Overload</a><br /><a href="N_Laserfiche_I18n">Laserfiche.I18n Namespace</a><br />

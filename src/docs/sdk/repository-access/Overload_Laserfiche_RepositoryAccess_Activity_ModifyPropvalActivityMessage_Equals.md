@@ -1,0 +1,13 @@
+# ModifyPropvalActivityMessage.Equals Method 
+ 
+
+
+## Overload List
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Equals_1">Equals(Object)</a></td><td> (Overrides Object.Equals(Object).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Equals">Equals(ModifyPropvalActivityMessage)</a></td><td /></tr></table>&nbsp;
+<a href="#modifypropvalactivitymessage.equals-method">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage">ModifyPropvalActivityMessage Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Activity">Laserfiche.RepositoryAccess.Activity Namespace</a><br />

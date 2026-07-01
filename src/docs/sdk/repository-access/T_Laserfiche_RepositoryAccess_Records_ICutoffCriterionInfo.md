@@ -1,0 +1,34 @@
+# ICutoffCriterionInfo Interface
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public interface ICutoffCriterionInfo : ILaserficheObject
+```
+
+**VB**<br />
+``` VB
+Public Interface ICutoffCriterionInfo
+	Inherits ILaserficheObject
+```
+
+The ICutoffCriterionInfo type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_AllowCalendarCycle">AllowCalendarCycle</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_AllowEvents">AllowEvents</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_CalendarCycleId">CalendarCycleId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_Description">Description</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_EventCount">EventCount</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_EventIds">EventIds</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_Id">Id</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_Interval">Interval</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_IsComplete">IsComplete</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ILaserficheObject_IsConnected">IsConnected</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_IsEligibleByAnyEvent">IsEligibleByAnyEvent</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ILaserficheObject_IsModified">IsModified</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ILaserficheObject_IsNew">IsNew</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ILaserficheObject_IsPending">IsPending</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_Name">Name</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_RetentionType">RetentionType</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ILaserficheObject_Session">Session</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_TriggerAction">TriggerAction</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_TriggerLinkTypeId">TriggerLinkTypeId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_TriggerLocationId">TriggerLocationId</a></td><td /></tr></table>&nbsp;
+<a href="#icutoffcriterioninfo-interface">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_AddEvent">AddEvent</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_ClearEvents">ClearEvents</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_ContainsEvent">ContainsEvent</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_Delete">Delete</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Refresh">Refresh</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_RemoveEvent">RemoveEvent</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_RemoveEventAt">RemoveEventAt</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Save">Save</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_ILaserficheObject">ILaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_ICutoffCriterionInfo_SetEventAt">SetEventAt</a></td><td /></tr></table>&nbsp;
+<a href="#icutoffcriterioninfo-interface">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

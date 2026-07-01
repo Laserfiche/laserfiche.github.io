@@ -1,0 +1,33 @@
+# BriefcaseImporter.BriefcaseName Property 
+ 
+
+Gets or sets the name of the briefcase.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public string BriefcaseName { get; set; }
+```
+
+**VB**<br />
+``` VB
+Public Property BriefcaseName As String
+	Get
+	Set
+```
+
+
+#### Property Value
+Type: String
+
+#### Implements
+<a href="P_Laserfiche_RepositoryAccess_IBriefcaseImporter_BriefcaseName">IBriefcaseImporter.BriefcaseName</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_BriefcaseImporter">BriefcaseImporter Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

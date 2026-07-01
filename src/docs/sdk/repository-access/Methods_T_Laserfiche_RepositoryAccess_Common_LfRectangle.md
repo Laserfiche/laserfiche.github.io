@@ -1,0 +1,27 @@
+# LfRectangle Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Common_LfRectangle">LfRectangle</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Contains">Contains(LfPoint)</a></td><td>
+Determines if a point lies within the region bounded by the rectangle. The bottom and right edges are not considered part of a rectangle's region, but the top and left edges are.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Contains_1">Contains(LfRectangle)</a></td><td>
+Returns true if the region bounded by the given `LfRectangle` is a subset of the region represented by this object. The bottom and right edges are not considered part of a rectangle's region, but the top and left edges are.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Contains_2">Contains(Int32, Int32)</a></td><td>
+Determines if a point lies within the region bounded by the rectangle. The bottom and right edges are not considered part of a rectangle's region, but the top and left edges are.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Equals_1">Equals(Object)</a></td><td> (Overrides ValueType.Equals(Object).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Equals">Equals(LfRectangle)</a></td><td>
+Determines if the rectangle that this object represents is equal to the rectangle that the parameter *other* represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_FromLTRB">FromLTRB</a></td><td>
+Initializes a `Rectangle given coordinates for the left, top, right, and bottom edges of the rectangle.`</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_GetHashCode">GetHashCode</a></td><td> (Overrides ValueType.GetHashCode().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Inflate_1">Inflate(LfSize)</a></td><td>
+Increases the size of the rectangle that this object represents without changing the location of the center of the rectangle. Each edge of the rectangle is shifted by the given amount.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Inflate_2">Inflate(Int32, Int32)</a></td><td>
+Increases the size of the rectangle that this object represents without changing the location of the center of the rectangle. Each edge of the rectangle is shifted by the given amount.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Inflate">Inflate(LfRectangle, Int32, Int32)</a></td><td>
+Increases the size of the rectangle that this object represents without changing the location of the center of the rectangle. Each edge of the rectangle is shifted by the given amount.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_IntersectsWith">IntersectsWith</a></td><td>
+Determines if the rectangle that this object represents intersects with the rectangle represented by the parameter *rect*.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Offset">Offset(LfSize)</a></td><td>
+Offsets the position of the rectangle that this object represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Offset_1">Offset(Int32, Int32)</a></td><td>
+Offsets the position of the rectangle that this object represents.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_ToString">ToString</a></td><td> (Overrides ValueType.ToString().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Common_LfRectangle_Union">Union</a></td><td>
+Returns the smallest rectangle that covers both of the regions represented by the arguments. This is the rectangular union.</td></tr></table>&nbsp;
+<a href="#lfrectangle-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Common_LfRectangle">LfRectangle Structure</a><br /><a href="N_Laserfiche_RepositoryAccess_Common">Laserfiche.RepositoryAccess.Common Namespace</a><br />

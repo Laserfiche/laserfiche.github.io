@@ -1,0 +1,33 @@
+# RecordProperties.DispositionScheduleId Property 
+ 
+
+Gets the ID of the disposition schedule that has been assigned to the corresponding record.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public int DispositionScheduleId { get; set; }
+```
+
+**VB**<br />
+``` VB
+Public Property DispositionScheduleId As Integer
+	Get
+	Set
+```
+
+
+#### Property Value
+Type: Int32
+
+#### Implements
+<a href="P_Laserfiche_RepositoryAccess_Records_IRecordProperties_DispositionScheduleId">IRecordProperties.DispositionScheduleId</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Records_RecordProperties">RecordProperties Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

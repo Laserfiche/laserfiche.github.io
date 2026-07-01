@@ -1,0 +1,40 @@
+# DocumentFactory.GetPageInfos Method (Int32, PageRange, ISession)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public PageInfoReader GetPageInfos(
+	int entryId,
+	PageRange pageRange,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Function GetPageInfos ( 
+	entryId As Integer,
+	pageRange As PageRange,
+	session As ISession
+) As PageInfoReader
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>entryId</dt><dd>Type: System.Int32<br /></dd><dt>pageRange</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_PageRange">Laserfiche.RepositoryAccess.PageRange</a><br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_PageInfoReader">PageInfoReader</a>
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_IDocumentFactory_GetPageInfos_1">IDocumentFactory.GetPageInfos(Int32, PageRange, ISession)</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_DocumentFactory">DocumentFactory Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_DocumentFactory_GetPageInfos">GetPageInfos Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

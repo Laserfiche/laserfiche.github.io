@@ -1,0 +1,62 @@
+# Freeze Class
+ 
+
+A collection of methods for creating and managing Laserfiche records management freezes (a "freeze" is also known as a "hold" or "legal hold").
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;Laserfiche.RepositoryAccess.Records.Freeze<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static class Freeze
+```
+
+**VB**<br />
+``` VB
+Public NotInheritable Class Freeze
+```
+
+The Freeze type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Create">Create(FreezeInfo, ISession)</a></td><td>
+Creates a new Laserfiche records management freeze definition.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Create_1">Create(Int32, String, ISession)</a></td><td>
+Create a new Laserfiche records management freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Delete">Delete(Int32, ISession)</a></td><td>
+Deletes a Laserfiche records management freeze definition from a repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Delete_1">Delete(String, ISession)</a></td><td>
+Deletes a Laserfiche records management freeze definition from a repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_EnumAll">EnumAll</a></td><td>
+Returns an `FreezeInfoReader` instance which can be used to enumerate all of the Laserfiche records management freeze definitions in a repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeEntry">FreezeEntry(Int32, Int32, ISession)</a></td><td>
+Add an entry to an existing freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeEntry_1">FreezeEntry(Int32, String, ISession)</a></td><td>
+Create a new Laserfiche records management freeze with reason and add an entry to the freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeMultiEntries_2">FreezeMultiEntries(Int32[], Int32, ISession)</a></td><td>
+Add entries to an existing freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeMultiEntries_3">FreezeMultiEntries(Int32[], String, ISession)</a></td><td>
+Create a new Laserfiche records management freeze with reason and add entries to the freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeMultiEntries">FreezeMultiEntries(IEntryInfo[], Int32, ISession)</a></td><td>
+Add entries to an existing freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_FreezeMultiEntries_1">FreezeMultiEntries(IEntryInfo[], String, ISession)</a></td><td>
+Create a new Laserfiche records management freeze with reason and add entries to the freeze</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetDirectFreezes">GetDirectFreezes</a></td><td>
+Returns information about all the direct freezes on the specified entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetFreezes">GetFreezes(Int32, ISession)</a></td><td>
+Returns information about all the active freezes on the specified entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetFreezes_2">GetFreezes(String, ISession)</a></td><td>
+Returns information about all the active freezes on the specified entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetFreezes_1">GetFreezes(Int32, ISession, Dictionary(Int32, List(FrozenEntry)))</a></td><td>
+Returns information about all the active freezes on the specified entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetFreezes_3">GetFreezes(String, ISession, Dictionary(Int32, List(FrozenEntry)))</a></td><td>
+Returns information about all the active freezes on the specified entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetInfo">GetInfo(Int32, ISession)</a></td><td>
+Returns an `FreezeInfo` instance which describes an existing Laserfiche records management freeze definition.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_GetInfo_1">GetInfo(String, ISession)</a></td><td>
+Returns an `FreezeInfo` instance which describes an existing Laserfiche records management freeze definition.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Unfreeze">Unfreeze(Int32, ISession)</a></td><td>
+Removes all freezes on an entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Unfreeze_3">Unfreeze(String, ISession)</a></td><td>
+Removes all freezes on an entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Unfreeze_1">Unfreeze(Int32, Int32, ISession)</a></td><td>
+Removes the freeze with the specified freezeid on an entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Unfreeze_2">Unfreeze(Int32, String, ISession)</a></td><td>
+Removes entries from a freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_UnfreezeMultiEntries_2">UnfreezeMultiEntries(Int32[], Int32, ISession)</a></td><td>
+Removes entries from a freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_UnfreezeMultiEntries_3">UnfreezeMultiEntries(Int32[], String, ISession)</a></td><td>
+Removes entries from a freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_UnfreezeMultiEntries">UnfreezeMultiEntries(IEntryInfo[], Int32, ISession)</a></td><td>
+Removes entries from a freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_UnfreezeMultiEntries_1">UnfreezeMultiEntries(IEntryInfo[], String, ISession)</a></td><td>
+Removes entries from a freeze.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Update">Update(Int32, FreezeInfo, ISession)</a></td><td>
+Updates the definition for an existing Laserfiche records management freeze object.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_Freeze_Update_1">Update(String, FreezeInfo, ISession)</a></td><td>
+Updates the definition for an existing Laserfiche records management freeze object.</td></tr></table>&nbsp;
+<a href="#freeze-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

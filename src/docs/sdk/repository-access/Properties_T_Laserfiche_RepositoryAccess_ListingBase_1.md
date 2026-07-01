@@ -1,0 +1,21 @@
+# ListingBase(*T*) Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_ListingBase_1">ListingBase(T)</a> generic type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_CacheLimit">CacheLimit</a></td><td>
+Gets or sets the maximum number of objects to cache.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_MarkedIds">MarkedIds</a></td><td>
+Gets a collection of object IDs indicating which objects have been marked.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_MarkedRowCount">MarkedRowCount</a></td><td>
+Gets a count of the number of rows which have been marked in this instance.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_MarkedRows">MarkedRows</a></td><td>
+Gets a collection of row numbers indicating which rows have been marked.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_RowCount">RowCount</a></td><td>
+Gets the number of rows/objects in the listing.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_ListingBase_1_Session">Session</a></td><td>
+Gets the Laserfiche session associated with this instance.</td></tr></table>&nbsp;
+<a href="#listingbase(*t*)-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_ListingBase_1">ListingBase(T) Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

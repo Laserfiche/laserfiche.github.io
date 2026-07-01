@@ -1,0 +1,40 @@
+# EntryFactory.BatchGetEffectiveRightsEx Method (IEnumerable(Int32), IEnumerable(AccountReference), ISession)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public Dictionary<int, Dictionary<AccountReference, DetailedEffectiveAccess>> BatchGetEffectiveRightsEx(
+	IEnumerable<int> entryIds,
+	IEnumerable<AccountReference> lfAccts,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Function BatchGetEffectiveRightsEx ( 
+	entryIds As IEnumerable(Of Integer),
+	lfAccts As IEnumerable(Of AccountReference),
+	session As ISession
+) As Dictionary(Of Integer, Dictionary(Of AccountReference, DetailedEffectiveAccess))
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>entryIds</dt><dd>Type: System.Collections.Generic.IEnumerable(Int32)<br /></dd><dt>lfAccts</dt><dd>Type: System.Collections.Generic.IEnumerable(<a href="T_Laserfiche_RepositoryAccess_AccountReference">AccountReference</a>)<br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+#### Return Value
+Type: Dictionary(Int32, Dictionary(<a href="T_Laserfiche_RepositoryAccess_AccountReference">AccountReference</a>, <a href="T_Laserfiche_RepositoryAccess_DetailedEffectiveAccess">DetailedEffectiveAccess</a>))
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_IEntryFactory_BatchGetEffectiveRightsEx">IEntryFactory.BatchGetEffectiveRightsEx(IEnumerable(Int32), IEnumerable(AccountReference), ISession)</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_EntryFactory">EntryFactory Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_EntryFactory_BatchGetEffectiveRightsEx">BatchGetEffectiveRightsEx Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

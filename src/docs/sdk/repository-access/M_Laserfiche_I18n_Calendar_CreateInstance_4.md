@@ -1,0 +1,37 @@
+# Calendar.CreateInstance Method (String, TimeZone, Locale)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_I18n">Laserfiche.I18n</a><br />**Assembly:**&nbsp;Laserfiche.I18n (in Laserfiche.I18n.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static Calendar CreateInstance(
+	string calendar,
+	TimeZone zone,
+	Locale locale
+)
+```
+
+**VB**<br />
+``` VB
+Public Shared Function CreateInstance ( 
+	calendar As String,
+	zone As TimeZone,
+	locale As Locale
+) As Calendar
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>calendar</dt><dd>Type: System.String<br /></dd><dt>zone</dt><dd>Type: <a href="T_Laserfiche_I18n_TimeZone">Laserfiche.I18n.TimeZone</a><br /></dd><dt>locale</dt><dd>Type: <a href="T_Laserfiche_I18n_Locale">Laserfiche.I18n.Locale</a><br /></dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_I18n_Calendar">Calendar</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_I18n_Calendar">Calendar Class</a><br /><a href="Overload_Laserfiche_I18n_Calendar_CreateInstance">CreateInstance Overload</a><br /><a href="N_Laserfiche_I18n">Laserfiche.I18n Namespace</a><br />

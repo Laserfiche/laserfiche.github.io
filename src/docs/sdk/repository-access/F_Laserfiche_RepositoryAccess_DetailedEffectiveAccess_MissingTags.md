@@ -1,0 +1,26 @@
+# DetailedEffectiveAccess.MissingTags Field
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public Nullable<bool> MissingTags
+```
+
+**VB**<br />
+``` VB
+Public MissingTags As Nullable(Of Boolean)
+```
+
+
+#### Field Value
+Type: Nullable(Boolean)
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_DetailedEffectiveAccess">DetailedEffectiveAccess Structure</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

@@ -1,0 +1,27 @@
+# IAccountInfo.LinkedAccounts Property 
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+ILFSecurityIdentifierCollection LinkedAccounts { get; }
+```
+
+**VB**<br />
+``` VB
+ReadOnly Property LinkedAccounts As ILFSecurityIdentifierCollection
+	Get
+```
+
+
+#### Property Value
+Type: <a href="T_Laserfiche_RepositoryAccess_ILFSecurityIdentifierCollection">ILFSecurityIdentifierCollection</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_IAccountInfo">IAccountInfo Interface</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

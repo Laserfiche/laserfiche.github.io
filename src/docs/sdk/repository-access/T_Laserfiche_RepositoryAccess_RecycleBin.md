@@ -1,0 +1,49 @@
+# RecycleBin Class
+ 
+
+A collection of static methods for managing the recycle bin in a Laserfiche repository.
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;Laserfiche.RepositoryAccess.RecycleBin<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static class RecycleBin
+```
+
+**VB**<br />
+``` VB
+Public NotInheritable Class RecycleBin
+```
+
+The RecycleBin type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing">GetListing(RecycleBinColumn, SortDirection, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing_3">GetListing(Int32, RecycleBinColumn, SortDirection, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin that share the same parent entry.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing_1">GetListing(RecycleBinColumn, SortDirection, LFSecurityIdentifier, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin that were moved there (i.e., deleted) by a specifed user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing_2">GetListing(RecycleBinColumn, SortDirection, SecurityIdentifier, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin that were moved there (i.e., deleted) by a specifed user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing_4">GetListing(Int32, RecycleBinColumn, SortDirection, LFSecurityIdentifier, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin that share the same parent entry that were moved there (i.e., deleted) by the specified user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetListing_5">GetListing(Int32, RecycleBinColumn, SortDirection, SecurityIdentifier, ISession)</a></td><td>
+Returns a `RecycleBinListing` instance which represents a listing of all the entries in the recycle bin that share the same parent entry that were moved there (i.e., deleted) by the specified user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_GetTrustees">GetTrustees</a></td><td>
+Returns a `RecycleBinTrusteeCollection` instance which represents a collection of security identifiers of all the trustees that have moved items to the recycle bin.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_LFGetTrustees">LFGetTrustees</a></td><td>
+Returns a `RecycleBinTrusteeCollection` instance which represents a collection of security identifiers of all the trustees that have moved items to the recycle bin.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_PurgeAllEntries_1">PurgeAllEntries(ISession)</a></td><td>
+Purges all the entries in the recycle bin in the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_PurgeAllEntries">PurgeAllEntries(AccountReference, ISession)</a></td><td>
+Purges all the entries in the recycle bin that were moved there (i.e., deleted) by the specified user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_PurgeAllEntries_2">PurgeAllEntries(LFIdentityReference, ISession)</a></td><td>
+Purges all the entries in the recycle bin that were moved there (i.e., deleted) by the specified user.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_PurgeEntry">PurgeEntry(Guid, ISession)</a></td><td>
+Purges a single entry from the recycle bin. If purging a folder, all of its contents are also purged.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_PurgeEntry_1">PurgeEntry(Int32, ISession)</a></td><td>
+Purges a single entry from the recycle bin. If purging a folder, all of its contents are also purged.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_RestoreEntry">RestoreEntry(Guid, String, ISession)</a></td><td>
+Removes an entry from the recycle bin and restores it to the folder tree. When a folder is restored, its contents are also restored.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBin_RestoreEntry_1">RestoreEntry(Int32, String, ISession)</a></td><td>
+Removes an entry from the recycle bin and restores it to the folder tree. When a folder is restored, its contents are also restored.</td></tr></table>&nbsp;
+<a href="#recyclebin-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

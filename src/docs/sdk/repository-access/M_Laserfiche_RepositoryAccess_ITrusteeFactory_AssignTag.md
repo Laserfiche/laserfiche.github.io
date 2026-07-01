@@ -1,0 +1,34 @@
+# ITrusteeFactory.AssignTag Method 
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+void AssignTag(
+	AccountReference acctRef,
+	int tagId,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Sub AssignTag ( 
+	acctRef As AccountReference,
+	tagId As Integer,
+	session As ISession
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>acctRef</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_AccountReference">Laserfiche.RepositoryAccess.AccountReference</a><br /></dd><dt>tagId</dt><dd>Type: System.Int32<br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_ITrusteeFactory">ITrusteeFactory Interface</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

@@ -1,0 +1,43 @@
+# VolumeInfo Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_VolumeInfo">VolumeInfo</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_EncryptionAlgorithm">EncryptionAlgorithm</a></td><td>
+Gets or sets the algorithm used to encrypt the volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_FixedPath">FixedPath</a></td><td>
+Gets or sets the fixed path in the file system of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_Id">Id</a></td><td>
+Gets the ID of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsCompressed">IsCompressed</a></td><td>
+Gets or sets a boolean indicating if the volume is compressed.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsConnected">IsConnected</a></td><td>
+Gets whether this instance is associated with a `Session` object.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsDataChecksummed">IsDataChecksummed</a></td><td>
+Gets or sets a boolean indicating whether data stored in the volume is automatically checksummed.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsEDocFixed">IsEDocFixed</a></td><td>
+Gets or sets a boolean indicating if electronic document files are stored under the fixed path of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsEncrypted">IsEncrypted</a></td><td>
+Gets a boolean indicating if the volume is encrypted.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsImageFixed">IsImageFixed</a></td><td>
+Gets or sets a boolean indicating if image files are stored under the fixed path of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsLocked">IsLocked</a></td><td>
+Gets a boolean indicating if the volume is locked because it is encrypted and a valid key has not been provided to unlock it.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsModified">IsModified</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_SecureLaserficheObject_IsModified">SecureLaserficheObject.IsModified</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsMounted">IsMounted</a></td><td>
+Gets a boolean indicating if the volume is mounted.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsNew">IsNew</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsNew">LaserficheObject.IsNew</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsOffline">IsOffline</a></td><td>
+Gets or sets a boolean indicating if the volume is offline.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsPending">IsPending</a></td><td>
+Gets whether this instance has pending changes to be saved to a Laserfiche repository.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsReadOnly">IsReadOnly</a></td><td>
+Gets or sets a boolean indicating if the represented volume is read-only.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsTextFixed">IsTextFixed</a></td><td>
+Gets or sets a boolean indicating if text files are stored under the fixed path of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_IsWriteOnce">IsWriteOnce</a></td><td>
+Gets or sets a boolean indicating if the represented volume is write-once. That is, once a file has been written, it cannot be overwritten, modified, or deleted.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_LocalId">LocalId</a></td><td>
+Gets the local ID of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_MaximumSize">MaximumSize</a></td><td>
+Gets or sets the maximum size of the represented volume, in megabytes. For logical volumes, this is the rollover trigger size for the current physical volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_Name">Name</a></td><td>
+Gets or sets the name of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_RemovablePath">RemovablePath</a></td><td>
+Gets or sets the removable path in the file system of the represented volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_RolloverBaseDate">RolloverBaseDate</a></td><td>
+Gets or sets the base date for scheduled volume rollover.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_RolloverDate">RolloverDate</a></td><td>
+Gets or sets the date of the next volume rollover.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_RolloverPeriod">RolloverPeriod</a></td><td>
+Gets or sets the amount of time to elapse between scheduled volume rollovers.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_RolloverUnit">RolloverUnit</a></td><td>
+Gets or sets the unit of time between scheduled volume rollovers.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_Session">Session</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_SourceVolumeId">SourceVolumeId</a></td><td>
+Gets the ID of the source logical volume if the represented volume is a physical volume created from a logical volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_VolumeInfo_VolumeType">VolumeType</a></td><td>
+Gets, and for new volumes, sets a member of the `VolumeType` enumeration which specifies the type of volume the represented volume is.</td></tr><tr><td>![Protected property](media/protproperty.gif "Protected property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_WillDelete">WillDelete</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr></table>&nbsp;
+<a href="#volumeinfo-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_VolumeInfo">VolumeInfo Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

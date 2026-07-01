@@ -1,0 +1,15 @@
+# Trustee.EnumGroups Method 
+ 
+
+
+## Overload List
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Trustee_EnumGroups">EnumGroups(AccountReference, ISession)</a></td><td>
+Returns an `AccountReferenceCollection` instance containing `AccountReference` instances representing the lf groups the specified trustee is a direct member of.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_Trustee_EnumGroups_1">EnumGroups(LFIdentityReference, ISession)</a></td><td>
+Returns an `AccountReferenceCollection` instance containing `AccountReference` instances representing the lf groups the specified trustee is a direct member of.</td></tr></table>&nbsp;
+<a href="#trustee.enumgroups-method">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Trustee">Trustee Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

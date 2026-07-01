@@ -1,0 +1,15 @@
+# UserPrincipal Methods
+ 
+
+The <a href="T_LfPortable_DirectoryServices_AccountManagement_UserPrincipal">UserPrincipal</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_Principal_CheckDisposedOrDeleted">CheckDisposedOrDeleted</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_Principal">Principal</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_Principal_Dispose">Dispose</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_Principal">Principal</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_Principal_Equals">Equals</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_Principal">Principal</a>.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_UserPrincipal_FindByIdentity">FindByIdentity</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_Principal_GetHashCode">GetHashCode</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_Principal">Principal</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_AuthenticablePrincipal_SetPassword">SetPassword</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_AuthenticablePrincipal">AuthenticablePrincipal</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_Principal_ToString">ToString</a></td><td> (Inherited from <a href="T_LfPortable_DirectoryServices_AccountManagement_Principal">Principal</a>.)</td></tr></table>&nbsp;
+<a href="#userprincipal-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_LfPortable_DirectoryServices_AccountManagement_UserPrincipal">UserPrincipal Class</a><br /><a href="N_LfPortable_DirectoryServices_AccountManagement">LfPortable.DirectoryServices.AccountManagement Namespace</a><br />

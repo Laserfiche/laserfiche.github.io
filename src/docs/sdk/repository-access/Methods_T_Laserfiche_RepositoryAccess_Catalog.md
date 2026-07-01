@@ -1,0 +1,26 @@
+# Catalog Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Catalog">Catalog</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Attach">Attach(String)</a></td><td>
+Attaches a search engine catalog at the specified path to the search engine instance associated with the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Attach_1">Attach(String, CatalogAttachOptions)</a></td><td>
+Attaches a search engine catalog at the specified path to the search engine instance associated with the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_CheckIfUsingSSL">CheckIfUsingSSL</a></td><td>
+Returns true if LFS connects to the Laserfiche Full-Text Search Engine using TLS/SSL.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Create">Create()</a></td><td>
+Creates a new search engine catalog associated with the current Laserfiche repository and attaches it to the search engine instance associated with the current instance of Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Create_1">Create(CatalogCreationOptions)</a></td><td>
+Creates a new search engine catalog associated with the current Laserfiche repository and attaches it to the search engine instance associated with the current instance of Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Delete">Delete</a></td><td>
+Marks the represented catalog for deletion next time pending changes are saved to Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Detach">Detach</a></td><td>
+Detaches the represented catalog from the Laserfiche Full-Text Search Engine instance that it is currently attached to.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_GetConnectionInfo">GetConnectionInfo</a></td><td>
+Returns a `CatalogConnectionInfo` instance which describes the connection settings used by the represented catalog.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheObject_GetObjectData">GetObjectData</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_GetPEPEnabled">GetPEPEnabled</a></td><td>
+return a boolean to show whether or not PEP is enabled for the catalog.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Refresh">Refresh</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_LaserficheObject_Refresh">LaserficheObject.Refresh(Boolean)</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_Save">Save</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_LaserficheObject_Save">LaserficheObject.Save()</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_SetPEPEnabled">SetPEPEnabled</a></td><td>
+enable/disable PEP status for the catalog</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Catalog_SetUseSSL">SetUseSSL</a></td><td>
+Set lffts to use (or not to use) SSL connection to connect to lfs</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#catalog-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Catalog">Catalog Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

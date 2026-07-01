@@ -1,0 +1,23 @@
+# CustomAuditEvent Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent">CustomAuditEvent</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Add">Add(KeyValuePair(String, Object))</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Add_1">Add(String, Object)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddAnnotation">AddAnnotation</a></td><td>
+Add information about an annotation to the custom audit event.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddEntry">AddEntry</a></td><td>
+Add information about an entry to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddField">AddField</a></td><td>
+Add information about a template field definition to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddPage">AddPage</a></td><td>
+Add information about a document page to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddTemplate">AddTemplate</a></td><td>
+Add information about a Laserfiche template definition to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddTrustee">AddTrustee</a></td><td>
+Add information about a Laserfiche account to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_AddVolume">AddVolume</a></td><td>
+Add information about a Laserfiche volume to the audit record.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Clear">Clear</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Contains">Contains</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_ContainsKey">ContainsKey</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_CopyTo">CopyTo</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_GetEnumerator">GetEnumerator</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Remove">Remove(KeyValuePair(String, Object))</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_Remove_1">Remove(String)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_ReportAuditEvent">ReportAuditEvent</a></td><td>
+Reports the represented custom audit event to Laserfiche for recording in the audit log.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent_TryGetValue">TryGetValue</a></td><td /></tr></table>&nbsp;
+<a href="#customauditevent-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Audit_CustomAuditEvent">CustomAuditEvent Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Audit">Laserfiche.RepositoryAccess.Audit Namespace</a><br />

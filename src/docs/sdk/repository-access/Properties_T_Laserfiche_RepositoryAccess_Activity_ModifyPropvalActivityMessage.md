@@ -1,0 +1,15 @@
+# ModifyPropvalActivityMessage Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage">ModifyPropvalActivityMessage</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Descriptor">Descriptor</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_EntryId">EntryId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Etype">Etype</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_ParentId">ParentId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Parser">Parser</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Path">Path</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_PropertyId">PropertyId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_PropertyName">PropertyName</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_PropertyType">PropertyType</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_PropertyValue">PropertyValue</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage_Uuid">Uuid</a></td><td /></tr></table>&nbsp;
+<a href="#modifypropvalactivitymessage-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Activity_ModifyPropvalActivityMessage">ModifyPropvalActivityMessage Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Activity">Laserfiche.RepositoryAccess.Activity Namespace</a><br />

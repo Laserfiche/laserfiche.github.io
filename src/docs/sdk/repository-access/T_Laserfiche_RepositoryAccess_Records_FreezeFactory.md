@@ -1,0 +1,38 @@
+# FreezeFactory Class
+ 
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;Laserfiche.RepositoryAccess.Records.FreezeFactory<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public class FreezeFactory : IFreezeFactory
+```
+
+**VB**<br />
+``` VB
+Public Class FreezeFactory
+	Implements IFreezeFactory
+```
+
+The FreezeFactory type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory__ctor">FreezeFactory</a></td><td>
+Initializes a new instance of the FreezeFactory class</td></tr></table>&nbsp;
+<a href="#freezefactory-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Create">Create(FreezeInfo, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Create_1">Create(Int32, String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Delete">Delete(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Delete_1">Delete(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_EnumAll">EnumAll</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeEntry">FreezeEntry(Int32, Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeEntry_1">FreezeEntry(Int32, String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeMultiEntries_2">FreezeMultiEntries(Int32[], Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeMultiEntries_3">FreezeMultiEntries(Int32[], String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeMultiEntries">FreezeMultiEntries(IEntryInfo[], Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_FreezeMultiEntries_1">FreezeMultiEntries(IEntryInfo[], String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetDirectFreezes">GetDirectFreezes</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetFreezes">GetFreezes(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetFreezes_2">GetFreezes(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetFreezes_1">GetFreezes(Int32, ISession, Dictionary(Int32, List(FrozenEntry)))</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetFreezes_3">GetFreezes(String, ISession, Dictionary(Int32, List(FrozenEntry)))</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetInfo">GetInfo(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_GetInfo_1">GetInfo(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Unfreeze">Unfreeze(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Unfreeze_3">Unfreeze(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Unfreeze_1">Unfreeze(Int32, Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Unfreeze_2">Unfreeze(Int32, String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_UnfreezeMultiEntries_2">UnfreezeMultiEntries(Int32[], Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_UnfreezeMultiEntries_3">UnfreezeMultiEntries(Int32[], String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_UnfreezeMultiEntries">UnfreezeMultiEntries(IEntryInfo[], Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_UnfreezeMultiEntries_1">UnfreezeMultiEntries(IEntryInfo[], String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Update">Update(Int32, IFreezeInfo, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Records_FreezeFactory_Update_1">Update(String, IFreezeInfo, ISession)</a></td><td /></tr></table>&nbsp;
+<a href="#freezefactory-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

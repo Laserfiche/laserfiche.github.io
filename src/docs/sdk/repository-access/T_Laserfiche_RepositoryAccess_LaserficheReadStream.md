@@ -1,0 +1,52 @@
+# LaserficheReadStream Class
+ 
+
+A `Stream` derived class which is used to read byte-oriented streams from Laserfiche.
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;System.MarshalByRefObject<br />&nbsp;&nbsp;&nbsp;&nbsp;System.IO.Stream<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laserfiche.RepositoryAccess.LaserficheReadStream<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public class LaserficheReadStream : Stream, 
+	IDisposable
+```
+
+**VB**<br />
+``` VB
+Public Class LaserficheReadStream
+	Inherits Stream
+	Implements IDisposable
+```
+
+The LaserficheReadStream type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream__ctor">LaserficheReadStream</a></td><td>
+Initializes a new instance of the LaserficheReadStream class</td></tr></table>&nbsp;
+<a href="#laserfichereadstream-class">Back to Top</a>
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_CanRead">CanRead</a></td><td> (Overrides Stream.CanRead.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_CanSeek">CanSeek</a></td><td> (Overrides Stream.CanSeek.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_CanTimeout">CanTimeout</a></td><td> (Overrides Stream.CanTimeout.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_CanWrite">CanWrite</a></td><td> (Overrides Stream.CanWrite.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_ChecksumAlgorithm">ChecksumAlgorithm</a></td><td>
+Gets the standardized name of the checksum/hash algorithm.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_ComputeChecksum">ComputeChecksum</a></td><td>
+Gets or sets a boolean which directs the `LaserficheReadStream` to compute a checksum over the bytes it receives from Laserfiche.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_ComputedChecksum">ComputedChecksum</a></td><td>
+Gets the checksum that this instance computed over the data received.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_ContentType">ContentType</a></td><td>
+Gets the MIME type of the content, if available.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_IsClosed">IsClosed</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_Length">Length</a></td><td> (Overrides Stream.Length.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_LocationDataFormat">LocationDataFormat</a></td><td>
+Gets a `LocationDataFormat` enumeration which specifies which OCR location format to read.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_Position">Position</a></td><td> (Overrides Stream.Position.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td>ReadTimeout</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheReadStream_StoredChecksum">StoredChecksum</a></td><td>
+Gets the checksum of the data pre-calculated and sent by Laserfiche.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td>WriteTimeout</td><td> (Inherited from Stream.)</td></tr></table>&nbsp;
+<a href="#laserfichereadstream-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>BeginRead</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>BeginWrite</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_Close">Close</a></td><td> (Overrides Stream.Close().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CopyTo(Stream)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CopyTo(Stream, Int32)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CopyToAsync(Stream)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CopyToAsync(Stream, Int32)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CopyToAsync(Stream, Int32, CancellationToken)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>CreateWaitHandle</td><td> **Obsolete. ** (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Dispose()</td><td> (Inherited from Stream.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Dispose(Boolean)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>EndRead</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>EndWrite</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_Flush">Flush</a></td><td> (Overrides Stream.Flush().)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>FlushAsync()</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>FlushAsync(CancellationToken)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone()</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone(Boolean)</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>ObjectInvariant</td><td> **Obsolete. ** (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_Read">Read</a></td><td> (Overrides Stream.Read(Byte[], Int32, Int32).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ReadAsync(Byte[], Int32, Int32)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ReadAsync(Byte[], Int32, Int32, CancellationToken)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ReadByte</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_Seek">Seek</a></td><td> (Overrides Stream.Seek(Int64, SeekOrigin).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_SetLength">SetLength</a></td><td> (Overrides Stream.SetLength(Int64).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheReadStream_Write">Write</a></td><td> (Overrides Stream.Write(Byte[], Int32, Int32).)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>WriteAsync(Byte[], Int32, Int32)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>WriteAsync(Byte[], Int32, Int32, CancellationToken)</td><td> (Inherited from Stream.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>WriteByte</td><td> (Inherited from Stream.)</td></tr></table>&nbsp;
+<a href="#laserfichereadstream-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

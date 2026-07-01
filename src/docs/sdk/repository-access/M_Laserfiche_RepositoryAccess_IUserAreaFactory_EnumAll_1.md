@@ -1,0 +1,35 @@
+# IUserAreaFactory.EnumAll Method (UserArea.EnumAreaOption, ISession)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+IUserAreaInfoReader EnumAll(
+	UserArea.EnumAreaOption options,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Function EnumAll ( 
+	options As UserArea.EnumAreaOption,
+	session As ISession
+) As IUserAreaInfoReader
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>options</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_UserArea_EnumAreaOption">Laserfiche.RepositoryAccess.UserArea.EnumAreaOption</a><br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_IUserAreaInfoReader">IUserAreaInfoReader</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_IUserAreaFactory">IUserAreaFactory Interface</a><br /><a href="Overload_Laserfiche_RepositoryAccess_IUserAreaFactory_EnumAll">EnumAll Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

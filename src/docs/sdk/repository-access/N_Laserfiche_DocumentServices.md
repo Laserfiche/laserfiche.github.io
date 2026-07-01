@@ -1,0 +1,60 @@
+---
+layout: default
+title: Document Services
+nav_order: 2
+parent: Laserfiche SDK
+---
+
+# Laserfiche.DocumentServices Namespace
+ 
+
+The Laserfiche.DocumentServices namespace contains classes that provide services for importing, exporting, OCR and other operations related to Laserfiche repositories. Most classes in this namespace use the Laserfiche.RepositoryAccess assembly to communicate with Laserfiche.
+
+
+## Classes
+&nbsp;<table><tr><th></th><th>Class</th><th>Description</th></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ChecksumMismatchEventArgs">ChecksumMismatchEventArgs</a></td><td>
+Contains event data specific to a checksum mismatch event when exporting data from a Laserfiche document.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_CommonEntryProperties">CommonEntryProperties</a></td><td>
+Represents essential properties that are common to all Laserfiche entries. Used to specify entry properties for `VolumeMaker`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_DocumentExporter">DocumentExporter</a></td><td>
+Provides the ability to export documents, or selected portions of documents in a variety of image formats, as plain-text, or as a PDF (Portable Document Format) file.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_DocumentImporter">DocumentImporter</a></td><td>
+Implements methods for importing data into an existing document in a Laserfiche repository.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_DocumentImporterOcrOptions">DocumentImporterOcrOptions</a></td><td>
+Represents the options that `DocumentImporter` will use when performing OCR of page images during import.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_DSMethodTracer">DSMethodTracer</a></td><td>
+Provides access to a static instance of MethodTracer for logging DocumentServices messages.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ElecDocumentAttributes">ElecDocumentAttributes</a></td><td>
+Represents the properties of an electronic document. Used to specify electronic document properties for `VolumeMaker`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ImportEngine">ImportEngine</a></td><td>
+Processes Laserfiche Import Engine command files.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ImportEngineException">ImportEngineException</a></td><td>
+Represents an error encountered by `ImportEngine`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ImportOperation">ImportOperation</a></td><td>
+Represents an `ImportEngine` import operation running asynchronously.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_LfEmbeddedFontCollection">LfEmbeddedFontCollection</a></td><td>
+A collection of fonts that will be embedded in a PDF document.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ListImporter">ListImporter</a></td><td>
+Implements processing Laserfiche list import files (.LST) that can be used to import electronic documents and pages into a Laserfiche repository. Please see the `ImportEngine` class for a more modern alternative.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_ListImporterException">ListImporterException</a></td><td>
+Represents an error raised by the `ListImporter` class.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_OcrEngine">OcrEngine</a></td><td>
+Provides the ability to OCR documents stored in a Laserfiche repository.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_OcrEngineRegistration">OcrEngineRegistration</a></td><td>
+Information about an OCR engine registered for use with Laserfiche.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_OcrPageEventArgs">OcrPageEventArgs</a></td><td>
+Represents information about a page OCR event.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_OptionalAnnotationProperties">OptionalAnnotationProperties</a></td><td>
+Represents optional properties that are common to all Laserfiche annotations. Used to specify optional annotation properties for `VolumeMaker`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_OptionalEntryProperties">OptionalEntryProperties</a></td><td>
+Represents optional properties that are common to all Laserfiche entries. Used to specify optional entry properties for `VolumeMaker`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_PageAttributes">PageAttributes</a></td><td>
+Represents the properties of a document page. Used to specify page properties for `VolumeMaker`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_PageExportedEventArgs">PageExportedEventArgs</a></td><td>
+Data for a page exported event fired by `DocumentExporter`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_PageImportedEventArgs">PageImportedEventArgs</a></td><td>
+Represents information about a page import event raised by `DocumentImporter`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_PdfPageMargins">PdfPageMargins</a></td><td>
+Stores the page margins of a PDF document.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotDriver">SnapshotDriver</a></td><td>
+Provides the ability to pass data to Laserfiche Snapshot that will be used to control how the next print job Snapshot receives will be processed.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotDriverSettings">SnapshotDriverSettings</a></td><td>
+The settings to pass to Laserfiche Snapshot when it processes a print job while it is being controlled by `SnapshotDriver`.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotMetadata">SnapshotMetadata</a></td><td>
+A collection of metadata to apply to Laserfiche documents that are generated by Laserfiche Snapshot.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotProfile">SnapshotProfile</a></td><td>
+Represents a profile configured in Laserfiche Snapshot.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotResult">SnapshotResult</a></td><td>
+Represents the results of a print job processed by Laserfiche Snapshot.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_StampBitmapConverter">StampBitmapConverter</a></td><td>
+Provides methods to convert between bitmaps and Laserfiche stamp image data.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_TextExtractor">TextExtractor</a></td><td>
+Extract text from electronic documents stored in Laserfiche and imports the extracted text as pages in document.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_VolumeMaker">VolumeMaker</a></td><td>
+Provides the ability to create a volume that can be attached to a Laserfiche repository.</td></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_Laserfiche_DocumentServices_WatermarkSpecification">WatermarkSpecification</a></td><td>
+Represents the specifications of a text watermark on an image.</td></tr></table>
+
+## Delegates
+&nbsp;<table><tr><th></th><th>Delegate</th><th>Description</th></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_DocumentExporter_ChecksumMismatchEventHandler">DocumentExporter.ChecksumMismatchEventHandler</a></td><td /></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_DocumentExporter_PageExportedEventHandler">DocumentExporter.PageExportedEventHandler</a></td><td /></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_DocumentImporter_PageImportedEventHandler">DocumentImporter.PageImportedEventHandler</a></td><td /></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_ListImporter_AllReferencedFilesHandler">ListImporter.AllReferencedFilesHandler</a></td><td /></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_ListImporter_ReferencedPDFFileHandler">ListImporter.ReferencedPDFFileHandler</a></td><td /></tr><tr><td>![Public delegate](media/pubdelegate.gif "Public delegate")</td><td><a href="T_Laserfiche_DocumentServices_OcrEngine_OcrPageEventHandler">OcrEngine.OcrPageEventHandler</a></td><td /></tr></table>
+
+## Enumerations
+&nbsp;<table><tr><th></th><th>Enumeration</th><th>Description</th></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_DocumentPageFormat">DocumentPageFormat</a></td><td>
+Enumeration of document page formats supported by `DocumentExporter`.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_ImportEnginePhase">ImportEnginePhase</a></td><td>
+Enumeration of processing phases the `ImportEngine` moves through during an import operation.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_OcrOptimizationMode">OcrOptimizationMode</a></td><td>
+Enumeration of OCR engine optimization modes.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_PdfEncryption">PdfEncryption</a></td><td>
+Enumeration of supported PDF encryption algorithms.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_PdfExportOptions">PdfExportOptions</a></td><td>
+Enumeration of options that control how PDFs are exported.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_PdfPageSize">PdfPageSize</a></td><td>
+Enumeration of supported PDF page sizes.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotDriverWorkMode">SnapshotDriverWorkMode</a></td><td>
+An enumeration of the different modes Laserfiche Snapshot should operate in when it processes a print job when being controlled by `SnapshotDriver`.</td></tr><tr><td>![Public enumeration](media/pubenumeration.gif "Public enumeration")</td><td><a href="T_Laserfiche_DocumentServices_SnapshotProfileLocation">SnapshotProfileLocation</a></td><td>
+An enumeration of registry hives where Laserfiche Snapshot profiles can be stored.</td></tr></table>&nbsp;

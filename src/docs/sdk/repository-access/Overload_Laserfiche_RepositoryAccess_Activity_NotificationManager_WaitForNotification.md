@@ -1,0 +1,16 @@
+# NotificationManager.WaitForNotification Method 
+ 
+
+
+## Overload List
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Activity_NotificationManager_WaitForNotification">WaitForNotification()</a></td><td>
+Returns a `Notification` instance which represents the next pending notification. This method waits indefinitely until a notification is be received if there are no pending notifications to return immediately.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Activity_NotificationManager_WaitForNotification_1">WaitForNotification(Int32)</a></td><td>
+Returns a `Notification` instance which represents the next pending notification. This method waits for the specified period for a notification to be received if there are no pending notifications to return immediately. If no notification can be read within the specified timeout, null is returned.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_Activity_NotificationManager_WaitForNotification_2">WaitForNotification(TimeSpan)</a></td><td>
+Returns a `Notification` instance which represents the next pending notification. This method waits for the specified period for a notification to be received if there are no pending notifications to return immediately. If no notification can be read within the specified timeout, null is returned.</td></tr></table>&nbsp;
+<a href="#notificationmanager.waitfornotification-method">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Activity_NotificationManager">NotificationManager Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Activity">Laserfiche.RepositoryAccess.Activity Namespace</a><br />

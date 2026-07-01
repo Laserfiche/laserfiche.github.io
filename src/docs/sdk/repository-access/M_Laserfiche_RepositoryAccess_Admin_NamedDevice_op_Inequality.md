@@ -1,0 +1,35 @@
+# NamedDevice.Inequality Operator 
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Admin">Laserfiche.RepositoryAccess.Admin</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static bool operator !=(
+	NamedDevice lhs,
+	NamedDevice rhs
+)
+```
+
+**VB**<br />
+``` VB
+Public Shared Operator <> ( 
+	lhs As NamedDevice,
+	rhs As NamedDevice
+) As Boolean
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>lhs</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_Admin_NamedDevice">Laserfiche.RepositoryAccess.Admin.NamedDevice</a><br /></dd><dt>rhs</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_Admin_NamedDevice">Laserfiche.RepositoryAccess.Admin.NamedDevice</a><br /></dd></dl>
+
+#### Return Value
+Type: Boolean
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Admin_NamedDevice">NamedDevice Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Admin">Laserfiche.RepositoryAccess.Admin Namespace</a><br />

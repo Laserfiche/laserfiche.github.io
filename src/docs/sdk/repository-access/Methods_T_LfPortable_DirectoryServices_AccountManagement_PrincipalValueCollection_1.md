@@ -1,0 +1,15 @@
+# PrincipalValueCollection(*T*) Methods
+ 
+
+The <a href="T_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1">PrincipalValueCollection(T)</a> generic type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_Add">Add</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_Clear">Clear</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_Contains">Contains</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_CopyTo">CopyTo</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_GetEnumerator">GetEnumerator</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_IndexOf">IndexOf</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_Insert">Insert</a></td><td /></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_Remove">Remove</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1_RemoveAt">RemoveAt</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#principalvaluecollection(*t*)-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_LfPortable_DirectoryServices_AccountManagement_PrincipalValueCollection_1">PrincipalValueCollection(T) Class</a><br /><a href="N_LfPortable_DirectoryServices_AccountManagement">LfPortable.DirectoryServices.AccountManagement Namespace</a><br />

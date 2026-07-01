@@ -1,0 +1,40 @@
+# EntryFactory.TryGetEntryInfo Method (IFolderInfo, String, ISession)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public IEntryInfo TryGetEntryInfo(
+	IFolderInfo parentFolder,
+	string childName,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Function TryGetEntryInfo ( 
+	parentFolder As IFolderInfo,
+	childName As String,
+	session As ISession
+) As IEntryInfo
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>parentFolder</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_IFolderInfo">Laserfiche.RepositoryAccess.IFolderInfo</a><br /></dd><dt>childName</dt><dd>Type: System.String<br /></dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br /></dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_IEntryInfo">IEntryInfo</a>
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_IEntryFactory_TryGetEntryInfo">IEntryFactory.TryGetEntryInfo(IFolderInfo, String, ISession)</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_EntryFactory">EntryFactory Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_EntryFactory_TryGetEntryInfo">TryGetEntryInfo Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

@@ -1,0 +1,15 @@
+# ModifyPropdefActivityMessage Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage">ModifyPropdefActivityMessage</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_Descriptor">Descriptor</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_OldPropertyFlags">OldPropertyFlags</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_OldPropertyLength">OldPropertyLength</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_OldPropertyName">OldPropertyName</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_OldPropertyType">OldPropertyType</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_Parser">Parser</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_PropertyFlags">PropertyFlags</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_PropertyId">PropertyId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_PropertyLength">PropertyLength</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_PropertyName">PropertyName</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage_PropertyType">PropertyType</a></td><td /></tr></table>&nbsp;
+<a href="#modifypropdefactivitymessage-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Activity_ModifyPropdefActivityMessage">ModifyPropdefActivityMessage Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Activity">Laserfiche.RepositoryAccess.Activity Namespace</a><br />

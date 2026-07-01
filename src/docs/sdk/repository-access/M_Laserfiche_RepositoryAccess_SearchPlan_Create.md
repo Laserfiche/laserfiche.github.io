@@ -1,0 +1,37 @@
+# SearchPlan.Create Method 
+ 
+
+Adds a new search plan to the search plan library in the current Laserfiche repository.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static SearchPlanInfo Create(
+	SearchPlanInfo info,
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Shared Function Create ( 
+	info As SearchPlanInfo,
+	session As ISession
+) As SearchPlanInfo
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>info</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_SearchPlanInfo">Laserfiche.RepositoryAccess.SearchPlanInfo</a><br />A `SearchPlanInfo` instance representing the search plan to add.</dd><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br />The Laserfiche session to use.</dd></dl>
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_SearchPlanInfo">SearchPlanInfo</a><br />A `SearchPlanInfo` instance representing the search plan that was added to the search plan library.
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_SearchPlan">SearchPlan Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

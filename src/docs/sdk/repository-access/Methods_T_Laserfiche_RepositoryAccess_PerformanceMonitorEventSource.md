@@ -1,0 +1,15 @@
+# PerformanceMonitorEventSource Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_PerformanceMonitorEventSource">PerformanceMonitorEventSource</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Dispose</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetTrait</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>IsEnabled()</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>IsEnabled(EventLevel, EventKeywords)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>IsEnabled(EventLevel, EventKeywords, EventChannel)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_PerformanceMonitorEventSource_PerformanceTraceEvent">PerformanceTraceEvent</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write(String)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write(String, EventSourceOptions)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write``1(String, UMP)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write``1(String, EventSourceOptions, UMP)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write``1(String, EventSourceOptions, UMP)</td><td> (Inherited from EventSource.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Write``1(String, EventSourceOptions, Guid, Guid, UMP)</td><td> (Inherited from EventSource.)</td></tr></table>&nbsp;
+<a href="#performancemonitoreventsource-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_PerformanceMonitorEventSource">PerformanceMonitorEventSource Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

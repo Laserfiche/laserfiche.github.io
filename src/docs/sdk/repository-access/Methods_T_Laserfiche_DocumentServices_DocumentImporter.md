@@ -1,0 +1,26 @@
+# DocumentImporter Methods
+ 
+
+The <a href="T_Laserfiche_DocumentServices_DocumentImporter">DocumentImporter</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_CancelImport">CancelImport</a></td><td>
+Signals that the import process should be canceled. Should only be called from an event handler callback.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportEdoc">ImportEdoc(String, Stream)</a></td><td>
+Imports data from a stream into the current Laserfiche document as an electronic document, replacing any existing electronic document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportEdoc_1">ImportEdoc(String, String)</a></td><td>
+Imports an electronic document file into the current Laserfiche document, replacing any existing electronic document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportImages">ImportImages(Stream)</a></td><td>
+Import all the images contained in the specified input stream into the currently selected document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportImages_2">ImportImages(String)</a></td><td>
+Import all the images contained in the specified image file into the currently selected document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportImages_1">ImportImages(Stream, PageRange)</a></td><td>
+Import the specified range of images contained in the specified input stream into the currently selected document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportImages_3">ImportImages(String, PageRange)</a></td><td>
+Import the specified range of images contained in the specified image file into the currently selected document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportText">ImportText(Stream)</a></td><td>
+Import a text stream, breaking it up into pages with the specified number of lines. The encoding will be automatically detected.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportText_2">ImportText(String)</a></td><td>
+Import a text file, breaking it up into pages with the specified number of lines. The encoding will be automatically detected.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportText_1">ImportText(Stream, Encoding)</a></td><td>
+Import a text stream, breaking it up into pages with the specified number of lines.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_DocumentServices_DocumentImporter_ImportText_3">ImportText(String, Encoding)</a></td><td>
+Import a text file, breaking it up into pages with the specified number of lines.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone()</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone(Boolean)</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#documentimporter-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_DocumentServices_DocumentImporter">DocumentImporter Class</a><br /><a href="N_Laserfiche_DocumentServices">Laserfiche.DocumentServices Namespace</a><br />

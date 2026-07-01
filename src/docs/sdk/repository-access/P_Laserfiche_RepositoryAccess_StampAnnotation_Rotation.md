@@ -1,0 +1,30 @@
+# StampAnnotation.Rotation Property 
+ 
+
+The amount of clockwise rotation in degrees of the stamp relative to the page image.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public int Rotation { get; set; }
+```
+
+**VB**<br />
+``` VB
+Public Property Rotation As Integer
+	Get
+	Set
+```
+
+
+#### Property Value
+Type: Int32
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_StampAnnotation">StampAnnotation Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

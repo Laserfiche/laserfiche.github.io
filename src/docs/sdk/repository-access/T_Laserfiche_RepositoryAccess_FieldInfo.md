@@ -1,0 +1,91 @@
+# FieldInfo Class
+ 
+
+Represents a template field definition in a Laserfiche repository.
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;System.MarshalByRefObject<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="T_Laserfiche_RepositoryAccess_LaserficheObject">Laserfiche.RepositoryAccess.LaserficheObject</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="T_Laserfiche_RepositoryAccess_SecureLaserficheObject">Laserfiche.RepositoryAccess.SecureLaserficheObject</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laserfiche.RepositoryAccess.FieldInfo<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="T_Laserfiche_RepositoryAccess_BriefcaseFieldInfo">Laserfiche.RepositoryAccess.BriefcaseFieldInfo</a><br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+[SerializableAttribute]
+public class FieldInfo : SecureLaserficheObject, IFieldInfo, 
+	ISerializable, ILaserficheObject
+```
+
+**VB**<br />
+``` VB
+<SerializableAttribute>
+Public Class FieldInfo
+	Inherits SecureLaserficheObject
+	Implements IFieldInfo, ISerializable, ILaserficheObject
+```
+
+The FieldInfo type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo__ctor">FieldInfo()</a></td><td>
+Initializes a `FieldInfo` instance representing a new string template field with an initial length of 20 characters.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo__ctor_1">FieldInfo(FieldInfo)</a></td><td>
+Initializes a `FieldInfo` instance using an existing `FieldInfo` instance to copy initial field settings from.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo__ctor_2">FieldInfo(FieldType)</a></td><td>
+Initializes a `FieldInfo` instance representing a new template field of the specified data type.</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo__ctor_3">FieldInfo(SerializationInfo, StreamingContext)</a></td><td>
+Initializes a new instance of the FieldInfo class</td></tr></table>&nbsp;
+<a href="#fieldinfo-class">Back to Top</a>
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_AutoExtract">AutoExtract</a></td><td>
+Gets or sets a Boolean that indicates whether or not automatic field extraction should be performed for this field.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Constraint">Constraint</a></td><td>
+Gets or sets the constraint for values stored in the represented field. This property corresponds to the ILFTemplateField.Regex property in LFSO.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_ConstraintError">ConstraintError</a></td><td>
+Gets or sets the error string that will be returned when the field constraint is violated when setting a value for this field.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_ContainingTemplateCount">ContainingTemplateCount</a></td><td>
+Gets the number of templates that contain the field represented by this instance.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Currency">Currency</a></td><td>
+Gets or sets the name of the currency that will be using when formatting the represented field when the `Format` property is set to the `Currency` member of the `FieldFormat` enumeration.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_DefaultValue">DefaultValue</a></td><td>
+Gets or sets the default value of the field for new entries that are assigned to a template the represented field is a member of.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Description">Description</a></td><td>
+Gets or sets the description of the represented template field.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_FieldType">FieldType</a></td><td>
+Gets or sets the type of values that can be stored in the represented template field.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Flags">Flags</a></td><td>
+Gets implementation defined flag values for the represented template field definition.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Format">Format</a></td><td>
+Gets or sets the display format of the represented template field.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_FormatPattern">FormatPattern</a></td><td>
+Gets or sets the custom format pattern for fields that are configured to use a custom format.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_HideListValues">HideListValues</a></td><td>
+Gets or sets a boolean that acts as a hint to clients that list field values should not be enumerated or displayed to the user in a drop-down list or similar manner, because there may be many values.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Id">Id</a></td><td>
+Gets the ID of the represented template field definition.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsConnected">IsConnected</a></td><td>
+Gets whether this instance is associated with a `Session` object.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsExpunged">IsExpunged</a></td><td>
+Gets a boolean indicating if the field definition has been deleted in Laserfiche.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsIndexed">IsIndexed</a></td><td>
+Gets or sets a boolean indicating whether the field will be indexed to speed up full-text searches.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsIndexedForReporting">IsIndexedForReporting</a></td><td>
+Gets or sets a boolean indicating whether the field will be indexed to for reporting analytics</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsModified">IsModified</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_SecureLaserficheObject_IsModified">SecureLaserficheObject.IsModified</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsMultiValue">IsMultiValue</a></td><td>
+Gets or sets a boolean indicating if the represented template field supports multiple values (i.e., whether the field is a multi-value field).</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsNew">IsNew</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsNew">LaserficheObject.IsNew</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsPending">IsPending</a></td><td>
+Gets whether this instance has pending changes to be saved to a Laserfiche repository.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_IsRequired">IsRequired</a></td><td>
+Gets or sets a boolean indicating if the represented field must have a value set on entries assigned to a template that the field is a member of.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Length">Length</a></td><td>
+Gets or sets the length of the field for variable length data types.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_Name">Name</a></td><td>
+Gets or sets the name of the template field definition.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_Session">Session</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_FieldInfo_WarnIfBlank">WarnIfBlank</a></td><td>
+Gets or sets a boolean indicating if client programs should warn users if they change field values on an entry while leaving this field blank.</td></tr><tr><td>![Protected property](media/protproperty.gif "Protected property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_WillDelete">WillDelete</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr></table>&nbsp;
+<a href="#fieldinfo-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_ChangeType">ChangeType</a></td><td>
+Changes the data type of the represented template field definition. The change is submitted to Laserfiche when pending changes for this instance are saved to the repository.</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheObject_ClearPending">ClearPending</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_Delete">Delete</a></td><td>
+Marks the template field definition represented by this instance for deletion when changes are submitted to Laserfiche.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_FromXml">FromXml</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetAccessControl">GetAccessControl</a></td><td>
+Returns a new `FieldSecurity` instance which represents the configured access control settings for the represented template field.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetAclDisplayRights">GetAclDisplayRights(AccountReference)</a></td><td>
+Returns the rights granted through the ACL configured on the represented template field to the specified trustee.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetAclDisplayRights_1">GetAclDisplayRights(LFIdentityReference)</a></td><td>
+Returns the rights granted through the ACL configured on the represented template field to the specified trustee.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetAssignedEntryCount">GetAssignedEntryCount</a></td><td>
+Gets a count of the number of entries that have this field assigned.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetContainingTemplates">GetContainingTemplates</a></td><td>
+Returns a collection of `TemplateInfo` instances representing the Laserfiche templates the represented field is a member of.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetEffectiveRights">GetEffectiveRights()</a></td><td>
+Calculates and returns the effective access rights of the current session to the represented template field.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetEffectiveRights_1">GetEffectiveRights(AccountReference)</a></td><td>
+Calculates and returns the effective access rights of the specified user to the represented template field.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetEffectiveRights_2">GetEffectiveRights(LFIdentityReference)</a></td><td>
+Calculates and returns the effective access rights of the specified user to the represented template field.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetItemList">GetItemList</a></td><td>
+Returns a `FieldItemList` instance representing the list of items assigned to the represented template field.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_GetObjectData">GetObjectData</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_SecureLaserficheObject_GetObjectData">SecureLaserficheObject.GetObjectData(SerializationInfo, StreamingContext)</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone()</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone(Boolean)</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_ParseMoreProperties">ParseMoreProperties</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_Refresh">Refresh</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_SecureLaserficheObject_Refresh">SecureLaserficheObject.Refresh(Boolean)</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_Save">Save</a></td><td> (Overrides <a href="M_Laserfiche_RepositoryAccess_SecureLaserficheObject_Save">SecureLaserficheObject.Save()</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_SetAccessControl">SetAccessControl</a></td><td>
+Configures the access control settings for the represented template field definition.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_SetItemList">SetItemList</a></td><td>
+Sets the list of strings to be used for the list items.</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheObject_SetPending">SetPending</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_ValueToString">ValueToString(Object)</a></td><td>
+Converts a value to a string following the format rules of the represented field definition.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_FieldInfo_ValueToString_1">ValueToString(Object, ILfLocale)</a></td><td>
+Converts a value to a string following the format rules of the represented field definition.</td></tr></table>&nbsp;
+<a href="#fieldinfo-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

@@ -1,0 +1,28 @@
+# RecycleBinListingRow Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_RecycleBinListingRow">RecycleBinListingRow</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_ConstructRow">ConstructRow(Guid, ISession)</a></td><td>
+Constructs and returns a new `RecycleBinListingRow` instance using the specified identifying data. The instance is not associated with any listing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_ConstructRow_2">ConstructRow(Int32, ISession)</a></td><td>
+Constructs and returns a new `RecycleBinListingRow` instance using the specified identifying data. The instance is not associated with any listing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_ConstructRow_1">ConstructRow(Guid, Int64, RecycleBinObjectType, ISession)</a></td><td>
+Constructs and returns a new `RecycleBinListingRow` instance using the specified identifying data. The instance is not associated with any listing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")![Static member](media/static.gif "Static member")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_ConstructRow_3">ConstructRow(Int32, Int64, RecycleBinObjectType, ISession)</a></td><td>
+Constructs and returns a new `RecycleBinListingRow` instance using the specified identifying data. The instance is not associated with any listing.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_Purge">Purge</a></td><td>
+Requests that the recycled object be purged so that it cannot be restored.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_Restore">Restore()</a></td><td>
+Restores the recycled object to the default location.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_Restore_1">Restore(String)</a></td><td>
+Restores the recycled object to the entry specified by the provided entry path in the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestoreAsync">RestoreAsync()</a></td><td>
+Asynchronously restores the recycled object to the default location.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestoreAsync_1">RestoreAsync(String)</a></td><td>
+Asynchronously restores the recycled object to the entry specified by the provided entry path in the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestorePage">RestorePage(String, PageRestoreOption)</a></td><td>
+Restores the recycled page to the document specified by the provided entry path in the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestorePage_1">RestorePage(String, PageRestoreOption, Int64)</a></td><td>
+Restores the recycled page to the document specified by the provided entry path in the current repository, at the specified location in the document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestorePageAsync">RestorePageAsync(String, PageRestoreOption)</a></td><td>
+Asynchronously restores the recycled page to the document specified by the provided entry path in the current repository.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_RecycleBinListingRow_RestorePageAsync_1">RestorePageAsync(String, PageRestoreOption, Int64)</a></td><td>
+Asynchronously restores the recycled page to the document specified by the provided entry path in the current repository, at the specified location in the document.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr></table>&nbsp;
+<a href="#recyclebinlistingrow-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_RecycleBinListingRow">RecycleBinListingRow Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

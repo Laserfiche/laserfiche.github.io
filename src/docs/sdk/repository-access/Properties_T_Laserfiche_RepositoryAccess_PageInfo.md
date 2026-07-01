@@ -1,0 +1,46 @@
+# PageInfo Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_PageInfo">PageInfo</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_EntryId">EntryId</a></td><td>
+Gets the entry ID of the containing document.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_Flags">Flags</a></td><td>
+Gets the flags for the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_HasImage">HasImage</a></td><td>
+Gets a boolean indicating if the represented page has an image part.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_HasText">HasText</a></td><td>
+Gets a boolean indicating if the represented page has a text part.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_HasThumbnail">HasThumbnail</a></td><td>
+Gets a boolean indicating if the represented page has a pre-generated image thumbnail part.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_HasWordLocations">HasWordLocations</a></td><td>
+Gets a boolean indicating if the represented page has OCR word locations data.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageDataSize">ImageDataSize</a></td><td>
+Gets the size of the image file, in bytes, associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageDepth">ImageDepth</a></td><td>
+Gets the pixel depth in bits per pixel for the image associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageETag">ImageETag</a></td><td>
+Gets the image's ETag, which changes whenever the image is modified.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageFilePath">ImageFilePath</a></td><td>
+Gets the path to the image file for the represented page in the volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageHeight">ImageHeight</a></td><td>
+Gets the height of the image, in pixels, associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageRotation">ImageRotation</a></td><td>
+Gets or sets the rotation amount for the image associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageRotationAngle">ImageRotationAngle</a></td><td>
+Gets or set the image rotation angle, in degrees, interpreted as a clockwise rotation. Must be one of: 0, 90, 180, 270.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageWidth">ImageWidth</a></td><td>
+Gets the width of the image, in pixels, associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageXResolution">ImageXResolution</a></td><td>
+Gets the horizontal resolution of the image, in pixels/dots per inch, associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ImageYResolution">ImageYResolution</a></td><td>
+Gets the vertical resolution of the image, in pixels/dots per inch, associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsConnected">IsConnected</a></td><td>
+Gets whether this instance is associated with a `Session` object.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_IsModified">IsModified</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsModified">LaserficheObject.IsModified</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_IsNew">IsNew</a></td><td> (Overrides <a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsNew">LaserficheObject.IsNew</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_IsPending">IsPending</a></td><td>
+Gets whether this instance has pending changes to be saved to a Laserfiche repository.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_IsReadOnly">IsReadOnly</a></td><td>
+Gets a boolean indicating if the page is part of an archived document version.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_Language">Language</a></td><td>
+Gets or sets the RFC 4646 compliant language code indicating the natural language the represented page's text is composed in.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_LocationDataFormat">LocationDataFormat</a></td><td>
+Gets the original data file foramat for the OCR word locations data associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_LocationFilePath">LocationFilePath</a></td><td>
+Gets the path to the data file for the OCR word locations data associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_LocationsDataSize">LocationsDataSize</a></td><td>
+Gets the size of the OCR locations data stream associated with the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_PageId">PageId</a></td><td>
+Gets the repository unique page ID for the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_PageNumber">PageNumber</a></td><td>
+Gets the page number in the current document for the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_Session">Session</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_TextDataSize">TextDataSize</a></td><td>
+Gets the size of the data file, in bytes, that contains the text for the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_TextFilePath">TextFilePath</a></td><td>
+Gets the path to the data file that contains the text for the represented page in the volume.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_ThumbnailDataSize">ThumbnailDataSize</a></td><td>
+Gets the size of the data stream containing the image thumbnail for the represented page.</td></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_PageInfo_Version">Version</a></td><td>
+Gets the version number of the containing document that the represented page belongs to.</td></tr><tr><td>![Protected property](media/protproperty.gif "Protected property")</td><td><a href="P_Laserfiche_RepositoryAccess_LaserficheObject_WillDelete">WillDelete</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr></table>&nbsp;
+<a href="#pageinfo-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_PageInfo">PageInfo Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

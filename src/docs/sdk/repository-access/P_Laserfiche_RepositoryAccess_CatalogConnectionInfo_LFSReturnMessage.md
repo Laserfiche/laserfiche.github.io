@@ -1,0 +1,29 @@
+# CatalogConnectionInfo.LFSReturnMessage Property 
+ 
+
+Gets the error message for the last error code returned by the Laserfiche server.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public string LFSReturnMessage { get; }
+```
+
+**VB**<br />
+``` VB
+Public ReadOnly Property LFSReturnMessage As String
+	Get
+```
+
+
+#### Property Value
+Type: String
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_CatalogConnectionInfo">CatalogConnectionInfo Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br /><a href="P_Laserfiche_RepositoryAccess_CatalogConnectionInfo_LFSReturnError">CatalogConnectionInfo.LFSReturnError</a><br />

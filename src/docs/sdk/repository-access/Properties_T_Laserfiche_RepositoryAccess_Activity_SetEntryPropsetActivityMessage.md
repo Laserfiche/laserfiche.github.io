@@ -1,0 +1,15 @@
+# SetEntryPropsetActivityMessage Properties
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage">SetEntryPropsetActivityMessage</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_Descriptor">Descriptor</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_EntryId">EntryId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_Etype">Etype</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_NewPsetId">NewPsetId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_NewPsetName">NewPsetName</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_OldPsetId">OldPsetId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_OldPsetName">OldPsetName</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_ParentId">ParentId</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")![Static member](media/static.gif "Static member")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_Parser">Parser</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_Path">Path</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage_Uuid">Uuid</a></td><td /></tr></table>&nbsp;
+<a href="#setentrypropsetactivitymessage-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Activity_SetEntryPropsetActivityMessage">SetEntryPropsetActivityMessage Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Activity">Laserfiche.RepositoryAccess.Activity Namespace</a><br />

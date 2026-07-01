@@ -1,0 +1,30 @@
+# TrusteeAttributeCollection.Values Property 
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public ICollection<string> Values { get; }
+```
+
+**VB**<br />
+``` VB
+Public ReadOnly Property Values As ICollection(Of String)
+	Get
+```
+
+
+#### Property Value
+Type: ICollection(String)
+
+#### Implements
+IDictionary(TKey, TValue).Values<br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_TrusteeAttributeCollection">TrusteeAttributeCollection Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

@@ -1,0 +1,40 @@
+# GroupInfo Methods
+ 
+
+The <a href="T_Laserfiche_RepositoryAccess_GroupInfo">GroupInfo</a> type exposes the following members.
+
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_GroupInfo_AddMember">AddMember(AccountReference)</a></td><td>
+Adds a member to the Laserfiche group.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_GroupInfo_AddMember_1">AddMember(GroupInfo)</a></td><td>
+Add a member to the Laserfiche group.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_GroupInfo_AddMember_2">AddMember(UserInfo)</a></td><td>
+Add a member to the Laserfiche group.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_GroupInfo_ClearMembers">ClearMembers</a></td><td>
+Removes all the members from the Laserfiche group.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>CreateObjRef</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_Delete">Delete</a></td><td>
+Marks the Laserfiche account that this instance represents for deletion when pending changes are saved to the repository.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_LaserficheObject_GetObjectData">GetObjectData</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_LaserficheObject">LaserficheObject</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_GetTrusteeInfo">GetTrusteeInfo</a></td><td>
+Returns a `TrusteeInfo` instance representing the general trustee data about the account that this instance represents.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_HasFailureAuditMask">HasFailureAuditMask</a></td><td>
+Returns a boolean indicating if the requested audit classes are configured to be audited on failed operations for the represented trustee.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_HasSuccessAuditMask">HasSuccessAuditMask</a></td><td>
+Returns a boolean indicating if the requested audit classes are configured to be audited on successful operations for the represented trustee.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>InitializeLifetimeService</td><td> (Inherited from MarshalByRefObject.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_JoinGroup">JoinGroup</a></td><td>
+Adds the Laserfiche account that this instance represents to the specified Laserfiche group when pending changes are saved to Laserfiche.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_LeaveAllGroups">LeaveAllGroups</a></td><td>
+Removes the represented account from all Laserfiche groups.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_LeaveGroup">LeaveGroup</a></td><td>
+Removes the Laserfiche account that this instance represents from the specified Laserfiche group when pending changes are saved to Laserfiche.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_LinkWindowsAccount_1">LinkWindowsAccount(IdentityReference)</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_LinkWindowsAccount">LinkWindowsAccount(LFIdentityReference)</a></td><td>
+Link a Windows account to the Laserfiche account that this instance represents when pending changes are saved to Laserfiche.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_Refresh_1">Refresh(Boolean)</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_Refresh">Refresh(AccountInfo.AccountFields, Boolean)</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_GroupInfo_RemoveMember">RemoveMember</a></td><td>
+Removes a member from the Laserfiche group.</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_Save">Save</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_UnlinkAllWindowsAccounts">UnlinkAllWindowsAccounts</a></td><td>
+Unlinks all Windows accounts from the represented Laserfiche account when pending changes are next saved to Laserfiche.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_UnlinkWindowsAccount_1">UnlinkWindowsAccount(IdentityReference)</a></td><td> (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountInfo_UnlinkWindowsAccount">UnlinkWindowsAccount(LFIdentityReference)</a></td><td>
+Unlink a Windows account from the Laserfiche account that this instance represents when pending changes are saved to Laserfiche.
+ (Inherited from <a href="T_Laserfiche_RepositoryAccess_AccountInfo">AccountInfo</a>.)</td></tr></table>&nbsp;
+<a href="#groupinfo-methods">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_GroupInfo">GroupInfo Class</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

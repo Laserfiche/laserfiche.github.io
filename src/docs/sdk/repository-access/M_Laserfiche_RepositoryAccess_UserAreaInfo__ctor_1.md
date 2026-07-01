@@ -1,0 +1,32 @@
+# UserAreaInfo Constructor (ISession)
+ 
+
+Initializes a `UserAreaInfo` instance representing an empty user area.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public UserAreaInfo(
+	ISession session
+)
+```
+
+**VB**<br />
+``` VB
+Public Sub New ( 
+	session As ISession
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>session</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_ISession">Laserfiche.RepositoryAccess.ISession</a><br />The Laserfiche session to associate with the new `UserAreaInfo` instance.</dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_UserAreaInfo">UserAreaInfo Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_UserAreaInfo__ctor">UserAreaInfo Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

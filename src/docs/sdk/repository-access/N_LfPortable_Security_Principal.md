@@ -1,0 +1,4 @@
+# LfPortable.Security.Principal Namespace
+
+## Classes
+&nbsp;<table><tr><th></th><th>Class</th><th>Description</th></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_LfPortable_Security_Principal_IdentityReferenceCollection">IdentityReferenceCollection</a></td><td /></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_LfPortable_Security_Principal_LFIdentityReference">LFIdentityReference</a></td><td /></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_LfPortable_Security_Principal_LFNTAccount">LFNTAccount</a></td><td /></tr><tr><td>![Public class](media/pubclass.gif "Public class")</td><td><a href="T_LfPortable_Security_Principal_LFSecurityIdentifier">LFSecurityIdentifier</a></td><td /></tr></table>&nbsp;

@@ -1,0 +1,15 @@
+# GenericAce Properties
+ 
+
+The <a href="T_LfPortable_Security_AccessControl_GenericAce">GenericAce</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_AceFlags">AceFlags</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_AceType">AceType</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_AuditFlags">AuditFlags</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_BinaryLength">BinaryLength</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_InheritanceFlags">InheritanceFlags</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_IsInherited">IsInherited</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_LfPortable_Security_AccessControl_GenericAce_PropagationFlags">PropagationFlags</a></td><td /></tr></table>&nbsp;
+<a href="#genericace-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_LfPortable_Security_AccessControl_GenericAce">GenericAce Class</a><br /><a href="N_LfPortable_Security_AccessControl">LfPortable.Security.AccessControl Namespace</a><br />

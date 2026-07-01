@@ -1,0 +1,15 @@
+# Calendar Properties
+ 
+
+The <a href="T_Laserfiche_I18n_Calendar">Calendar</a> type exposes the following members.
+
+
+## Properties
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Ampm">Ampm</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Date">Date</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_DateTime">DateTime</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_DayOfWeek">DayOfWeek</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Era">Era</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_FirstDayOfWeek">FirstDayOfWeek</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Hour">Hour</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_HourOfDay">HourOfDay</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_InDaylightTime">InDaylightTime</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_IsLenient">IsLenient</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_IsWeekend">IsWeekend</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_MinimalDaysInFirstWeek">MinimalDaysInFirstWeek</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Minute">Minute</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Month">Month</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Second">Second</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_TimeZone">TimeZone</a></td><td /></tr><tr><td>![Public property](media/pubproperty.gif "Public property")</td><td><a href="P_Laserfiche_I18n_Calendar_Year">Year</a></td><td /></tr></table>&nbsp;
+<a href="#calendar-properties">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_I18n_Calendar">Calendar Class</a><br /><a href="N_Laserfiche_I18n">Laserfiche.I18n Namespace</a><br />

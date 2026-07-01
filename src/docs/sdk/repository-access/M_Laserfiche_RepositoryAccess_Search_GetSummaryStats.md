@@ -1,0 +1,31 @@
+# Search.GetSummaryStats Method 
+ 
+
+Returns a `SearchStatistics` instance which represents the statistics of the search results. This method can only be called when the search command has completed.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public SearchStatistics GetSummaryStats()
+```
+
+**VB**<br />
+``` VB
+Public Function GetSummaryStats As SearchStatistics
+```
+
+
+#### Return Value
+Type: <a href="T_Laserfiche_RepositoryAccess_SearchStatistics">SearchStatistics</a><br />A `SearchStatistics` instance which represents the statistics of the search results.
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_ISearch_GetSummaryStats">ISearch.GetSummaryStats()</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Search">Search Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_Search_GetSummaryStats">GetSummaryStats Overload</a><br /><a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

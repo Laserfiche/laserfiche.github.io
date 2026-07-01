@@ -1,0 +1,38 @@
+# AccountFactory Class
+ 
+
+
+## Inheritance Hierarchy
+System.Object<br />&nbsp;&nbsp;Laserfiche.RepositoryAccess.AccountFactory<br />
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public class AccountFactory : IAccountFactory
+```
+
+**VB**<br />
+``` VB
+Public Class AccountFactory
+	Implements IAccountFactory
+```
+
+The AccountFactory type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory__ctor">AccountFactory</a></td><td>
+Initializes a new instance of the AccountFactory class</td></tr></table>&nbsp;
+<a href="#accountfactory-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_AddMembersToGroup_1">AddMembersToGroup(String, IEnumerable(String), ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_AddMembersToGroup">AddMembersToGroup(IAccountReference, IEnumerable(String), ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Create">Create</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Delete_1">Delete(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Delete_2">Delete(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Delete">Delete(LFSecurityIdentifier, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumAll_1">EnumAll(ISession, String, Int32, Int32, SortDirection)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumAll">EnumAll(AccountInfo.AccountFields, String, Int32, Int32, SortDirection, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumGroupMembers_1">EnumGroupMembers(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumGroupMembers_2">EnumGroupMembers(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumGroupMembers">EnumGroupMembers(IAccountReference, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumGroups_1">EnumGroups(ISession, String, Int32, Int32, SortDirection)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumGroups">EnumGroups(AccountInfo.AccountFields, String, Int32, Int32, SortDirection, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumUsers_1">EnumUsers(ISession, String, Int32, Int32, SortDirection)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_EnumUsers">EnumUsers(AccountInfo.AccountFields, String, Int32, Int32, SortDirection, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>Equals</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>Finalize</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetHashCode</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_3">GetInfo(Int32, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_4">GetInfo(SecurityIdentifier, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_6">GetInfo(String, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_1">GetInfo(LFSecurityIdentifier, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_2">GetInfo(Int32, AccountInfo.AccountFields, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo_5">GetInfo(String, AccountInfo.AccountFields, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_GetInfo">GetInfo(LFSecurityIdentifier, AccountInfo.AccountFields, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>GetType</td><td> (Inherited from Object.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td>MemberwiseClone</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_RemoveMembersFromGroup_1">RemoveMembersFromGroup(String, IEnumerable(String), ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_RemoveMembersFromGroup">RemoveMembersFromGroup(IAccountReference, IEnumerable(String), ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td>ToString</td><td> (Inherited from Object.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Update_1">Update(Int32, IAccountInfo, ISession)</a></td><td /></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="M_Laserfiche_RepositoryAccess_AccountFactory_Update">Update(LFSecurityIdentifier, IAccountInfo, ISession)</a></td><td /></tr></table>&nbsp;
+<a href="#accountfactory-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="N_Laserfiche_RepositoryAccess">Laserfiche.RepositoryAccess Namespace</a><br />

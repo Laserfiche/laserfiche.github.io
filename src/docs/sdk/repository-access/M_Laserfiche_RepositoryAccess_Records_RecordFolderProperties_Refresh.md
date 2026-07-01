@@ -1,0 +1,35 @@
+# RecordFolderProperties.Refresh Method 
+ 
+
+Retrieves records management data about the represented record folder from the Laserfiche repository and updates this instance's data to match.
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public override void Refresh(
+	bool keepChanges
+)
+```
+
+**VB**<br />
+``` VB
+Public Overrides Sub Refresh ( 
+	keepChanges As Boolean
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>keepChanges</dt><dd>Type: System.Boolean<br />If true, local changes to this instance are kept, otherwise they are overwritten with data from the repository.</dd></dl>
+
+#### Implements
+<a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Refresh">ILaserficheObject.Refresh(Boolean)</a><br /><a href="M_Laserfiche_RepositoryAccess_ILaserficheObject_Refresh">ILaserficheObject.Refresh(Boolean)</a><br />
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Records_RecordFolderProperties">RecordFolderProperties Class</a><br /><a href="N_Laserfiche_RepositoryAccess_Records">Laserfiche.RepositoryAccess.Records Namespace</a><br />

@@ -1,0 +1,34 @@
+# NamedUserDatabase.RegisterNamedUser Method (String, SecurityIdentifier, NamedUserStatus)
+ 
+
+**Namespace:**&nbsp;<a href="N_Laserfiche_RepositoryAccess_Admin">Laserfiche.RepositoryAccess.Admin</a><br />**Assembly:**&nbsp;Laserfiche.RepositoryAccess (in Laserfiche.RepositoryAccess.dll) Version: 12.0.0.0 (12.0.2509.107)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public void RegisterNamedUser(
+	string accountName,
+	SecurityIdentifier sid,
+	NamedUserStatus status
+)
+```
+
+**VB**<br />
+``` VB
+Public Sub RegisterNamedUser ( 
+	accountName As String,
+	sid As SecurityIdentifier,
+	status As NamedUserStatus
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>accountName</dt><dd>Type: System.String<br /></dd><dt>sid</dt><dd>Type: System.Security.Principal.SecurityIdentifier<br /></dd><dt>status</dt><dd>Type: <a href="T_Laserfiche_RepositoryAccess_NamedUserStatus">Laserfiche.RepositoryAccess.NamedUserStatus</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="T_Laserfiche_RepositoryAccess_Admin_NamedUserDatabase">NamedUserDatabase Class</a><br /><a href="Overload_Laserfiche_RepositoryAccess_Admin_NamedUserDatabase_RegisterNamedUser">RegisterNamedUser Overload</a><br /><a href="N_Laserfiche_RepositoryAccess_Admin">Laserfiche.RepositoryAccess.Admin Namespace</a><br />
