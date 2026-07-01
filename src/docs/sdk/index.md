@@ -12,8 +12,8 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ## Repository Access
 
-[Learn More](./repository-access/N_Laserfiche_RepositoryAccess.md)
+[Learn More](repository-access/N_Laserfiche_RepositoryAccess.md)
 
 ## Document Services
 
-[Learn More](./repository-access/N_Laserfiche_DocumentServices.md)
+[Learn More](repository-access/N_Laserfiche_DocumentServices.md)
