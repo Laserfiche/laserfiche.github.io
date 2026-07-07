@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Frequently Asked Questions
-nav_order: 7
+nav_order: 99
 ---
 
 <!--© 2026 Laserfiche.
