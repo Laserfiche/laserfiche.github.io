@@ -67,7 +67,7 @@ using (Session mySess = new Session())
 }
 ```
 
-RepositoryAccess has a special exception class, LaserficheRepositoryException, for exceptions that originate from Laserfiche. It implements .NET's `system.exception` class. You can use try-catch methods to catch exceptions of a specific class. In the sample function below, we implement dynamic folder generation by writing a function that checks to see if a folder exists. If it does not exist, an exception of the type LaserficheRepositoryException.ObjectNotFoundException should be thrown. The function creates a folder if it finds this exception.
+RepositoryAccess has a special exception class, LaserficheRepositoryException, for exceptions that originate from Laserfiche. It implements .NET's `System.Exception` class. You can use try-catch methods to catch exceptions of a specific class. In the sample function below, we implement dynamic folder generation by writing a function that checks to see if a folder exists. If it does not exist, an exception of the type LaserficheRepositoryException.ObjectNotFoundException should be thrown. The function creates a folder if it finds this exception.
 
 ```
 public static void Dynamicfolder(Session mySess)
@@ -81,15 +81,15 @@ public static void Dynamicfolder(Session mySess)
   catch (LaserficheRepositoryException ex)
   {
     // Check if the exception is an Object Not Found type. If so, create a new folder.
-    if (ex is LaserficheRepositoryException.ObjectNotFoundException)
+    if (ex is ObjectNotFoundException)
     {
-      Folder.Create(Folder.GetFolderInfo("\\ParentFolder", mySess), "Subfolder",
+      Folder.Create(Folder.GetFolderInfo("\\ParentFolder", mySess), "SubFolder",
       EntryNameOption.None, mySess);
     }
   }
 }
 ```
 
-Most of the exceptions in LaserficheRepositoryException have self-explanatory names. MultiStatusException represents a collection of Laserfiche errors. If you encounter a MultiStatusException, you can find the exception that is the root cause of subsequent exceptions by using the GetBaseException method. The additional exceptions can be accessed by index using the InnerExtraException method.
+Most of the exceptions in LaserficheRepositoryException have self-explanatory names. MultiStatusException represents a collection of Laserfiche errors. The primary error is available directly on the exception through the `ErrorCode` and `Message` properties. Additional errors are stored as `InnerExtraException` instances in an extra errors collection; you can get the count with `ExtraErrorCount` and retrieve a specific one by index with `GetExtraError`.
 
-You can also check for specific error codes by using the LaserficheRepositoryException.ErrorCode property. See the [Laserfiche Administration Guide](https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/lfmsg/Content/Overview.htm%3FTocPath%3DError%2520Code%2520Listing|Laserfiche%2520Messages%2520Guide|_____1) for a list of error codes and what they mean.
+You can also check for specific error codes by using the LaserficheRepositoryException.ErrorCode property.
