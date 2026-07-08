@@ -10,25 +10,33 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Installing the Laserfiche SDK
 
-## 
-            Installing the Laserfiche SDK
+The Laserfiche SDK is distributed as NuGet packages. Each assembly is available as a NuGeT package, and the Laserfiche SDK meta package will get all the packages.
 
-The Laserfiche SDK Installation installs the various assemblies, libraries, and dependencies necessary to programmatically access Laserfiche. In addition, the installation package includes documentation on select interfaces, sample Visual Studio projects, as well as a standalone redistributable and merge modules that can help you with distributing the Laserfiche components.
+## Prerequisites
 
-Laserfiche SDK components rely on Microsoft technology that you users will need to install in order to run your applications. See the **Microsoft Visual C++ Runtime Requirements** and **Microsoft .NET Framework Requirements** sections on [this page](../deploying-laserfiche-sdk-dependencies-for-net-com-applications/). Make sure the appropriate Microsoft redistributable packages are installed as needed.
+- x64 architecture 
+- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+- [Microsoft Visual C++ v14 Redistributable (x64)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version)
 
-Perform the following procedure to install the Laserfiche SDK.
 
 **To install the Laserfiche SDK:**
 
-1. If you downloaded the SDK, run **Autorun.exe** from the download.
-2. Select **Install Laserfiche SDK Full Package**.
-    **Note:** The autorun also includes the **Install Laserfiche SDK Runtime** option. The Runtime installation is designed to facilitate distributing the various support files necessary for users to run your integrations. It does not include the documentation or the merge modules.
-3. On the **Welcome** step, click **Next** to continue.
-4. On the **License Agreement** step, read the license agreement. To accept the agreement, select the **I accept the terms in the License Agreement** option. Click **Next** to continue.
-5. On the **Custom Setup** step, select the components you want to install and specify where you wish to install the SDK documentation and merge modules.
-6. On the **Laserfiche Product Activation** step, select the activation method. Click **Next** to continue.
+Browse the available LAserfiche SDK NuGet Packages on https://nuget.org. Search for "Laserfiche.SDK" in the Visual Studio NuGet Package Manager to install the desired packages. Use the **Laserfiche.SDK** meta package to automatically install all the Laserfiche SDK packages.
 
-    **Note:** If you choose to activate using the Laserfiche Directory Server, you will be prompted for information on the location of your Laserfiche Directory Server.
-7. On the **Ready to Install** step, click **Install** to begin the installation process.
+The following table lists out the available Laserfiche SDK NuGet packages. 
 
+| NuGet Package | Description |
+| --- | --- |
+| https://www.nuget.org/packages/Laserfiche.SDK | Provides classes for working with Laserfiche. This meta package includes all the Laserfiche SDK components. |
+| https://www.nuget.org/packages/Laserfiche.SDK.RepositoryAccess | Provides classes for working with data stored in a Laserfiche repository. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.DocumentServices | Providers classes for importing and exporting from a Laserfiche repository. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.ClientAutomation | Provides classes for manipulating the Laserfiche desktop client. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.HttpClient | A dependency in the Laserfiche SDK. |
+| https://www.nuget.org/packages/Laserfiche.SDK.I18n | A dependency in the Laserfiche SDK. |
+| https://www.nuget.org/packages/Laserfiche.SDK.ICU | A dependency in the Laserfiche SDK. |
+| https://www.nuget.org/packages/Laserfiche.SDK.ITextSharp | A dependency in the Laserfiche SDK. |
+| https://www.nuget.org/packages/Laserfiche.SDK.LaserficheImaging | Provides classes for working with images using LfWicUtil. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.LfWicUtil | LfWicUtil is Laserfiche's native code imaging library for Windows that provides functionality on top of Windows Imaging Components (WIC). Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.LicenseManagerObjects | Provides classes for working with Directory Server. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.PdfServices | Provides extra classes for importing PDFs into Laserfiche and extracting page content as Laserfiche pages. Included in the Laserfiche SDK meta package. |
+| https://www.nuget.org/packages/Laserfiche.SDK.TextProviderClient | A dependency in the Laserfiche SDK. |
