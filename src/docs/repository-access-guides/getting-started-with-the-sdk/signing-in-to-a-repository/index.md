@@ -17,15 +17,14 @@ Most actions done with the SDK require that you sign in to a repository first. H
 Here, we sign in to the repository *MyRepositoryName* on the Laserfiche Server *MyServerName* using the credentials *MyUsername* and *MyPassword*:
 
 ```
-RepositoryRegistration myRepoReg = new 
-RepositoryRegistration("MyServerName", "MyRepositoryName");
+RepositoryRegistration myRepoReg = new RepositoryRegistration("MyServerName", "MyRepositoryName");
 Session mySess = new Session();
-mySess.LogIn("MyUsername", "MyPassword", myRepoReg)
+mySess.LogIn("MyUsername", "MyPassword", myRepoReg);
 ```
 
 ## Signing in with a Windows account
 
-You may be registered to Laserfiche as a Windows account user, instead of having a Laserfiche-specific username and password. In that case, you can omit the username and password arguments in the LogIn function. This will sign you in with the current thread's Windows credentials. Here, we also demonstrate a way to retrieve a list of repositories on the Laserfiche Server of interest, and sign in to one of the repositories in that list.
+Omit the username and password arguments in the LogIn function to sign in with the current thread's Windows credentials. Here, we also demonstrate a way to retrieve a list of repositories on the Laserfiche Server of interest, and sign in to one of the repositories in that list.
 
 ```
 Server myServ = new Server("MyServerName");
@@ -43,29 +42,32 @@ To use SSL, set Session.IsSecure to true.
 RepositoryRegistration myRepoReg = new 
 RepositoryRegistration("MyServerName", "MyRepositoryName");
 Session mySess = new Session();
-mySess.isSecure = true;
-mySess.LogIn("MyUsername", "MyPassword", myRepoReg)
+mySess.IsSecure = true;
+mySess.LogIn("MyUsername", "MyPassword", myRepoReg);
 ```
 
 ## Connecting to Laserfiche Cloud
 
-You sign in to Laserfiche Cloud by passing in a RepositoryAccess.CloudTicket object that contains information on the Cloud account you want to use. If you are using multi-factor authentication, you will also want to include the OneTimePassword attribute. Here, we have some sample code for someone signing in to the repository named *repositoryName* with an account ID of 123456789, username *myUsername*, and password *myPassword*.
+You sign in to Laserfiche Cloud by passing in a RepositoryAccess.CloudTicket object that contains information on the Cloud account you want to use. If you are using multi-factor authentication, you will also want to include the OneTimePassword attribute. Here, we have some sample code for  signing in to the repository named *repositoryName* with an account ID of 123456789 in the US data center, username *myUsername*, and password *myPassword*.
 
 ```
-Laserfiche.RepositoryAccess.CloudTicketRequestSettings 
-cloudTicketSettings = new Laserfiche.RepositoryAccess.CloudTicketRequestSettings();
+Laserfiche.RepositoryAccess.CloudTicketRequestSettings cloudTicketSettings = new Laserfiche.RepositoryAccess.CloudTicketRequestSettings();
 cloudTicketSettings.AccountId = "123456789";
 cloudTicketSettings.UserName = "myUsername";
 cloudTicketSettings.Password = "myPassword";
 cloudTicketSettings.OneTimePassword = "MFACode"; //optional for MFA
-Laserfiche.RepositoryAccess.CloudTicket cloudTicket = 
-Laserfiche.RepositoryAccess.CloudTicket.GetTicket(cloudTicketSettings);
-```
+// The SDK defaults to connecting to the US data center.
+// You must specify a different endpoint if connecting to
+// a Laserfiche Cloud Account on a Canadian or
+// European data center. For example, 
+// cloudTicketSettings.CustomEndpoint = new Uri("https://acs.laserfiche.ca/ACS/");
+// cloudTicketSettings.CustomEndpoint = new Uri("https://acs.eu.laserfiche.com/ACS/");
 
-```
-string repositoryHost = repositoryName + ".laserfiche.com";
+Laserfiche.RepositoryAccess.CloudTicket cloudTicket = Laserfiche.RepositoryAccess.CloudTicket.GetTicket(cloudTicketSettings);
+
+string repositoryHost = "repositoryName" + ".laserfiche.com";
 Laserfiche.RepositoryAccess.Session cloudSession = 
 Laserfiche.RepositoryAccess.Session.Create(repositoryHost, cloudTicket);
 ```
 
-For more information on connecting to Laserfiche Cloud, including guidance on how to connect using an ADFS domain account, see [Using the SDK for Laserfiche Cloud](../../sdk-tutorials/cloud/using-the-sdk-for-laserfiche-cloud/).
+For more information on connecting to Laserfiche Cloud, including guidance on how to connect using an AD FS domain account, see [Using the SDK for Laserfiche Cloud](../../sdk-tutorials/cloud/using-the-sdk-for-laserfiche-cloud/).
