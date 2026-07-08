@@ -9,14 +9,6 @@ grand_parent: SDK Tutorials
 <!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Using the SDK for Laserfiche Cloud
-
-Laserfiche Cloud is an implementation of Laserfiche products that is hosted on Amazon Web Services. Authentication to Laserfiche Cloud is handled by the Account Control System (ACS). The ACS has the following functions:
-
-- Handling session tokens and identity management
-- Managing users, groups, subscriptions, and billing
-- Managing the Security Token Service (STS) that generates Security Assertion Markup Language (SAML) XML tokens for authentication
-
 ## Signing in to Laserfiche Cloud
 
 In the section on signing in with the SDK, we provide [sample code](../../../getting-started-with-the-sdk/signing-in-to-a-repository/#Connecti) for signing in to Laserfiche Cloud. The Laserfiche.RepositoryAccess.CloudTicket class generates a cloud ticket that is used to connect directly to the repository. This ticket uses SAML for authentication.
