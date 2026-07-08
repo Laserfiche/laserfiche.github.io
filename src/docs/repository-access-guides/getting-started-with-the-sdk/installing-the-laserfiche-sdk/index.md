@@ -12,7 +12,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 The Laserfiche SDK is distributed as NuGet packages. Each assembly is available as a NuGeT package, and the Laserfiche SDK meta package will get all the packages.
 
-## Prerequisites
+**Prerequisites**
 
 - x64 architecture 
 - [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
@@ -40,3 +40,7 @@ The following table lists out the available Laserfiche SDK NuGet packages.
 | https://www.nuget.org/packages/Laserfiche.SDK.LicenseManagerObjects | Provides classes for working with Directory Server. Included in the Laserfiche SDK meta package. |
 | https://www.nuget.org/packages/Laserfiche.SDK.PdfServices | Provides extra classes for importing PDFs into Laserfiche and extracting page content as Laserfiche pages. Included in the Laserfiche SDK meta package. |
 | https://www.nuget.org/packages/Laserfiche.SDK.TextProviderClient | A dependency in the Laserfiche SDK. |
+
+## Deploying Laserfiche SDK Redistributables with your Integration
+
+Bin deploy all necessary Laserfiche SDK assemblies with your integration.
