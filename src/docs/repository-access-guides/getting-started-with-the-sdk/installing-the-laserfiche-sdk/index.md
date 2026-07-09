@@ -10,7 +10,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Installing the Laserfiche SDK
 
-The Laserfiche SDK is distributed as NuGet packages. Each assembly is available as a NuGeT package, and the Laserfiche SDK meta package will get all the packages.
+The Laserfiche SDK is distributed as NuGet packages. Each assembly is available as a NuGet package, and the Laserfiche SDK meta package will get all the packages.
 
 **Prerequisites**
 
@@ -21,7 +21,7 @@ The Laserfiche SDK is distributed as NuGet packages. Each assembly is available 
 
 **To install the Laserfiche SDK:**
 
-Browse the available LAserfiche SDK NuGet Packages on https://nuget.org. Search for "Laserfiche.SDK" in the Visual Studio NuGet Package Manager to install the desired packages. Use the **Laserfiche.SDK** meta package to automatically install all the Laserfiche SDK packages.
+Browse the available Laserfiche SDK NuGet Packages on https://nuget.org. Search for "Laserfiche.SDK" in the Visual Studio NuGet Package Manager to install the desired packages. Use the **Laserfiche.SDK** meta package to automatically install all the Laserfiche SDK packages.
 
 The following table lists out the available Laserfiche SDK NuGet packages. 
 
