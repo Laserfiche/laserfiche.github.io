@@ -25,8 +25,10 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/RecentD
 GET .../RecentFolders
 ```
 
-- `RecentDocuments` returns the user's recently accessed documents (`entryId`, `fullPath`). The optional `documentLimit` query parameter caps the number of results — `0` returns an empty list; negative values are rejected.
-- `RecentFolders` returns the user's recently accessed folders (`entryId`, `fullPath`).
+- `RecentDocuments` (read-only) returns the user's recently accessed documents (`entryId`, `fullPath`). The optional `documentLimit` query parameter caps the number of results — `0` returns an empty list; negative values are rejected.
+- `RecentFolders` (read-only) returns the user's recently accessed folders (`entryId`, `fullPath`).
+
+The Laserfiche apps maintain these lists; there is no write operation for them over REST.
 
 ## Starred entries
 
@@ -65,7 +67,9 @@ DELETE .../PersonalCollections/{collectionId}/Entries
 
 ## Generic user areas
 
-The raw user-area primitive is exposed for the caller's own areas. Application-managed areas (Personal Collections, Starred, Recent) are hidden from this surface, so a raw write cannot corrupt the app conventions.
+The raw user-area primitive is exposed for the caller's own areas. Application-managed areas (Personal Collections, Starred, Recent) are hidden from this surface so a raw write cannot corrupt the app conventions — they remain fully readable and writable through their own dedicated endpoints above.
+
+A Personal Collection is itself a user area that follows an application convention (a reserved naming scheme plus a structured `data` payload that the Laserfiche apps recognize). The `PersonalCollections` endpoints manage that convention for you, so you never construct it by hand — which is why they are kept separate from these generic endpoints. Use `PersonalCollections`, `StarredEntries`, or the Recent endpoints to work with those app-managed areas; use `UserAreas` for your own arbitrary areas.
 
 ```
 GET    https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/UserAreas
@@ -84,3 +88,42 @@ DELETE .../UserAreas/{areaId}/Entries
 - `PUT .../UserAreas/{areaId}` is a partial update (`name` / `comment` / `data`; `null` leaves a member unchanged).
 - `DELETE .../UserAreas/{areaId}` deletes a user area (`204`).
 - `GET` / `POST` / `DELETE .../UserAreas/{areaId}/Entries` lists, adds, or removes member entries (`entryIds`).
+
+### Example: create a user area and add entries
+
+Create a working set named "Q3 Review". `comment` and `data` are optional; `data` is an opaque string your integration controls (for example, a serialized JSON blob).
+
+```
+POST https://api.laserfiche.com/repository/v2/Repositories/r-abcd1234/UserAreas
+```
+```json
+{
+  "name": "Q3 Review",
+  "comment": "Documents to review this quarter",
+  "data": "{\"color\":\"blue\"}"
+}
+```
+
+The response returns the created area with its server-assigned `id`:
+
+```json
+{
+  "id": 5012,
+  "name": "Q3 Review",
+  "comment": "Documents to review this quarter",
+  "data": "{\"color\":\"blue\"}"
+}
+```
+
+Add entries to the area by its `id`:
+
+```
+POST https://api.laserfiche.com/repository/v2/Repositories/r-abcd1234/UserAreas/5012/Entries
+```
+```json
+{
+  "entryIds": [908, 2162601]
+}
+```
+
+The response returns the area's updated members (`entryId`, `fullPath`).

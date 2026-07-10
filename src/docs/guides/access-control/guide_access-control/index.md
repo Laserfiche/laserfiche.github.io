@@ -27,7 +27,7 @@ The `AccessControl` sub-resource answers (1); the `Rights` sub-resource answers 
 
 ### The Rights query
 
-A single `Rights` endpoint per securable object replaces the originally separate effective/direct routes. It takes an `aclOnly` flag:
+A single `Rights` endpoint per securable object answers this question, controlled by an `aclOnly` flag:
 
 - `aclOnly=false` (default) — the net **effective** rights, after inheritance, group membership, allow/deny resolution, and the privilege / records-management overlays.
 - `aclOnly=true` — only the rights granted by the object's **own ACL**, without the privilege/RM overlay (group membership is still resolved).
@@ -47,7 +47,7 @@ GET  .../Entries/{entryId}/Rights[?trusteeId=|?trusteeName=][&aclOnly=]
 - `includeInherited=true` (default) returns both explicit and inherited ACEs; inherited entries carry `isInherited = true`.
 - `includeInherited=false` returns only the explicit ACEs — the exact set that the `PUT` accepts.
 
-**`PUT .../AccessControl`** fully replaces the entry's explicit access control entries. An empty array clears them; inherited entries cannot be supplied. Each entry is keyed by `trustee.sid`. The `inheritParents` flag controls whether the entry inherits from its parents — omit it to preserve the current setting. Returns the updated ACL.
+**`PUT .../AccessControl`** fully replaces the entry's explicit access control entries (ACEs). An empty array clears them; inherited ACEs cannot be supplied. Each ACE is keyed by its `trustee.sid`. The `inheritParents` flag controls whether the entry inherits rights from its parents — omit it to preserve the current setting. Returns the updated ACL.
 
 **`GET .../Rights`** is the rights query described [above](#the-rights-query).
 
@@ -76,6 +76,8 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Session
 ```
 
 Returns the current session's privileges and feature rights (named-boolean maps) plus `isReadOnly` — useful for UI enablement and pre-flight checks. This reflects the **current session only**.
+
+This is distinct from the per-object `Rights` query above: `SessionRights` reports repository-wide privileges and feature rights held by the calling session, not the rights a trustee has on a specific securable object. It is scoped to the caller's own session and does not accept a trustee parameter.
 
 ## Trustee lookup
 
