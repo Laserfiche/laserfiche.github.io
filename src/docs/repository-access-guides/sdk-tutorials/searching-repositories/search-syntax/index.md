@@ -41,7 +41,7 @@ Laserfiche observes an order of precedence for search syntax strings that involv
 | --- | --- |
 | `*` | (Asterisk) Represents zero or more missing characters. For example, `govern*s` would find "governors," "governments," and "governs." |
 | `?` | (Question mark) Represents any single character. For example, `gr?y` would find "gray" and "grey," but not "gravy." |
-| `[]` | (Brackets) Brackets are also used as a wildcard for any single character. A limited set of replacement characters can be specified within the brackets. For example, `d[io]ve` find "dive" and "dove," but not "dave."<br>                        <br>**Note:** Oracle does not support brackets. If your repository uses Oracle for its database management system, you can use brackets for full text searches but not for any other search type. |
+| `[]` | (Brackets) Brackets are also used as a wildcard for any single character. A limited set of replacement characters can be specified within the brackets. For example, `d[io]ve` find "dive" and "dove," but not "dave."<br><br>**Note:** Oracle does not support brackets. If your repository uses Oracle for its database management system, you can use brackets for full text searches but not for any other search type. |
 | `-` | (Dash) The dash character is used in conjunction with brackets to specify that only characters within a particular range should be found. For instance, you might want to locate all documents that contain an account number that begins with “100347” and ends with a number rather than a letter. You could search on `100347[0-9]`. This would return account number “1003475” but not “100347C.” |
 
 Wildcards may be combined. For example, `br[a-o]ke*` would find all of the following words: brake, braked, broke, broker, and broken.

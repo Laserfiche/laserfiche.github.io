@@ -17,12 +17,43 @@ LFQL has a number of built-in functions for retrieving information about Laserfi
 
 The path parameter in these functions must be a string literal and a valid path.
 
-| Function Signature | Description |
-| --- | --- |
-| `IS_DESCENDANTOF(entrypath : path, p : path)` | Returns `1` if `entrypath` is a descendant of the provided path. Example:<br><br><br>```<br>select e.entry_name from lf.entry e<br> where is_descendantof(e.path, '\folder1') = 1<br>```<br><br>                        <br>**Note:** `0` will be returned if the path is invalid or the user does not have the **browse** right to the child and the **read** right to the parent. |
-| `IS_ANCESTOROF(entrypath : path, p : path)` | Returns `1` if `entrypath` is an ancestor of the provided path. Example:<br><br><br>```<br>select e.entry_name from lf.entry e<br> where is_ancestorof(e.path, '\folder1') = 1<br>```<br><br>                        <br> **Note:** `0` will be returned if the path is invalid or the user does not have the **browse** right to the child and the **read** right to the parent. |
-| `IS_CHILDOF(entrypath : path, p : path)` | Returns `1` if `entrypath` is a child of the provided path. Example:<br><br><br>```<br>select e.entry_name from lf.entry e<br> where is_childof(e.path, '\folder1') = 1<br>```<br><br>                        <br>**Note:** `0` will be returned if the path is invalid or the user does not have the **browse** right to the child and the **read** right to the parent. |
-| `IS_PARENTOF(entrypath : path, p : path)` | Returns `1` if entrypath is the parent of the provided path. Example:<br><br><br>```<br>select e.entry_name from lf.entry e<br> where is_parentof(e.path, '\folder1') = 1<br>```<br><br>                        <br>**Note:** `0` will be returned if the path is invalid or the user does not have the **browse** right to the child and the **read** right to the parent. |
+**Note:** For all functions below, `0` will be returned if the path is invalid or the user does not have the **browse** right to the child and the **read** right to the parent.
+
+#### `IS_DESCENDANTOF(entrypath : path, p : path)`
+
+Returns `1` if `entrypath` is a descendant of the provided path. Example:
+
+```sql
+select e.entry_name from lf.entry e
+ where is_descendantof(e.path, '\folder1') = 1
+```
+
+#### `IS_ANCESTOROF(entrypath : path, p : path)`
+
+Returns `1` if `entrypath` is an ancestor of the provided path. Example:
+
+```sql
+select e.entry_name from lf.entry e
+ where is_ancestorof(e.path, '\folder1') = 1
+```
+
+#### `IS_CHILDOF(entrypath : path, p : path)`
+
+Returns `1` if `entrypath` is a child of the provided path. Example:
+
+```sql
+select e.entry_name from lf.entry e
+ where is_childof(e.path, '\folder1') = 1
+```
+
+#### `IS_PARENTOF(entrypath : path, p : path)`
+
+Returns `1` if entrypath is the parent of the provided path. Example:
+
+```sql
+select e.entry_name from lf.entry e
+ where is_parentof(e.path, '\folder1') = 1
+```
 
 ## Aggregate Functions
 

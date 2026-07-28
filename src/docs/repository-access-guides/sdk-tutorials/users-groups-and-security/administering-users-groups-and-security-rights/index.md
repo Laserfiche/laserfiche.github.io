@@ -13,15 +13,150 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 In this tutorial, we cover some common security-related actions, such as creating users and groups, assigning rights and privileges to users, and assigning security tags. These actions use the RepositoryAccess library.
 
-| Signing in<br>                        <br>Start by creating a session with the repository *myRepoReg*, which is housed on the Laserfiche Server *myLFServer*. We sign in as a Laserfiche user with username *myUsername* and password *myPassword*. | ```<br>using (mySession = new Session())<br>{ <br>    RepositoryRegistration myRepoReg = <br>    new RepositoryRegistration("myLFServer", "myRepo");<br>    mySession.LogIn("myUsername", "myPassword", myRepoReg);<br>``` |
-| --- | --- |
-| Creating a user and a group<br>                        <br>Assuming that we are signed in as an administrator, we can now create a user and a group. We add the created user to the created group. | ```<br>    UserInfo UI = new UserInfo();<br>    UI.Name = "New User";<br>    UI.Session = mySession;<br>    UI.Save();<br>    GroupInfo GI = new GroupInfo();<br>    GI.Name = "New Group";<br>    GI.Session = mySession;<br>    GI.Save();<br>    List<string> list = new List<string>();<br>    list.Add("New User");<br>    list.Add("myUsername");<br>    Account.AddMembersToGroup("New Group", list, mySession);<br>``` |
-| Linking a Laserfiche user to a Windows account<br>                        <br>Now, we link our newly created Laserfiche account "New User" to an existing Windows account *WindowsUser*. This is done using the LinkWindowsAccount function. | ```<br>    AccountInfo AI = Account.GetInfo("New User", mySession);<br>    AI.LinkWindowsAccount(new System.Security.Principal.NTAccount(<br><br>    "WindowsUser"));<br>    AI.Save();<br>``` |
-| Retrieving group information<br>                        <br>We can list all the members of our new group and list all the groups that our new users belongs to. | ```<br>    AccountReferenceReader ARR = Account.EnumGroupMembers(<br>    "New Group", mySession);<br>    foreach (AccountReference AR in ARR)<br>    {<br>        Console.WriteLine(AR.AccountName);<br>    }<br>    string[] GroupNames = AI.Groups;<br>    foreach (string Name in GroupNames)<br>    {<br>        Console.WriteLine(Name);<br>    }<br>``` |
-| Assigning privileges and feature rights<br>                        <br>Next, we take an existing Windows group called *myWinGroup* and grant its members the right to sign in to the repository. We also grant them the right to grant or deny entry access rights to all entries in the repository (Privileges.EntryAccess), and let them move and import entries in Laserfiche clients. | ```<br>    System.Security.Principal.NTAccount WinGroup = <br>    new System.Security.Principal.NTAccount("myWinGroup");<br>    Repository.GrantLogOnAccess(WinGroup, mySession);<br>    TrusteeInfo ti = new TrusteeInfo();<br>    ti.Privileges = Privileges.EntryAccess;<br>    ti.FeatureRights = FeatureRights.Move | <br>    FeatureRights.Import;<br>    Trustee.SetInfo(new AccountReference(WinGroup, mySession), ti, mySession);<br>``` |
-| Setting entry access rights<br>                        <br>Now we set entry access rights for the Windows group on the folder *myFolder*. We grant the group the right to read and delete only documents in *myFolder*, which means that group members cannot read or delete subfolders of *myFolder*. We also explicitly deny the group the right to rename *myFolder*. | ```<br>    EntryInfo EI = Entry.GetEntryInfo("\\myFolder", mySession);<br>    EntrySecurity ES = EI.GetAccessControl();<br>    EntryAccessRule EAR = new EntryAccessRule(WinGroup, <br>    EntryRights.Read | EntryRights.Delete, <br>    EntryAccessScope.DocumentsOnly, <br>    System.Security.AccessControl.AccessControlType.Allow);    <br>    EntryAccessRule Denial = new EntryAccessRule(WinGroup, <br>    EntryRights.Rename, EntryAccessScope.ThisEntry, <br>    System.Security.AccessControl.AccessControlType.Deny);<br>    ES.AddAccessRule(EAR);<br>    ES.AddAccessRule(Denial);<br>    EI.SetAccessControl(ES);<br>``` |
-| Retrieving effective rights<br>                        <br>We can retrieve the effective rights of any user (*SecureUser* in this case) and print the list to the console. | ```<br>    EntryRights ER = Entry.GetAclDisplayRights("\\myFolder",<br>    new AccountReference("SecureUser", mySession), mySession);<br>    Console.WriteLine(ER.ToString());<br>``` |
-| Creating a new tag<br>                        <br>Here we create a new tag called "My Tag". The "true" parameter enables auto-renaming if there is already a tag called "My Tag". | ```<br>    TagInfo TagI = new TagInfo();<br>    TagI.Name = "My Tag";<br>    Tag.Create(TagI, true, mySession);<br>``` |
-| Making a tag a security tag<br>                        <br>Next, we retrieve an existing tag named "Classified" and set it to be a security tag. | ```<br>    TagInfo SecTag = Tag.GetInfo("Classified", mySession);<br>    SecTag.IsSecure = true;<br>    SecTag.Save();<br>``` |
-| Assigning a tag to a user<br>                        <br>Now we assign the security tag "Classified" to the new user we had created earlier. | ```<br>    TrusteeInfo trustee = Trustee.GetInfo("New User", mySession);<br>    trustee.AssignTag(SecTag);<br>``` |
-| Assigning a tag to a document<br>                        <br>We assign the "Classified" tag to an existing document called "SecureDoc". This means that only users with the "Classified" tag, our new user being an example, will be able to access the document. We add some comments to the tag.<br><br>                        <br>The final `}` closes our repository session by ending the **using** statement we began this tutorial with. | ```<br>    using (EntryInfo SecureDocInfo = Entry.GetEntryInfo(<br>    "\\SecureDoc", mySession))<br>    {<br>        SecureDocInfo.AssignTag(SecTag, "Do not share");<br>    }<br>}<br>``` |
+### Signing in
+
+Start by creating a session with the repository *myRepoReg*, which is housed on the Laserfiche Server *myLFServer*. We sign in as a Laserfiche user with username *myUsername* and password *myPassword*.
+
+```csharp
+using (Session mySession = new Session())
+{
+    RepositoryRegistration myRepoReg =
+    new RepositoryRegistration("myLFServer", "myRepo");
+    mySession.LogIn("myUsername", "myPassword", myRepoReg);
+```
+
+### Creating a user and a group
+
+Assuming that we are signed in as an administrator, we can now create a user and a group. We add the created user to the created group.
+
+```csharp
+    UserInfo UI = new UserInfo();
+    UI.Name = "New User";
+    UI.Session = mySession;
+    UI.Save();
+    GroupInfo GI = new GroupInfo();
+    GI.Name = "New Group";
+    GI.Session = mySession;
+    GI.Save();
+    List<string> list = new List<string>();
+    list.Add("New User");
+    list.Add("myUsername");
+    Account.AddMembersToGroup("New Group", list, mySession);
+```
+
+### Linking a Laserfiche user to a Windows account
+
+Now, we link our newly created Laserfiche account "New User" to an existing Windows account *WindowsUser*. This is done using the LinkWindowsAccount function.
+
+```csharp
+    AccountInfo AI = Account.GetInfo("New User", mySession);
+    AI.LinkWindowsAccount(new System.Security.Principal.NTAccount(
+    "WindowsUser"));
+    AI.Save();
+```
+
+### Retrieving group information
+
+We can list all the members of our new group and list all the groups that our new users belongs to.
+
+```csharp
+    AccountReferenceReader ARR = Account.EnumGroupMembers(
+    "New Group", mySession);
+    foreach (AccountReference AR in ARR)
+    {
+        Console.WriteLine(AR.AccountName);
+    }
+    string[] GroupNames = AI.Groups;
+    foreach (string Name in GroupNames)
+    {
+        Console.WriteLine(Name);
+    }
+```
+
+### Assigning privileges and feature rights
+
+Next, we take an existing Windows group called *myWinGroup* and grant its members the right to sign in to the repository. We also grant them the right to grant or deny entry access rights to all entries in the repository (Privileges.EntryAccess), and let them move and import entries in Laserfiche clients.
+
+```csharp
+    System.Security.Principal.NTAccount WinGroup =
+    new System.Security.Principal.NTAccount("myWinGroup");
+    Repository.GrantLogOnAccess(WinGroup, mySession);
+    TrusteeInfo ti = new TrusteeInfo();
+    ti.Privileges = Privileges.EntryAccess;
+    ti.FeatureRights = FeatureRights.Move |
+    FeatureRights.Import;
+    Trustee.SetInfo(new AccountReference(WinGroup, mySession), ti, mySession);
+```
+
+### Setting entry access rights
+
+Now we set entry access rights for the Windows group on the folder *myFolder*. We grant the group the right to read and delete only documents in *myFolder*, which means that group members cannot read or delete subfolders of *myFolder*. We also explicitly deny the group the right to rename *myFolder*.
+
+```csharp
+    EntryInfo EI = Entry.GetEntryInfo("\\myFolder", mySession);
+    EntrySecurity ES = EI.GetAccessControl();
+    EntryAccessRule EAR = new EntryAccessRule(WinGroup,
+    EntryRights.Read | EntryRights.Delete,
+    EntryAccessScope.DocumentsOnly,
+    System.Security.AccessControl.AccessControlType.Allow);
+    EntryAccessRule Denial = new EntryAccessRule(WinGroup,
+    EntryRights.Rename, EntryAccessScope.ThisEntry,
+    System.Security.AccessControl.AccessControlType.Deny);
+    ES.AddAccessRule(EAR);
+    ES.AddAccessRule(Denial);
+    EI.SetAccessControl(ES);
+```
+
+### Retrieving effective rights
+
+We can retrieve the effective rights of any user (*SecureUser* in this case) and print the list to the console.
+
+```csharp
+    EntryRights ER = Entry.GetAclDisplayRights("\\myFolder",
+    new AccountReference("SecureUser", mySession), mySession);
+    Console.WriteLine(ER.ToString());
+```
+
+### Creating a new tag
+
+Here we create a new tag called "My Tag". The "true" parameter enables auto-renaming if there is already a tag called "My Tag".
+
+```csharp
+    TagInfo TagI = new TagInfo();
+    TagI.Name = "My Tag";
+    Tag.Create(TagI, true, mySession);
+```
+
+### Making a tag a security tag
+
+Next, we retrieve an existing tag named "Classified" and set it to be a security tag.
+
+```csharp
+    TagInfo SecTag = Tag.GetInfo("Classified", mySession);
+    SecTag.IsSecure = true;
+    SecTag.Save();
+```
+
+### Assigning a tag to a user
+
+Now we assign the security tag "Classified" to the new user we had created earlier.
+
+```csharp
+    TrusteeInfo trustee = Trustee.GetInfo("New User", mySession);
+    trustee.AssignTag(SecTag);
+```
+
+### Assigning a tag to a document
+
+We assign the "Classified" tag to an existing document called "SecureDoc". This means that only users with the "Classified" tag, our new user being an example, will be able to access the document. We add some comments to the tag.
+
+The final `}` closes our repository session by ending the **using** statement we began this tutorial with.
+
+```csharp
+    using (EntryInfo SecureDocInfo = Entry.GetEntryInfo(
+    "\\SecureDoc", mySession))
+    {
+        SecureDocInfo.AssignTag(SecTag, "Do not share");
+    }
+}
+```
