@@ -16,8 +16,8 @@ PowerShell scripts can access .NET assemblies like RepositoryAccess.
 
 The following sample PowerShell script uses the Server class in RepositoryAccess to display a list of all current connections to a Laserfiche Server. The script does the following:
 
-1. Use the [Add-Type](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-type?view=powershell-5.1) cmdlet to load RepositoryAccess types into PowerShell.
-2. Use the [New-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-object?view=powershell-5.1) cmdlet to create a new instance of the `Server` class.
+1. Use the [Add-Type](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-type) cmdlet to load RepositoryAccess types into PowerShell.
+2. Use the [New-Object](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-object) cmdlet to create a new instance of the `Server` class.
 3. Use the EnumSessions method to enumerate through current sessions.
 4. Display the UserName and LoginTime properties for each session.
 
@@ -25,7 +25,8 @@ The following sample PowerShell script uses the Server class in RepositoryAccess
 
 ```csharp
 
-Add-Type -path 'C:\Program Files\Laserfiche\SDK 10.4\bin\10.4\net-4.0\Laserfiche.RepositoryAccess.dll'
+Add-Type -path 'C:\temp\Laserfiche.RepositoryAccess.dll'
+Add-Type -path 'C:\temp\Laserfiche.HttpClient.dll'
 
 $ServerName = 'MyServerName'
 
@@ -38,5 +39,3 @@ foreach ($session in $AllSessions)
   $session.UserName + ": " + $session.LogInTime.ToString()
 }
 ```
-
-**Note:** The RepositoryAccess assembly is built against .NET 4. If you are using an older version of PowerShell you may need to manually configure PowerShell and the Integrated Scripting Environment (ISE) to use the .NET 4 runtime.
