@@ -37,10 +37,10 @@ You should cache objects to avoid constantly polling the Laserfiche Server for t
 It is best practice to retrieve object definitions once and cache them locally. Change numbers help you detect when the cached definitions need to be updated. Change numbers can be used for fields, templates, business process definitions, tags, and document relationships. Getting change numbers from Laserfiche Server is a quick process, so it is preferable to re-retrieving object definitions. Here, we present sample code that changes the refresh parameter to `true` if the latest change number does not match the existing cached change number of the list of fields `cachedFields`. We assume that you have an open session with the repository named `session`. A complete example of this code is available in the **LFChangeNumbersDemo** subfolder of [the sample code](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming).
 
 ```
-Dictionary<ChangeNumber.ObjectType, long> latestChangeNums 
+Dictionary<ChangeNumber.ObjectType, long> latestChangeNumbers 
 = new Dictionary<ChangeNumber.ObjectType, long>();
-latestChangeNums[ChangeNumber.ObjectType.Field]=0;
-ChangeNumber.GetChangeNumbers(latestChangeNums, session);
+latestChangeNumbers[ChangeNumber.ObjectType.Field]=0;
+ChangeNumber.GetChangeNumbers(latestChangeNumbers, session);
 bool refresh = false;
 if (latestChangeNumbers[ChangeNumber.ObjectType.Field] != cachedFields.changeNumber)
 {
@@ -78,7 +78,7 @@ using (MemoryStream memStream = new MemoryStream())
     //Convert fieldInfo to a byte array
     binaryFat.Serialize(memStream, fieldInfo);
     //Save array to disk
-    File.WriteAllBytes(cachePath, memStream, ToArray());
+    File.WriteAllBytes(cachePath, memStream.ToArray());
 }
 ```
 
@@ -93,7 +93,7 @@ using (MemoryStream memStream = new MemoryStream(cacheBytes))
 {
     BinaryFormatter binaryFat = new BinaryFormatter();
     //Convert byte array to FieldInfo object
-    fieldInfo = (FieldInfo)binaryFmt.Deserialize(memStream);
+    fieldInfo = (FieldInfo)binaryFat.Deserialize(memStream);
 }
 ```
 

@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Key Concepts for Client Automation
 
-ClientAutomation.dll (CAT) is a .NET assembly that exposes an API for manipulating Laserfiche Client 9 or Laserfiche Client 10. In order for your third-party application to make calls using CAT methods, the appropriate files must be properly installed and registered on the desired workstation. For information on the files required to use CAT, please consult the [Distributing Your SDK Applications](../../../getting-started-with-the-sdk/deploying-laserfiche-sdk-dependencies-for-net-com-applications/) section.
+ClientAutomation.dll (CAT) is a .NET assembly that exposes an API for manipulating Laserfiche Client 9 or Laserfiche Client 10. In order for your third-party application to make calls using CAT methods, the appropriate files must be properly installed and registered on the desired workstation. For information on the files required to use CAT, please consult the [Installing the Laserfiche SDK](../../../getting-started-with-the-sdk/installing-the-laserfiche-sdk/) section.
 
 To start using `ClientAutomation`, create an instance of the ClientManager class. `ClientManager` allows you to check whether there are any open client instances, get open client instances and windows, open and log in to a client instance, navigate to a folder, run Client actions on documents, launch Laserfiche Scanning, run searches, create custom toolbar buttons, and start and view business processes.
 

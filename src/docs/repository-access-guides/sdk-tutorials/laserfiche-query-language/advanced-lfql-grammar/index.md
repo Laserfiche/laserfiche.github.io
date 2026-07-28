@@ -135,7 +135,7 @@ Referenced by: `wclause`
 
 You can filter the results you get by demanding that certain column values in their rows be within a  range of values. This can apply to numbers or to other ordered quantities like dates and times.
 
-            ![](../../../assets/sha1-cc5d8ca9e067d74fa8d0faeca5447e315d5e0aad.png)'
+            ![](../../../assets/sha1-cc5d8ca9e067d74fa8d0faeca5447e315d5e0aad.png)
 
 ```
 between_opt

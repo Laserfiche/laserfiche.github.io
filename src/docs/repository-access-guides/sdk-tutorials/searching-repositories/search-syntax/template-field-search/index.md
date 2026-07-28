@@ -132,7 +132,7 @@ Date/time field:
 
 ```csharp
 
-{[ ]:[FieldName]="mm/dd/yyyyhh:mm:ss tt"}
+{[ ]:[FieldName]="mm/dd/yyyy hh:mm:ss tt"}
 ```
 
 A sample Date/Time field value is “05/31/2006 09:45:13 AM.”

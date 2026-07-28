@@ -28,5 +28,5 @@ The following sample search will find all documents that contain between 3 and 6
 
 ```csharp
 
-{LF:agecount <= 3} & {LF:pagecount >= 6}
+{LF:pagecount <= 3} & {LF:pagecount >= 6}
 ```

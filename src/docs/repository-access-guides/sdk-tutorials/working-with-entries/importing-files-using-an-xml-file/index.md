@@ -22,8 +22,8 @@ using (mySession = new Session())
     new RepositoryRegistration("myLFServer", "myRepo");
     mySession.LogIn("myUsername", "myPassword", myRepoReg);
     ImportEngine impEngine = new ImportEngine(mySession);
-    ImpEngine.RootPath = "\\Folder1\\importFolder";
-    ImpEngine.VolumeName = "DEFAULT";
-    ImpEngine.Process("C:\\Temp\\Import.xml");
+    impEngine.RootPath = "\\Folder1\\importFolder";
+    impEngine.VolumeName = "DEFAULT";
+    impEngine.Process("C:\\Temp\\Import.xml");
 }
 ```

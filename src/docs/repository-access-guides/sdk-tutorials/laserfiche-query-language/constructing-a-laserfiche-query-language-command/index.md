@@ -21,7 +21,7 @@ We can add an additional clause and column to our query to order the results by 
 SELECT entry_name, entry_id, page_count
  FROM lf.entry
  WHERE pset_name = 'Receipt'
- ORDER BY page_count DSC
+ ORDER BY page_count DESC
 ```
 
 In general, `ORDER BY` (if it is used) will appear last in a query, because it is the least significant clause in the query. If `WHERE` is used, it tends to occur second-last (if `ORDER BY` exists) or last. The first two clauses must always be `SELECT` followed by `FROM`, if `FROM` exists. The following sections provide more details on all these clauses.
@@ -40,7 +40,7 @@ The rows (results) in the result set must obey the conditions specified in the `
 
 ## The ORDER BY Clause
 
-This clause does not change which rows appear in the result set. It merely sorts the result set. The clause can take multiple columns as a sorting criterion, but all the columns specified in the clause must exist in one of the tables specified in the `FROM` clause. To specify the columns used to sort the results, you can use either the column names or the relative position in which they appear in the `SELECT` clause. After each column or relative position, you can add an `ASC` or `DSC` to indicate if the results should be sorted in ascending or descending order. If you do not indicate this, they will be sorted in ascending order.
+This clause does not change which rows appear in the result set. It merely sorts the result set. The clause can take multiple columns as a sorting criterion, but all the columns specified in the clause must exist in one of the tables specified in the `FROM` clause. To specify the columns used to sort the results, you can use either the column names or the relative position in which they appear in the `SELECT` clause. After each column or relative position, you can add an `ASC` or `DESC` to indicate if the results should be sorted in ascending or descending order. If you do not indicate this, they will be sorted in ascending order.
 
 As an example of how relative position can be used in the `ORDER BY` clause, we rewrite our previous sample query  using relative order:
 
@@ -48,7 +48,7 @@ As an example of how relative position can be used in the `ORDER BY` clause, we 
 SELECT entry_name, entry_id, page_count
  FROM lf.entry
  WHERE pset_name = 'Receipt'
- ORDER BY 3 DSC
+ ORDER BY 3 DESC
 ```
 
 ## Full-Text Search

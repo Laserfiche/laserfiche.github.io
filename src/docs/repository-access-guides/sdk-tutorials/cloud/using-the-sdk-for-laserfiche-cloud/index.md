@@ -11,11 +11,11 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ## Signing in to Laserfiche Cloud
 
-In the section on signing in with the SDK, we provide [sample code](../../../getting-started-with-the-sdk/signing-in-to-a-repository/#Connecti) for signing in to Laserfiche Cloud. The Laserfiche.RepositoryAccess.CloudTicket class generates a cloud ticket that is used to connect directly to the repository. This ticket uses SAML for authentication.
+In the section on signing in with the SDK, we provide [sample code](../../../getting-started-with-the-sdk/signing-in-to-a-repository/) for signing in to Laserfiche Cloud. The Laserfiche.RepositoryAccess.CloudTicket class generates a cloud ticket that is used to connect directly to the repository. This ticket uses SAML for authentication.
 
-It is possible to sign in using domain authentication with Active Directory Federation Services (ADFS). This requires extra steps using the ACS web API, which we explain later. To find out how to configure a user to sign in with domain authentication, see the [Laserfiche Cloud help](https://doc.laserfiche.com/laserfiche.documentation/english/docs/Default.htm#sso.htm%3FTocPath%3DAccount%2520Administration|_____4). 
+It is possible to sign in using domain authentication with Active Directory Federation Services (AD FS). This requires extra steps using the Laserfiche Cloud Account Administration web API, which we explain later. To find out how to configure a user to sign in with domain authentication, see the [Laserfiche Cloud help](https://doc.laserfiche.com/laserfiche/en-us/content/admin-account-sso-cloud.htm). 
 
-Multi-factor authentication is also supported with Laserfiche Cloud. See the [Laserfiche Cloud help](https://doc.laserfiche.com/laserfiche.documentation/english/docs/Default.htm#GettingStartedWithACS.htm%3FTocPath%3DAccount%2520Administration|_____1) for how to enable multi-factor authentication for a user.
+Multi-factor authentication is also supported with Laserfiche Cloud. See the [Laserfiche Cloud help](https://doc.laserfiche.com/laserfiche/en-us/content/admin-account-users-ovw.htm) for how to enable multi-factor authentication for a user.
 
 #### The SAML XML token
 
@@ -64,7 +64,7 @@ XmlReader.Create(new StringReader(samlTokenXml)))
                             string roleDomain =
                             roleValue.Substring(0, colonPos);
                             string role =
-                           a roleValue.Substring(colonPos + 1);
+                            roleValue.Substring(colonPos + 1);
 
                             if (role == "CreateSession")
                                 repositoryName = roleDomain;
@@ -79,16 +79,14 @@ XmlReader.Create(new StringReader(samlTokenXml)))
 
 #### Signing in with ADFS
 
-To sign in using ADFS, the SDK needs to communicate directly with the ACS web API. This is not currently exposed in RepositoryAccess. However, there is a [code sample](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming) for signing with ADFS available for download if you have a Laserfiche Support site account. In the downloaded folder, navigate to the **LFFolderSyncUtil** subfolder. The code for signing in with ADFS is in `CloudUtil.cs`.
+To sign in using AD FS, the SDK needs to communicate directly with the Laserfiche Cloud Account Administration web API. This is not currently exposed in RepositoryAccess. However, there is a [code sample](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming) for signing with AD FS available for download if you have a Laserfiche Support site account. In the downloaded folder, navigate to the **LFFolderSyncUtil** subfolder. The code for signing in with AD FS is in `CloudUtil.cs`.
 
-The program flow for signing in with ADFS is as follows, assuming that the customer ID of interest is 123456:
+The program flow for signing in with AD FS is as follows, assuming that the customer ID of interest is 123456:
 
 - Submit a HTTP `POST` request to `https://acs.laserfiche.com/acs/federatedlogin/?customerID=123456&targetUrl=`
 - Navigate to the URL returned in the Location header
 - Follow the redirects using `GET` and `POST` a hidden HTML form that performs the authentication handshake
 - From the final response, obtain the session key used to initialize a `CloudTicket` object
-
-The code sample also contains a function to check if ADFS is enabled. This is done by sending a GET request to the following URL: `https://acs.laserfiche.com/acs/IsAdfsEnabled/?customerID=123456`
 
 ## More Information
 

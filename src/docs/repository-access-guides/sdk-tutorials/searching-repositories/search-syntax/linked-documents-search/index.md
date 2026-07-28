@@ -37,7 +37,7 @@ The following sample search will find all documents that supersede another docum
 
 ```csharp
 
-{LF:RelationSRC=”1”}
+{LF:RelationSRC="1"}
 ```
 
 The following sample search will find all documents that are superseded by another document:
