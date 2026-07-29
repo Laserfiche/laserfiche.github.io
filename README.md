@@ -24,11 +24,17 @@ First published 5/23/2024
 
 - Check installations and versions:
 
-  ```sh
+```sh
   gem --version
   bundle --version
   bundle exec jekyll --version
-  ```
+```
+
+- To update all gems in the project (Gemfile.lock)
+
+```sh
+  bundle update
+```
 
 ### Build the static website and serve locally
 

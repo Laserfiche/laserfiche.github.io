@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Laserfiche Developer Center
 
-With robust resources and how-to guides, the Laserfiche Developer Center provides everything you need to know about the Laserfiche API and how to use our RESTful web APIs to incorporate the Laserfiche platform into your tech stack.
+Everything you need to build, extend, and automate on the Laserfiche platform. Access APIs, explore development tools, and deploy secure integrations.
 
 ## Overview
 
