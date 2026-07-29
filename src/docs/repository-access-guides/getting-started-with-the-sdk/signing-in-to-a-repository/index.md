@@ -16,7 +16,7 @@ Most actions done with the SDK require that you sign in to a repository first. H
 
 Here, we sign in to the repository *MyRepositoryName* on the Laserfiche Server *MyServerName* using the credentials *MyUsername* and *MyPassword*:
 
-```
+```csharp
 RepositoryRegistration myRepoReg = new RepositoryRegistration("MyServerName", "MyRepositoryName");
 Session mySess = new Session();
 mySess.LogIn("MyUsername", "MyPassword", myRepoReg);
@@ -26,7 +26,7 @@ mySess.LogIn("MyUsername", "MyPassword", myRepoReg);
 
 Omit the username and password arguments in the LogIn function to sign in with the current thread's Windows credentials. Here, we also demonstrate a way to retrieve a list of repositories on the Laserfiche Server of interest, and sign in to one of the repositories in that list.
 
-```
+```csharp
 Server myServ = new Server("MyServerName");
 RepositoryRegistrationCollection repoRegColl = myServ.GetRepositories();
 RepositoryRegistration myRepoReg = repoRegColl["MyRepositoryName"];
@@ -38,7 +38,7 @@ mySess.LogIn(myRepoReg);
 
 To use SSL, set Session.IsSecure to true.
 
-```
+```csharp
 RepositoryRegistration myRepoReg = new 
 RepositoryRegistration("MyServerName", "MyRepositoryName");
 Session mySess = new Session();
@@ -50,7 +50,7 @@ mySess.LogIn("MyUsername", "MyPassword", myRepoReg);
 
 You sign in to Laserfiche Cloud by passing in a RepositoryAccess.CloudTicket object that contains information on the Cloud account you want to use. If you are using multi-factor authentication, you will also want to include the OneTimePassword attribute. Here, we have some sample code for  signing in to the repository named *repositoryName* with an account ID of 123456789 in the US data center, username *myUsername*, and password *myPassword*.
 
-```
+```csharp
 Laserfiche.RepositoryAccess.CloudTicketRequestSettings cloudTicketSettings = new Laserfiche.RepositoryAccess.CloudTicketRequestSettings();
 cloudTicketSettings.AccountId = "123456789";
 cloudTicketSettings.UserName = "myUsername";
@@ -69,5 +69,3 @@ string repositoryHost = "repositoryName" + ".laserfiche.com";
 Laserfiche.RepositoryAccess.Session cloudSession = 
 Laserfiche.RepositoryAccess.Session.Create(repositoryHost, cloudTicket);
 ```
-
-For more information on connecting to Laserfiche Cloud, including guidance on how to connect using an AD FS domain account, see [Using the SDK for Laserfiche Cloud](../../sdk-tutorials/cloud/using-the-sdk-for-laserfiche-cloud/).

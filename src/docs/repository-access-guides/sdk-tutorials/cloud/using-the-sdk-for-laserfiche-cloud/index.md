@@ -30,12 +30,13 @@ The SAML XML token is a signed XML document that contains information about the 
 
 If your application does not know the customer's repository name, you can parse the SAML XML token to get this information. Here is some sample code that obtains the repository name as a variable *repositoryName*, assuming that you have a cloud ticket *CurrentTicket*:
 
-```
+```csharp
 using System.Xml;
 using System.IO;
 using System.Text;
 
 string samlTokenXml = CurrentTicket.GetSamlToken();
+string repositoryName = null;
 
 using (XmlReader reader = 
 XmlReader.Create(new StringReader(samlTokenXml)))
@@ -76,18 +77,3 @@ XmlReader.Create(new StringReader(samlTokenXml)))
     }
 }
 ```
-
-#### Signing in with ADFS
-
-To sign in using AD FS, the SDK needs to communicate directly with the Laserfiche Cloud Account Administration web API. This is not currently exposed in RepositoryAccess. However, there is a [code sample](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming) for signing with AD FS available for download if you have a Laserfiche Support site account. In the downloaded folder, navigate to the **LFFolderSyncUtil** subfolder. The code for signing in with AD FS is in `CloudUtil.cs`.
-
-The program flow for signing in with AD FS is as follows, assuming that the customer ID of interest is 123456:
-
-- Submit a HTTP `POST` request to `https://acs.laserfiche.com/acs/federatedlogin/?customerID=123456&targetUrl=`
-- Navigate to the URL returned in the Location header
-- Follow the redirects using `GET` and `POST` a hidden HTML form that performs the authentication handshake
-- From the final response, obtain the session key used to initialize a `CloudTicket` object
-
-## More Information
-
-You can look at the other code samples available [in the Support site download](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming), or read the section on [best practices for using the SDK with Laserfiche Cloud](../best-practices-for-laserfiche-cloud/).
