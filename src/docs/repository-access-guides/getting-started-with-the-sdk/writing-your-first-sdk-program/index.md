@@ -17,9 +17,8 @@ Here we present a short code sample that shows you the basic program flow for an
 3. Lock the document for modification
 4. Assign a new template with one field to the document
 5. Save your changes
-6. Close `using` statements (this implicitly signs us out of the repository).
 
-```
+```csharp
 using(Session mySession = new Session())
 {
     RepositoryRegistration myRepoReg = new RepositoryRegistration("myLFServer", "myRepo");
@@ -51,7 +50,7 @@ For these reasons, we recommend `using` statements over other methods that requi
 
 Exceptions happen; as you write an application, think about the ways your code might fail and handle those cases with try-catch statements. For example, you could catch exceptions that may occur when your application signs in:
 
-```
+```csharp
 RepositoryRegistration myRepoReg = new RepositoryRegistration("Server", "Repository");
 using (Session mySess = new Session())
 {
@@ -67,9 +66,9 @@ using (Session mySess = new Session())
 }
 ```
 
-RepositoryAccess has a special exception class, LaserficheRepositoryException, for exceptions that originate from Laserfiche. It implements .NET's `System.Exception` class. You can use try-catch methods to catch exceptions of a specific class. In the sample function below, we implement dynamic folder generation by writing a function that checks to see if a folder exists. If it does not exist, an exception of the type LaserficheRepositoryException.ObjectNotFoundException should be thrown. The function creates a folder if it finds this exception.
+RepositoryAccess has an exception class, LaserficheRepositoryException, for exceptions that originate from Laserfiche. It implements .NET's `System.Exception` class. You can use try-catch methods to catch exceptions of a specific class. In the sample function below, we implement dynamic folder generation by writing a function that checks to see if a folder exists. If it does not exist, an exception of the type ObjectNotFoundException (a subclass of LaserficheRepositoryException) should be thrown. The function creates a folder if it finds this exception.
 
-```
+```csharp
 public static void Dynamicfolder(Session mySess)
 {
   try
