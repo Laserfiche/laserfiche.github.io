@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Using the Lookup Tables CLI
-nav_order: 7
+nav_order: 8
 parent: Guides
 ---
 

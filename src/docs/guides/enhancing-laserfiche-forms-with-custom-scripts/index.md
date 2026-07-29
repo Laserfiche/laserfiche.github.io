@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Enhancing Laserfiche Forms with custom TypeScript
-nav_order: 7
+nav_order: 10
 has_children: false
 parent: Guides
 ---
