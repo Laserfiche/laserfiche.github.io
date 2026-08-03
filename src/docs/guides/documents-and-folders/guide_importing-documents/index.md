@@ -9,10 +9,11 @@ parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Import Documents
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_importing-documents-v1/).</sup>

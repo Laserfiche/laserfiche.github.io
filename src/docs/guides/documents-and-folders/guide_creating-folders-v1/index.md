@@ -7,10 +7,11 @@ redirect_from:
 nav_exclude: true
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Create Folders in the Repository
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_creating-folders/).</sup>
@@ -26,10 +27,11 @@ In the example scenario below, we will create a folder for a new employee named 
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/r-abcd1234/Entries/908/Laserfiche.Repository.Folder/children
 ```
+
 ```json
 {
-"name" : "Jane Smith",
-"entryType" : "Folder"
+  "name": "Jane Smith",
+  "entryType": "Folder"
 }
 ```
 
@@ -55,6 +57,7 @@ If successful, the API will return a 201 HTTP response status code indicating th
 ```
 HTTP 201 Created
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v1/$metadata#Collection(Laserfiche.Repository.Entry)",

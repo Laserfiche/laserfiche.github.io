@@ -8,7 +8,7 @@ redirect_from:
 has_children: false
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche Developer Center

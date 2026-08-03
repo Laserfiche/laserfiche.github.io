@@ -5,7 +5,7 @@ nav_order: 1
 parent: Laserfiche APIs
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Repository API

@@ -7,10 +7,11 @@ redirect_from:
 nav_exclude: true
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Export Documents
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_exporting-documents/).</sup>
@@ -82,6 +83,7 @@ Note: The only difference between this route and the one mentioned in the previo
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/repoId/Entries/entryId/Laserfiche.Repository.Document/GetEdocWithAuditReason
 ```
+
 ```json
 {
   "auditReasonId": 71,

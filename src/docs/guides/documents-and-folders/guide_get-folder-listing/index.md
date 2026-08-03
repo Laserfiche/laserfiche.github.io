@@ -8,10 +8,11 @@ parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Get Folder Contents
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_get-folder-listing-v1/).</sup>.
@@ -41,6 +42,7 @@ A successful request will return a 200 HTTP response status code with the follow
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Entry)",
@@ -102,6 +104,7 @@ The response will look like the following (again, truncated for space).
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Entry)",
@@ -220,6 +223,7 @@ The response will look like the following (again, truncated for space).
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Entry)",

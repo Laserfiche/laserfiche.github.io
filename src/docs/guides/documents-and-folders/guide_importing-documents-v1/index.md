@@ -7,10 +7,11 @@ redirect_from:
   - guide_importing-documents.html
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Importing a Document using the Laserfiche API
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_importing-documents/).</sup>
@@ -38,6 +39,7 @@ Content-Type: application/pdf
 Content-Disposition: form-data; name="request"
 Content-Type: application/json
 ```
+
 ```json
 {
   "template": "Email",
@@ -60,12 +62,11 @@ Content-Type: application/json
         ]
       }
     },
-    "tags": [
-      "Information tag 1"
-    ]
+    "tags": ["Information tag 1"]
   }
 }
 ```
+
 ```
 ------WebKitFormBoundaryWSIjerzIxTqZu0gW--
 ```
@@ -75,6 +76,7 @@ If the document was created successfully, the API will return a 201 HTTP respons
 ```
 HTTP 201 Created
 ```
+
 ```json
 {
   "operations": {
@@ -94,9 +96,7 @@ HTTP 201 Created
       "exceptions": []
     },
     "setTags": {
-      "assignedTags": [
-        "Information tag 1"
-      ],
+      "assignedTags": ["Information tag 1"],
       "exceptions": []
     }
   },
@@ -111,7 +111,6 @@ The Laserfiche API import can be made from the Postman tool.`
 1. **Download** and **install** Postman.
 1. **Open** Postman and select the option to **Import** a request.
 1. Select the option to import **Raw Text** and paste the below curl command.
-
    - ```sh
      curl --location --request POST 'https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{parentfolderid}/{documentName}?autoRename=true' \
      --header 'Authorization: Bearer {accessToken}' \
