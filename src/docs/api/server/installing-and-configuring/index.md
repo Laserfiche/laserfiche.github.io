@@ -8,7 +8,7 @@ parent: Self-Hosted API Server
 grandparent: Laserfiche APIs
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Installing and Configuring the API Server

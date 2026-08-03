@@ -7,10 +7,11 @@ redirect_from:
 parent: Getting Started
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Repository Long Operations
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_long-operations-v1/).</sup>
@@ -33,11 +34,12 @@ First we'll call the copy API to copy a folder and its content to another folder
 ```
 POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{destinationEntryId}/Folder/CopyAsync
 ```
+
 ```json
 {
-    "sourceId": 9,
-    "name": "CopiedEntry",
-    "autoRename": true
+  "sourceId": 9,
+  "name": "CopiedEntry",
+  "autoRename": true
 }
 ```
 
@@ -46,6 +48,7 @@ The API call will return a task ID in the response:
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.StartTaskResponse",
@@ -64,6 +67,7 @@ The API will return the status of the task, for example:
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Tasks",
@@ -98,6 +102,7 @@ We will get back the newly created entry details. See the following sample respo
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Repositories('r-abc123')/entries/Laserfiche.Repository.Folder/$entity",

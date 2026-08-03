@@ -10,7 +10,7 @@ redirect_from:
 has_children: true
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Overview of the Laserfiche API

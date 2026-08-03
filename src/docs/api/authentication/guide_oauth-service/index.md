@@ -9,7 +9,7 @@ parent: Authentication
 grand_parent: Laserfiche APIs
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Creating an OAuth Service App for the Laserfiche API

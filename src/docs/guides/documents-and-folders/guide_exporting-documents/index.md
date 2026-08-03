@@ -9,10 +9,11 @@ parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Export Documents
+
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_exporting-documents-v1/).</sup>
@@ -62,6 +63,7 @@ The **request body** has the following structure:
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Repositories('r-abc123')/entries(2161949)/Export",
@@ -84,6 +86,7 @@ If export is started successfully, the API will return a 202 HTTP response statu
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Repositories('r-abc123')/entries(2161949)/ExportAsync",
@@ -101,6 +104,7 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?t
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Tasks",

@@ -7,10 +7,11 @@ redirect_from:
   - guide_get-folder-listing.html
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Retrieving the Contents of a Folder
+
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_get-folder-listing/).</sup>
@@ -39,6 +40,7 @@ A successful request will return a 200 HTTP response status code with the follow
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v1/$metadata#Collection(Laserfiche.Repository.Entry)",
@@ -95,6 +97,7 @@ The response will look like the following (again, truncated for space).
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v1/$metadata#Collection(Laserfiche.Repository.Entry)",
@@ -220,6 +223,7 @@ The response will look like the following (again, truncated for space).
 ```
 HTTP 200 OK
 ```
+
 ```json
 {
   "@odata.context": "https://api.laserfiche.com/repository/v1/$metadata#Collection(Laserfiche.Repository.Entry)",

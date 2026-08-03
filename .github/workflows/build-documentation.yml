@@ -1,4 +1,4 @@
-# © 2025 Laserfiche.
+# © 2026 Laserfiche.
 # See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -45,7 +45,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
         working-directory: ./src
@@ -54,12 +54,15 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Run tests
-        working-directory: ./src
-        run: bundle exec rake
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --offline restricts checks to local files, so only internal/relative links are validated
+          args: --offline --no-progress --root-dir ./src/_site './src/_site/**/*.html'
+          fail: true
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./src/_site
 
@@ -74,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
