@@ -54,9 +54,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Run tests
-        working-directory: ./src
-        run: bundle exec rake
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --offline restricts checks to local files, so only internal/relative links are validated
+          args: --offline --no-progress --root-dir ./src/_site './src/_site/**/*.html'
+          fail: true
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
