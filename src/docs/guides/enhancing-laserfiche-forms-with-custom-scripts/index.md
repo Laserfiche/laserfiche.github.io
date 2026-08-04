@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 The **Laserfiche Form Builder** repository is designed to simplify and accelerate building custom Laserfiche Forms scripts and integrations. By providing a modern local development workflow and a suite of reusable components, it removes the friction of managing complex JavaScript customization in the browser.
 
-> ⚠️ **Important:** This toolkit is not officially supported by Laserfiche and may break with future updates to Laserfiche Forms. Do not open official support tickets with Laserfiche for issues related to this toolkit.
+> ⚠️ **Community-Supported Project:** This is an open-source resource maintained through GitHub and is not covered by Laserfiche’s official product support channels. For questions, bug reports, enhancement ideas, or contributions, please use the project’s GitHub discussions, issues, and pull requests. Because the toolkit builds on Laserfiche Forms customization capabilities, future Forms updates may require corresponding community updates to the toolkit.
 
 ---
 
