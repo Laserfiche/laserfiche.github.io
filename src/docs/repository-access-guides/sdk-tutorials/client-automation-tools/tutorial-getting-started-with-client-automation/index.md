@@ -11,11 +11,11 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Getting Started with Client Automation
 
-In this tutorial, we demonstrate how you can carry out actions in the Laserfiche Windows Client using SDK programs. These actions include: opening a new Client instance, reusing an existing client instance, opening folders, generating image pages, starting business processes, and viewing a document's business process details. This tutorial primarily uses the **ClientAutomation.dll** assembly, but the snippet for viewing a document's business process details dialog boxes also uses **RepositoryAcess.dll**.
+This tutorial demonstrates how to carry out actions in the Laserfiche Repository Desktop Client using the Client Automation Tools assembly. These actions include: opening a new client instance, reusing an existing client instance, opening folders, generating image pages, starting business processes, and viewing a document's business process details. This tutorial primarily uses the **ClientAutomation.dll** assembly, but the snippet for viewing a document's business process details dialog also uses **Laserfiche.RepositoryAccess.dll**. The example code snippets in this topic comprise one continuous C# program.
 
-### Signing in to new instance of Client
+### Signing in to a new instance of the Repository Desktop Client
 
-Load the Laserfiche Client and sign in to a repository. In this code snippet, we check that there are no open instances of the Client, then we open the Client and sign in to the specified repository using a Laserfiche username and password. (To use Windows authentication, simply omit `options.UserName` and `options.Password` from the LaunchOptions instance.) Since we have just opened the Client, there should only be one open window, the Folder Browser.
+Open the Repository Desktop Client and sign in to a repository. This code snippet first checks that there are no open instances of the Repository Desktop Client before opening the Client and signing in to the specified repository using a Laserfiche username and password. (To use Windows authentication, omit `options.UserName` and `options.Password` from the LaunchOptions instance.) Because the code opens a new instance of the client, there should only be one open window, the Folder Browser.
 
 ```csharp
 LaunchOptions options = new LaunchOptions();
@@ -35,9 +35,9 @@ using (ClientManager lfclient = new ClientManager())
     }
 ```
 
-### Signing in to existing instance of Client
+### Signing in using an existing instance
 
-This next code snippet covers the case where there are one or more open instances of the Client. If there are, we reuse the first Client instance that CAT returns. We sign in to this Client instance and make its main window the Folder Browser.
+This next code snippet covers the case where there are one or more open instances of the Repository Desktop Client. If there are open instances, the snippet retrieves the first instance that it finds and signs in while making its main window the Folder Browser.
 
 ```csharp
     else
@@ -51,7 +51,7 @@ This next code snippet covers the case where there are one or more open instance
 
 ### Navigating to a folder and opening a document
 
-Either way, now we are signed in to the repository within the ClientManager `using` statement. We start by navigating to the folder with Folder ID `123456`. Then, we open the document that has the path "\myFolder\myDoc" in the Document Viewer, but set it to read-only mode. In the OpenOptions class, you can also specify which panes and tabs you want to open, the page to initially display, and the window position.
+This snippet demonstrates navigating to the folder with Folder ID `123456`, then opens a document in read-only mode. Use the OpenOptions class to control which panes and tabs to open, the page to initially display, and the window position.
 
 ```csharp
     FolderBrowser.SetCurrentFolder(123456);
@@ -64,9 +64,9 @@ Either way, now we are signed in to the repository within the ClientManager `usi
 
 ### Generating image pages for an electronic document
 
-Now we will demonstrate how to generate image pages for an electronic document. We first set ShowUI to `true` in order to display a progress dialog box. Then we try to generate pages for the document with ID `789`. GeneratePages takes a list of document IDs, so we put `789` in a list.
+This next snippet demonstrates how to generate image pages for an electronic document. Set ShowUI to `true` in order to display a progress dialog. The snippet tries to generate pages for the document with ID `789`. GeneratePages takes a list of document IDs. In this example, the list contains one item.
 
-We did not specify which image generation tool to use, which means that the CAT uses the Client's PDF image generation tools to create the pages if document `789` was a PDF file. If document `789` were another kind of electronic file, the CAT would have used Snapshot to print image pages for the file.
+Without specifying a specific image generation tool, CAT uses the Client's PDF image generation tools to create the pages if document `789` was a PDF file. If document `789` were another kind of electronic file, CAT would have used Snapshot to print image pages for the file.
 
 ```csharp
     GeneratePagesOptions options = new GeneratePagesOptions();
@@ -78,7 +78,7 @@ We did not specify which image generation tool to use, which means that the CAT 
 
 ### Using Snapshot to generate pages for PDF files
 
-You can use Snapshot to generate pages for PDF files by altering the ForceSnapshot property. Here we do that for documents with IDs `123` and `456`.
+Set the ForceSnapshot property to use Snapshot to generate pages for PDF files.
 
 ```csharp
     GeneratePagesOptions SnapOptions = new GeneratePagesOptions();
@@ -91,7 +91,7 @@ You can use Snapshot to generate pages for PDF files by altering the ForceSnapsh
 
 ### Searching in CAT
 
-We can also run searches in CAT. Here we search for all documents that have the "Forms" template and that have the status "Approved" in that template's "Status" field. See the [section](../../searching-repositories/search-syntax/) on advanced search syntax for further information on how to fill in the Query property. In this code snippet, the search results are displayed in the current client window, not a new window.
+CAT can also tell the client to run searches. This next snippet searches for all documents that have the "Forms" template and that have the status "Approved" in that template's "Status" field. See the [search tutorial](../../searching-repositories/search-syntax/) on advanced search syntax for further information on how to fill in the Query property. In this code snippet, the search results are displayed in the current client window, not a new window.
 
 ```csharp
     SearchOptions searchOptions = new SearchOptions();
@@ -102,7 +102,7 @@ We can also run searches in CAT. Here we search for all documents that have the 
 
 ### Starting a business process
 
-Continuing to use our open Folder Browser window, we now proceed to start a business process. You can use the business process' name or its ID. We also set ShowUI to false to skip the display of the confirmation prompt for starting the business process. We start the business process on the document with ID `123`.
+If your self-hosted Workflow installation is configured with workflow business processes, you can use CAT to start a business process in the client. You can use the business process' name or its ID. Set ShowUI to false to skip the display of the confirmation prompt for starting the business process. This code snippet starts the business process on the document with ID `123`.
 
 ```csharp
     StartBusinessProcessOptions startBizOptions = new
@@ -115,7 +115,7 @@ Continuing to use our open Folder Browser window, we now proceed to start a busi
 
 ### Viewing a list of available business processes
 
-If you want to see the list of available business processes for a document, set the BusinessProcessName property to `(none)`. Here, we do this for the document with entry ID 456.
+If you want to see the list of available business processes for a document, set the BusinessProcessName property to `(none)`.
 
 ```csharp
     StartBusinessProcessOptions bpOptions = new
@@ -127,9 +127,7 @@ If you want to see the list of available business processes for a document, set 
 
 ### Viewing a document's business process history
 
-To load the **Business Process Details** dialog box for a document, you should invoke the ShowBusinessProcessHistory method. To do this, you need the entry ID and the business process ID. Here, we get the ID values of all the business process instances on a document, then load the **Business Process Details** dialog box. This code snippet uses the `RepositoryAccess` library to get the ID values of business process instances on the document with entry ID `789`. It then loads the **Business Process Details** dialog box for all these instances. The windows are positioned with their left, top, right, and bottom edges at 200 pixels, 200 pixels, 600 pixels, and 600 pixels respectively, and the `false` argument means that the windows are not maximized.
-
-Finally, with the very last `}` we close the `ClientManager` **using** statement.
+To load the **Business Process Details** dialog for a document, you can invoke the ShowBusinessProcessHistory method. You need the entry ID and the business process ID. This sample snippet gets the ID values of all the business process instances on a document, then loads the **Business Process Details** dialog. This code snippet uses the `RepositoryAccess` library to get the ID values of business process instances on the document with entry ID `789`. It then loads the **Business Process Details** dialog box for all these instances. The windows are positioned with their left, top, right, and bottom edges at 200 pixels, 200 pixels, 600 pixels, and 600 pixels respectively, and the `false` argument means that the windows are not maximized.
 
 ```csharp
     RepositoryConnection CATconnection =

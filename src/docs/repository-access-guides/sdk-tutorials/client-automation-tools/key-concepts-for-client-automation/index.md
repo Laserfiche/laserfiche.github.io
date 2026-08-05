@@ -31,7 +31,7 @@ A [tutorial](../tutorial-getting-started-with-client-automation/) on CAT covers 
 
 ## Sample Code
 
-This [repository](../../../sample-projects) includes `ClientAutomation` sample code for the following activities.
+This [repository](https://github.com/Laserfiche/lf-sample-clientautomation) includes `ClientAutomation` sample code for the following activities.
 
 - Launching a client (**ClientLauncher**)
 - Monitoring all open instances of the Client and printing details about open Client windows (**MonitorConsole**)
