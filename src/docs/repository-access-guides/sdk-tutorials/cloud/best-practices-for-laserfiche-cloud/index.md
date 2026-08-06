@@ -11,22 +11,24 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Best Practices for Laserfiche Cloud
 
-Cloud repositories have a higher latency that on-premise repositories, so your SDK application for Laserfiche Cloud should minimize round trips to the Cloud server. Here are some best practices for using the SDK with Laserfiche Cloud. Many of the practices recommended here are implemented in sample code available [here](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming).
+The Laserfiche SDK supports connecting to a Laserfiche Cloud repository.
+
+Cloud repositories tend to have a higher latency than self-hosted repositories. An SDK application for Laserfiche Cloud should minimize round trips to the Cloud repository. Here are some guidelines for using the SDK with Laserfiche Cloud.
 
 ## Sign in Once
 
-You should write your program so that it only signs in once and retains the session object, rather than signing in multiple times. A background thread will keep the session from signing out.
+A program should sign in once and retain the session object, rather than signing in multiple times. A background thread will keep the session from signing out.
 
 ## Minimize Round trips
 
-Minimize round trips by having fewer requests. For example, in the code snippet below, it is unnecessary to make a call to GetDocumentInfo twice. Instead, you could simply define a DocumentInfo object `docInfo = DocumentInfo(docId, session)`. 
+Minimize round trips by having fewer requests. For example, in the code snippet below, it is unnecessary to make a call to GetDocumentInfo twice. Instead, define a DocumentInfo object `docInfo = DocumentInfo(docId, session)`. 
 
-```
+```csharp
 string docFullPath = Document.GetDocumentInfo(docId, session).GetParentFolder().Path
  + "\\" + Document.GetDocumentInfo(docId, session).Name;
 ```
 
-Another helpful fact to keep in mind is that methods perform actions and properties do not. When you call properties, you are usually only getting or setting a value associated with the object, so they tend to be quicker than methods.
+Another helpful fact to keep in mind is that methods perform actions and properties do not. Getting or setting a property value tends to be quicker than method calls.
 
 ## Caching
 
@@ -34,9 +36,9 @@ You should cache objects to avoid constantly polling the Laserfiche Server for t
 
 #### Change Numbers
 
-It is best practice to retrieve object definitions once and cache them locally. Change numbers help you detect when the cached definitions need to be updated. Change numbers can be used for fields, templates, business process definitions, tags, and document relationships. Getting change numbers from Laserfiche Server is a quick process, so it is preferable to re-retrieving object definitions. Here, we present sample code that changes the refresh parameter to `true` if the latest change number does not match the existing cached change number of the list of fields `cachedFields`. We assume that you have an open session with the repository named `session`. A complete example of this code is available in the **LFChangeNumbersDemo** subfolder of [the sample code](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming).
+It is generally recommended to retrieve object definitions once and cache them locally. Change numbers help you detect when the cached definitions need to be updated. Change numbers can be used for fields, templates, business process definitions, tags, and document relationships. Getting change numbers from Laserfiche Server is a quick process, so it is preferable to get change numbers rather than re-retrieving object definitions. This sample changes the refresh parameter to `true` if the latest change number does not match the existing cached change number of the list of fields `cachedFields`. The snippet assumes that you have an open session with the repository named `session`.
 
-```
+```csharp
 Dictionary<ChangeNumber.ObjectType, long> latestChangeNumbers 
 = new Dictionary<ChangeNumber.ObjectType, long>();
 latestChangeNumbers[ChangeNumber.ObjectType.Field]=0;
@@ -63,12 +65,11 @@ if (refresh)
 }
 ```
 
-#### 
-Persistent Caching
+#### Persistent Caching
 
-You can store RepositoryAccess objects so that they are not lost even if the session ends. After retrieving the object, serialize it to disk. When you need it again, deserialize it from disk rather than retrieving it from the cloud, which is slower. Here is some sample code for serializing an object to disk:
+It is possible to store RepositoryAccess objects so that they are not lost even if the session ends. After retrieving the object, serialize it to disk. When you need it again, deserialize it from disk rather than retrieving it from the cloud, which is potentially slower. Here is some sample code for serializing an object to disk:
 
-```
+```csharp
 using System.Runtime.Serialization.Formatters.Binary;
 
 FieldInfo fieldInfo = Field.GetInfo(fieldId, session);
@@ -82,9 +83,9 @@ using (MemoryStream memStream = new MemoryStream())
 }
 ```
 
-Deserializing the object from disk is equally simple:
+Deserializing the object from disk:
 
-```
+```csharp
 using System.Runtime.Serialization.Formatters.Binary;
 
 FieldInfo fieldInfo;
@@ -99,22 +100,18 @@ using (MemoryStream memStream = new MemoryStream(cacheBytes))
 
 #### EntryInfo.Etag
 
-The Etag property of an EntryInfo object changes when any aspect of an entry's content changes. It uses a standard HTTP cache mechanism to track changes. You can compare the Etag of your locally stored document with the Etag of the server's document, and update only if there is a difference. In the [sample download](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming), you can find code that implements this comparison in **LFFolderSyncUtil\Program.cs**.
+The Etag property of an EntryInfo object changes when any aspect of an entry's content changes. It uses a standard HTTP cache mechanism to track changes. You can compare the Etag of your locally stored document with the Etag of the server's document, and update only if there is a difference.
 
 #### Checksums
 
-Comparing checksums is another way to check for differences between the locally stored document and the cloud document. In **LFFolderSyncUtil\Program.cs** in the [sample download](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming), part of the code uses the file size as a checksum.
+Comparing checksums is another way to check for differences between the locally stored document and the cloud document.
 
 ## Troubleshooting
 
-You can use method tracing to identify the slowest calls. RepositoryAccess enables this through the MethodTracer class. The following line of code will initialize tracing and output a trace log to `tracePath`:
+You can use tracing to identify the slowest calls. RepositoryAccess enables this through the MethodTracer class. The following line of code will initialize tracing and output a trace log to `tracePath`:
 
-```
+```csharp
 Laserfiche.RepositoryAccess.MethodTracer.InitializeMethodTracer(tracePath);
 ```
-
-A sample trace log can be found in the **LFFolderSyncUtil** subfolder of [the sample download](https://support.laserfiche.com/resources/3511/pd302-advanced-topics-in-sdk-programming).
-
-You can conditionally enable tracing by using registry flags in Windows. These flags can be found in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Tracing`.
 
 Remember to turn off tracing when you are done.

@@ -13,5 +13,4 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 ## Pages
 
-- [Using the SDK for Laserfiche Cloud](./using-the-sdk-for-laserfiche-cloud/)
 - [Best Practices for Laserfiche Cloud](./best-practices-for-laserfiche-cloud/)
