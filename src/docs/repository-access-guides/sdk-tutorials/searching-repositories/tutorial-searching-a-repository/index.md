@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Searching and Indexing a Repository
 
-In this tutorial, we demonstrate how to index a repository, index specific documents, search a repository, search documents, and turn your search results into an output format of your choice. You must index the documents, folders, or repositories you wish to search before conducting a search on them. For more complex searches, see the section on [advanced search syntax](../search-syntax/).
+This tutorial demonstrates how to index a self-hosted repository, index specific documents, search a repository, search documents, and turn your search results into an output format of your choice. You must index the documents, folders, or repositories you wish to search before conducting a search on them. For more complex searches, see the section on [advanced search syntax](../search-syntax/).
 
 ### Signing in
 

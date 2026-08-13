@@ -14,5 +14,5 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 ## Pages
 
 - [Key Concepts for Searching with the SDK](./key-concepts-for-searching-with-the-sdk/)
-- [Tutorial: Searching and Indexing a Repository](./tutorial-searching-and-indexing-a-repository/)
-- [Search Syntax](./search-syntax/)
+- [Tutorial: Searching a Repository](./tutorial-searching-and-indexing-a-repository/)
+- [Search Syntax and LFQL Examples ](./examples-in-advanced-search-syntax-and-lfql/)
