@@ -25,7 +25,7 @@ The sample search tutorial uses a `using` statement to work on the `SearchResult
 
 ## Code Samples
 
-We provide a [brief tutorial](../tutorial-searching-and-indexing-a-repository/) with a code sample on searching with the SDK. In addition, we have the following examples of search strings to illustrate more advanced search syntax:
+See a [brief tutorial](../tutorial-searching-a-repository/) with a code sample on searching with the SDK. See additional examples of search strings to illustrate more advanced search syntax:
 
 - A [table of search queries](../examples-in-advanced-search-syntax-and-lfql/) together with their [LFQL](../../laserfiche-query-language/constructing-a-laserfiche-query-language-command/) equivalents.
 
