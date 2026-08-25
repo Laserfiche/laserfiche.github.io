@@ -18,23 +18,25 @@ The Activity Log does not serve as a complete history of notifications. It is on
 
 Your program can check if it missed any notifications by comparing the Activity Sequence Number (ASN) it last stored with the ASN of the Activity Log's most recent entry. If these numbers do not match, your program should check the Activity Log for the notifications it missed. The ActivityLogReader class is key to reading a repository's Activity Log.
 
-In our [code sample on retrieving notifications](../subscribing-to-notifications-and-retrieving-notifications/), we demonstrated how you can create a log file to record an ASN for each received notification. In this code sample, we write a program that checks a log file like the aforementioned one, compares the most recently received ASN to the Activity Log's ASNs, and prints information about missed notifications to the console.
+The [code sample on retrieving notifications](../subscribing-to-notifications-and-retrieving-notifications/) demonstrates how to create a log file that records an ASN for each received notification. This tutorial writes a program that checks a log file like that one, compares the most recently received ASN to the Activity Log's ASNs, and prints information about any missed notifications to the console.
 
-### Sign in to the repository
+The example code snippets in this topic comprise one continuous C# program.
+
+### Signing in to the repository
 
 Sign in to the repository using Windows authentication.
 
 ```csharp
-using (mySess = new Session())
+using (Session mySession = new Session())
 {
     RepositoryRegistration myRepoReg =
     new RepositoryRegistration("myLFServer", "myRepo");
-    mySess.LogIn(myRepoReg);
+    mySession.LogIn(myRepoReg);
 ```
 
-### Get the ASN of the last received notifications
+### Getting the ASN of the last received notification
 
-Check to see if any have been missed since the program last connected to the repository. Read your ASN log file to get the ASN of the last notification that your program received.
+Check whether any notifications were missed since the program last connected to the repository, by reading the ASN log file to get the ASN of the last notification received.
 
 ```csharp
     long lastNotif = 0;
@@ -43,29 +45,26 @@ Check to see if any have been missed since the program last connected to the rep
     {
 ```
 
-### Read the most recent ASN in the Activity Log
+### Reading the most recent ASN in the Activity Log
 
-We initialize two boolean variables that will keep track of whether we should print the entire activity log out, or just a subset of it.
-
-Then, we sort the Activity Log so that the most recent ASN is on top, and read the most recent ASN.
+Initialize two boolean variables to track whether to print the entire Activity Log, or just a subset of it. Then sort the Activity Log so that the most recent entry is first, and read its ASN.
 
 ```csharp
         bool printEntireActivityLog = false;
         bool printActivityLogRange = false;
         int firstcount = 0;
         ActivityLogReader ALR = new
-        ActivityLogReader(SortDirection.Descending, mySess);
+        ActivityLogReader(SortDirection.Descending, mySession);
         while (ALR.Read() && firstcount <2)
         {
             firstcount += 1;
             ActivityRecord lastActivity = ALR.Item;
-            lastASNinAR = lastActivity.SequenceNumber;
+            long lastASNinAR = lastActivity.SequenceNumber;
 ```
 
-### Check if the two ASNs match. If not, check which activities we missed
+### Checking whether any activities were missed
 
-Check if the last ASN recorded by our program is identical to the ASN for the latest Activity Log entry. If it is not, we go on to check if we have missed all the activities in the current Activity Log, or only some of them. We set the relevant boolean variables to true or false depending on what we find.
-Since we had sorted the Activity Log in descending order initially in order to get the latest entry, we now reset the order to the default ascending order in order to get the earliest entry.
+Check whether the last ASN recorded by the program matches the ASN of the latest Activity Log entry. If it does not, check whether all activities in the current Activity Log were missed, or only some of them, and set the boolean variables accordingly. Since the Activity Log was sorted in descending order to get the latest entry, reset it to the default ascending order to get the earliest entry.
 
 ```csharp
             if (lastASNinAR != lastNotif)
@@ -76,7 +75,7 @@ Since we had sorted the Activity Log in descending order initially in order to g
                 {
                     secondcount += 1;
                     ActivityRecord firstActivity = ALR.Item;
-                    firstASNinAR = firstActivity.SequenceNumber;
+                    long firstASNinAR = firstActivity.SequenceNumber;
                     if (firstASNinAR > lastNotif)
                     {
                         printEntireActivityLog = true;
@@ -90,9 +89,9 @@ Since we had sorted the Activity Log in descending order initially in order to g
         }
 ```
 
-### Print entire Activity Log if we missed all activities in it
+### Printing the entire Activity Log if all activities were missed
 
-Print to the console the type and Session ID of the activity that triggered the notification. If we had missed all the events in the Activity Log, we print information about every activity in the Activity Log to the console.
+If every activity in the Activity Log was missed, print the sequence number and activity type of each entry to the console.
 
 ```csharp
         if (printEntireActivityLog)
@@ -106,15 +105,83 @@ Print to the console the type and Session ID of the activity that triggered the 
         }
 ```
 
-### Else: Print only Activity Log from most recent received notification onwards
+### Printing only the missed range of the Activity Log
 
-If we had missed only some of the events in the Activity Log, we print only information about all the events from `lastnotif` onwards to the console. The `-1` parameter in `ActivityLogReader` indicates the end of the Activity Log.
+If only some of the events in the Activity Log were missed, print information about every event from `lastNotif` onward to the console. The `-1` parameter in `ActivityLogReader` indicates the end of the Activity Log.
 
 ```csharp
         if (printActivityLogRange)
         {
             ActivityLogReader ALRRange =
-            new ActivityLogReader(lastNotif, -1, mySess);
+            new ActivityLogReader(lastNotif, -1, mySession);
+            while (ALRRange.Read())
+            {
+                ActivityRecord AR = ALRRange.Item;
+                Console.WriteLine(AR.SequenceNumber +
+                " " + AR.ActivityType);
+            }
+        }
+    }
+}
+```
+
+### Putting It All Together
+
+The snippets above combine into the following continuous program:
+
+```csharp
+using (Session mySession = new Session())
+{
+    RepositoryRegistration myRepoReg =
+    new RepositoryRegistration("myLFServer", "myRepo");
+    mySession.LogIn(myRepoReg);
+    long lastNotif = 0;
+    if (long.TryParse(File.ReadLines(
+    "asn_log.txt").Last(), out lastNotif))
+    {
+        bool printEntireActivityLog = false;
+        bool printActivityLogRange = false;
+        int firstcount = 0;
+        ActivityLogReader ALR = new
+        ActivityLogReader(SortDirection.Descending, mySession);
+        while (ALR.Read() && firstcount <2)
+        {
+            firstcount += 1;
+            ActivityRecord lastActivity = ALR.Item;
+            long lastASNinAR = lastActivity.SequenceNumber;
+            if (lastASNinAR != lastNotif)
+            {
+                ALR.Reset();
+                int secondcount = 0;
+                while (ALR.Read() && secondcount <2)
+                {
+                    secondcount += 1;
+                    ActivityRecord firstActivity = ALR.Item;
+                    long firstASNinAR = firstActivity.SequenceNumber;
+                    if (firstASNinAR > lastNotif)
+                    {
+                        printEntireActivityLog = true;
+                    }
+                    else
+                    {
+                        printActivityLogRange = true;
+                    }
+                }
+            }
+        }
+        if (printEntireActivityLog)
+        {
+            while (ALR.Read())
+            {
+                ActivityRecord AR = ALR.Item;
+                Console.WriteLine(AR.SequenceNumber
+                + " " + AR.ActivityType);
+            }
+        }
+        if (printActivityLogRange)
+        {
+            ActivityLogReader ALRRange =
+            new ActivityLogReader(lastNotif, -1, mySession);
             while (ALRRange.Read())
             {
                 ActivityRecord AR = ALRRange.Item;
