@@ -23,7 +23,7 @@ The following sample PowerShell script uses the Server class in RepositoryAccess
 
 **Displaying the current sessions in a Laserfiche Server**
 
-```csharp
+```powershell
 
 Add-Type -path 'C:\temp\Laserfiche.RepositoryAccess.dll'
 Add-Type -path 'C:\temp\Laserfiche.HttpClient.dll'
@@ -35,7 +35,7 @@ $MyServer = New-Object Laserfiche.RepositoryAccess.Server($ServerName)
 [Laserfiche.RepositoryAccess.ServerSessionInfoReader]$AllSessions = $MyServer.EnumSessions()
 foreach ($session in $AllSessions)
 {
-  #print the user names and login times for all sessions in the specified Laserfiche server.
-  $session.UserName + ": " + $session.LogInTime.ToString()
+  #print the user names and login times for all sessions in the specified Laserfiche server.
+  $session.UserName + ": " + $session.LogInTime.ToString()
 }
 ```
