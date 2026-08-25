@@ -11,29 +11,28 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Submitting LFQL Queries
 
-The basic procedure for submitting LFQL queries is as follows:
+The basic procedure for submitting LFQL queries is as follows:
 
 - Sign in to the repository.
-- Create a new LfConnection object using your current session.
-- Use the LfConnection object to create an LfCommand object.
-- Specify the LfCommand object's command text in the LFQL query language.
-- Use LfDataReader to execute the command and obtain the results.
+- Create a new `LfConnection` object using your current session.
+- Use the `LfConnection` object to create an `LfCommand` object.
+- Specify the `LfCommand` object's command text in the LFQL query language.
+- Use `LfDataReader` to execute the command and obtain the results.
 
-Here, we show how you can retrieve a list of entries that have been assigned the "Receipt" template, returning their names and IDs.
+The following sample retrieves a list of entries that have been assigned the "Receipt" template, returning their names and IDs.
 
 ```csharp
-using (mySession = new Session())
+using (Session mySession = new Session())
 { 
     RepositoryRegistration myRepoReg = new RepositoryRegistration("myLFServer", "myRepo");
     mySession.LogIn("myUsername", "myPassword", myRepoReg);
     LfConnection conn = new LfConnection(mySession);
     conn.Open();
     LfCommand lfqlCommand = conn.CreateCommand();
-    lfqlCommand.CommandText = "SELECT entry_name, entry_id  from lf.entry WHERE pset_name = 'Receipt'";
+    lfqlCommand.CommandText = "SELECT entry_name, entry_id FROM lf.entry WHERE pset_name = 'Receipt'";
     Laserfiche.RepositoryAccess.Data.LfDataReader reader = lfqlCommand.ExecuteReader();
     if (reader.HasRows) // check for non-zero result set
     {
-        Console.WriteLine(reader.RecordsAffected.ToString()); // Show the total number of rows
         while (reader.Read())
         {
             System.Windows.Forms.MessageBox.Show("Entry Name: " + reader["entry_name"].ToString() +

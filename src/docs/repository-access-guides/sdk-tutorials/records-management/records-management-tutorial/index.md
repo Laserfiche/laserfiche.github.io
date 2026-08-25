@@ -219,7 +219,7 @@ Retrieve the record series created earlier, modify its comment, and save the cha
 
 ### Creating a cutoff instruction
 
-Create a [time+event](https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/userguide/Default.htm#../Subsystems/client_wa/Content/RecordsManagement/Time-Event-based_Cutoff_Instruction.htm) cutoff instruction using the cycle created earlier. Create a `CutoffCriterionInfo` object, assign its properties, and retrieve the ID of the previously created cycle. Add two events to the cutoff instruction, then create it using the `CutoffCriterion.Create` method.
+Create a time+event cutoff instruction using the cycle created earlier. Create a `CutoffCriterionInfo` object, assign its properties, and retrieve the ID of the previously created cycle. Add two events to the cutoff instruction, then create it using the `CutoffCriterion.Create` method.
 
 ```csharp
     CutoffCriterionInfo cci = new CutoffCriterionInfo();
