@@ -9,7 +9,7 @@ redirect_from:
   - guide_building-apps.html
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Guides

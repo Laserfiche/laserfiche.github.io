@@ -24,11 +24,17 @@ First published 5/23/2024
 
 - Check installations and versions:
 
-  ```sh
+```sh
   gem --version
   bundle --version
   bundle exec jekyll --version
-  ```
+```
+
+- To update all gems in the project (Gemfile.lock)
+
+```sh
+  bundle update
+```
 
 ### Build the static website and serve locally
 
@@ -78,20 +84,6 @@ nav_order: 1
 parent: Laserfiche Title
 ---
 ```
-
-## Using html-proofer to test the relative links
-
-To check if there are any dead relative links in the project, navigate to src, and run
-
-```sh
-jekyll build
-bundle exec rake
-```
-
-NOTE: If `rake` fails with error `Could not open library 'libcurl.dll'`
-
-- Download CURL from https://curl.se/download.html
-- Copy the correct version of the curl DLL (e.g. libcurl-x64.dll for Windows 64 bit) into the Ruby bin folder (e.g.`C:\Ruby33-x64\bin`) and rename to `libcurl.dll`.
 
 ## Previewing pages from build artifact
 

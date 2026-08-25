@@ -9,7 +9,7 @@ redirect_from:
   - guide_update-field-values.html
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Write Field Values

@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Using the Lookup Tables CLI
-nav_order: 7
+nav_order: 8
 parent: Guides
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Using the Lookup Tables CLI For Laserfiche Cloud

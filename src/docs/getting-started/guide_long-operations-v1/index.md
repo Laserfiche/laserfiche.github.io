@@ -7,7 +7,7 @@ redirect_from:
 nav_exclude: true
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Long Operations
@@ -34,10 +34,11 @@ First we'll call the copy API to copy a folder and its content to another folder
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{destinationEntryId}/Laserfiche.Repository.Folder/children/CopyAsync
 ```
+
 ```json
 {
-    "sourceId": 9,
-    "name": "MyCopiedFolder"
+  "sourceId": 9,
+  "name": "MyCopiedFolder"
 }
 ```
 
@@ -46,9 +47,10 @@ The API call will return a token in the response:
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-    "token": "12345678-abcd-efgh-ijkl-123456789012"
+  "token": "12345678-abcd-efgh-ijkl-123456789012"
 }
 ```
 
@@ -63,13 +65,14 @@ The API will return the status of the operation, for example:
 ```
 HTTP 202 Accepted
 ```
+
 ```json
 {
-    "operationToken": "12345678-abcd-efgh-ijkl-123456789012",
-    "operationType": "CopyEntry",
-    "percentComplete": 10,
-    "status": "InProgress",
-    "errors": []
+  "operationToken": "12345678-abcd-efgh-ijkl-123456789012",
+  "operationType": "CopyEntry",
+  "percentComplete": 10,
+  "status": "InProgress",
+  "errors": []
 }
 ```
 
@@ -91,24 +94,25 @@ We will get back the newly created entry details, see the following sample respo
 ```
 HTTP 200 Ok
 ```
+
 ```json
 {
-    "id": 1234,
-    "name": "MyCopiedFolder",
-    "parentId": 1,
-    "fullPath": "\\MyCopiedFolder ",
-    "folderPath": "\\",
-    "creator": "Guide User",
-    "creationTime": "2020-12-12T12:00:00-00:00",
-    "lastModifiedTime": "2020-12-12T12:00:00-00:00",
-    "entryType": "Folder",
-    "templateName": "",
-    "templateId": 0,
-    "templateFieldNames": [],
-    "volumeName": "DEFAULTVOLUME",
-    "rowNumber": 0,
-    "isRecordFolder": false,
-    "isUnderRecordSeries": false
+  "id": 1234,
+  "name": "MyCopiedFolder",
+  "parentId": 1,
+  "fullPath": "\\MyCopiedFolder ",
+  "folderPath": "\\",
+  "creator": "Guide User",
+  "creationTime": "2020-12-12T12:00:00-00:00",
+  "lastModifiedTime": "2020-12-12T12:00:00-00:00",
+  "entryType": "Folder",
+  "templateName": "",
+  "templateId": 0,
+  "templateFieldNames": [],
+  "volumeName": "DEFAULTVOLUME",
+  "rowNumber": 0,
+  "isRecordFolder": false,
+  "isUnderRecordSeries": false
 }
 ```
 

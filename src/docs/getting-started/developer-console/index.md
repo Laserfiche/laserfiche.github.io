@@ -7,7 +7,7 @@ redirect_from:
 parent: Getting Started
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche Developer Console
@@ -33,7 +33,6 @@ To access the Developer Console, depending on where your Laserfiche Cloud data r
 As a developer, follow these steps to create and distribute an application capable to interact with Laserfiche Cloud API:
 
 1. Create a new application definition using the Laserfiche Developer Console. Laserfiche supports these application types:
-
    - [Creating an OAuth Service App for the Laserfiche API](../../api/authentication/guide_oauth-service/)
    - [Creating an OAuth Single-Page App for the Laserfiche API](../../api/authentication/guide_oauth-spa/)
    - [Creating an OAuth Web App for the Laserfiche API](../../api/authentication/guide_oauth-webapp/)
@@ -41,7 +40,6 @@ As a developer, follow these steps to create and distribute an application capab
 1. Compile and package your application code.
 1. Using the Laserfiche Developer Console, [export the Application Manifest](../../api/authentication/guide_importing-exporting-manifest/) JSON file.
 1. Create a distribution package for your application containing:
-
    - The executable artifact
    - Laserfiche Application Manifest JSON file
    - Include in your documentation: how to provision your application in a Laserfiche Cloud Account by importing the Application Manifest JSON file.

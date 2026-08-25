@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Working with Reporting Applications
-nav_order: 8
+nav_order: 9
 has_children: false
 parent: Guides
 ---
 
-<!--© 2025 Laserfiche.
+<!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Accessing Lookup Tables from Reporting Applications
