@@ -10,7 +10,3 @@ parent: SDK Tutorials
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Cloud
-
-## Pages
-
-- [Best Practices for Laserfiche Cloud](./best-practices-for-laserfiche-cloud/)

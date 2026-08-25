@@ -10,8 +10,3 @@ parent: SDK Tutorials
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Records Management
-
-## Pages
-
-- [Key Concepts for Records Management](./key-concepts-for-records-management/)
-- [Records Management Tutorial](./records-management-tutorial/)

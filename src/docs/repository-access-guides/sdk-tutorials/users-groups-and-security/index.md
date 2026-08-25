@@ -10,8 +10,3 @@ parent: SDK Tutorials
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Users, Groups, and Security
-
-## Pages
-
-- [Key Concepts for Working with Users, Groups, and Security](./key-concepts-for-working-with-users-groups-and-security/)
-- [Administering Users, Groups, and Security Rights](./administering-users-groups-and-security-rights/)

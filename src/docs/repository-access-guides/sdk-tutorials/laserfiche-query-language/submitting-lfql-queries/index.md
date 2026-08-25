@@ -21,7 +21,7 @@ The basic procedure for submitting LFQL queries is as follows:
 
 Here, we show how you can retrieve a list of entries that have been assigned the "Receipt" template, returning their names and IDs.
 
-```
+```csharp
 using (mySession = new Session())
 { 
     RepositoryRegistration myRepoReg = new RepositoryRegistration("myLFServer", "myRepo");
