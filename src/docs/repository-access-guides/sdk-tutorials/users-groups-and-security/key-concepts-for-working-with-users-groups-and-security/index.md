@@ -23,7 +23,7 @@ The Account class contains methods for retrieving Laserfiche users or groups.
 
 Entry access rights are contained in EntryAccessRule objects, part of the EntrySecurity class. Similarly,  VolumeAccessRule, TemplateAccessRule, and FieldAccessRule  control access to volumes, templates, and fields respectively. These are part of the VolumeSecurity, TemplateSecurity, and FieldSecurity classes respectively. You can retrieve the rights a user have to a Laserfiche entity using EntryRights, VolumeRights, TemplateRights, and FieldRights.
 
-Feature rights, privileges, and tags are associated with particular users---and, for tags, also with particular entries. To grant permissions that are not entry access rights to users or groups, use TrusteeInfo objects to represent the users or groups. We demonstrate how these work in our tutorial.
+Feature rights, privileges, and tags are associated with particular users. Tags are also associated with particular entries. To grant permissions that are not entry access rights to users or groups, use TrusteeInfo objects to represent the users or groups. We demonstrate how these work in our tutorial.
 
 To obtain the effective rights of a user, use `GetEffectiveRights` for the currently signed-in user or `GetAclDisplayRights` for any other user. The tutorial demonstrates how to use the latter method. Both methods are in the Entry class.
 

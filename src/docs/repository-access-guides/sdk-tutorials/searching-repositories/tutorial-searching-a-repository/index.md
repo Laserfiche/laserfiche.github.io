@@ -9,13 +9,15 @@ grand_parent: SDK Tutorials
 <!--© 2026 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Searching and Indexing a Repository
+# Searching a Repository
 
-This tutorial demonstrates how to index a self-hosted repository, index specific documents, search a repository, search documents, and turn your search results into an output format of your choice. You must index the documents, folders, or repositories you wish to search before conducting a search on them. For more complex searches, see the section on [advanced search syntax](../search-syntax/).
+This tutorial demonstrates using Repository Access to search a repository and work with the search results. For an overview of the classes involved and details on advanced search syntax, see [Key Concepts for Searching with the SDK](../key-concepts-for-searching-with-the-sdk/).
+
+The example code snippets in this topic comprise one continuous C# program.
 
 ### Signing in
 
-We begin by signing in to the repository *myRepo* on the Laserfiche Server *myLFServer*, using the Windows credentials of the current thread.
+Start a session and sign in to the repository *myRepo* on the Laserfiche Server *myLFServer*, using the Windows credentials of the current thread.
 
 ```csharp
 using (Session mySession = new Session())
@@ -25,27 +27,9 @@ using (Session mySession = new Session())
     mySession.LogIn(myRepoReg);
 ```
 
-### Indexing a document
-
-Now we (re)index an existing document *Doc* in the repository.
-
-```csharp
-    DocumentInfo myDoc = Document.GetDocumentInfo("\\Doc", mySession);
-    myDoc.Index();
-```
-
-### Indexing a repository
-
-Maybe you decided that that was not enough, and want to index the whole repository. The [IndexAll](LfSDKNet104.chm::/html/T_Laserfiche_RepositoryAccess_IndexOption.htm) option tells Laserfiche to index the whole repository.
-
-```csharp
-    IndexConfiguration IC = new IndexConfiguration(mySession);
-    IC.Reindex(IndexOption.IndexAll);
-```
-
 ### Searching a repository and retrieving search statistics
 
-Now that we've indexed the repository, we can search the whole repository. Here we search for documents containing the word "fish". We then use [SearchStatistics](LfSDKNet104.chm::/html/T_Laserfiche_RepositoryAccess_SearchStatistics.htm) to get the number of documents containing "fish", and print this number to the console.
+Search the repository for documents containing the word "fish". Then use `SearchStatistics` to get the number of documents found, and print the value to the console.
 
 ```csharp
     Search RepoSearch = new Search(mySession);
@@ -55,9 +39,9 @@ Now that we've indexed the repository, we can search the whole repository. Here 
     Console.WriteLine("Entries Found: " + SS.DocumentCount);
 ```
 
-### Finding IDs of Documents
+### Finding IDs of documents
 
-If you have information about certain documents but do not know their IDs, you can search using that information and retrieve the IDs of the documents that are hits. Here, we take the previous search results and write their entry IDs and entry names to the console.
+Use the previous search results to look up the entry IDs and names of the documents that are hits, and print them to the console.
 
 ```csharp
     SearchListingSettings Settings = new SearchListingSettings();
@@ -71,9 +55,9 @@ If you have information about certain documents but do not know their IDs, you c
     RepoSearch.Close();
 ```
 
-### Searching with complex requirements
+### Searching with more complex requirements
 
-Now let's do a more complex search that looks in a particular folder for a certain field value. We will look under the folder "Forms" for documents that have a "Pending" value in their "Approval Status" field, then run the search.
+Search under the folder "Forms" for documents that have a "Pending" value in the "Approval Status" field.
 
 ```csharp
     Search FormSearch = new Search(mySession);
@@ -84,7 +68,7 @@ Now let's do a more complex search that looks in a particular folder for a certa
 
 ### Modifying how search listings appear
 
-We also want the names of the documents and their last modified dates as part of our search results, and we would like the results sorted by the last modified date. We configure `SearchListingSettings` to display this information.
+Configure this search to retrieve the names of the documents and their last modified dates as part of the search results, and also sort the results by the last modified date.
 
 ```csharp
     SearchListingSettings searchSettings =
@@ -96,19 +80,16 @@ We also want the names of the documents and their last modified dates as part of
 
 ### Using search results to act on documents
 
-Now we can process the forms search results and modify the document status according to their appearance in the results. To get a list of the results, we pass the `SearchListingSettings` object into the `GetResultListing` method.
+Process the search results and modify the status of matching documents. Pass the `SearchListingSettings` object into the `GetResultListing` method to retrieve the list of results, and create a `StringBuilder` named `csvText` to accumulate the text that will be written to a .csv file in a later step.
 
-We start an empty file "csvText" in preparation for the next section of the code, where we will write the results to a .csv file.
-
-For each result (representing one document that has "Pending" in its "Approval Status" field), we lock the document and change the approval status of that document to "Approved". The end of the `using (EntryInfo...` statement automatically unlocks the document.
+For each search result — one document with "Pending" in its "Approval Status" field — lock the document and change its approval status to "Approved". The end of the `using (EntryInfo...` statement automatically unlocks the document.
 
 ```csharp
     using (SearchResultListing listing =
     FormSearch.GetResultListing(searchSettings))
     {
         StringBuilder csvText = new StringBuilder();
-        csvText.AppendLine("Entry ID, Entry Name,
-        Last Modified");
+        csvText.AppendLine("Entry ID, Entry Name, Last Modified");
         foreach (EntryListingRow row in listing)
         {
             int rowID = (int)row[SystemColumn.Id];
@@ -126,11 +107,73 @@ For each result (representing one document that has "Pending" in its "Approval S
 
 ### Writing search results to CSV file
 
-We are still in the `using (SearchResultListing...` statement at this point. Now we write our search results to a .csv file "results.csv" for reporting purposes.
+Write the search results to a .csv file "results.csv" for reporting purposes.
 
-We also end both the `using (SearchResultListing...` statement and the `using (mySession...` statement. Ending the former helps us avoid hitting the search listing limit—Laserfiche only allows four concurrently open search result listings. Ending the latter automatically signs us out of the repository.
+Closing the `using (SearchResultListing...` statement avoids hitting the search listing limit. Closing the `using (mySession...` statement then signs out of the repository automatically.
 
 ```csharp
+            csvText.AppendLine(row.GetDatumAsString
+            (SystemColumn.Id) + "," +
+            row.GetDatumAsString(SystemColumn.Name) + "," +
+            row.GetDatumAsString(SystemColumn.LastModified));
+        }
+        System.IO.File.WriteAllText("results.csv",
+        csvText.ToString());
+    }
+}
+```
+
+### Putting It All Together
+
+The snippets above combine into the following continuous program:
+
+```csharp
+using (Session mySession = new Session())
+{
+    RepositoryRegistration myRepoReg =
+    new RepositoryRegistration("myLFServer", "myRepo");
+    mySession.LogIn(myRepoReg);
+    Search RepoSearch = new Search(mySession);
+    RepoSearch.Command = "fish";
+    RepoSearch.Run();
+    SearchStatistics SS = RepoSearch.GetSummaryStats();
+    Console.WriteLine("Entries Found: " + SS.DocumentCount);
+    SearchListingSettings Settings = new SearchListingSettings();
+    SearchResultListing Results = RepoSearch.GetResultListing(Settings);
+    for (int k = 1; k <= Results.RowsCount; k++)
+    {
+        Console.WriteLine(Results.GetDatumAsString(k,
+        SystemColumn.Id) + " " + Results.GetDatumAsString(k,
+        SystemColumn.Name));
+    }
+    RepoSearch.Close();
+    Search FormSearch = new Search(mySession);
+    FormSearch.Command = @"{LF: LOOKIN = ""\Forms""} &
+    {[]:[Approval Status] = ""Pending""}";
+    FormSearch.Run();
+    SearchListingSettings searchSettings =
+    new SearchListingSettings();
+    searchSettings.AddColumn(SystemColumn.Name);
+    searchSettings.AddColumn(SystemColumn.LastModified);
+    searchSettings.SetSortColumn(SystemColumn.LastModified);
+    using (SearchResultListing listing =
+    FormSearch.GetResultListing(searchSettings))
+    {
+        StringBuilder csvText = new StringBuilder();
+        csvText.AppendLine("Entry ID, Entry Name, Last Modified");
+        foreach (EntryListingRow row in listing)
+        {
+            int rowID = (int)row[SystemColumn.Id];
+            using (EntryInfo eInfo =
+            Entry.GetEntryInfo(rowID, mySession))
+            {
+                eInfo.Lock(LockType.Exclusive);
+                FieldValueCollection FVC =
+                eInfo.GetFieldValues();
+                FVC["Approval Status"] = "Approved";
+                eInfo.SetFieldValues(FVC);
+                eInfo.Save();
+            }
             csvText.AppendLine(row.GetDatumAsString
             (SystemColumn.Id) + "," +
             row.GetDatumAsString(SystemColumn.Name) + "," +
