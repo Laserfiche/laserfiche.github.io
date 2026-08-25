@@ -3,6 +3,7 @@ layout: default
 title: Getting Started with the SDK
 nav_order: 2
 has_children: true
+parent: Laserfiche SDK
 ---
 
 <!--© 2026 Laserfiche.

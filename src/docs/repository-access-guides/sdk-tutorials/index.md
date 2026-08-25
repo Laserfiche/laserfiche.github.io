@@ -3,6 +3,7 @@ layout: default
 title: SDK Tutorials
 nav_order: 3
 has_children: true
+parent: Laserfiche SDK
 ---
 
 <!--© 2026 Laserfiche.
