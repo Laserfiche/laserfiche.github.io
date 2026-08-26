@@ -91,7 +91,7 @@ Set the ForceSnapshot property to use Snapshot to generate pages for PDF files.
 
 ### Searching in CAT
 
-CAT can also tell the client to run searches. This next snippet searches for all documents that have the "Forms" template and that have the status "Approved" in that template's "Status" field. See the [search tutorial](../../searching-repositories/search-syntax/) on advanced search syntax for further information on how to fill in the Query property. In this code snippet, the search results are displayed in the current client window, not a new window.
+CAT can also tell the client to run searches. This next snippet searches for all documents that have the "Forms" template and that have the status "Approved" in that template's "Status" field. In this code snippet, the search results are displayed in the current client window, not a new window.
 
 ```csharp
     SearchOptions searchOptions = new SearchOptions();
