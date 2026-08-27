@@ -1,0 +1,431 @@
+/*<meta />*/
+
+/*===========================================================================================================================================================
+
+Hello! If this is your first time looking at a stylesheet within the text editor view, what you are reading right now is a "comment". Comments are added throughout this stylesheet with the purpose of making the source code easier to understand, comments will not be interpreted during the compile process. Since comments are not interpreted during the compile process, feel free to add or remove any comments.
+
+If you have any questions regarding how to work with this stylesheet or template project, please contact MadCap Technical Support. 
+https://www.madcapsoftware.com/support/contact-options.aspx
+
+===========================================================================================================================================================*/
+
+
+/* Home Page General Styles*/
+
+body
+{
+	font-family: Arial;
+	line-height: 1.5em;
+	background-color: #dadada;
+}
+
+p
+{
+	color: #5a5a5a;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.center
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	float: none !important;
+	text-align: center;
+}
+
+.inner-wrap .tab-bar .nav-search /*Makes the search in the Top Navigation skin not appear on the home page*/
+{
+	display: none;
+}
+
+.inner-wrap .main-section > .outer-row
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+/* Mad Cap proxy/editor assigned styles */
+
+MadCap|searchBarProxy
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	float: none;
+	width: 50%;
+}
+
+MadCap|topicToolbarProxy
+{
+	float: none;
+}
+
+MadCap|menuProxy.menu1
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|menuProxy.menu2
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|slideshow
+{
+	border-style: none;
+	box-shadow: none;
+}
+
+MadCap|slideshowCaption
+{
+	background: none;
+	color: #000000;
+	padding: 0;
+	padding-top: 0;
+}
+
+html.home-page
+{
+	mc-community-features: disabled;
+}
+
+/* Responsive Header Styles*/
+
+#contentBody > .responsive-header
+{
+	background-color: transparent;
+}
+
+/* Home Page Topic Hero section*/
+
+div.topic-hero
+{
+	padding-top: 20px;
+	height: auto;
+	padding-bottom: 80px;
+}
+
+h1
+{
+	font-size: 3.6em;
+	margin-top: 1.11em;
+	margin-bottom: 0.5em;
+	line-height: 100%;
+}
+
+h2
+{
+	font-size: 1.8em;
+	margin-bottom: 80px;
+	line-height: 100%;
+}
+
+.search,
+.search-bar
+{
+	margin: 0 auto;
+}
+
+/*==Home-tiles section==*/
+
+div.home-tiles-container
+{
+	padding-bottom: 150px;
+}
+
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-bottom: 5%;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	overflow: hidden;
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 16.667%;
+	margin-left: 12.667%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 16.667%;
+	margin-left: 2%;
+}
+
+div.home-tiles > div:nth-child(3)
+{
+	width: 16.667%;
+	margin-left: 2%;
+}
+
+div.home-tiles > div:nth-child(4)
+{
+	width: 16.667%;
+	margin-left: 2%;
+}
+
+/*=Elements for text contained within each home-tile=*/
+
+div.tile-head-1, div.tile-head-2, div.tile-head-3, div.tile-head-4
+{
+	color: #fff;
+}
+
+div.tile-head-1 /*Change this background-color for the first tile color*/
+{
+	background-color: #013658;
+}
+
+div.tile-head-2 /*Change this background-color for the second tile color*/
+{
+	background-color: #87AFBF;
+}
+
+div.tile-head-3 /*Change this background-color for the second tile color*/
+{
+	background-color: #00B5D6;
+}
+
+div.tile-head-4 /*Change this background-color for the second tile color*/
+{
+	background-color: #00779B;
+}
+
+p.tile-title
+{
+	color: #fff;
+	padding: 10px;
+	margin-top: 0px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+p.tile-content
+{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+div.home-tiles a /*Complex Selector: Links within the home tiles will have the following properties*/
+{
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div.home-tiles a:hover /*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #d3d3d3;
+}
+
+/*==Home Page Footer==*/
+
+div.footer
+{
+	background-color: #D15B05;
+	padding-top: 20px;
+	border-top: 1px solid #b3b3b3;
+}
+
+div.footer a /*Complex Selector: Any anchor (links) tags that are within div.footer will have the following properties */
+{
+	text-decoration: none;
+	color: #DADADA;
+}
+
+div.footer p /*Complex Selector: Any <p> that is contained within div.footer will have the following properties*/
+{
+	color: #fff;
+	font-size: 0.8em;
+}
+
+div.home-master-page-footer	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+}
+
+div.home-master-page-footer::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-master-page-footer::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-master-page-footer > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.home-master-page-footer > div:nth-child(1)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+div.home-master-page-footer > div:nth-child(2)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+div.home-master-page-footer > div:nth-child(3)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+/*===========================================================================================================================================================
+Styles after this point are styles that are for specific mediums. If any additional styles are added to this template they will be listed after mediums.
+[@media tablet] declares styles that will apply when the screen is in tablet view
+[@media mobile] declares styles that will apply when the screen is in mobile view
+===========================================================================================================================================================*/
+
+@media tablet
+{
+	div.footer
+	{
+		padding-top: 10px;
+	}
+
+	div.HomeHeroSection > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 40%;
+		margin-left: 10%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 40%;
+		margin-left: 5%;
+	}
+
+	div.home-tiles > div:nth-child(3)
+	{
+		width: 40%;
+		margin-left: 10%;
+	}
+
+	div.home-tiles > div:nth-child(4)
+	{
+		width: 40%;
+		margin-left: 5%;
+	}
+}
+
+@media mobile
+{
+	MadCap|searchBarProxy.homeSearchBar
+	{
+		width: 100%;
+	}
+	
+	h1
+	{
+		font-size: 2.4em;
+	}
+
+	h2
+	{
+		font-size: 1.2em;
+	}
+
+
+	div.home-tiles-container
+	{
+		padding-bottom: 0;
+	}
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	div.home-tiles > div:nth-child(3)
+	{
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	div.home-tiles > div:nth-child(4)
+	{
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	div.home-master-page-footer > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+}
