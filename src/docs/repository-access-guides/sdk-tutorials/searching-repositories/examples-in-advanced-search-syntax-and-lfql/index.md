@@ -22,24 +22,28 @@ This page contains examples for the following types of searches:
 - [Searches based on other entry properties](#searching-on-other-entry-properties)
 
 ## Volume-Related Searches
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries in the volume with volume ID 1. | ```{LF:volid="1"}``` | ```select entry_name, entry_id, volume_id, volume_name from lf.entry where volume_id = 1``` |
+| Search for entries in the volume with volume ID 1. | ```{LF:volid="1"}``` | ```select entry_name, entry_id, volume_id, volume_name from lf.entry where volume_id = 1``` |
 | Search for entries in the volume that is named 'default'. | ```{LF:volname="default"}``` | ```select entry_name, entry_id, volume_name from lf.entry where volume_name = 'default'``` |
 
 ## Date-Related Searches
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
 | Find entries created after the specified date. | ```{LF:created>"2007-10-22"}``` | ```select entry_name, entry_id from lf.entry where created_date > date '2007-10-22'``` |
 | Find entries modified before the specified date. | ```{LF:modified<"2007-10-22"}``` | ```select entry_name, entry_id from lf.entry where last_modified < date '2007-10-22'``` |
 
 ## Searching for Entry Names and IDs
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
 | Find entries with the name "sample". | ```{LF:name="sample"}``` | ```select entry_name, entry_id from lf.entry where entry_name = 'sample'``` |
 | Find entries with an ID that is a number greater than 3. | ```{LF:Id>"3"}``` | ```select entry_name from lf.entry where entry_id > 3``` |
 
 ## Searching for Document Metadata
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
 | Find entries that have the template that is named "application". | ```{LF:templatename="application"}``` | ```select entry_name, entry_id, pset_name from lf.entry where pset_name = 'application'``` |
@@ -50,9 +54,10 @@ This page contains examples for the following types of searches:
 | Find entries that have the "classified" tag. | ```{LF:tags="classified"}``` | ```select e.entry_name, e.entry_id from lf.entry e, lf.entry_tag et, lf.tag_def td where e.entry_id = et.entry_id and et.tag_id = td.tag_id and tag_name = 'classified'``` |
 
 ## Searching on Properties of Annotations
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
-| Search for entries with sticky notes containing the string "urgent". | ```{LF:sticky="urgent"}``` | ```select entry_id, sticky_note  from lf.annotation where sticky_note like '%urgent%'``` |
+| Search for entries with sticky notes containing the string "urgent". | ```{LF:sticky="urgent"}``` | ```select entry_id, sticky_note from lf.annotation where sticky_note like '%urgent%'``` |
 | Search for entries with annotations with the color that has decimal value 65535. | ```{LF:anncolor="65535"}``` | ```select entry_id, ann_color from lf.annotation where ann_color = 65535``` |
 | Search for entries with annotations created by the user with the username "admin". | ```{LF:anncreator="admin"}``` | ```select entry_id, ann_creator from lf.annotation where ann_creator = 'admin'``` |
 | Search for entries with sticky note-type annotations | ```{LF:anntype="note"}``` | ```select entry_id, ann_type from lf.annotation where ann_type = 'note'``` |
@@ -60,12 +65,14 @@ This page contains examples for the following types of searches:
 | Search for entries with a stamp that is named "approved". | ```{LF:annstampname="approved"}``` | ```select entry_id, ann_stamp_name from lf.annotation where ann_stamp_name = 'approved'``` |
 
 ## Searching on Check-Out Properties
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
 | Search for entries checked out by the user with username "admin". | ```{LF:checkoutuser="admin"}``` | ```select entry_name, entry_id from lf.entry where checked_out_by = 'admin'``` |
 | Search for entries checked out by the user with user ID "2". | ```{LF:checkoutuserid="2"}``` | ```select entry_name, entry_id, checked_out_id from lf.entry where checked_out_id = 2``` |
 
 ## Searching on Other Entry Properties
+
 | Search Description | Laserfiche Search Syntax | LFQL Syntax |
 | --- | --- | --- |
 | Search for entries that have an electronic document with the extension "pdf". | ```{LF:ext="pdf"}``` | ```select entry_name, extension from lf.entry where extension = 'pdf'``` |
