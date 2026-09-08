@@ -16,6 +16,15 @@ A Laserfiche document has one primary electronic document. It can also carry **a
 
 An alternate electronic document travels with its document through copy, move, versioning and briefcase operations. That is the reason to use one instead of a second entry plus a link: the payload cannot be separated from the document it belongs to.
 
+### What is not an alternate electronic document
+
+Alternate electronic documents are streams **your integration writes and names**. Some Laserfiche-generated content that sits alongside a document is *not* exposed here:
+
+- **Transcriptions** of audio and video are their own repository storage, produced when automatic transcription is enabled, and searchable in their own right. They are not alternate electronic documents and do not appear in this listing.
+- **The AI document summary** is held in a reserved stream named `summary_json`. It is hidden from the listing and reported as not found, so a generic client cannot read or overwrite it.
+
+If you expected one of these to come back from these routes and it did not, that is why.
+
 Reads require the `repository.Read` scope and the `Read` entry right. Writes and deletes require `repository.Write`, plus `Read` and `WriteContent` on the entry and a writable, non-read-only volume. All operations are restricted to document entries; a folder answers `404`.
 
 ## Names: read this before you write any code
@@ -121,6 +130,14 @@ POST .../Entries/{entryId}/Export
 The response carries a signed download link. The long-running form, `POST .../Entries/{entryId}/ExportAsync`, accepts the same body and returns `202` with a task id whose result carries the link.
 
 `part` accepts `Image`, `Text`, `Edoc` and `AlternateEdoc`. `alternateEdocName` is required when `part` is `AlternateEdoc` and rejected on any other part rather than silently ignored. `pageRange` is ignored for `AlternateEdoc`, as it is for `Edoc`.
+
+Because this is the export surface, it is **audited like any other export**. If the repository is configured to require an audit reason for exports, the request must carry an `auditReasonId` drawn from the `ExportDocument` reasons — a reason belonging to any other event type will not satisfy it — with an optional `auditReasonComment`:
+
+```
+GET .../Repositories/{repositoryId}/AuditReasons
+```
+
+Omitting it answers `400` with *"Need to provide correct audit reason for ExportDocument"*. Note that leaving the field unset in a generated client is not the same as omitting it: it serializes as `0`, which matches no reason and fails the same way. See [Exporting documents](../guide_exporting-documents/) for the full audit-reason contract.
 
 Exporting the reserved `summary_json` answers `404`, identical to exporting a name the document does not have.
 
