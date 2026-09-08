@@ -27,6 +27,8 @@ Laserfiche Repository API enables programmatic access to [Cloud](https://doc.las
 - [Manage document locks and versions — lock / unlock, check-in / check-out](../../guides/documents-and-folders/guide_document-lifecycle/)
 - [Read/Write entry metadata](../../guides/metadata/)
 - [Read and write annotations, and manage stamps](../../guides/documents-and-folders/guide_annotations-and-stamps/)
+- [Store alternate electronic documents — named binary streams alongside a document](../../guides/documents-and-folders/guide_alternate-electronic-documents/)
+- [Locate words on a page, and map a rectangle to text offsets](../../guides/documents-and-folders/guide_page-word-locations/)
 - [Search the Repository](../../guides/search/)
 - [Manage access control and rights — entries, fields, templates, trustees](../../guides/access-control/)
 - [Manage records — properties, retention events, and record series](../../guides/records-management/)
