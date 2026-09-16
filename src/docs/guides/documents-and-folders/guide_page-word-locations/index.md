@@ -2,7 +2,7 @@
 layout: default
 title: Page Word Locations and Text Offsets
 nav_order: 11
-parent: Documents and Folders
+parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
@@ -84,11 +84,24 @@ GET .../Pages/2/Text/Offsets?x=120&y=340&width=460&height=28
 
 Because both endpoints and the annotation share one offset convention, step 3 reproduces exactly what the user selected in step 1.
 
-## Text is generated asynchronously
+## A page with no text answers `404`
 
-A document can have pages and no text yet — a PDF imported moments earlier has been rasterized but not necessarily OCR'd. Neither endpoint conjures text that does not exist.
+Both endpoints read the page's **text** part and its **locations** part together. If either part is missing, the request is refused with `404` — not with an empty word list and not with a `hasTextSpan: false` result:
 
-Poll **`hasText` on `ListPageInfos`** and retry rather than treating an empty result as final. Note that exporting `part=Text` from a document whose pages carry no text is refused with `400`, and a `400` is not a status a caller should retry — so poll for readiness rather than retrying the export.
+| Page state | Result |
+|---|---|
+| No word locations (`hasWordLocations: false`) | `404` |
+| No text (`hasText: false`) | `404` |
+
+So a `404` from these endpoints does **not** mean the entry or the page is missing. Check `ListPageInfos` before concluding that: if the page is listed, the `404` is telling you the page has no text yet.
+
+### Text is generated asynchronously
+
+A document can have pages and no text yet — a PDF imported moments earlier has been rasterized but not necessarily OCR'd, and a page whose text is still being generated is exactly the page that answers `404` above.
+
+Poll **`hasText` and `hasWordLocations` on `ListPageInfos`** and call again once both are true, rather than treating the `404` as final. See [Generating text and OCR](../guide_generating-text/) for how the text gets there.
+
+Note that exporting `part=Text` from a document whose pages carry no text is refused with `400`, and a `400` is not a status a caller should retry — so poll for readiness rather than retrying the export.
 
 ## Errors at a glance
 
@@ -96,6 +109,7 @@ Poll **`hasText` on `ListPageInfos`** and retry rather than treating an empty re
 |---|---|
 | A rectangle parameter omitted | `400` |
 | Page has more word locations than the server supports | `400` |
+| Page has no text, or no word locations | `404` |
 | Entry is not a document, page does not exist, or entry not found | `404` |
 
 ## Related

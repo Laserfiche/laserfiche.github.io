@@ -2,7 +2,7 @@
 layout: default
 title: Alternate Electronic Documents
 nav_order: 10
-parent: Documents and Folders
+parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
@@ -62,13 +62,16 @@ GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries
 
 Returns each stream's `name`, `mimeType` and `size`. Supports `$select`, `$top`, `$skip`, `$count` and `Prefer`.
 
-To find out whether a document has any streams at all without enumerating them, request `hasAlternateEdocs` on a single-entry `GET`:
+To find out whether a document has any streams at all without enumerating them, read `hasAlternateEdocs` on a single-entry `GET`:
 
 ```
+GET .../Entries/{entryId}
 GET .../Entries/{entryId}?$select=hasAlternateEdocs
 ```
 
-It is opt-in — never returned by default — and it is **null in listing results**, where the value is not determined. Null there means "not determined here", not "none".
+It is returned on every single-entry read of a document — there is no `include*` parameter to switch it on, and it costs nothing extra, because the underlying column comes back with the standard entry fetch. `$select` is only a projection, for when you want that field alone.
+
+It is **null in listing results** — folder listings and search results — where the value is not determined. Null there means "not determined here", not "none": read the entry to find out.
 
 ## Read one stream's metadata
 

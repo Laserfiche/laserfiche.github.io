@@ -2,7 +2,7 @@
 layout: default
 title: Generating Text and OCR
 nav_order: 12
-parent: Documents and Folders
+parent: Repository Folders and Documents
 grand_parent: Guides
 ---
 
