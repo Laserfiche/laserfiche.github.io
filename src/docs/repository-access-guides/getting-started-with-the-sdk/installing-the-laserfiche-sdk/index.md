@@ -21,25 +21,25 @@ The Laserfiche SDK is distributed as NuGet packages. Each assembly is available 
 
 **To install the Laserfiche SDK:**
 
-Browse the available Laserfiche SDK NuGet Packages on https://nuget.org. Search for "Laserfiche.SDK" in the Visual Studio NuGet Package Manager to install the desired packages. Use the **Laserfiche.SDK** meta package to automatically install all the Laserfiche SDK packages.
+Browse the available Laserfiche SDK NuGet Packages on [nuget.org](https://nuget.org). Search for "Laserfiche.SDK" in the Visual Studio NuGet Package Manager to install the desired packages. Use the **Laserfiche.SDK** meta package to automatically install all the Laserfiche SDK packages.
 
 The following table lists out the available Laserfiche SDK NuGet packages. 
 
 | NuGet Package | Description |
 | --- | --- |
-| https://www.nuget.org/packages/Laserfiche.SDK | Provides classes for working with Laserfiche. This meta package includes all the Laserfiche SDK components. |
-| https://www.nuget.org/packages/Laserfiche.SDK.RepositoryAccess | Provides classes for working with data stored in a Laserfiche repository. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.DocumentServices | Providers classes for importing and exporting from a Laserfiche repository. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.ClientAutomation | Provides classes for manipulating the Laserfiche desktop client. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.HttpClient | A dependency in the Laserfiche SDK. |
-| https://www.nuget.org/packages/Laserfiche.SDK.I18n | A dependency in the Laserfiche SDK. |
-| https://www.nuget.org/packages/Laserfiche.SDK.ICU | A dependency in the Laserfiche SDK. |
-| https://www.nuget.org/packages/Laserfiche.SDK.ITextSharp | A dependency in the Laserfiche SDK. |
-| https://www.nuget.org/packages/Laserfiche.SDK.LaserficheImaging | Provides classes for working with images using LfWicUtil. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.LfWicUtil | LfWicUtil is Laserfiche's native code imaging library for Windows that provides functionality on top of Windows Imaging Components (WIC). Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.LicenseManagerObjects | Provides classes for working with Directory Server. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.PdfServices | Provides extra classes for importing PDFs into Laserfiche and extracting page content as Laserfiche pages. Included in the Laserfiche SDK meta package. |
-| https://www.nuget.org/packages/Laserfiche.SDK.TextProviderClient | A dependency in the Laserfiche SDK. |
+| [Laserfiche.SDK](https://www.nuget.org/packages/Laserfiche.SDK) | Provides classes for working with Laserfiche. This meta package includes all the Laserfiche SDK components. |
+| [Laserfiche.SDK.RepositoryAccess](https://www.nuget.org/packages/Laserfiche.SDK.RepositoryAccess) | Provides classes for working with data stored in a Laserfiche repository. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.DocumentServices](https://www.nuget.org/packages/Laserfiche.SDK.DocumentServices) | Providers classes for importing and exporting from a Laserfiche repository. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.ClientAutomation](https://www.nuget.org/packages/Laserfiche.SDK.ClientAutomation) | Provides classes for manipulating the Laserfiche desktop client. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.HttpClient](https://www.nuget.org/packages/Laserfiche.SDK.HttpClient) | A dependency in the Laserfiche SDK. |
+| [Laserfiche.SDK.I18n](https://www.nuget.org/packages/Laserfiche.SDK.I18n) | A dependency in the Laserfiche SDK. |
+| [Laserfiche.SDK.ICU](https://www.nuget.org/packages/Laserfiche.SDK.ICU) | A dependency in the Laserfiche SDK. |
+| [Laserfiche.SDK.ITextSharp](https://www.nuget.org/packages/Laserfiche.SDK.ITextSharp) | A dependency in the Laserfiche SDK. |
+| [Laserfiche.SDK.LaserficheImaging](https://www.nuget.org/packages/Laserfiche.SDK.LaserficheImaging) | Provides classes for working with images using LfWicUtil. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.LfWicUtil](https://www.nuget.org/packages/Laserfiche.SDK.LfWicUtil) | LfWicUtil is Laserfiche's native code imaging library for Windows that provides functionality on top of Windows Imaging Components (WIC). Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.LicenseManagerObjects](https://www.nuget.org/packages/Laserfiche.SDK.LicenseManagerObjects) | Provides classes for working with Directory Server. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.PdfServices](https://www.nuget.org/packages/Laserfiche.SDK.PdfServices) | Provides extra classes for importing PDFs into Laserfiche and extracting page content as Laserfiche pages. Included in the Laserfiche SDK meta package. |
+| [Laserfiche.SDK.TextProviderClient](https://www.nuget.org/packages/Laserfiche.SDK.TextProviderClient) | A dependency in the Laserfiche SDK. |
 
 ## Deploying Laserfiche SDK Redistributables with your Integration
 
