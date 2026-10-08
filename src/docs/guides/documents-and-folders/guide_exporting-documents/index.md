@@ -32,7 +32,7 @@ Retrieve a document from the repository in a synchronous style, using the follow
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Export?pageRange=*{pageRange}*
 ```
 
-- The **pageRange** parameter is a comma-separated range of pages to include. Ex: 1,3,4 or 1-3,5-7,9. This value is ignored when exporting the document as **Edoc**. If no value is given, the API will export all pages.
+- The **pageRange** parameter is a comma-separated range of pages to include. Ex: 1,3,4 or 1-3,5-7,9. This value is ignored when exporting the document as **Edoc** or **AlternateEdoc**, neither of which is made of pages. If no value is given, the API will export all pages.
 - A Laserfiche administrator may configure the document repository to have audit reasons that can be selected when performing various actions. These audit reasons include "Export" audit reasons, which give specific reasons on why a document may need to be exported. You can include an auditReasonId and optionally a comment in the request body. The available audit reasons for a repository can be retrieved through this GET request:
 
 ```
@@ -43,7 +43,8 @@ The **request body** has the following structure:
 
 - **auditReasonId:** the ID of the audit event to associate with the export operation.
 - **auditReasonComment:** the comment of the audit event to associate with the export operation.
-- **part:** the part of the document to export. Options include: **Image**, **Text**, and **Edoc**.
+- **part:** the part of the document to export. Options include: **Image**, **Text**, **Edoc**, and **AlternateEdoc**.
+- **alternateEdocName:** the name of the alternate electronic document to export. Required when **part=AlternateEdoc**, and rejected with a 400 on any other part rather than silently ignored. A name the document does not have is a 404. See the [Alternate electronic documents guide](../guide_alternate-electronic-documents/) for the naming rules and the rest of that surface.
 - **imageOptions:** the options applied when exporting as **Image**, i.e. when **part=Image**.
   - **format:** the image format to export as. Options include: **MultiPageTIFF**, **SinglePageTIFF**, **PNG**, **PDF**, and **JPEG**. The default value is MultiPageTIFF. MultiPageTIFF format is a single multi-page TIFF file. SinglePageTIFF format is multiple single-page TIFF files (in a single zip file).
   - **jpegCompressionLevel:** the quality level for JPEG compression when exporting as **Image**. The value must be between 0 and 100 (inclusive). The default value is 70.
