@@ -47,6 +47,13 @@ The **request body** has the following structure:
 - **alternateEdocName:** the name of the alternate electronic document to export. Required when **part=AlternateEdoc**, and rejected with a 400 on any other part rather than silently ignored. A name the document does not have is a 404. See the [Alternate electronic documents guide](../guide_alternate-electronic-documents/) for the naming rules and the rest of that surface.
 - **imageOptions:** the options applied when exporting as **Image**, i.e. when **part=Image**.
   - **format:** the image format to export as. Options include: **MultiPageTIFF**, **SinglePageTIFF**, **PNG**, **PDF**, and **JPEG**. The default value is MultiPageTIFF. MultiPageTIFF format is a single multi-page TIFF file. SinglePageTIFF format is multiple single-page TIFF files (in a single zip file).
+  - **encoding:** the compression of the pages in a TIFF export. Only applicable when format is **MultiPageTIFF** or **SinglePageTIFF**; any other format with an encoding is rejected with a 400. Options include:
+    - **AsStored** (the default when encoding is omitted): the stored pages are copied without being decoded, so the export is about the size of the stored document. Black-and-white pages stay CCITT G4, LZW pages stay LZW, and JPEG pages are written as JPEG inside the TIFF (compression 7), which some older TIFF readers cannot open. Pages that must be redrawn (annotations, redactions, rotation, a watermark) are written G4 when black-and-white and LZW otherwise.
+    - **Lossless:** CCITT G4 or LZW only, with the same pixels as Uncompressed at a fraction of the size. Black-and-white pages are normally G4; pages that render in grey or colour (including a black-and-white page with an included colour annotation) are LZW. No page is written as JPEG inside the TIFF, so use Lossless for readers that cannot open compression 7.
+    - **Uncompressed:** every page is decoded and written uncompressed (black-and-white pages stay G4). This was the output when encoding was omitted, before AsStored became the default; set it to keep that output.
+    - **G4:** every page is converted to black and white and written CCITT G4.
+    - **LZW:** every page is decoded and written LZW at its own bit depth.
+    - **JPEG:** pages are re-encoded as JPEG inside the TIFF using **jpegCompressionLevel**; black-and-white pages without annotations stay G4.
   - **jpegCompressionLevel:** the quality level for JPEG compression when exporting as **Image**. The value must be between 0 and 100 (inclusive). The default value is 70.
   - **includeAnnotations:** indicates if the annotations need to be included. The default value is true.
   - **convertPdfAnnotations:** indicates if the annotations on the image need to be converted to PDF annotations when exporting to PDF format. The default value is true. This option is only applicable when exporting to PDF format and includeAnnotations is true.
@@ -71,6 +78,10 @@ HTTP 200 OK
   "value": "{downloadLink}"
 }
 ```
+
+### Large TIFF exports
+
+A TIFF file cannot be larger than 4 GB. A **MultiPageTIFF** export that would pass that size fails with a 400 (`invalidRequest`; for **ExportAsync**, the task fails with it) instead of returning a file with pages missing; an uncompressed export is rejected before any page is rendered. To export such a document, export fewer pages with **pageRange**, use **SinglePageTIFF**, or export as **PDF**. If the export is uncompressed, setting **encoding** to **Lossless** writes the same pixels in less space.
 
 ## Async Export
 
