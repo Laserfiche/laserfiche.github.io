@@ -17,7 +17,6 @@ This lets you build retrieval-augmented generation (RAG) into an application wit
 
 - Collections hold only content you upload through this API. They are not linked to repository entries, and nothing from a repository is added to them automatically.
 - Collections belong to the Laserfiche Cloud **account**. Every Collections API credential in the account can list, change, query, and delete every collection in that account.
-- The Collections API is available in the United States, Canadian, and European Cloud data centers. Self-hosted Laserfiche does not have it.
 
 ## Use cases
 
@@ -43,15 +42,10 @@ Collections work best when:
 
 For a complete example with sample responses, see [Answer policy questions from files](#answer-policy-questions-from-files).
 
-## Base URLs
+## Try it out
 
-Use the data center where your Laserfiche Cloud account resides.
-
-| Data center   | Base URL                                          | Swagger UI                                                    |
-| ------------- | ------------------------------------------------- | ------------------------------------------------------------- |
-| United States | `https://api.laserfiche.com/ai/collections/v1`    | [Try it](https://api.laserfiche.com/ai/collections/v1/ui/)    |
-| Canada        | `https://api.laserfiche.ca/ai/collections/v1`     | [Try it](https://api.laserfiche.ca/ai/collections/v1/ui/)     |
-| Europe        | `https://api.eu.laserfiche.com/ai/collections/v1` | [Try it](https://api.eu.laserfiche.com/ai/collections/v1/ui/) |
+- Use the [Swagger Playground](../../getting-started/playground/#laserfiche-collections-api) to explore and call the API. Click **Authorize** and enter the credentials from [Set up credentials](#set-up-credentials).
+- Paths on this page are relative to `https://api.laserfiche.com/ai/collections/v1`. If your account is in the Canadian or European data center, use the host listed in the Swagger Playground.
 
 ## Authentication
 
@@ -107,11 +101,11 @@ curl -u "username:password" https://api.laserfiche.com/ai/collections/v1/usage
 }
 ```
 
-In the Swagger UI, click **Authorize** and enter the same username and password.
+In the Swagger Playground, click **Authorize** and enter the same username and password.
 
 ## Endpoints
 
-Paths are relative to the [base URL](#base-urls). `{collection}` is the collection name.
+Paths are relative to the [base URL](#try-it-out). `{collection}` is the collection name.
 
 | Operation                       | Purpose                               | Request                                                              | Success response                                                     |
 | ------------------------------- | ------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -235,11 +229,11 @@ Errors return a JSON body:
 
 ## Examples
 
-These examples use `curl` against the United States data center. Set two variables first:
+These examples use `curl`. Set two variables first:
 
 ```sh
-export LF_API=https://api.laserfiche.com/ai/collections/v1
-export LF_AUTH='username:password'   # from step 3 of the setup
+export LF_API=https://api.laserfiche.com/ai/collections/v1   # host for your region: see Try it out
+export LF_AUTH='username:password'                           # from step 3 of the setup
 ```
 
 Sample responses are illustrative. Token counts, sizes, IDs, and answers will differ.
