@@ -60,6 +60,7 @@ Create an OAuth Service App when you want to write a service application that ma
          - For read access to global resources: "table.Read project/Global"
          - For read/write access to global resources: "table.Read table.Write project/Global"
          - For read/write access to a project named "Example Project": "table.Read table.Write project/Example+Project"
+       - The Collections API does not use scopes. For credentials used only with the Collections API, leave the requested scopes empty. See [Collections API authentication](../../collections-api-reference/#authentication).
        - See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
      - Once generated, you can skip the next step for the OAuth credentials flow and go directly to the [Use the credentials to access Laserfiche APIs](#use-the-credentials-to-access-laserfiche-apis) section.
 
@@ -175,11 +176,18 @@ Error types include:
   Include the username and password in the Basic Authorization header when accessing the Laserfiche API. This should follow the Basic Authentication standard of _username:password_, base64-encoded
 
   {: .note }
-  Basic Authentication is supported for Table APIs.
+  Basic Authentication is supported for the Table API and the Collections API. The Collections API accepts only Basic Authentication.
 
   You can make Table API calls like so:
 
   ```
   GET https://api.laserfiche.com/odata4/table
+  Authorization: Basic base64_encoded_username:password
+  ```
+
+  You can make [Collections API](../../collections-api-reference/) calls like so:
+
+  ```
+  GET https://api.laserfiche.com/ai/collections/v1/usage
   Authorization: Basic base64_encoded_username:password
   ```
