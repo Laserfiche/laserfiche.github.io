@@ -11,11 +11,37 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Collections API
 **Applies to**: Laserfiche Cloud.
 
-A **collection** is a named set of documents that you upload through this API. The service extracts the text from each document, splits it into passages, and indexes them so you can ask questions in natural language. Each answer cites the passages it came from.
+A **collection** is a named set of documents that you upload through this API. The service extracts the text from each document, splits it into passages, and vectorizes them so your application can ask questions in natural language. Each answer comes from the collection's documents and cites the passages it used.
+
+This lets you build retrieval-augmented generation (RAG) into an application without running it yourself. The Collections API stores the vectors, finds the passages that match a question, and writes the answer, so your application needs no vector database or language model of its own.
 
 - Collections hold only content you upload through this API. They are not linked to repository entries, and nothing from a repository is added to them automatically.
 - Collections belong to the Laserfiche Cloud **account**. Every Collections API credential in the account can list, change, query, and delete every collection in that account.
 - The Collections API is available in the United States, Canadian, and European Cloud data centers. Self-hosted Laserfiche does not have it.
+
+## Use cases
+
+Collections suit any application that answers questions from a knowledge base: a set of reference documents that people would otherwise search by hand. For example:
+
+| Use case                      | Documents to upload                                                           | Example question                                                        |
+| ----------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Requests for proposals (RFPs) | Past RFP responses, product and service descriptions, standard contract terms | "Does the product support single sign-on with SAML 2.0?"                |
+| Security questionnaires       | Security policies, completed vendor questionnaires, data retention standards  | "How long are audit logs kept, and where are they stored?"              |
+| Health benefits               | Plan summaries, coverage documents, enrollment guides, benefits FAQs          | "Does the PPO plan cover physical therapy, and is there a visit limit?" |
+| Company policies              | Employee handbook, travel and expense policy, IT acceptable use policy        | "What is the meal allowance for domestic travel?"                       |
+
+Two ways an application might use them:
+
+- **An RFP tool** keeps one collection of approved answers and product documents. When a new RFP arrives, the tool sends each question to the collection and uses the answer as a first draft. The references show which documents support each answer, so a reviewer can check them before the response goes out.
+- **An HR portal** loads this year's benefits documents into a collection such as `benefits-2027` and passes employee questions to it. When the plans change, the portal uploads the new documents under the same names, which replaces the old versions.
+
+Collections work best when:
+
+- **The answers are in the documents.** An answer uses only the collection's content, and says so when the documents don't cover the question.
+- **The documents contain text.** The service does not run OCR, so it skips scanned images that have no text layer. See [Limits](#limits).
+- **Everyone who uses your application may see the content.** Collections have no per-user permissions, and every credential in the account can query every collection. Load shared reference material, not personal records such as individual claims or employee files. If different audiences need different content, use separate collections and have your application decide who can query which one.
+
+For a complete example with sample responses, see [Answer policy questions from files](#answer-policy-questions-from-files).
 
 ## Base URLs
 
