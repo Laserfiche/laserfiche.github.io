@@ -164,7 +164,7 @@ A document whose name already exists in the collection is **replaced**. If the r
 
 The collection must already exist. Uploading to a collection that does not exist returns `404`.
 
-The service skips a file that is over the size limit or that yields no text (see [Limits](#limits)). The `200` response does not name skipped files, so call `GET /{collection}` afterward to confirm what was stored. If no file in the request yields text, the request fails with `400` and `error_code` `106` ("No vectorizable text was found").
+The service skips a file that is empty or over the size limit (see [Limits](#limits)). A file with no extractable text, such as a scanned PDF or an image, is accepted but adds nothing: it is not stored, and an existing document with the same name is kept. The `200` response does not name these files, so call `GET /{collection}` afterward to confirm what was stored. Only documents with text appear there. If every file in the request is skipped, the request fails with `400` and `error_code` `106` ("No vectorizable text was found"), but a request whose files all lack text still returns `200`.
 
 If the text extraction service can't read a file (for example, a corrupt or password-protected file), the whole request fails with `422`, or with `503` if text extraction is unavailable. Nothing from the request is stored in either case. To find out which file failed, upload one file per request.
 
@@ -223,7 +223,7 @@ Storage counts the UTF-8 bytes of the text extracted from each document, not the
 **Supported files:** plain text (`.txt`), PDF, Microsoft Word, Excel, PowerPoint, Outlook (`.msg`), OneNote, Publisher, and Visio files, OpenDocument text and spreadsheets, RTF, HTML, XML, CSV, and other text-based formats.
 
 {: .warning }
-The Collections API does **not** perform OCR. Image files and scanned PDFs without a text layer add no searchable content. Run OCR first, or send the text with the JSON form.
+The Collections API does **not** perform OCR. Image files and scanned PDFs without a text layer are accepted but add no searchable content. Run OCR first, or send the text with the JSON form.
 
 ## Errors
 
@@ -240,7 +240,7 @@ Errors return a JSON body:
 
 | Status | `error_code`         | Meaning                                                                                                   |
 | ------ | -------------------- | --------------------------------------------------------------------------------------------------------- |
-| `400`  | `106`                | No text could be extracted from any file in the request, or the JSON `name` or `text` is empty.           |
+| `400`  | `106`                | Every file in the request was empty or over the size limit, or the JSON `name` or `text` is empty.        |
 | `400`  | `1143`               | The upload would exceed the account's storage limit. Delete documents or collections to free space.       |
 | `400`  | none                 | The request does not match the API schema, for example a missing `input_prompt` or `documents` parameter. |
 | `401`  | none                 | No `Authorization` header, or a Bearer token instead of Basic credentials.                                |
