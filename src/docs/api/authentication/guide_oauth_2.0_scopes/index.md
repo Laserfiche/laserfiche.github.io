@@ -53,9 +53,7 @@ See the following lists of available OAuth 2.0 scopes.
 
 ### Collections API
 
-| Scopes          | Description                                                        |
-| --------------- | ------------------------------------------------------------------ |
-| collections.All | Allows full access to collections on behalf of the signed-in user. |
+The Collections API does not use OAuth 2.0 scopes. It accepts only HTTP Basic authentication with a Developer Console username and password, and those credentials reach every collection in the account. Leave **Requested scopes** empty when you generate them. See [Collections API authentication](../../collections-api-reference/#authentication).
 
 ### Repository API
 

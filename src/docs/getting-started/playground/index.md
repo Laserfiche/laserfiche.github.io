@@ -63,7 +63,7 @@ Use the [Laserfiche OData Table API](./../../api/odata-api-reference/) to access
 
 ## Laserfiche Collections API
 
-Use the Laserfiche Collections API to manage and query collections of vectorized documents.
+Use the [Laserfiche Collections API](./../../api/collections-api-reference/) to manage and query collections of vectorized documents. It accepts only Basic Authentication: click **Authorize** and enter a Developer Console username and password. See [how to set up credentials](./../../api/collections-api-reference/#set-up-credentials).
 
 - [Try the Collections API](https://api.laserfiche.com/ai/collections/v1/ui/) (United States Data Center)
 - [Try the Collections API](https://api.laserfiche.ca/ai/collections/v1/ui/) (Canadian Data Center)
