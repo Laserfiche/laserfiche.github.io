@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Collections API
 **Applies to**: Laserfiche Cloud.
 
-A **collection** is a named set of documents that you upload through this API. The service extracts the text from each document, splits it into passages, and vectorizes them so your application can ask questions in natural language. Each answer comes from the collection's documents and cites the passages it used.
+A **collection** is a named set of documents that you upload through this API. The service extracts the text from each document, splits it into passages, and vectorizes them so your application can ask questions in natural language. Each answer comes from the collection's documents and cites the documents it used.
 
 This lets you build retrieval-augmented generation (RAG) into an application without running it yourself. The Collections API stores the vectors, finds the passages that match a question, and writes the answer, so your application needs no vector database or language model of its own.
 
@@ -37,7 +37,7 @@ Two ways an application might use them:
 Collections work best when:
 
 - **The answers are in the documents.** An answer uses only the collection's content, and says so when the documents don't cover the question.
-- **The documents contain text.** The service does not run OCR, so it skips scanned images that have no text layer. See [Limits](#limits).
+- **The documents contain text.** The service does not run OCR, so scanned images that have no text layer add no searchable content. See [Limits](#limits).
 - **Everyone who uses your application may see the content.** Collections have no per-user permissions, and every credential in the account can query every collection. Load shared reference material, not personal records such as individual claims or employee files. If different audiences need different content, use separate collections and have your application decide who can query which one.
 
 For a complete example with sample responses, see [Answer policy questions from files](#answer-policy-questions-from-files).
@@ -69,23 +69,47 @@ Authorization: Basic base64(username:password)
 
 ### Step 1: Create a service principal and key
 
-1. In Account Administration, open the **Users** tab and go to **Service Principals**. Click **Add Service Principal**, or open an existing service principal. ![Service Principals in Account Administration](../authentication/guide_service-principals/assets/images/service-principals-01.png)
-1. Click **Create Service Principal Key(s)** and save one of the keys. The keys are shown only once. ![Create Service Principal Keys](../authentication/guide_service-principals/assets/images/service-principals-03.png)
+1. In Account Administration, open the **Users** tab and go to **Service Principals**. Click **Add Service Principal**, or open an existing service principal.
+
+   ![Service Principals in Account Administration](../authentication/guide_service-principals/assets/images/service-principals-01.png)
+
+1. Click **Create Service Principal Key(s)** and save one of the keys. The keys are shown only once.
+
+   ![Create Service Principal Keys](../authentication/guide_service-principals/assets/images/service-principals-03.png)
 
 See the [Service Principals guide](../authentication/guide_service-principals/) for more about creating principals and rotating keys.
 
 ### Step 2: Register a Service app
 
-1. Open the [Developer Console](../../getting-started/developer-console/). ![Developer Console in the app menu](./assets/images/collections-setup-01-developer-console.png)
-1. Click **New**, then **Create a new app**. ![Create a new app](./assets/images/collections-setup-02-new-app.png)
-1. Select **Service**, enter a name, and click **Create application**. ![Select the Service app type](./assets/images/collections-setup-03-service-app.png)
-1. On the **General** tab, select the service principal from step 1 in **Service Account**, and save. ![Select the service account](./assets/images/collections-setup-04-service-account.png)
+1. Open the [Developer Console](../../getting-started/developer-console/).
+
+   ![Developer Console in the app menu](./assets/images/collections-setup-01-developer-console.png)
+
+1. Click **New**, then **Create a new app**.
+
+   ![Create a new app](./assets/images/collections-setup-02-new-app.png)
+
+1. Select **Service**, enter a name, and click **Create application**.
+
+   ![Select the Service app type](./assets/images/collections-setup-03-service-app.png)
+
+1. On the **General** tab, select the service principal from step 1 in **Service Account**, and save.
+
+   ![Select the service account](./assets/images/collections-setup-04-service-account.png)
 
 ### Step 3: Generate the username and password
 
-1. On the **Authentication** tab, create a key and choose **Create a username and password to access Laserfiche APIs using the 'Basic' HTTP authentication scheme**. Click **Next**. ![Choose the Basic authentication option](./assets/images/collections-setup-05-basic-option.png)
-1. Paste the service principal key from step 1. **Leave the requested scopes empty**, and click **Generate credentials**. ![Enter the service principal key and leave scopes empty](./assets/images/collections-setup-06-key-and-scopes.png)
-1. Copy or download the username and password. The password is shown only once. The username is the app's Client ID. ![Basic authentication credentials created](./assets/images/collections-setup-07-credentials.png)
+1. On the **Authentication** tab, create a key and choose **Create a username and password to access Laserfiche APIs using the 'Basic' HTTP authentication scheme**. Click **Next**.
+
+   ![Choose the Basic authentication option](./assets/images/collections-setup-05-basic-option.png)
+
+1. Paste the service principal key from step 1. **Leave the requested scopes empty**, and click **Generate credentials**.
+
+   ![Enter the service principal key and leave scopes empty](./assets/images/collections-setup-06-key-and-scopes.png)
+
+1. Copy or download the username and password. The password is shown only once. The username is the app's Client ID.
+
+   ![Basic authentication credentials created](./assets/images/collections-setup-07-credentials.png)
 
 ### Step 4: Make a first call
 
@@ -140,7 +164,9 @@ A document whose name already exists in the collection is **replaced**. If the r
 
 The collection must already exist. Uploading to a collection that does not exist returns `404`.
 
-The service skips any file it cannot read: an unsupported or oversized file, or a file with no text layer (see [Limits](#limits)). The `200` response does not name skipped files. Call `GET /{collection}` afterward to confirm what was stored. If no file in the request produces text, the request fails with `400` and `error_code` `106` ("No vectorizable text was found").
+The service skips a file that is over the size limit or that yields no text (see [Limits](#limits)). The `200` response does not name skipped files, so call `GET /{collection}` afterward to confirm what was stored. If no file in the request yields text, the request fails with `400` and `error_code` `106` ("No vectorizable text was found").
+
+If the text extraction service can't read a file (for example, a corrupt or password-protected file), the whole request fails with `422`, or with `503` if text extraction is unavailable. Nothing from the request is stored in either case. To find out which file failed, upload one file per request.
 
 ### List documents
 
@@ -154,11 +180,11 @@ The service skips any file it cannot read: an unsupported or oversized file, or 
 
 `POST /{collection}/query` takes `{"input_prompt": "<question>"}` and returns:
 
-| Field         | Description                                                                                                                                       |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `response_id` | A 32-character hexadecimal identifier for this response.                                                                                          |
-| `answer`      | The answer, in Markdown. In-text citations such as `[1]` refer to `references[0]`, `[2]` to `references[1]`, and so on.                           |
-| `references`  | The passages the answer cites, in citation order. Each has `source` (the document name) and `content` (the passage text). The list can be empty. |
+| Field         | Description                                                                                                                                                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `response_id` | A 32-character hexadecimal identifier for this response.                                                                                                                                                                              |
+| `answer`      | The answer, in Markdown. In-text citations such as `[1]` refer to `references[0]`, `[2]` to `references[1]`, and so on.                                                                                                               |
+| `references`  | The documents the answer cites, in citation order. Each has `source` (the document name) and `content` (the passages retrieved from that document, separated by blank lines). A document appears at most once. The list can be empty. |
 
 - The answer uses only the collection's documents. If they don't contain the answer, the response says so rather than guessing.
 - Answers are in English unless the question asks for another language.
@@ -185,19 +211,19 @@ The service skips any file it cannot read: an unsupported or oversized file, or 
 
 ## Limits
 
-| Limit                | Value                                                                                 | When exceeded                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Storage              | 1 GiB (1,073,741,824 bytes) of **extracted text** per account, across all collections | The upload fails with `400`, `error_code` `1143`. Nothing from that request is stored. |
-| Request size         | 100 MiB per request body                                                              | `413`                                                                                  |
-| PDF and Office files | 50 MiB per file                                                                       | The file is skipped.                                                                   |
-| AI units             | 1 per successful query                                                                | `429`, `error_code` `123`, once the account's AI units are used up                     |
+| Limit        | Value                                                                                 | When exceeded                                                                          |
+| ------------ | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Storage      | 1 GiB (1,073,741,824 bytes) of **extracted text** per account, across all collections | The upload fails with `400`, `error_code` `1143`. Nothing from that request is stored. |
+| Request size | 100 MiB per request body                                                              | `413`                                                                                  |
+| File size    | 50 MiB per file. Plain text (`.txt`) files are limited only by the request size.      | The file is skipped.                                                                   |
+| AI units     | 1 per successful query                                                                | `429`, `error_code` `123`, once the account's AI units are used up                     |
 
 Storage counts the UTF-8 bytes of the text extracted from each document, not the size of the file. Deleting documents or collections frees storage.
 
 **Supported files:** plain text (`.txt`), PDF, Microsoft Word, Excel, PowerPoint, Outlook (`.msg`), OneNote, Publisher, and Visio files, OpenDocument text and spreadsheets, RTF, HTML, XML, CSV, and other text-based formats.
 
 {: .warning }
-The Collections API does **not** perform OCR. Image files and scanned PDFs without a text layer produce no text and are skipped. Run OCR first, or send the text with the JSON form.
+The Collections API does **not** perform OCR. Image files and scanned PDFs without a text layer add no searchable content. Run OCR first, or send the text with the JSON form.
 
 ## Errors
 
@@ -214,7 +240,7 @@ Errors return a JSON body:
 
 | Status | `error_code`         | Meaning                                                                                                   |
 | ------ | -------------------- | --------------------------------------------------------------------------------------------------------- |
-| `400`  | `106`                | No text could be extracted from any file in the request, or the JSON `name` is empty.                     |
+| `400`  | `106`                | No text could be extracted from any file in the request, or the JSON `name` or `text` is empty.           |
 | `400`  | `1143`               | The upload would exceed the account's storage limit. Delete documents or collections to free space.       |
 | `400`  | none                 | The request does not match the API schema, for example a missing `input_prompt` or `documents` parameter. |
 | `401`  | none                 | No `Authorization` header, or a Bearer token instead of Basic credentials.                                |
@@ -224,7 +250,9 @@ Errors return a JSON body:
 | `403`  | `124`                | Query only: the account has no AI-unit allowance.                                                         |
 | `404`  | `1142`               | The collection does not exist (upload, document delete, and query).                                       |
 | `413`  | none                 | The request body is over 100 MiB.                                                                         |
+| `422`  | `1170`               | Upload only: a file could not be read. Sending the same file again won't help.                            |
 | `429`  | `123`                | Query only: the account has used all of its AI units.                                                     |
+| `503`  | `1170`               | Upload only: text extraction is unavailable. Retry with backoff.                                          |
 | `500`  | `1150`–`1158`, other | A server or AI model error. Retry with backoff.                                                           |
 
 ## Examples
@@ -333,17 +361,18 @@ curl -u "$LF_AUTH" "$LF_API/hr-policies"
 ```json
 {
   "Employee-Handbook.pdf": 512870,
+  "Old-Travel-Policy.pdf": 38114,
   "PTO-Policy.docx": 45663
 }
 ```
 
 ```sh
 curl -u "$LF_AUTH" -X DELETE \
-  "$LF_API/hr-policies/document?documents=PTO-Policy.docx&documents=Old-Travel-Policy.pdf"
+  "$LF_API/hr-policies/document?documents=Old-Travel-Policy.pdf"
 ```
 
 ```json
-"Succesfully deleted documents: ['PTO-Policy.docx', 'Old-Travel-Policy.pdf']"
+"Succesfully deleted documents: ['Old-Travel-Policy.pdf']"
 ```
 
 ### Check storage before a bulk load
